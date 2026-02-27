@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # PostgreSQL数据库
+  postgres:
+    image: postgres:15-alpine
+    container_name: competitor-postgres
+    environment:
+      POSTGRES_USER: competitor
+      POSTGRES_PASSWORD: comp123456
+      POSTGRES_DB: competitor_analysis
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # 后端API服务
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: competitor-api
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=competitor
+      - DB_PASSWORD=comp123456
+      - DB_NAME=competitor_analysis
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # 前端Nginx服务
+  frontend:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: competitor-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -96,6 +96,25 @@ export default function App() {
           </div>
         )}
       </main>
+
+      <footer className="border-t border-gray-100 bg-gray-50/50 py-6 mt-auto">
+        <div className="max-w-[1400px] mx-auto px-6 text-center">
+          <p className="text-xs text-gray-400 mb-2">
+            数据来源：
+            <a
+              href="https://adata.woa.com/bi/view/13453?s=28YRWo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-500 hover:text-primary-600 hover:underline"
+            >
+              服饰运动爆款素材数据
+            </a>
+          </p>
+          <p className="text-[10px] text-gray-300">
+            © 2026 服饰运动爆款素材榜单
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

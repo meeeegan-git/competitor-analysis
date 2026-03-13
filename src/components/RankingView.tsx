@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef, useCallback } from 'react';
-import { Pagination, Select } from 'tdesign-react';
+import { Pagination, Select, Input } from 'tdesign-react';
+import { SearchIcon } from 'tdesign-icons-react';
 import { WeekData, CompactRow } from '../types';
 
 interface RankingViewProps {
@@ -11,6 +12,7 @@ const PAGE_SIZE = 20;
 export default function RankingView({ data }: RankingViewProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
+  const [searchKeyword, setSearchKeyword] = useState('');
 
   // 行业选项
   const industryOptions = useMemo(() => {
@@ -20,12 +22,19 @@ export default function RankingView({ data }: RankingViewProps) {
     }));
   }, [data.industries]);
 
-  // 筛选后的数据
+  // 筛选后的数据（行业 + 商品名称模糊搜索）
   const filteredRows = useMemo(() => {
-    if (selectedIndustries.length === 0) return data.rows;
-    const indSet = new Set(selectedIndustries);
-    return data.rows.filter(r => indSet.has(r.ind));
-  }, [data.rows, selectedIndustries]);
+    let rows = data.rows;
+    if (selectedIndustries.length > 0) {
+      const indSet = new Set(selectedIndustries);
+      rows = rows.filter(r => indSet.has(r.ind));
+    }
+    if (searchKeyword.trim()) {
+      const kw = searchKeyword.trim().toLowerCase();
+      rows = rows.filter(r => r.pn && r.pn.toLowerCase().includes(kw));
+    }
+    return rows;
+  }, [data.rows, selectedIndustries, searchKeyword]);
 
   // 分页
   const pagedRows = useMemo(() => {
@@ -60,7 +69,16 @@ export default function RankingView({ data }: RankingViewProps) {
               minCollapsedNum={3}
             />
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
+          <div className="flex items-center gap-2 min-w-[280px]">
+            <span className="text-sm font-medium text-gray-600 whitespace-nowrap">商品</span>
+            <Input
+              value={searchKeyword}
+              onChange={(val) => { setSearchKeyword(val as string); setCurrentPage(1); }}
+              prefixIcon={<SearchIcon />}
+              clearable
+              placeholder="搜索商品名称..."
+              style={{ flex: 1 }}
+            />
           </div>
         </div>
       </div>
@@ -237,8 +255,9 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
               </div>
             </>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-              <span className="text-2xl">🏷️</span>
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 border border-dashed border-gray-200 rounded-lg">
+              <span className="text-xl text-gray-300">📷</span>
+              <span className="text-[10px] text-gray-300 mt-0.5">暂无</span>
             </div>
           )}
         </div>
@@ -383,7 +402,10 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
             )}
           </div>
         ) : (
-          <span className="text-xs text-gray-300">-</span>
+          <div className="w-[120px] h-[80px] mx-auto flex flex-col items-center justify-center bg-gray-50 border border-dashed border-gray-200 rounded-lg">
+            <span className="text-lg text-gray-300">🎬</span>
+            <span className="text-[10px] text-gray-300 mt-0.5">暂无素材</span>
+          </div>
         )}
       </td>
     </tr>

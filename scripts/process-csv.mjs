@@ -171,14 +171,18 @@ function toNum(val) {
   return isNaN(num) ? 0 : num;
 }
 
-// 获取当前 ISO 周标签
+// 根据上传日期自动生成周标签（上传当日往前推7天）
+// 例如：3月13日上传 → 03.06-03.12
 function getCurrentWeekLabel() {
   const now = new Date();
-  const year = now.getFullYear();
-  const oneJan = new Date(year, 0, 1);
-  const days = Math.floor((now - oneJan) / 86400000);
-  const weekNum = Math.ceil((days + oneJan.getDay() + 1) / 7);
-  return `${year}-W${String(weekNum).padStart(2, '0')}`;
+  // 结束日期 = 昨天（上传当日的前一天）
+  const end = new Date(now);
+  end.setDate(end.getDate() - 1);
+  // 开始日期 = 往前推6天（共7天）
+  const start = new Date(end);
+  start.setDate(start.getDate() - 6);
+  const fmt = (d) => `${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+  return `${fmt(start)}-${fmt(end)}`;
 }
 
 // 解析 CSV（手动处理，支持带逗号的字段）
@@ -215,6 +219,34 @@ function parseCSVLine(line) {
   return result;
 }
 
+/**
+ * 自动检测列偏移：
+ * 当 Excel 导出时"素材MD5示意(预览)(翻译后)"列缺失数据，
+ * 导致从该列开始所有数据左移1位。
+ * 检测方式：如果"翻译后"列的值是数字而非URL，则认为发生了偏移。
+ * 
+ * 偏移时的正确映射（表头列名 → 实际数据含义）：
+ * 素材MD5示意(预览)(翻译后) → 消耗(元)
+ * 消耗(元)                → 消耗(元)占比(%)
+ * 消耗(元)占比(%)          → 下单金额(元)
+ * 下单金额(元)             → 下单金额(元)占比(%)
+ * 下单金额(元)占比(%)       → 下单单价(元)
+ * 下单单价(元)             → ctr(%)
+ * ctr(%)                  → 综合目标转化率(%)
+ * 综合目标转化率(%)         → 竞价CPM(元)
+ * 竞价CPM(元)             → 下单ROI
+ * 下单ROI                 → 视频3秒完播率(%)
+ * 视频3秒完播率(%)         → 平均播放时长(毫秒精度)(s)
+ */
+const SHIFTED_COL_MAP = {
+  [COL_CONSUMPTION]:        COL_MATERIAL_MD5,           // 消耗 ← 翻译后列
+  [COL_ORDER_PRICE]:        '下单金额(元)占比(%)',        // 下单单价 ← 下单金额占比列
+  [COL_CTR]:                COL_ORDER_PRICE,             // ctr ← 下单单价列
+  [COL_ROI]:                '竞价CPM(元)',               // ROI ← 竞价CPM列
+  [COL_VIDEO_3S_RATE]:      COL_ROI,                     // 3秒完播率 ← 下单ROI列
+  [COL_AVG_PLAY_DURATION]:  COL_VIDEO_3S_RATE,           // 平均播放 ← 3秒完播率列
+};
+
 async function processCSV(csvPath, weekLabel) {
   console.log(`正在处理: ${csvPath}`);
   console.log(`周标签: ${weekLabel}`);
@@ -226,6 +258,7 @@ async function processCSV(csvPath, weekLabel) {
 
   let headers = null;
   let lineCount = 0;
+  let isShifted = false; // 列偏移标记
 
   // 按DPA商品名称去重（保留消耗最大的行）
   const dpaMap = new Map(); // dpaName -> rowObject
@@ -252,25 +285,52 @@ async function processCSV(csvPath, weekLabel) {
       row[headers[i]] = values[i];
     }
 
+    // 在第一条数据行检测列偏移
+    if (lineCount === 1) {
+      const materialVal = (row[COL_MATERIAL_MD5] || '').trim();
+      // 如果"翻译后"列是纯数字（不是URL），说明列偏移了
+      if (materialVal && !materialVal.startsWith('http') && !isNaN(parseFloat(materialVal))) {
+        isShifted = true;
+        console.log('⚠️ 检测到列偏移：素材MD5示意(预览)(翻译后) 不是URL，启用偏移映射');
+      } else {
+        console.log('✅ 列映射正常');
+      }
+    }
+
     const rawIndustry = (row[COL_INDUSTRY] || '').trim();
     const category = (row[COL_CATEGORY] || '').trim();
     const dpaName = (row[COL_DPA_NAME] || '').trim();
+
+    // 根据是否偏移选择正确的列
+    const getCol = (colName) => {
+      if (isShifted && SHIFTED_COL_MAP[colName]) {
+        return row[SHIFTED_COL_MAP[colName]] || '';
+      }
+      return row[colName] || '';
+    };
     
-    // 跳过汇总行、空行、素材为空的行
-    const materialLink = (row[COL_MATERIAL_MD5] || '').trim();
-    if (rawIndustry === '整体' || !dpaName || !materialLink) continue;
+    // 素材链接：偏移时只有MD5，正常时从"翻译后"列取URL
+    const materialMD5 = (row['素材MD5示意(预览)'] || '').trim();
+    const materialLink = isShifted ? '' : (row[COL_MATERIAL_MD5] || '').trim();
     
-    // 整合行业名称
-    const industry = normalizeIndustry(rawIndustry, dpaName);
+    // 跳过汇总行、商品名为空/"空"的行
+    if (rawIndustry === '整体' || !dpaName || dpaName === '空') continue;
     
-    const consumption = toNum(row[COL_CONSUMPTION]);
+    // 整合行业名称（"空"行业也走重分类）
+    const normalizedRawIndustry = (rawIndustry === '空') ? '其他' : rawIndustry;
+    const industry = normalizeIndustry(normalizedRawIndustry, dpaName);
+    
+    const consumption = toNum(getCol(COL_CONSUMPTION));
 
     const existing = dpaMap.get(dpaName);
     if (!existing || consumption > existing._consumption) {
       dpaMap.set(dpaName, {
         ...row,
         _consumption: consumption,
-        _normalizedIndustry: industry,  // 存储整合后的行业名称
+        _normalizedIndustry: industry,
+        _materialLink: materialLink,
+        _materialMD5: materialMD5,
+        _isShifted: isShifted,
       });
     }
   }
@@ -298,14 +358,27 @@ async function processCSV(csvPath, weekLabel) {
 
     for (const row of top100) {
       const consumption = row._consumption;
+      const shifted = row._isShifted;
       const category = (row[COL_CATEGORY] || '').trim();
-      const orderPrice = toNum(row[COL_ORDER_PRICE]);
-      const orderRoi = toNum(row[COL_ROI]);
-      const video3sRate = toNum(row[COL_VIDEO_3S_RATE]);
-      const avgPlayDuration = toNum(row[COL_AVG_PLAY_DURATION]);
-      const ctr = toNum(row[COL_CTR]);
-      const materialLink = row[COL_MATERIAL_MD5] || '';
       const dpaName = (row[COL_DPA_NAME] || '').trim();
+
+      // 根据偏移状态选择正确的列
+      const getCol = (colName) => {
+        if (shifted && SHIFTED_COL_MAP[colName]) {
+          return row[SHIFTED_COL_MAP[colName]] || '';
+        }
+        return row[colName] || '';
+      };
+
+      const orderPrice = toNum(getCol(COL_ORDER_PRICE));
+      const orderRoi = toNum(getCol(COL_ROI));
+      const video3sRate = toNum(getCol(COL_VIDEO_3S_RATE));
+      const avgPlayDuration = toNum(getCol(COL_AVG_PLAY_DURATION));
+      const ctr = toNum(getCol(COL_CTR));
+      const materialLink = row._materialLink || '';
+
+      // 跳过无素材链接的数据行
+      if (!materialLink) continue;
 
       if (category) categories.add(category);
 

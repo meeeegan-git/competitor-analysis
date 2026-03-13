@@ -1,18 +1,10 @@
 [
   {
-    "week": "2026-W10",
-    "file": "week-2026-W10.json",
-    "generatedAt": "2026-03-06T08:38:29.822Z",
-    "totalCount": 628,
-    "categoryCount": 165,
-    "industryCount": 11
-  },
-  {
-    "week": "2026-W09",
-    "file": "week-2026-W09.json",
-    "generatedAt": "2026-02-27T08:40:57.406Z",
-    "totalCount": 547,
-    "categoryCount": 155,
-    "industryCount": 10
+    "week": "03.06-03.12",
+    "file": "week-03.06-03.12.json",
+    "generatedAt": "2026-03-13T09:42:53.102Z",
+    "totalCount": 573,
+    "categoryCount": 154,
+    "industryCount": 9
   }
 ]

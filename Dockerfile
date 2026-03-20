@@ -4,6 +4,9 @@ FROM nginx:alpine
 # 复制构建好的静态文件到 nginx 默认目录
 COPY dist/ /usr/share/nginx/html/
 
+# 复制密码认证文件
+COPY .htpasswd /etc/nginx/.htpasswd
+
 # 复制自定义 nginx 配置
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

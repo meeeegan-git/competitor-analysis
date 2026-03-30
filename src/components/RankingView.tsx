@@ -146,16 +146,22 @@ export default function RankingView({ data }: RankingViewProps) {
   );
 }
 
+function isVideoUrl(url: string): boolean {
+  return !!url && (url.startsWith('http://') || url.startsWith('https://'));
+}
+
 function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
   const thumbVideoRef = useRef<HTMLVideoElement>(null);
   const materialVideoRef = useRef<HTMLVideoElement>(null);
   const materialContainerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const hasVideo = isVideoUrl(row.ml);
 
   const handleThumbMouseEnter = () => {
     if (thumbVideoRef.current) {
       thumbVideoRef.current.currentTime = 0;
+      thumbVideoRef.current.load();
       thumbVideoRef.current.play().catch(() => {});
     }
   };
@@ -163,14 +169,13 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
   const handleThumbMouseLeave = () => {
     if (thumbVideoRef.current) {
       thumbVideoRef.current.pause();
-      thumbVideoRef.current.currentTime = 2;
     }
   };
 
   // 素材列：点击开始播放（放大250%）/ 暂停（恢复原位）
   const handleMaterialClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!row.ml) return;
+    if (!hasVideo) return;
     if (isPlaying) {
       if (materialVideoRef.current) {
         materialVideoRef.current.pause();
@@ -183,18 +188,18 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
 
   // 素材列：悬停静音预览（仅未播放状态）
   const handleMaterialMouseEnter = () => {
-    if (!row.ml || isPlaying) return;
+    if (!hasVideo || isPlaying) return;
     if (materialVideoRef.current) {
       materialVideoRef.current.currentTime = 0;
+      materialVideoRef.current.load();
       materialVideoRef.current.play().catch(() => {});
     }
   };
 
   const handleMaterialMouseLeave = () => {
-    if (!row.ml || isPlaying) return;
+    if (!hasVideo || isPlaying) return;
     if (materialVideoRef.current) {
       materialVideoRef.current.pause();
-      materialVideoRef.current.currentTime = 2;
     }
   };
 
@@ -234,7 +239,7 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
           onMouseEnter={handleThumbMouseEnter}
           onMouseLeave={handleThumbMouseLeave}
         >
-          {row.ml ? (
+          {hasVideo ? (
             <>
               <video
                 ref={thumbVideoRef}
@@ -243,8 +248,7 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
                 muted
                 loop
                 playsInline
-                preload="metadata"
-                crossOrigin="anonymous"
+                preload="none"
                 controlsList="nodownload"
                 onContextMenu={(e) => e.preventDefault()}
               />
@@ -326,7 +330,7 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
       </td>
       {/* 素材列：展示视频首帧缩略图，悬停预览/点击放大250%播放 */}
       <td className="ranking-td text-center">
-        {row.ml ? (
+        {hasVideo ? (
           <div className="relative" ref={materialContainerRef}>
             <div
               className="w-[120px] h-[160px] rounded-lg bg-black mx-auto overflow-hidden relative cursor-pointer group/material"
@@ -343,8 +347,7 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
                     muted
                     loop
                     playsInline
-                    preload="metadata"
-                    crossOrigin="anonymous"
+                    preload="none"
                     controlsList="nodownload"
                     onContextMenu={(e) => e.preventDefault()}
                   />
@@ -384,7 +387,7 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
                     className="w-full h-full object-contain bg-black select-none"
                     loop
                     playsInline
-                    crossOrigin="anonymous"
+                    muted
                     controls
                     controlsList="nodownload"
                     onContextMenu={(e) => e.preventDefault()}

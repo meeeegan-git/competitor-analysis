@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useCallback } from 'react';
+import { useState, useMemo, useRef, useCallback, useEffect } from 'react';
 import { Pagination, Select, Input } from 'tdesign-react';
 import { SearchIcon } from 'tdesign-icons-react';
 import { WeekData, CompactRow } from '../types';
@@ -151,26 +151,60 @@ function isVideoUrl(url: string): boolean {
 }
 
 function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
-  const thumbVideoRef = useRef<HTMLVideoElement>(null);
   const materialVideoRef = useRef<HTMLVideoElement>(null);
   const materialContainerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [thumbSrc, setThumbSrc] = useState<string | null>(null);
   const hasVideo = isVideoUrl(row.ml);
 
-  const handleThumbMouseEnter = () => {
-    if (thumbVideoRef.current) {
-      thumbVideoRef.current.currentTime = 0;
-      thumbVideoRef.current.load();
-      thumbVideoRef.current.play().catch(() => {});
-    }
-  };
+  // 用隐藏 video + canvas 截取视频首帧作为正方形商品主图
+  useEffect(() => {
+    if (!hasVideo) return;
+    const video = document.createElement('video');
+    video.crossOrigin = 'anonymous';
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = 'auto';
+    video.src = `${row.ml}#t=2`;
 
-  const handleThumbMouseLeave = () => {
-    if (thumbVideoRef.current) {
-      thumbVideoRef.current.pause();
-    }
-  };
+    const handleLoaded = () => {
+      // 等一帧确保画面渲染
+      requestAnimationFrame(() => {
+        try {
+          const vw = video.videoWidth;
+          const vh = video.videoHeight;
+          if (!vw || !vh) return;
+          // 取正方形：从视频中心裁切
+          const size = Math.min(vw, vh);
+          const sx = (vw - size) / 2;
+          const sy = (vh - size) / 2;
+          const canvas = document.createElement('canvas');
+          canvas.width = 160; // 2x 分辨率
+          canvas.height = 160;
+          const ctx = canvas.getContext('2d');
+          if (ctx) {
+            ctx.drawImage(video, sx, sy, size, size, 0, 0, 160, 160);
+            setThumbSrc(canvas.toDataURL('image/jpeg', 0.85));
+          }
+        } catch {
+          // 跨域等错误：降级为不显示
+        } finally {
+          video.src = '';
+          video.load();
+        }
+      });
+    };
+
+    video.addEventListener('loadeddata', handleLoaded, { once: true });
+    video.load();
+
+    return () => {
+      video.removeEventListener('loadeddata', handleLoaded);
+      video.src = '';
+      video.load();
+    };
+  }, [hasVideo, row.ml]);
 
   // 素材列：点击开始播放（放大250%）/ 暂停（恢复原位）
   const handleMaterialClick = (e: React.MouseEvent) => {
@@ -234,30 +268,18 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
         </span>
       </td>
       <td className="ranking-td text-center">
-        <div
-          className="w-20 h-20 rounded-lg bg-gray-100 mx-auto overflow-hidden relative cursor-pointer group/thumb"
-          onMouseEnter={handleThumbMouseEnter}
-          onMouseLeave={handleThumbMouseLeave}
-        >
-          {hasVideo ? (
-            <>
-              <video
-                ref={thumbVideoRef}
-                src={`${row.ml}#t=2`}
-                className="w-full h-full object-cover select-none"
-                muted
-                loop
-                playsInline
-                preload="none"
-                controlsList="nodownload"
-                onContextMenu={(e) => e.preventDefault()}
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity pointer-events-none">
-                <svg className="w-6 h-6 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </>
+        <div className="w-20 h-20 rounded-lg bg-gray-100 mx-auto overflow-hidden relative">
+          {thumbSrc ? (
+            <img
+              src={thumbSrc}
+              alt={row.pn}
+              className="w-full h-full object-cover select-none"
+              draggable={false}
+            />
+          ) : hasVideo ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-100">
+              <div className="w-5 h-5 border-2 border-gray-300 border-t-primary-500 rounded-full animate-spin" />
+            </div>
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 border border-dashed border-gray-200 rounded-lg">
               <span className="text-xl text-gray-300">📷</span>

@@ -12,7 +12,7 @@ import path from 'path';
 import { createReadStream } from 'fs';
 import readline from 'readline';
 
-// CSV 列名
+// CSV 列名（标准格式 - 含KPI三级行业和素材链接）
 const COL_INDUSTRY = 'KPI三级行业';
 const COL_CATEGORY = '商品统一类目V2(一级～四级)';
 const COL_DPA_NAME = 'DPA商品名称';
@@ -23,6 +23,9 @@ const COL_VIDEO_3S_RATE = '视频3秒完播率(%)';
 const COL_AVG_PLAY_DURATION = '平均播放时长(毫秒精度)(s)';
 const COL_CTR = 'ctr(%)';
 const COL_MATERIAL_MD5 = '素材MD5示意(预览)(翻译后)';
+
+// 新格式列名（无KPI三级行业、无素材链接，有视频号名称）
+const COL_VIDEONAME = '视频号名称';
 
 /**
  * 行业整合映射：将细分行业合并
@@ -74,6 +77,43 @@ function reclassifyOther(productName) {
     }
   }
   // 兜底：无法分类的仍归为"其他"
+  return '其他';
+}
+
+/**
+ * 从商品统一类目推断行业（当数据集没有KPI三级行业列时使用）
+ * 类目格式：服饰鞋包-女装-xxx 或 运动户外-户外服装/运动服装-xxx
+ */
+function inferIndustryFromCategory(category) {
+  if (!category) return '其他';
+  const cat = category.trim();
+  // 一级类目映射
+  if (cat.startsWith('服饰鞋包-内衣裤袜') || cat.startsWith('服饰鞋包-内衣裤袜/睡衣')) return '贴身衣物';
+  if (cat.startsWith('服饰鞋包-女装')) return '女装';
+  if (cat.startsWith('服饰鞋包-男装')) return '男装';
+  if (cat.startsWith('服饰鞋包-女鞋')) return '箱包鞋靴';
+  if (cat.startsWith('服饰鞋包-男鞋')) return '箱包鞋靴';
+  if (cat.startsWith('服饰鞋包-童装')) return '综合服饰';
+  if (cat.startsWith('服饰鞋包-童鞋')) return '箱包鞋靴';
+  if (cat.startsWith('服饰鞋包-箱包皮具')) return '箱包鞋靴';
+  if (cat.startsWith('服饰鞋包-服饰配件')) return '箱包鞋靴';
+  if (cat.startsWith('服饰鞋包-眼镜')) return '箱包鞋靴';
+  if (cat.startsWith('运动户外-户外服装') || cat.startsWith('运动户外-户外鞋靴')) return '运动鞋服';
+  if (cat.startsWith('运动户外-户外照明') || cat.startsWith('运动户外-露营') || cat.startsWith('运动户外-骑行') || cat.startsWith('运动户外-登山')) return '运动用品';
+  if (cat.startsWith('运动户外-')) return '运动用品';
+  if (cat.startsWith('珠宝/首饰/手表-')) return '品牌珠宝饰品';
+  if (cat.startsWith('奢侈品-')) return '潮奢鞋服包';
+  if (cat.startsWith('母婴用品-婴童服') || cat.startsWith('母婴用品-孕产妇服')) return '综合服饰';
+  if (cat.startsWith('母婴用品-')) return '其他';
+  if (cat.startsWith('美妆护肤-')) return '其他';
+  if (cat.startsWith('个护清洁-')) return '其他';
+  if (cat.startsWith('日用百货-')) return '其他';
+  if (cat.startsWith('食品饮料-') || cat.startsWith('酒类-') || cat.startsWith('生鲜-')) return '其他';
+  if (cat.startsWith('家用电器-') || cat.startsWith('家具-') || cat.startsWith('家装建材-')) return '其他';
+  if (cat.startsWith('文玩收藏-')) return '其他';
+  if (cat.startsWith('手机通讯-') || cat.startsWith('图书-') || cat.startsWith('玩具-')) return '其他';
+  if (cat.startsWith('医疗器械-') || cat.startsWith('医药健康-')) return '其他';
+  if (cat.startsWith('农林牧渔-') || cat.startsWith('学习/办公用品-') || cat.startsWith('少儿兴趣-') || cat.startsWith('成人兴趣-') || cat.startsWith('职业技能-')) return '其他';
   return '其他';
 }
 
@@ -259,6 +299,8 @@ async function processCSV(csvPath, weekLabel) {
   let headers = null;
   let lineCount = 0;
   let isShifted = false; // 列偏移标记
+  let hasIndustryCol = false; // 是否有KPI三级行业列
+  let hasMaterialCol = false; // 是否有素材链接列
 
   // 按DPA商品名称去重（保留消耗最大的行）
   const dpaMap = new Map(); // dpaName -> rowObject
@@ -285,21 +327,34 @@ async function processCSV(csvPath, weekLabel) {
       row[headers[i]] = values[i];
     }
 
-    // 在第一条数据行检测列偏移
+    // 在第一条数据行检测列偏移和数据格式
     if (lineCount === 1) {
-      const materialVal = (row[COL_MATERIAL_MD5] || '').trim();
-      // 如果"翻译后"列是纯数字（不是URL），说明列偏移了
-      if (materialVal && !materialVal.startsWith('http') && !isNaN(parseFloat(materialVal))) {
-        isShifted = true;
-        console.log('⚠️ 检测到列偏移：素材MD5示意(预览)(翻译后) 不是URL，启用偏移映射');
+      hasIndustryCol = headers.includes(COL_INDUSTRY);
+      hasMaterialCol = headers.includes(COL_MATERIAL_MD5);
+      if (!hasIndustryCol) {
+        console.log('⚠️ 无KPI三级行业列，将从商品类目推断行业');
+      }
+      if (!hasMaterialCol) {
+        console.log('⚠️ 无素材链接列，将不包含视频链接');
+      }
+      if (hasMaterialCol) {
+        const materialVal = (row[COL_MATERIAL_MD5] || '').trim();
+        // 如果"翻译后"列是纯数字（不是URL），说明列偏移了
+        if (materialVal && !materialVal.startsWith('http') && !isNaN(parseFloat(materialVal))) {
+          isShifted = true;
+          console.log('⚠️ 检测到列偏移：素材MD5示意(预览)(翻译后) 不是URL，启用偏移映射');
+        } else {
+          console.log('✅ 列映射正常');
+        }
       } else {
-        console.log('✅ 列映射正常');
+        console.log('✅ 列映射正常（无素材列，跳过偏移检测）');
       }
     }
 
     const rawIndustry = (row[COL_INDUSTRY] || '').trim();
     const category = (row[COL_CATEGORY] || '').trim();
     const dpaName = (row[COL_DPA_NAME] || '').trim();
+    const videoName = (row[COL_VIDEONAME] || '').trim();
 
     // 根据是否偏移选择正确的列
     const getCol = (colName) => {
@@ -310,15 +365,27 @@ async function processCSV(csvPath, weekLabel) {
     };
     
     // 素材链接：偏移时只有MD5，正常时从"翻译后"列取URL
-    const materialMD5 = (row['素材MD5示意(预览)'] || '').trim();
-    const materialLink = isShifted ? '' : (row[COL_MATERIAL_MD5] || '').trim();
+    const materialMD5 = hasMaterialCol ? (row['素材MD5示意(预览)'] || '').trim() : '';
+    const materialLink = hasMaterialCol ? (isShifted ? '' : (row[COL_MATERIAL_MD5] || '').trim()) : '';
     
     // 跳过汇总行、商品名为空/"空"的行
-    if (rawIndustry === '整体' || !dpaName || dpaName === '空') continue;
+    // 新格式中第一列是视频号名称，汇总行特征是视频号名称为"整体"
+    if ((hasIndustryCol && rawIndustry === '整体') || (!hasIndustryCol && videoName === '整体') || !dpaName || dpaName === '空') continue;
     
-    // 整合行业名称（"空"行业也走重分类）
-    const normalizedRawIndustry = (rawIndustry === '空') ? '其他' : rawIndustry;
-    const industry = normalizeIndustry(normalizedRawIndustry, dpaName);
+    // 整合行业名称
+    let industry;
+    if (hasIndustryCol && rawIndustry && rawIndustry !== '空') {
+      industry = normalizeIndustry(rawIndustry, dpaName);
+    } else {
+      // 没有KPI三级行业列，从类目推断，再用重分类优化
+      const inferredFromCat = inferIndustryFromCategory(category);
+      // 如果类目推断为"其他"，再用商品名称重分类
+      if (inferredFromCat === '其他') {
+        industry = normalizeIndustry('其他', dpaName);
+      } else {
+        industry = inferredFromCat;
+      }
+    }
     
     const consumption = toNum(getCol(COL_CONSUMPTION));
 
@@ -377,8 +444,8 @@ async function processCSV(csvPath, weekLabel) {
       const ctr = toNum(getCol(COL_CTR));
       const materialLink = row._materialLink || '';
 
-      // 跳过无素材链接的数据行
-      if (!materialLink) continue;
+      // 新格式无素材链接时仍保留数据（ml 为空字符串）
+      // 旧格式有素材链接时必须保留
 
       if (category) categories.add(category);
 

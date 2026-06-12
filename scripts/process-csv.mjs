@@ -302,8 +302,10 @@ async function processCSV(csvPath, weekLabel) {
   let hasIndustryCol = false; // 是否有KPI三级行业列
   let hasMaterialCol = false; // 是否有素材链接列
 
-  // 按DPA商品名称去重（保留消耗最大的行）
-  const dpaMap = new Map(); // dpaName -> rowObject
+  // 按DPA商品名称去重：优先保留有视频链接的最高消耗素材
+  // 同一商品可能有多个素材，最高消耗的未必有视频链接
+  // 策略：有链接的素材中取消耗最大的；若无任何链接，则取消耗最大的
+  const dpaMap = new Map(); // dpaName -> { bestWithLink, bestWithoutLink }
 
   for await (const line of rl) {
     const trimmed = line.replace(/\r$/, '');
@@ -388,26 +390,54 @@ async function processCSV(csvPath, weekLabel) {
     }
     
     const consumption = toNum(getCol(COL_CONSUMPTION));
+    const hasLink = !!materialLink;
+
+    const entry = {
+      ...row,
+      _consumption: consumption,
+      _normalizedIndustry: industry,
+      _materialLink: materialLink,
+      _materialMD5: materialMD5,
+      _isShifted: isShifted,
+      _hasLink: hasLink,
+    };
 
     const existing = dpaMap.get(dpaName);
-    if (!existing || consumption > existing._consumption) {
+    if (!existing) {
       dpaMap.set(dpaName, {
-        ...row,
-        _consumption: consumption,
-        _normalizedIndustry: industry,
-        _materialLink: materialLink,
-        _materialMD5: materialMD5,
-        _isShifted: isShifted,
+        bestWithLink: hasLink ? entry : null,
+        bestWithoutLink: hasLink ? null : entry,
       });
+    } else {
+      // 更新有链接的最佳素材
+      if (hasLink) {
+        if (!existing.bestWithLink || consumption > existing.bestWithLink._consumption) {
+          existing.bestWithLink = entry;
+        }
+      } else {
+        // 更新无链接的最佳素材
+        if (!existing.bestWithoutLink || consumption > existing.bestWithoutLink._consumption) {
+          existing.bestWithoutLink = entry;
+        }
+      }
     }
   }
 
+  // 最终选取：优先有链接的，其次无链接的
+  const finalMap = new Map();
+  for (const [dpaName, { bestWithLink, bestWithoutLink }] of dpaMap) {
+    finalMap.set(dpaName, bestWithLink || bestWithoutLink);
+  }
+
   console.log(`总行数: ${lineCount}`);
-  console.log(`去重后商品数: ${dpaMap.size}`);
+  console.log(`去重后商品数: ${finalMap.size}`);
+  const withLink = [...finalMap.values()].filter(r => r._hasLink).length;
+  const withoutLink = finalMap.size - withLink;
+  console.log(`有视频链接: ${withLink}，无视频链接: ${withoutLink}`);
 
   // 按行业分组取 TOP100（每个行业最多100条素材）
   const industryGroups = new Map();
-  for (const [, row] of dpaMap) {
+  for (const [, row] of finalMap) {
     const industry = row._normalizedIndustry || (row[COL_INDUSTRY] || '').trim();
     if (!industry) continue;
     if (!industryGroups.has(industry)) industryGroups.set(industry, []);

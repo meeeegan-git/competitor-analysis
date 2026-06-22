@@ -1,5 +1,13 @@
 [
   {
+    "week": "06.15-06.21",
+    "file": "week-06.15-06.21.json",
+    "generatedAt": "2026-06-22T03:38:21.899Z",
+    "totalCount": 835,
+    "categoryCount": 176,
+    "industryCount": 14
+  },
+  {
     "week": "06.06-06.12",
     "file": "week-06.06-06.12.json",
     "generatedAt": "2026-06-12T09:31:16.769Z",

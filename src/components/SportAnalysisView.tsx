@@ -101,7 +101,7 @@ const DIMENSIONS: { key: DimKey; label: string; desc: string; color: string; bg:
   { key: 'role', label: '出镜角色', desc: '谁在视频里完成种草/演示', color: 'text-indigo-700', bg: 'bg-indigo-50' },
   { key: 'focus', label: '核心卖点', desc: '主打哪类产品利益点', color: 'text-green-700', bg: 'bg-green-50' },
   { key: 'proof', label: '信任证明', desc: '用什么证据降低购买顾虑', color: 'text-amber-700', bg: 'bg-amber-50' },
-  { key: 'script', label: '脚本范式', desc: '整条素材的内容骨架', color: 'text-rose-700', bg: 'bg-rose-50' },
+  { key: 'script', label: '脚本骨架', desc: '整条素材的内容组织方式', color: 'text-rose-700', bg: 'bg-rose-50' },
 ];
 
 export default function SportAnalysisView({ data }: { data: AnalysisData }) {
@@ -116,7 +116,11 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
 
       <TimelineValidation frameStats={data.frameStats} />
 
-      <ParadigmSection title={`${data.name}可复刻脚本范式`} paradigms={data.paradigms} />
+      <CreativeFormulaSection data={data} />
+
+      <CombinationStrategySection data={data} />
+
+      <ParadigmSection title={`${data.name}可复刻脚本骨架`} paradigms={data.paradigms} />
 
       <MaterialList
         title={`${data.name} TOP50 爆款素材逐帧拆解`}
@@ -146,7 +150,7 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
 
       <ElementValidation data={data.apparelBenchmark} title="服饰大盘可借鉴元素：数据占比 + 代表帧" compact />
       <TimelineValidation frameStats={data.apparelBenchmark.frameStats} compact />
-      <ParadigmSection title="服饰大盘可借鉴脚本范式" paradigms={data.apparelBenchmark.paradigms} compact />
+      <ParadigmSection title="服饰大盘可借鉴脚本骨架" paradigms={data.apparelBenchmark.paradigms} compact />
       <MaterialList
         title="服饰大盘 TOP50 爆款素材逐帧拆解"
         subtitle="这些素材已排除运动鞋服/运动用品自身，用来找跨品类可迁移的钩子、场景、证明方式和收口节奏。"
@@ -312,11 +316,277 @@ function TimelineValidation({ frameStats, compact = false }: { frameStats: Frame
   );
 }
 
+function CreativeFormulaSection({ data }: { data: AnalysisData }) {
+  const formulas = data.paradigms.slice(0, 5).map((p, idx) => {
+    const example = data.topItems.find(item => item.rank === p.exampleRank) || data.topItems[idx];
+    const mainFrames = example?.keyframes.filter(frame => [1, 3, 5, 9, 13, 15].includes(frame.time)) || [];
+    return { ...p, example, mainFrames, index: idx + 1 };
+  });
+
+  return (
+    <section className="glass-card p-6">
+      <div className="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <h2 className="text-xl font-bold text-gray-800">{data.name}爆款创意公式</h2>
+          <p className="text-sm text-gray-500 mt-1">
+            借鉴参考页的“公式化拆解”方式，但不照搬名称：每个公式都由TOP50里的关键元素组合、消耗占比和代表素材关键帧共同验证。
+          </p>
+        </div>
+        <div className="px-3 py-2 rounded-xl bg-primary-50 text-primary-700 text-xs font-medium whitespace-nowrap">
+          公式 = 钩子 × 画面载体 × 场景 × 证明 × 收口
+        </div>
+      </div>
+
+      <div className="space-y-5">
+        {formulas.map(formula => {
+          if (!formula.example) return null;
+          return (
+            <div key={`${formula.script}-${formula.hook}-${formula.role}`} className="rounded-2xl bg-white border border-gray-100 overflow-hidden">
+              <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2.5 py-1 rounded-lg bg-primary-600 text-white text-xs font-bold">创意公式 {formula.index}</span>
+                      <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-xs font-semibold">消耗贡献 {formula.costShare}%</span>
+                      <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-xs">样本 {formula.count} 条</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      {formula.hook} × {formula.example.tags.visual} × {formula.example.tags.scene}
+                    </h3>
+                    <p className="text-sm text-gray-500 mt-1">
+                      代表素材：#{formula.example.rank} {formula.example.pn}
+                    </p>
+                  </div>
+                  <div className="text-right text-xs text-gray-400">
+                    <p>CTR {formula.example.ctr}%</p>
+                    <p>3秒完播 {formula.example.vtr}%</p>
+                    <p>播放时长 {formula.example.dur}s</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
+                <div className="lg:col-span-5">
+                  <p className="text-sm font-bold text-gray-800 mb-2">关键帧证据</p>
+                  <FormulaScreenshotStrip item={formula.example} frames={formula.mainFrames} />
+                </div>
+
+                <div className="lg:col-span-4 space-y-3">
+                  <FormulaBlock
+                    title="爆款关键元素"
+                    items={[
+                      `前3秒钩子：${formula.hook}`,
+                      `出镜/角色：${formula.role}`,
+                      `视觉载体：${formula.example.tags.visual}`,
+                      `信任证明：${formula.example.tags.proof}`,
+                    ]}
+                  />
+                  <FormulaBlock
+                    title="按这个顺序拍"
+                    items={buildFormulaSteps(formula.example)}
+                  />
+                </div>
+
+                <div className="lg:col-span-3 space-y-3">
+                  <div className="rounded-xl bg-amber-50 border border-amber-100 p-3">
+                    <p className="text-xs font-bold text-amber-700">不变骨架</p>
+                    <p className="text-xs text-amber-700 leading-relaxed mt-1">
+                      {formula.hook}抓停 → {formula.example.tags.focus}证据 → {formula.example.tags.scene}代入 → {formula.example.tags.proof} → 权益/行动收口
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-green-50 border border-green-100 p-3">
+                    <p className="text-xs font-bold text-green-700">可替换变量</p>
+                    <p className="text-xs text-green-700 leading-relaxed mt-1">
+                      产品SKU、目标人群、出镜角色、使用场景、证明方式、价格权益都可替换；但“钩子→证据→场景→信任→收口”的顺序不要变。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function FormulaScreenshotStrip({ item, frames }: { item: MaterialItem; frames: KeyframeAnalysis[] }) {
+  const [shots, setShots] = useState<Record<number, string>>({});
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const captureIndexRef = useRef(0);
+  const timesKey = frames.map(frame => frame.time).join(',');
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas || !timesKey) return;
+
+    const times = timesKey.split(',').map(Number);
+    setShots({});
+    captureIndexRef.current = 0;
+
+    const seek = () => {
+      const time = times[captureIndexRef.current];
+      if (Number.isFinite(time)) {
+        const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
+        video.currentTime = safeTime;
+      }
+    };
+
+    const capture = () => {
+      const time = times[captureIndexRef.current];
+      if (!Number.isFinite(time)) return;
+      try {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+        canvas.width = video.videoWidth || 360;
+        canvas.height = video.videoHeight || 640;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.68);
+        if (dataUrl && dataUrl !== 'data:,') setShots(prev => ({ ...prev, [time]: dataUrl }));
+      } catch {
+        return;
+      }
+      captureIndexRef.current += 1;
+      if (captureIndexRef.current < times.length) seek();
+    };
+
+    video.addEventListener('loadedmetadata', seek);
+    video.addEventListener('seeked', capture);
+    video.load();
+    return () => {
+      video.removeEventListener('loadedmetadata', seek);
+      video.removeEventListener('seeked', capture);
+    };
+  }, [item.ml, timesKey]);
+
+  return (
+    <div>
+      <video ref={videoRef} src={item.ml} className="hidden" crossOrigin="anonymous" muted playsInline preload="auto" />
+      <canvas ref={canvasRef} className="hidden" />
+      <div className="grid grid-cols-6 gap-2">
+        {frames.map(frame => (
+          <div key={frame.time} className="rounded-lg overflow-hidden border border-gray-100 bg-gray-900">
+            <div className="h-28 relative flex items-center justify-center">
+              {shots[frame.time] ? (
+                <img src={shots[frame.time]} alt={`${frame.time}s`} className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-[10px] text-white/60">截帧中</span>
+              )}
+              <span className="absolute left-1 top-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[10px] font-bold">{frame.time}s</span>
+            </div>
+            <div className="bg-white p-1.5">
+              <p className="text-[10px] text-gray-700 font-medium truncate">{frame.phase}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FormulaBlock({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-xl bg-gray-50 border border-gray-100 p-3">
+      <p className="text-xs font-bold text-gray-800 mb-2">{title}</p>
+      <ul className="space-y-1.5">
+        {items.map(item => (
+          <li key={item} className="text-xs text-gray-600 leading-snug flex gap-1.5">
+            <span className="text-primary-500 flex-shrink-0">•</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function buildFormulaSteps(item: MaterialItem) {
+  return [
+    `1秒：${item.keyframes.find(f => f.time === 1)?.objective || item.tags.hook}`,
+    `3秒：把${item.tags.focus}和用户关系讲清楚`,
+    `5-9秒：用${item.tags.visual}/${item.tags.proof}证明卖点`,
+    `13-15秒：权益信息与行动入口同屏收口`,
+  ];
+}
+
+function CombinationStrategySection({ data }: { data: AnalysisData }) {
+  const topFormula = data.paradigms[0];
+  const secondFormula = data.paradigms[1];
+  const apparelFormula = data.apparelBenchmark.paradigms[0];
+  const topHook = data.elementStats.hook?.[0]?.label || '高频钩子';
+  const topProof = data.elementStats.proof?.[0]?.label || '信任证明';
+  const apparelHook = data.apparelBenchmark.elementStats.hook?.[0]?.label || '服饰大盘钩子';
+
+  const strategies = [
+    {
+      title: '启动测试组合',
+      badge: '先跑通',
+      body: `优先用“${topHook} + ${topProof}”做3-5条短素材，保持同一产品，替换开场截图和口播角度，验证CTR与3秒完播。`,
+      steps: ['1个主推SKU', '3个不同前3秒钩子', '同一套权益收口', '看CTR/3秒完播决定放量'],
+    },
+    {
+      title: '放量复制组合',
+      badge: '扩大素材池',
+      body: `围绕“${topFormula?.script || '最高贡献脚本'}”复制多条：不改骨架，只替换人设、场景和证明方式，避免每条都重新发明脚本。`,
+      steps: ['骨架不变', '人设替换', '场景替换', '证明替换'],
+    },
+    {
+      title: '服饰大盘迁移组合',
+      badge: '跨类目借鉴',
+      body: `从服饰大盘借“${apparelHook}”的开场方式，但中段必须换成${data.name}自己的产品证据，避免只学表面穿搭/颜值。`,
+      steps: ['大盘钩子', `${data.name}卖点`, '本品使用场景', '本品权益收口'],
+    },
+    {
+      title: '资源受限组合',
+      badge: '低成本可拍',
+      body: `如果没有明星/达人资源，优先选择“${secondFormula?.hook || topHook} + 素人/店主讲解 + 细节证明”的组合，把预算放在关键帧画面和字幕。`,
+      steps: ['素人出镜', '产品细节', '对比证明', '清晰字幕'],
+    },
+    {
+      title: '高客单/强信任组合',
+      badge: '增强说服',
+      body: `高客单商品不要只拼前3秒，应把9秒左右的“${topProof}”做重：口碑、认证、材质实验、使用前后对比至少选一种。`,
+      steps: ['钩子不要夸张', '证明要可视化', '价格解释价值', '售后降低风险'],
+    },
+  ];
+
+  return (
+    <section className="glass-card p-6">
+      <div className="flex items-center justify-between gap-4 mb-5">
+        <div>
+          <h2 className="text-xl font-bold text-gray-800">组合策略建议</h2>
+          <p className="text-sm text-gray-500 mt-1">把创意公式组合成可执行的拍摄与投放策略：先测钩子，再复制骨架，最后用服饰大盘元素扩展素材池。</p>
+        </div>
+        <span className="px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold">输出给编导/投手/广告主</span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        {strategies.map((strategy, idx) => (
+          <div key={strategy.title} className="rounded-2xl bg-white border border-gray-100 p-4 hover:shadow-md transition-shadow">
+            <div className="flex items-center justify-between mb-3">
+              <span className="w-7 h-7 rounded-lg bg-primary-500 text-white text-xs font-bold flex items-center justify-center">{idx + 1}</span>
+              <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-[10px] font-medium">{strategy.badge}</span>
+            </div>
+            <h3 className="text-sm font-bold text-gray-800">{strategy.title}</h3>
+            <p className="text-xs text-gray-600 leading-relaxed mt-2">{strategy.body}</p>
+            <div className="mt-3 space-y-1.5">
+              {strategy.steps.map(step => (
+                <div key={step} className="text-[10px] text-gray-500 bg-gray-50 rounded px-2 py-1">{step}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ParadigmSection({ title, paradigms, compact = false }: { title: string; paradigms: Paradigm[]; compact?: boolean }) {
   return (
     <section className="glass-card p-6">
       <h2 className="text-lg font-bold text-gray-800 mb-1">{title}</h2>
-      <p className="text-sm text-gray-500 mb-5">脚本范式按「脚本结构 × 前3秒钩子 × 出镜角色」聚合，并用消耗占比排序。</p>
+      <p className="text-sm text-gray-500 mb-5">脚本骨架按「脚本结构 × 前3秒钩子 × 出镜角色」聚合，并用消耗占比排序。</p>
       <div className={`grid ${compact ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-4`}>
         {paradigms.slice(0, compact ? 4 : 8).map((p, idx) => (
           <div key={`${p.script}-${p.hook}-${p.role}`} className="rounded-xl bg-white border border-gray-100 p-4 hover:shadow-md transition-shadow">

@@ -1,0 +1,488 @@
+{
+  "name": "运动鞋服",
+  "total": 379,
+  "weeks": [
+    "06.22-06.28",
+    "06.15-06.21",
+    "06.06-06.12",
+    "05.30-06.05"
+  ],
+  "dimensions": {
+    "hook": [
+      {
+        "label": "应季新品展示",
+        "count": 139,
+        "pct": 37
+      },
+      {
+        "label": "产品特写开场",
+        "count": 78,
+        "pct": 21
+      },
+      {
+        "label": "明星同款引入",
+        "count": 78,
+        "pct": 21
+      },
+      {
+        "label": "痛点场景切入",
+        "count": 64,
+        "pct": 17
+      },
+      {
+        "label": "强视觉冲击开场",
+        "count": 10,
+        "pct": 3
+      },
+      {
+        "label": "爆款数据背书",
+        "count": 5,
+        "pct": 1
+      },
+      {
+        "label": "品质认证背书",
+        "count": 3,
+        "pct": 1
+      },
+      {
+        "label": "高端质感开场",
+        "count": 2,
+        "pct": 1
+      }
+    ],
+    "persona": [
+      {
+        "label": "运动达人",
+        "count": 138,
+        "pct": 36
+      },
+      {
+        "label": "男性模特",
+        "count": 106,
+        "pct": 28
+      },
+      {
+        "label": "女性模特",
+        "count": 84,
+        "pct": 22
+      },
+      {
+        "label": "情侣组合",
+        "count": 28,
+        "pct": 7
+      },
+      {
+        "label": "青少年/儿童",
+        "count": 21,
+        "pct": 6
+      },
+      {
+        "label": "中年男性",
+        "count": 2,
+        "pct": 1
+      }
+    ],
+    "sellingPoint": [
+      {
+        "label": "轻薄透气",
+        "count": 209,
+        "pct": 55
+      },
+      {
+        "label": "高性价比",
+        "count": 56,
+        "pct": 15
+      },
+      {
+        "label": "百搭通勤",
+        "count": 34,
+        "pct": 9
+      },
+      {
+        "label": "修身显瘦",
+        "count": 16,
+        "pct": 4
+      },
+      {
+        "label": "户外防护",
+        "count": 15,
+        "pct": 4
+      },
+      {
+        "label": "保暖御寒",
+        "count": 15,
+        "pct": 4
+      },
+      {
+        "label": "优质面料",
+        "count": 13,
+        "pct": 3
+      },
+      {
+        "label": "品质做工",
+        "count": 11,
+        "pct": 3
+      },
+      {
+        "label": "时尚设计",
+        "count": 8,
+        "pct": 2
+      },
+      {
+        "label": "科技缓震",
+        "count": 1,
+        "pct": 0
+      },
+      {
+        "label": "舒适体验",
+        "count": 1,
+        "pct": 0
+      }
+    ],
+    "scriptStructure": [
+      {
+        "label": "快速展示型",
+        "count": 185,
+        "pct": 49
+      },
+      {
+        "label": "明星带货型",
+        "count": 61,
+        "pct": 16
+      },
+      {
+        "label": "痛点解决型",
+        "count": 59,
+        "pct": 16
+      },
+      {
+        "label": "产品展示型",
+        "count": 48,
+        "pct": 13
+      },
+      {
+        "label": "场景种草型",
+        "count": 18,
+        "pct": 5
+      },
+      {
+        "label": "快节奏展示型",
+        "count": 4,
+        "pct": 1
+      },
+      {
+        "label": "详细讲解型",
+        "count": 4,
+        "pct": 1
+      }
+    ]
+  },
+  "topCombos": [
+    {
+      "script": "快速展示型",
+      "hook": "应季新品展示",
+      "persona": "男性模特",
+      "count": 33,
+      "pct": 9,
+      "example": {
+        "pn": "Cardanro/卡丹路冰丝网眼夏季速干防晒男运动男士夏季裤子薄款",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53nqbaqaacyqaer4q7x5vbq3aebbwaecca.f0.mp4?dis_k=ab95b7dd7901dbfde2105f3bc4851da7&dis_t=1780301998&m=81b2be27bc1f8fd4de663bde1dd25c1c&sha256=ee409df7b3c6469ac1e90d67387b926f68c15f113cbc116155cc3549bb950e34",
+        "cs": 22051,
+        "sellingPoint": "轻薄透气"
+      }
+    },
+    {
+      "script": "快速展示型",
+      "hook": "应季新品展示",
+      "persona": "运动达人",
+      "count": 28,
+      "pct": 7,
+      "example": {
+        "pn": "MRSLUXE 凉感大U网纱户外运动透气轻薄夏季户外骑行服",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fmajeaaamuakbzqmofvbwkyesivqbesa.f0.mp4?dis_k=da19dd96edb62a9110bf32e7408e5294&dis_t=1779184221&m=75db912fa630ca7eca68a6bc009fd1f9",
+        "cs": 15609,
+        "sellingPoint": "轻薄透气"
+      }
+    },
+    {
+      "script": "快速展示型",
+      "hook": "产品特写开场",
+      "persona": "运动达人",
+      "count": 26,
+      "pct": 7,
+      "example": {
+        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "cs": 67174,
+        "sellingPoint": "高性价比"
+      }
+    },
+    {
+      "script": "快速展示型",
+      "hook": "产品特写开场",
+      "persona": "女性模特",
+      "count": 26,
+      "pct": 7,
+      "example": {
+        "pn": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53yyaniaaapuam7i74erurvrqe2tdabvca.f0.mp4?dis_k=6c0d6b9f5e679361c2d2104083f49f3b&dis_t=1779850657&m=6813685ae5c2b6b0983e1923744af23b&sha256=d9cd05e851f4d7f5ac8564d1edd5578ef58101e48b21d886d04b2f768931f7ac",
+        "cs": 7378,
+        "sellingPoint": "轻薄透气"
+      }
+    },
+    {
+      "script": "明星带货型",
+      "hook": "明星同款引入",
+      "persona": "运动达人",
+      "count": 25,
+      "pct": 7,
+      "example": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tibn6aaciqairz6q4jurrgqe36nafx2a.f0.mp4?dis_k=0173f9420d04e4aed385324f90e5efa7&dis_t=1778654244&m=2db26ef8db965ee404bfabeff7bb9c92&sha256=6bab121ec84ac992a3235c34467df0935c620d528b376e90235ebe8b614153b7",
+        "cs": 46811,
+        "sellingPoint": "高性价比"
+      }
+    },
+    {
+      "script": "明星带货型",
+      "hook": "明星同款引入",
+      "persona": "情侣组合",
+      "count": 24,
+      "pct": 6,
+      "example": {
+        "pn": "雅鹿夏季薄款真冰丝速干裤男女同款休闲运动弹力透气宽松透气百搭",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53diaemaaa4iapo6aht5vbugqeiynaarsa.f0.mp4?dis_k=06ebcc93eb99ae2f9fbdc486e1447966&dis_t=1778909725&m=769a9a90ca3d59b35e6daccd53ecb80c&sha256=ea764a05ac9eff248006e5fbf6d3f665c7e31b3630e044ed633f7dcc87168e4b",
+        "cs": 11068,
+        "sellingPoint": "轻薄透气"
+      }
+    },
+    {
+      "script": "快速展示型",
+      "hook": "产品特写开场",
+      "persona": "男性模特",
+      "count": 14,
+      "pct": 4,
+      "example": {
+        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+        "cs": 52315,
+        "sellingPoint": "轻薄透气"
+      }
+    },
+    {
+      "script": "痛点解决型",
+      "hook": "痛点场景切入",
+      "persona": "运动达人",
+      "count": 13,
+      "pct": 3,
+      "example": {
+        "pn": "（丫头推荐）蜂鸟综训运动速干透气弹力休闲裤-8566",
+        "ml": "",
+        "cs": 8470,
+        "sellingPoint": "轻薄透气"
+      }
+    }
+  ],
+  "examplesByDim": {
+    "hook": {
+      "产品特写开场": {
+        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "cs": 67174,
+        "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装"
+      },
+      "明星同款引入": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
+        "cs": 76138,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "应季新品展示": {
+        "pn": "Cardanro/卡丹路冰丝网眼夏季速干防晒男运动男士夏季裤子薄款",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53nqbaqaacyqaer4q7x5vbq3aebbwaecca.f0.mp4?dis_k=ab95b7dd7901dbfde2105f3bc4851da7&dis_t=1780301998&m=81b2be27bc1f8fd4de663bde1dd25c1c&sha256=ee409df7b3c6469ac1e90d67387b926f68c15f113cbc116155cc3549bb950e34",
+        "cs": 22051,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
+      },
+      "爆款数据背书": {
+        "pn": "【热卖爆款】凯乐石FUGA越野跑鞋男春夏户外防滑运动鞋透气轻便跑步鞋女EX3",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3much4aaej4aojao4trur4ziepzsqi7sa.f0.mp4?dis_k=aba587f678988dafa291eebc3989c057&dis_t=1777023156&m=bce444afd80d77c3ff35d4f39291b9eb&sha256=4c9418df50c2dfb30984168e9652e486291b607a7ec9147e9280d15ebef99c00",
+        "cs": 12244,
+        "ca": "运动户外-登山/攀岩/攀冰-登山鞋/徒步鞋/越野鞋"
+      },
+      "品质认证背书": {
+        "pn": "【舒云跑鞋】斯凯奇官方女鞋厚底耐磨轻便舒适缓震休闲风基础跑步鞋128650",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wyabqaaaj4amhgacwjvbvnqedc3aagca.f0.mp4?dis_k=0cdd30e1c857d877db3ffe2d6b0148ca&dis_t=1778572284&m=71eacdbe7d64f2ae33185342b24f96a7",
+        "cs": 3296,
+        "ca": "运动户外-户外鞋靴/运动鞋-跑步鞋"
+      },
+      "痛点场景切入": {
+        "pn": "（丫头推荐）蜂鸟综训运动速干透气弹力休闲裤-8566",
+        "ml": "",
+        "cs": 8470,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
+      },
+      "强视觉冲击开场": {
+        "pn": "【220克毛圈棉】夏款纯棉针织长裤男女款直口休闲裤跑步束脚运动裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3jaacgaaabeacvgx7dnurusaeeneaai2a.f0.mp4?dis_k=c1229858a04e1887737b359688d327b6&dis_t=1778321854&m=c50b1154ca731979bcce968783109a60&sha256=859e56c2d26d28e84834e33b4ccdb4c0c2fb44c380f8d0f8e0f1cf3bdc6872a6",
+        "cs": 1756,
+        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
+      },
+      "高端质感开场": {
+        "pn": "[高端定制]FORESTLIZARD直筒男女款舒适速干凉感防晒宽松伞兵裤运动长裤",
+        "ml": "",
+        "cs": 920,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
+      }
+    },
+    "persona": {
+      "运动达人": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
+        "cs": 76138,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "男性模特": {
+        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+        "cs": 52315,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
+      },
+      "女性模特": {
+        "pn": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536yabcaaawyafo4piwfurv5qech3aaeka.f0.mp4?dis_k=a49e0acc577749a5c88a538cb33bbc6a&dis_t=1776830223&m=2af438c32fde553bf5391d3d1f7af6f0&sha256=3997bdb12a82d882f48e90b80a4a332705583deb6a03286b2d9ede855db2af72",
+        "cs": 15692,
+        "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣"
+      },
+      "情侣组合": {
+        "pn": "雅鹿夏季薄款真冰丝速干裤男女同款休闲运动弹力透气宽松透气百搭",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53diaemaaa4iapo6aht5vbugqeiynaarsa.f0.mp4?dis_k=06ebcc93eb99ae2f9fbdc486e1447966&dis_t=1778909725&m=769a9a90ca3d59b35e6daccd53ecb80c&sha256=ea764a05ac9eff248006e5fbf6d3f665c7e31b3630e044ed633f7dcc87168e4b",
+        "cs": 11068,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
+      },
+      "青少年/儿童": {
+        "pn": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+        "cs": 16344,
+        "ca": "服饰鞋包-男装-裤子-牛仔裤"
+      },
+      "中年男性": {
+        "pn": "夏季网眼冰丝短裤男新款凉感透气套装中老年速干休闲运动短裤子",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53iyak6aaaeqahllqg7fvburqev5dabl2a.f0.mp4?dis_k=0370ff991693b3dc66444e0228f6451c&dis_t=1778837920&m=087440266ee7bf51ef20c23b4359761e&sha256=ec450bfdd39dfb4685720860ef0a1e8fdfc03689427df78e69e0eefbc3525943",
+        "cs": 476,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干衣裤套装"
+      }
+    },
+    "sellingPoint": {
+      "高性价比": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
+        "cs": 76138,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "轻薄透气": {
+        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+        "cs": 52315,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
+      },
+      "优质面料": {
+        "pn": "[618官方补贴可机洗7A级抗菌]2026新升级可机洗水洗真丝防晒口罩",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37iae4aaasiaf2x55kfurv6qej35aatsa.f0.mp4?dis_k=59c98148aec34a4d630a8480de7d01f9&dis_t=1773998955&m=2ce6a3d50b14eed4ca773002e384ddd7",
+        "cs": 12737,
+        "ca": "服饰鞋包-服饰配件/皮带/帽子/围巾-防晒服配-防晒口罩/防晒脖套"
+      },
+      "修身显瘦": {
+        "pn": "【杨幂同款】SIINSIIN白色喇叭裤时尚显瘦运动休闲鲨鱼微喇裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5344bxoaadxaamf6vqgrurrzyeo7tqg52a.f0.mp4?dis_k=49b7d49a085cbd36d997cc6d0a995623&dis_t=1773908364&m=13fc8423708728a00c5f71fd152a30a3&sha256=cc544f417faeb91a77adf1414ca0fac8ed5edebbde99530ab707929b9c09372a",
+        "cs": 8809,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "户外防护": {
+        "pn": "KAILAS凯乐石 博格达LT冲锋衣 防水防风通勤兼备",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53ambfcaacayajp4pm4vurqayekebqeuka.f0.mp4?dis_k=d478735846e99843e159d5eb306de3ee&dis_t=1777255945&m=7ea50fb9cfaffc87d74c479cfccd797b&sha256=7242d0be599fd8cfc26df912fc47c595f9100b4a2c552229b651ad7dd0aeb959",
+        "cs": 11132,
+        "ca": "运动户外-户外服装/运动服装-冲锋衣裤-冲锋衣"
+      },
+      "科技缓震": {
+        "pn": "【舒云跑鞋】斯凯奇官方女鞋厚底耐磨轻便舒适缓震休闲风基础跑步鞋128650",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wyabqaaaj4amhgacwjvbvnqedc3aagca.f0.mp4?dis_k=0cdd30e1c857d877db3ffe2d6b0148ca&dis_t=1778572284&m=71eacdbe7d64f2ae33185342b24f96a7",
+        "cs": 3296,
+        "ca": "运动户外-户外鞋靴/运动鞋-跑步鞋"
+      },
+      "百搭通勤": {
+        "pn": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53j4amqaaahmah5tq2x5vbutyezbhqbsca.f0.mp4?dis_k=d9970ebc275ff9a4b6957a2d1f9f33a4&dis_t=1780136523&m=eb2c92b4351b2d0435336493936848fb&sha256=c0e38c4c347e72ebc2e8a1c25567ccbbef27877bc4bfe128f9f74f49334cfe8f",
+        "cs": 9923,
+        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
+      },
+      "时尚设计": {
+        "pn": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+        "cs": 16344,
+        "ca": "服饰鞋包-男装-裤子-牛仔裤"
+      },
+      "保暖御寒": {
+        "pn": "UTO/悠途羊毛长袖春秋速干男款长袖女款运动户外跑步打底T恤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+        "cs": 7184,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
+      },
+      "品质做工": {
+        "pn": "新中式国潮大码男装t恤运动套装男宽松短袖短裤休闲男装搭配帅气",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3lqbckaacpeaic2a54jvbqxaeevoaejka.f0.mp4?dis_k=5fc88b518b2b9e816dee66a5e9884a2e&dis_t=1780458575&m=6448f700c9c15312aa1f3a475cc98b78&sha256=4462ed214fba71226718616876f89b1859079d3af76a92a37c208b94e36da9f4",
+        "cs": 2003,
+        "ca": "服饰鞋包-男装-套装/学生校服/工作制服-休闲套装"
+      },
+      "舒适体验": {
+        "pn": "拓路者女童喇叭裤26春秋季新款长裤儿童舒适运动微喇裤户外徒步裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gube6aacrualc7r6rnvbqniej42qet2a.f0.mp4?dis_k=e5c7bbe481c6d0f7ddb157559c017843&dis_t=1782382270&m=44648c386a5b4c2d9b197736faecf327",
+        "cs": 62,
+        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
+      }
+    },
+    "scriptStructure": {
+      "快速展示型": {
+        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "cs": 67174,
+        "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装"
+      },
+      "明星带货型": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tibn6aaciqairz6q4jurrgqe36nafx2a.f0.mp4?dis_k=0173f9420d04e4aed385324f90e5efa7&dis_t=1778654244&m=2db26ef8db965ee404bfabeff7bb9c92&sha256=6bab121ec84ac992a3235c34467df0935c620d528b376e90235ebe8b614153b7",
+        "cs": 46811,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "痛点解决型": {
+        "pn": "UTO/悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服春秋",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53yiadqaaaviajrni7rnvbvqqehdbaaoca.f0.mp4?dis_k=9dc30389e8ee9d5fcb50377d413a4263&dis_t=1780458180&m=eb7220d1e0e7546833b0a1dca17c8d5e&sha256=81928be9b59570e4e209797a0e0609b4b798892d6e3ddd10bed6632ab52cf30e",
+        "cs": 15716,
+        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
+      },
+      "产品展示型": {
+        "pn": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+        "cs": 35326,
+        "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣"
+      },
+      "快节奏展示型": {
+        "pn": "森马明星同款洞洞鞋网红凉鞋男夏季防滑防臭男士外穿包头沙滩拖鞋",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53fiabeaaageaalcqe2bvbukqecivaaesa.f0.mp4?dis_k=51b5bf5f3ab430b089a14abb2fcb3abc&dis_t=1778653206&m=2420d6c0099b85c953b1289eedd0adc8&sha256=5fcb11a8eefd20dfcfe9d6ccb07e795af44da083f5453a587646224a479185ac",
+        "cs": 1495,
+        "ca": "服饰鞋包-男鞋-凉鞋-洞洞鞋"
+      },
+      "场景种草型": {
+        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
+        "cs": 76138,
+        "ca": "服饰鞋包-女装-裤子-休闲裤"
+      },
+      "详细讲解型": {
+        "pn": "[泊伊尚品 品牌正品]无痕薄款高奢贴身透气外穿骑行裤女弹力修身运动服女骑行",
+        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmazcaabc4af3wjkhvvbxmyesgzqdeka.f0.mp4?dis_k=65f46c8dfbef6052964449f39e576dd7&dis_t=1781255340&m=81e68a4b9d069c51c82ecd0dfe548fe1&sha256=f3705d0950a911e48cb5a82f58765c8178985d743e4c370bf65cfd6b9dbeb6e5",
+        "cs": 147,
+        "ca": "运动户外-骑行运动-通用骑行装备-骑行服"
+      }
+    }
+  }
+}

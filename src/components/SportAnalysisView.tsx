@@ -357,25 +357,44 @@ function ValidatedBar({ item, rank, color }: { item: ElementStat; rank: number; 
 }
 
 function TimelineValidation({ frameStats, compact = false }: { frameStats: FrameStat[]; compact?: boolean }) {
+  const timeLabels: Record<number, { title: string; desc: string }> = {
+    1: { title: '抓停', desc: '先让用户停下来' },
+    3: { title: '确认利益', desc: '说明和用户的关系' },
+    5: { title: '卖点证据', desc: '把卖点变成画面' },
+    7: { title: '场景代入', desc: '展示真实使用场景' },
+    9: { title: '信任证明', desc: '放背书/口碑/数据' },
+    11: { title: '差异对比', desc: '解释为什么买它' },
+    13: { title: '权益加码', desc: '价格/赠品/活动' },
+    15: { title: '行动收口', desc: '明确点击或下单' },
+  };
+
   return (
     <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
       <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">KEYFRAME TIMELINE</p>
-      <h2 className="text-xl font-black text-gray-900 mb-1">关键帧时间线元素验证</h2>
-      <p className="text-sm text-gray-500 mb-5">按第1/3/5/7/9/11/13/15秒聚合TOP50素材的帧级元素，判断哪个时间点应该放什么信息。</p>
+      <h2 className="text-xl font-black text-gray-900 mb-1">关键帧信息排布建议</h2>
+      <p className="text-sm text-gray-500 mb-5">
+        这块不是占比统计，而是把TOP素材的逐帧拆解归纳成“每个关键秒应该放什么信息”。比例已去掉，避免误读。
+      </p>
       <div className={`grid ${compact ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-2 md:grid-cols-4 2xl:grid-cols-8'} gap-3`}>
-        {frameStats.map(fs => (
-          <div key={fs.time} className="rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-3.5">
-            <p className="text-sm font-bold text-primary-600 mb-2">{fs.time}s</p>
-            <div className="space-y-1.5">
-              {fs.topElements.slice(0, compact ? 3 : 4).map(el => (
-                <div key={el.label} className="flex items-center justify-between gap-1">
-                  <span className="text-[10px] text-gray-600 truncate">{el.label}</span>
-                  <span className="text-[10px] font-medium text-gray-400">{el.pct}%</span>
-                </div>
-              ))}
+        {frameStats.map(fs => {
+          const label = timeLabels[fs.time] || { title: '信息点', desc: '关键信息' };
+          return (
+            <div key={fs.time} className="rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-3.5">
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-sm font-black text-primary-600">{fs.time}s</p>
+                <span className="px-2 py-0.5 rounded-full bg-primary-50 text-primary-600 text-[10px] font-bold">{label.title}</span>
+              </div>
+              <p className="text-[10px] text-gray-400 mb-2">{label.desc}</p>
+              <div className="space-y-1.5">
+                {fs.topElements.slice(0, compact ? 3 : 4).map(el => (
+                  <div key={el.label} className="rounded-lg bg-white border border-gray-100 px-2 py-1 text-[10px] font-medium text-gray-700 truncate">
+                    {el.label}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

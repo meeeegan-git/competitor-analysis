@@ -104,6 +104,16 @@ const DIMENSIONS: { key: DimKey; label: string; desc: string; color: string; bg:
   { key: 'script', label: '脚本骨架', desc: '整条素材的内容组织方式', color: 'text-rose-700', bg: 'bg-rose-50' },
 ];
 
+const DIM_ICONS: Record<DimKey, string> = {
+  hook: '⚡',
+  visual: '🎥',
+  scene: '📍',
+  role: '👤',
+  focus: '💎',
+  proof: '🛡️',
+  script: '📝',
+};
+
 export default function SportAnalysisView({ data }: { data: AnalysisData }) {
   const [ownExpanded, setOwnExpanded] = useState<number | null>(0);
   const [benchExpanded, setBenchExpanded] = useState<number | null>(null);
@@ -250,68 +260,75 @@ function ReportHeader({ data }: { data: AnalysisData }) {
 function ElementValidation({ data, title, compact = false }: { data: AnalysisData | BenchmarkData; title: string; compact?: boolean }) {
   const [active, setActive] = useState<DimKey>('hook');
   const dim = DIMENSIONS.find(d => d.key === active)!;
-  const stats = data.elementStats[active] || [];
+  const stats = [...(data.elementStats[active] || [])].sort((a, b) => b.costShare - a.costShare);
   const first = stats[0];
 
   return (
-    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-      <div className="flex items-center justify-between gap-4 mb-6">
+    <section className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
+      <div className="flex items-center justify-between gap-4 mb-4">
         <div>
           <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">ELEMENT VALIDATION</p>
           <h2 className="text-xl font-black text-gray-900">{title}</h2>
-          <p className="text-sm text-gray-500 mt-1">占比=素材条数占比；消耗占比=该元素在TOP50内贡献的消耗占比。</p>
+          <p className="text-sm text-gray-500 mt-1">仅按消耗占比排序：该元素在TOP50内贡献的消耗占比。</p>
         </div>
         {first && (
           <div className={`px-4 py-2 rounded-xl ${dim.bg}`}>
-            <p className={`text-xs font-medium ${dim.color}`}>当前最高频</p>
-            <p className="text-sm font-bold text-gray-800">{first.label} · {first.pct}%</p>
+            <p className={`text-xs font-medium ${dim.color}`}>当前消耗最高</p>
+            <p className="text-sm font-bold text-gray-800">{first.label} · {first.costShare}%</p>
           </div>
         )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-3 mb-4">
         {DIMENSIONS.map(d => {
-          const top = data.elementStats[d.key]?.[0];
+          const top = [...(data.elementStats[d.key] || [])].sort((a, b) => b.costShare - a.costShare)[0];
           return (
             <button
               key={d.key}
               onClick={() => setActive(d.key)}
               className={`text-left rounded-2xl p-3.5 border transition-all cursor-pointer ${
-                active === d.key ? `${d.bg} border-current ${d.color} shadow-sm` : 'bg-gray-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
+                active === d.key ? `${d.bg} border-current ${d.color} shadow-sm ring-2 ring-current/10` : 'bg-gray-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
               }`}
             >
-              <p className={`text-xs font-semibold ${active === d.key ? d.color : 'text-gray-500'}`}>{d.label}</p>
-              <p className="text-xs text-gray-800 font-medium mt-1 truncate">{top?.label || '-'}</p>
-              <p className="text-[10px] text-gray-400 mt-0.5">{top?.pct || 0}% / 消耗{top?.costShare || 0}%</p>
+              <p className={`inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-black ${active === d.key ? `${d.bg} ${d.color}` : 'bg-white text-gray-500'}`}>
+                <span>{DIM_ICONS[d.key]}</span>{d.label}
+              </p>
+              <p className="text-sm text-gray-900 font-black mt-2 truncate">{top?.label || '-'}</p>
+              <p className="text-[11px] text-gray-500 mt-1">消耗占比 <span className="font-bold text-gray-800">{top?.costShare || 0}%</span></p>
             </button>
           );
         })}
       </div>
 
-      <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 lg:grid-cols-5'} gap-5`}>
-        <div className={compact ? '' : 'lg:col-span-3'}>
-          <div className="flex items-center gap-2 mb-3">
-            <span className={`px-2 py-0.5 rounded text-xs font-bold ${dim.bg} ${dim.color}`}>{dim.label}</span>
+      <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 xl:grid-cols-12'} gap-4`}>
+        <div className={compact ? '' : 'xl:col-span-7'}>
+          <div className="flex items-center gap-2 mb-2">
+            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-black ${dim.bg} ${dim.color}`}>
+              <span>{DIM_ICONS[active]}</span>{dim.label}
+            </span>
             <span className="text-xs text-gray-400">{dim.desc}</span>
           </div>
-          <div className="space-y-3">
-            {stats.slice(0, compact ? 6 : 10).map((item, idx) => (
+          <div className="space-y-2.5">
+            {stats.slice(0, compact ? 5 : 6).map((item, idx) => (
               <ValidatedBar key={item.label} item={item} rank={idx} color={dim.color} />
             ))}
           </div>
         </div>
 
-        <div className={compact ? '' : 'lg:col-span-2'}>
-          <p className="text-sm font-semibold text-gray-700 mb-3">代表案例帧</p>
-          <div className="grid grid-cols-2 gap-3">
-            {stats.slice(0, 4).map(item => (
-              <div key={item.label} className="bg-gray-50 rounded-xl p-3 border border-gray-100">
-                <div className="h-40 rounded-lg overflow-hidden bg-black mb-2">
+        <div className={compact ? '' : 'xl:col-span-5'}>
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-sm font-bold text-gray-800">代表案例帧</p>
+            <p className="text-[11px] text-gray-400">按消耗占比TOP展示</p>
+          </div>
+          <div className="grid grid-cols-3 gap-2.5">
+            {stats.slice(0, 3).map(item => (
+              <div key={item.label} className="bg-gray-50 rounded-2xl p-2.5 border border-gray-100">
+                <div className="h-28 rounded-xl overflow-hidden bg-black mb-2">
                   <FrameVideo src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
                 </div>
-                <p className={`text-[11px] font-bold ${dim.color}`}>{item.label}</p>
+                <p className={`text-[11px] font-black ${dim.color}`}>{item.label}</p>
                 <p className="text-[10px] text-gray-400 mt-0.5 line-clamp-2">#{item.exampleRank} {item.exampleName}</p>
-                <p className="text-[10px] text-gray-500 mt-1">占比 {item.pct}% · 消耗占比 {item.costShare}%</p>
+                <p className="text-[10px] text-gray-600 mt-1">消耗占比 <span className="font-bold">{item.costShare}%</span></p>
               </div>
             ))}
           </div>
@@ -323,18 +340,18 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
 
 function ValidatedBar({ item, rank, color }: { item: ElementStat; rank: number; color: string }) {
   return (
-    <div>
-      <div className="flex items-center justify-between mb-1">
-        <div className="flex items-center gap-2">
-          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${rank < 3 ? 'bg-primary-500 text-white' : 'bg-gray-100 text-gray-500'}`}>{rank + 1}</span>
-          <span className="text-sm font-medium text-gray-800">{item.label}</span>
+    <div className="rounded-2xl bg-gray-50/70 border border-gray-100 px-3 py-2.5">
+      <div className="flex items-center justify-between mb-1.5">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank < 3 ? 'bg-primary-500 text-white' : 'bg-white text-gray-500 border border-gray-100'}`}>{rank + 1}</span>
+          <span className="text-sm font-black text-gray-900 truncate">{item.label}</span>
         </div>
-        <span className="text-xs text-gray-400">{item.count}条 · {item.pct}% · 消耗{item.costShare}%</span>
+        <span className={`text-sm font-black ${color}`}>消耗占比 {item.costShare}%</span>
       </div>
-      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+      <div className="h-2 bg-white rounded-full overflow-hidden">
         <div className="h-full bg-gradient-to-r from-primary-400 to-primary-600 rounded-full" style={{ width: `${Math.min(item.costShare, 100)}%` }} />
       </div>
-      <p className={`text-[10px] mt-1 ${color}`}>代表：#{item.exampleRank} {item.exampleName}</p>
+      <p className={`text-[10px] mt-1.5 ${color}`}>代表：#{item.exampleRank} {item.exampleName}</p>
     </div>
   );
 }

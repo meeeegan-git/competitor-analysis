@@ -208,7 +208,7 @@ function ReportSideNav() {
       <div className="sticky top-24 rounded-3xl border border-gray-100 bg-white/90 backdrop-blur-xl shadow-sm p-4">
         <div className="mb-4 px-2">
           <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">REPORT NAV</p>
-          <p className="text-sm font-bold text-gray-900 mt-1">创意白皮书目录</p>
+          <p className="text-sm font-bold text-gray-900 mt-1">创意公式目录</p>
         </div>
         <nav className="space-y-1.5">
           {navItems.map(item => (
@@ -245,7 +245,7 @@ function ReportHeader({ data }: { data: AnalysisData }) {
         </span>
         <div>
           <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Playbook</p>
-          <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款素材创意白皮书</h1>
+          <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款创意公式拆解</h1>
         </div>
       </div>
     </div>
@@ -285,10 +285,11 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
                 active === d.key ? `${d.bg} border-current ${d.color} shadow-sm ring-2 ring-current/10` : 'bg-gray-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
               }`}
             >
-              <p className={`inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-black ${active === d.key ? `${d.bg} ${d.color}` : 'bg-white text-gray-500'}`}>
-                <span>{DIM_ICONS[d.key]}</span>{d.label}
+              <p className={`flex items-center gap-2 text-lg font-black ${active === d.key ? d.color : 'text-gray-800'}`}>
+                <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm ${active === d.key ? d.bg : 'bg-white'}`}>{DIM_ICONS[d.key]}</span>
+                <span>{d.label}</span>
               </p>
-              <p className="text-sm text-gray-900 font-black mt-2 truncate">{top?.label || '-'}</p>
+              <p className="text-sm text-gray-700 font-medium mt-2 truncate">{top?.label || '-'}</p>
               <p className="text-[11px] text-gray-500 mt-1">消耗占比 <span className="font-bold text-gray-800">{top?.costShare || 0}%</span></p>
             </button>
           );
@@ -297,14 +298,15 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
 
       <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 xl:grid-cols-12'} gap-4`}>
         <div className={compact ? '' : 'xl:col-span-7'}>
-          <div className="flex items-center gap-2 mb-2">
-            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-black ${dim.bg} ${dim.color}`}>
-              <span>{DIM_ICONS[active]}</span>{dim.label}
-            </span>
-            <span className="text-xs text-gray-400">{dim.desc}</span>
+          <div className="flex items-center gap-3 mb-3">
+            <span className={`w-10 h-10 rounded-2xl flex items-center justify-center text-lg ${dim.bg} ${dim.color}`}>{DIM_ICONS[active]}</span>
+            <div>
+              <p className={`text-2xl font-black ${dim.color}`}>{dim.label}</p>
+              <p className="text-xs text-gray-400 mt-0.5">{dim.desc}</p>
+            </div>
           </div>
           <div className="space-y-2.5">
-            {stats.slice(0, compact ? 5 : 6).map((item, idx) => (
+            {stats.slice(0, compact ? 8 : 12).map((item, idx) => (
               <ValidatedBar key={item.label} item={item} rank={idx} color={dim.color} />
             ))}
           </div>
@@ -339,7 +341,7 @@ function ValidatedBar({ item, rank, color }: { item: ElementStat; rank: number; 
       <div className="flex items-center justify-between mb-1.5">
         <div className="flex items-center gap-2 min-w-0">
           <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank < 3 ? 'bg-primary-500 text-white' : 'bg-white text-gray-500 border border-gray-100'}`}>{rank + 1}</span>
-          <span className="text-sm font-black text-gray-900 truncate">{item.label}</span>
+          <span className="text-sm font-medium text-gray-800 truncate">{item.label}</span>
         </div>
         <span className={`text-sm font-black ${color}`}>消耗占比 {item.costShare}%</span>
       </div>
@@ -388,9 +390,14 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
                       <span className="px-2.5 py-1 rounded-full bg-gray-100 text-gray-500 text-xs">样本 {formula.count} 条</span>
                     </div>
                     <h3 className="text-xl font-black text-gray-900 leading-snug">
-                      {formula.hook} × {formula.example.tags.visual} × {formula.example.tags.scene}
+                      公式{formula.index}：{formula.script}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1 line-clamp-1">
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      <FormulaChip label="前3秒钩子" value={formula.hook} />
+                      <FormulaChip label="视觉载体" value={formula.example.tags.visual} />
+                      <FormulaChip label="场景" value={formula.example.tags.scene} />
+                    </div>
+                    <p className="text-sm text-gray-500 mt-2 line-clamp-1">
                       代表素材：#{formula.example.rank} {formula.example.pn}
                     </p>
                   </div>
@@ -453,6 +460,15 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
         })}
       </div>
     </section>
+  );
+}
+
+function FormulaChip({ label, value }: { label: string; value: string }) {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full bg-white/80 border border-gray-100 px-2.5 py-1 text-[11px] shadow-sm">
+      <span className="font-bold text-gray-400">{label}</span>
+      <span className="font-medium text-gray-700">{value}</span>
+    </span>
   );
 }
 

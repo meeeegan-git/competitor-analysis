@@ -109,57 +109,125 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
   const [benchExpanded, setBenchExpanded] = useState<number | null>(null);
 
   return (
-    <div className="space-y-8 animate-fade-in">
-      <ReportHeader data={data} />
+    <div className="flex gap-6 animate-fade-in">
+      <ReportSideNav />
 
-      <ElementValidation data={data} title={`${data.name}爆款元素：关键帧拆解 + 数据验证`} />
+      <div className="min-w-0 flex-1 space-y-10">
+        <section id="overview" className="scroll-mt-24">
+          <ReportHeader data={data} />
+        </section>
 
-      <TimelineValidation frameStats={data.frameStats} />
+        <section id="elements" className="scroll-mt-24">
+          <ElementValidation data={data} title={`${data.name}爆款元素：关键帧拆解 + 数据验证`} />
+        </section>
 
-      <CreativeFormulaSection data={data} />
+        <section id="timeline" className="scroll-mt-24">
+          <TimelineValidation frameStats={data.frameStats} />
+        </section>
 
-      <CombinationStrategySection data={data} />
+        <section id="formulas" className="scroll-mt-24">
+          <CreativeFormulaSection data={data} />
+        </section>
 
-      <ParadigmSection title={`${data.name}可复刻脚本骨架`} paradigms={data.paradigms} />
+        <section id="strategy" className="scroll-mt-24">
+          <CombinationStrategySection data={data} />
+        </section>
 
-      <MaterialList
-        title={`${data.name} TOP50 爆款素材逐帧拆解`}
-        subtitle="每条素材均按第1/3/5/7/9/11/13/15秒对应帧拆解；重复素材只保留一次，同一客户最多3条。"
-        items={data.topItems}
-        expanded={ownExpanded}
-        setExpanded={setOwnExpanded}
-      />
+        <section id="scripts" className="scroll-mt-24">
+          <ParadigmSection title={`${data.name}可复刻脚本骨架`} paradigms={data.paradigms} />
+        </section>
 
-      <div className="glass-card p-6 border-l-4 border-l-amber-400">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-2xl">💡</span>
-          <div>
-            <h2 className="text-xl font-bold text-gray-800">服饰大盘爆款素材元素拆解</h2>
-            <p className="text-sm text-gray-500 mt-0.5">
-              这里不是另一个运动子类目，而是排除运动鞋服与运动用品后的服饰大盘TOP50，可作为{data.name}商家借鉴的创意库。
-            </p>
+        <section id="materials" className="scroll-mt-24">
+          <MaterialList
+            title={`${data.name} TOP50 爆款素材逐帧拆解`}
+            subtitle="每条素材均按第1/3/5/7/9/11/13/15秒对应帧拆解；重复素材只保留一次，同一客户最多3条。"
+            items={data.topItems}
+            expanded={ownExpanded}
+            setExpanded={setOwnExpanded}
+          />
+        </section>
+
+        <section id="apparel" className="scroll-mt-24 space-y-6">
+          <div className="rounded-3xl border border-amber-100 bg-gradient-to-br from-amber-50 via-white to-white p-6 shadow-sm">
+            <div className="flex items-start justify-between gap-5 mb-5">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">💡</span>
+                <div>
+                  <h2 className="text-xl font-bold text-gray-900">服饰大盘爆款素材元素拆解</h2>
+                  <p className="text-sm text-gray-500 mt-1 max-w-3xl">
+                    这里不是另一个运动子类目，而是排除运动鞋服与运动用品后的服饰大盘TOP50，用来找到可迁移到{data.name}的钩子、证明方式和转化节奏。
+                  </p>
+                </div>
+              </div>
+              <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold whitespace-nowrap">跨品类借鉴</span>
+            </div>
+            <div className="grid grid-cols-4 gap-3 text-xs">
+              <RulePill label="大盘规则" value="排除运动鞋服/运动用品" />
+              <RulePill label="拆解数量" value="TOP50" />
+              <RulePill label="重复素材" value="MD5去重" />
+              <RulePill label="客户限额" value="同客户≤3条" />
+            </div>
           </div>
+
+          <ElementValidation data={data.apparelBenchmark} title="服饰大盘可借鉴元素：数据占比 + 代表帧" compact />
+          <TimelineValidation frameStats={data.apparelBenchmark.frameStats} compact />
+          <ParadigmSection title="服饰大盘可借鉴脚本骨架" paradigms={data.apparelBenchmark.paradigms} compact />
+          <MaterialList
+            title="服饰大盘 TOP50 爆款素材逐帧拆解"
+            subtitle="这些素材已排除运动鞋服/运动用品自身，用来找跨品类可迁移的钩子、场景、证明方式和收口节奏。"
+            items={data.apparelBenchmark.topItems}
+            expanded={benchExpanded}
+            setExpanded={setBenchExpanded}
+            benchmark
+          />
+        </section>
+      </div>
+    </div>
+  );
+}
+
+function ReportSideNav() {
+  const navItems = [
+    { href: '#overview', icon: '📌', label: '报告概览', desc: '数据规则' },
+    { href: '#elements', icon: '📊', label: '元素验证', desc: '占比/消耗' },
+    { href: '#timeline', icon: '⏱️', label: '关键帧', desc: '时间线' },
+    { href: '#formulas', icon: '🧩', label: '创意公式', desc: '1-5公式' },
+    { href: '#strategy', icon: '🎯', label: '组合策略', desc: '怎么投拍' },
+    { href: '#scripts', icon: '📝', label: '脚本骨架', desc: '可复刻' },
+    { href: '#materials', icon: '🎬', label: '素材拆解', desc: 'TOP50' },
+    { href: '#apparel', icon: '💡', label: '服饰大盘', desc: '跨品类' },
+  ];
+
+  return (
+    <aside className="hidden xl:block w-56 flex-shrink-0">
+      <div className="sticky top-24 rounded-3xl border border-gray-100 bg-white/90 backdrop-blur-xl shadow-sm p-4">
+        <div className="mb-4 px-2">
+          <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">REPORT NAV</p>
+          <p className="text-sm font-bold text-gray-900 mt-1">创意白皮书目录</p>
         </div>
-        <div className="mt-3 grid grid-cols-4 gap-3 text-xs">
-          <RulePill label="大盘规则" value="排除运动鞋服/运动用品" />
-          <RulePill label="拆解数量" value="TOP50" />
-          <RulePill label="重复素材" value="MD5去重" />
-          <RulePill label="客户限额" value="同客户≤3条" />
+        <nav className="space-y-1.5">
+          {navItems.map(item => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="group flex items-center gap-3 rounded-2xl px-3 py-2.5 text-sm transition-all hover:bg-primary-50 hover:text-primary-700"
+            >
+              <span className="w-7 h-7 rounded-xl bg-gray-50 flex items-center justify-center text-sm group-hover:bg-white">
+                {item.icon}
+              </span>
+              <span className="min-w-0">
+                <span className="block font-semibold text-gray-700 group-hover:text-primary-700">{item.label}</span>
+                <span className="block text-[10px] text-gray-400 mt-0.5">{item.desc}</span>
+              </span>
+            </a>
+          ))}
+        </nav>
+        <div className="mt-4 rounded-2xl bg-gradient-to-br from-primary-50 to-blue-50 p-3">
+          <p className="text-[11px] font-bold text-primary-700">阅读路径</p>
+          <p className="text-[11px] text-gray-500 leading-relaxed mt-1">先看公式和策略，再展开具体素材关键帧。</p>
         </div>
       </div>
-
-      <ElementValidation data={data.apparelBenchmark} title="服饰大盘可借鉴元素：数据占比 + 代表帧" compact />
-      <TimelineValidation frameStats={data.apparelBenchmark.frameStats} compact />
-      <ParadigmSection title="服饰大盘可借鉴脚本骨架" paradigms={data.apparelBenchmark.paradigms} compact />
-      <MaterialList
-        title="服饰大盘 TOP50 爆款素材逐帧拆解"
-        subtitle="这些素材已排除运动鞋服/运动用品自身，用来找跨品类可迁移的钩子、场景、证明方式和收口节奏。"
-        items={data.apparelBenchmark.topItems}
-        expanded={benchExpanded}
-        setExpanded={setBenchExpanded}
-        benchmark
-      />
-    </div>
+    </aside>
   );
 }
 
@@ -170,23 +238,24 @@ function ReportHeader({ data }: { data: AnalysisData }) {
   const avgDur = avg(data.topItems.map(i => i.dur));
 
   return (
-    <div className="glass-card p-6">
-      <div className="flex items-start justify-between gap-6">
+    <div className="rounded-3xl border border-primary-100 bg-gradient-to-br from-white via-primary-50/40 to-blue-50/50 p-7 shadow-sm">
+      <div className="flex items-start justify-between gap-8">
         <div>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-3xl">{data.name === '运动鞋服' ? '👟' : '🏋️'}</span>
+          <div className="flex items-center gap-4 mb-4">
+            <span className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl">{data.name === '运动鞋服' ? '👟' : '🏋️'}</span>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">{data.name}爆款素材创意白皮书</h1>
+              <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Playbook</p>
+              <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款素材创意白皮书</h1>
               <p className="text-sm text-gray-500 mt-1">基于 {data.week} 表格数据，按关键帧和消耗表现反推可复刻元素</p>
             </div>
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-gray-500">
-            <p>原始行数：{data.dataRules.rawRows.toLocaleString()} 行</p>
-            <p>有效行数：{data.dataRules.validRowsAfterBlankRemoval.toLocaleString()} 行</p>
-            <p>素材池：{data.totalCountAfterRules.toLocaleString()} 条</p>
-            <p>关键帧：{data.dataRules.keyframeTimes.join(' / ')} 秒</p>
-            <p className="col-span-2">去重：{data.dataRules.dedupeRule}</p>
-            <p className="col-span-2">客户限制：{data.dataRules.customerCapRule}</p>
+          <div className="mt-5 grid grid-cols-2 gap-3 text-xs">
+            <DataRuleCard label="原始行数" value={`${data.dataRules.rawRows.toLocaleString()} 行`} />
+            <DataRuleCard label="有效行数" value={`${data.dataRules.validRowsAfterBlankRemoval.toLocaleString()} 行`} />
+            <DataRuleCard label="素材池" value={`${data.totalCountAfterRules.toLocaleString()} 条`} />
+            <DataRuleCard label="关键帧" value={`${data.dataRules.keyframeTimes.join(' / ')} 秒`} />
+            <DataRuleCard label="去重规则" value={data.dataRules.dedupeRule} wide />
+            <DataRuleCard label="客户限制" value={data.dataRules.customerCapRule} wide />
           </div>
         </div>
 
@@ -201,6 +270,15 @@ function ReportHeader({ data }: { data: AnalysisData }) {
   );
 }
 
+function DataRuleCard({ label, value, wide = false }: { label: string; value: string; wide?: boolean }) {
+  return (
+    <div className={`${wide ? 'col-span-2' : ''} rounded-2xl bg-white/75 border border-white px-3 py-2 shadow-sm`}>
+      <p className="text-[10px] font-bold text-gray-400">{label}</p>
+      <p className="text-xs font-medium text-gray-700 mt-0.5 leading-snug">{value}</p>
+    </div>
+  );
+}
+
 function ElementValidation({ data, title, compact = false }: { data: AnalysisData | BenchmarkData; title: string; compact?: boolean }) {
   const [active, setActive] = useState<DimKey>('hook');
   const dim = DIMENSIONS.find(d => d.key === active)!;
@@ -208,10 +286,11 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
   const first = stats[0];
 
   return (
-    <section className="glass-card p-6">
-      <div className="flex items-center justify-between gap-4 mb-5">
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="flex items-center justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
+          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">ELEMENT VALIDATION</p>
+          <h2 className="text-xl font-black text-gray-900">{title}</h2>
           <p className="text-sm text-gray-500 mt-1">占比=素材条数占比；消耗占比=该元素在TOP50内贡献的消耗占比。</p>
         </div>
         {first && (
@@ -222,15 +301,15 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
         )}
       </div>
 
-      <div className="grid grid-cols-7 gap-2 mb-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-3 mb-6">
         {DIMENSIONS.map(d => {
           const top = data.elementStats[d.key]?.[0];
           return (
             <button
               key={d.key}
               onClick={() => setActive(d.key)}
-              className={`text-left rounded-xl p-3 border transition-all cursor-pointer ${
-                active === d.key ? `${d.bg} border-current ${d.color}` : 'bg-white border-gray-100 hover:border-gray-200'
+              className={`text-left rounded-2xl p-3.5 border transition-all cursor-pointer ${
+                active === d.key ? `${d.bg} border-current ${d.color} shadow-sm` : 'bg-gray-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
               }`}
             >
               <p className={`text-xs font-semibold ${active === d.key ? d.color : 'text-gray-500'}`}>{d.label}</p>
@@ -294,12 +373,13 @@ function ValidatedBar({ item, rank, color }: { item: ElementStat; rank: number; 
 
 function TimelineValidation({ frameStats, compact = false }: { frameStats: FrameStat[]; compact?: boolean }) {
   return (
-    <section className="glass-card p-6">
-      <h2 className="text-lg font-bold text-gray-800 mb-1">关键帧时间线元素验证</h2>
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">KEYFRAME TIMELINE</p>
+      <h2 className="text-xl font-black text-gray-900 mb-1">关键帧时间线元素验证</h2>
       <p className="text-sm text-gray-500 mb-5">按第1/3/5/7/9/11/13/15秒聚合TOP50素材的帧级元素，判断哪个时间点应该放什么信息。</p>
-      <div className={`grid ${compact ? 'grid-cols-4' : 'grid-cols-8'} gap-3`}>
+      <div className={`grid ${compact ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-2 md:grid-cols-4 2xl:grid-cols-8'} gap-3`}>
         {frameStats.map(fs => (
-          <div key={fs.time} className="rounded-xl border border-gray-100 bg-white p-3">
+          <div key={fs.time} className="rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-3.5">
             <p className="text-sm font-bold text-primary-600 mb-2">{fs.time}s</p>
             <div className="space-y-1.5">
               {fs.topElements.slice(0, compact ? 3 : 4).map(el => (
@@ -324,10 +404,11 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
   });
 
   return (
-    <section className="glass-card p-6">
-      <div className="flex items-start justify-between gap-4 mb-5">
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="flex items-start justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-xl font-bold text-gray-800">{data.name}爆款创意公式</h2>
+          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">CREATIVE FORMULAS</p>
+          <h2 className="text-2xl font-black text-gray-900">{data.name}爆款创意公式</h2>
           <p className="text-sm text-gray-500 mt-1">
             借鉴参考页的“公式化拆解”方式，但不照搬名称：每个公式都由TOP50里的关键元素组合、消耗占比和代表素材关键帧共同验证。
           </p>
@@ -341,37 +422,47 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
         {formulas.map(formula => {
           if (!formula.example) return null;
           return (
-            <div key={`${formula.script}-${formula.hook}-${formula.role}`} className="rounded-2xl bg-white border border-gray-100 overflow-hidden">
-              <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2.5 py-1 rounded-lg bg-primary-600 text-white text-xs font-bold">创意公式 {formula.index}</span>
-                      <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-xs font-semibold">消耗贡献 {formula.costShare}%</span>
-                      <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-xs">样本 {formula.count} 条</span>
+            <div key={`${formula.script}-${formula.hook}-${formula.role}`} className="rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-sm">
+              <div className="p-5 border-b border-gray-100 bg-gradient-to-r from-primary-50 via-white to-white">
+                <div className="flex items-start justify-between gap-5">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="px-3 py-1 rounded-xl bg-primary-600 text-white text-xs font-bold shadow-sm">创意公式 {formula.index}</span>
+                      <span className="px-2.5 py-1 rounded-full bg-red-50 text-red-600 text-xs font-semibold">消耗贡献 {formula.costShare}%</span>
+                      <span className="px-2.5 py-1 rounded-full bg-gray-100 text-gray-500 text-xs">样本 {formula.count} 条</span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-xl font-black text-gray-900 leading-snug">
                       {formula.hook} × {formula.example.tags.visual} × {formula.example.tags.scene}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-gray-500 mt-1 line-clamp-1">
                       代表素材：#{formula.example.rank} {formula.example.pn}
                     </p>
                   </div>
-                  <div className="text-right text-xs text-gray-400">
-                    <p>CTR {formula.example.ctr}%</p>
-                    <p>3秒完播 {formula.example.vtr}%</p>
-                    <p>播放时长 {formula.example.dur}s</p>
+                  <div className="grid grid-cols-3 gap-2 flex-shrink-0">
+                    <FormulaMetric label="CTR" value={`${formula.example.ctr}%`} />
+                    <FormulaMetric label="3秒完播" value={`${formula.example.vtr}%`} />
+                    <FormulaMetric label="播放时长" value={`${formula.example.dur}s`} />
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
-                <div className="lg:col-span-5">
-                  <p className="text-sm font-bold text-gray-800 mb-2">关键帧证据</p>
+              <div className="p-5 space-y-5">
+                <FormulaFlow
+                  hook={formula.hook}
+                  visual={formula.example.tags.visual}
+                  scene={formula.example.tags.scene}
+                  proof={formula.example.tags.proof}
+                />
+
+                <div className="rounded-2xl bg-gray-50 border border-gray-100 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-sm font-bold text-gray-900">关键帧证据</p>
+                    <p className="text-xs text-gray-400">用代表素材截图验证公式节奏</p>
+                  </div>
                   <FormulaScreenshotStrip item={formula.example} frames={formula.mainFrames} />
                 </div>
 
-                <div className="lg:col-span-4 space-y-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <FormulaBlock
                     title="爆款关键元素"
                     items={[
@@ -385,20 +476,19 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
                     title="按这个顺序拍"
                     items={buildFormulaSteps(formula.example)}
                   />
-                </div>
-
-                <div className="lg:col-span-3 space-y-3">
-                  <div className="rounded-xl bg-amber-50 border border-amber-100 p-3">
-                    <p className="text-xs font-bold text-amber-700">不变骨架</p>
-                    <p className="text-xs text-amber-700 leading-relaxed mt-1">
-                      {formula.hook}抓停 → {formula.example.tags.focus}证据 → {formula.example.tags.scene}代入 → {formula.example.tags.proof} → 权益/行动收口
-                    </p>
-                  </div>
-                  <div className="rounded-xl bg-green-50 border border-green-100 p-3">
-                    <p className="text-xs font-bold text-green-700">可替换变量</p>
-                    <p className="text-xs text-green-700 leading-relaxed mt-1">
-                      产品SKU、目标人群、出镜角色、使用场景、证明方式、价格权益都可替换；但“钩子→证据→场景→信任→收口”的顺序不要变。
-                    </p>
+                  <div className="rounded-2xl bg-gradient-to-br from-amber-50 to-green-50 border border-amber-100 p-4">
+                    <div className="mb-4">
+                      <p className="text-xs font-bold text-amber-700">不变骨架</p>
+                      <p className="text-xs text-amber-700 leading-relaxed mt-1">
+                        {formula.hook}抓停 → {formula.example.tags.focus}证据 → {formula.example.tags.scene}代入 → {formula.example.tags.proof} → 权益/行动收口
+                      </p>
+                    </div>
+                    <div className="pt-3 border-t border-amber-100/80">
+                      <p className="text-xs font-bold text-green-700">可替换变量</p>
+                      <p className="text-xs text-green-700 leading-relaxed mt-1">
+                        产品SKU、目标人群、出镜角色、使用场景、证明方式、价格权益都可替换；但“钩子→证据→场景→信任→收口”的顺序不要变。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -407,6 +497,47 @@ function CreativeFormulaSection({ data }: { data: AnalysisData }) {
         })}
       </div>
     </section>
+  );
+}
+
+function FormulaMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-2xl bg-white/80 border border-white px-3 py-2 text-center shadow-sm min-w-[72px]">
+      <p className="text-[10px] text-gray-400">{label}</p>
+      <p className="text-sm font-bold text-gray-800 mt-0.5">{value}</p>
+    </div>
+  );
+}
+
+function FormulaFlow({ hook, visual, scene, proof }: { hook: string; visual: string; scene: string; proof: string }) {
+  const nodes = [
+    { label: '钩子', value: hook, tone: 'bg-purple-50 text-purple-700 border-purple-100' },
+    { label: '画面载体', value: visual, tone: 'bg-blue-50 text-blue-700 border-blue-100' },
+    { label: '场景', value: scene, tone: 'bg-cyan-50 text-cyan-700 border-cyan-100' },
+    { label: '证明', value: proof, tone: 'bg-amber-50 text-amber-700 border-amber-100' },
+    { label: '收口', value: '权益/行动入口', tone: 'bg-green-50 text-green-700 border-green-100' },
+  ];
+
+  return (
+    <div className="rounded-2xl border border-primary-100 bg-primary-50/40 p-4">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-6 h-6 rounded-lg bg-primary-600 text-white text-xs font-bold flex items-center justify-center">F</span>
+        <p className="text-sm font-bold text-gray-900">核心公式框架</p>
+      </div>
+      <div className="grid grid-cols-5 gap-2">
+        {nodes.map((node, idx) => (
+          <div key={node.label} className="relative">
+            <div className={`h-full rounded-2xl border px-3 py-3 ${node.tone}`}>
+              <p className="text-[10px] font-bold opacity-70">{node.label}</p>
+              <p className="text-xs font-bold mt-1 leading-snug line-clamp-2">{node.value}</p>
+            </div>
+            {idx < nodes.length - 1 && (
+              <span className="hidden 2xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-white border border-gray-100 items-center justify-center text-gray-300">→</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -514,7 +645,6 @@ function buildFormulaSteps(item: MaterialItem) {
 function CombinationStrategySection({ data }: { data: AnalysisData }) {
   const topFormula = data.paradigms[0];
   const secondFormula = data.paradigms[1];
-  const apparelFormula = data.apparelBenchmark.paradigms[0];
   const topHook = data.elementStats.hook?.[0]?.label || '高频钩子';
   const topProof = data.elementStats.proof?.[0]?.label || '信任证明';
   const apparelHook = data.apparelBenchmark.elementStats.hook?.[0]?.label || '服饰大盘钩子';
@@ -553,17 +683,18 @@ function CombinationStrategySection({ data }: { data: AnalysisData }) {
   ];
 
   return (
-    <section className="glass-card p-6">
-      <div className="flex items-center justify-between gap-4 mb-5">
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="flex items-center justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-xl font-bold text-gray-800">组合策略建议</h2>
+          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">COMBINATION STRATEGY</p>
+          <h2 className="text-2xl font-black text-gray-900">组合策略建议</h2>
           <p className="text-sm text-gray-500 mt-1">把创意公式组合成可执行的拍摄与投放策略：先测钩子，再复制骨架，最后用服饰大盘元素扩展素材池。</p>
         </div>
         <span className="px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold">输出给编导/投手/广告主</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
         {strategies.map((strategy, idx) => (
-          <div key={strategy.title} className="rounded-2xl bg-white border border-gray-100 p-4 hover:shadow-md transition-shadow">
+          <div key={strategy.title} className="rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-4 hover:shadow-md transition-shadow">
             <div className="flex items-center justify-between mb-3">
               <span className="w-7 h-7 rounded-lg bg-primary-500 text-white text-xs font-bold flex items-center justify-center">{idx + 1}</span>
               <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-[10px] font-medium">{strategy.badge}</span>
@@ -584,8 +715,9 @@ function CombinationStrategySection({ data }: { data: AnalysisData }) {
 
 function ParadigmSection({ title, paradigms, compact = false }: { title: string; paradigms: Paradigm[]; compact?: boolean }) {
   return (
-    <section className="glass-card p-6">
-      <h2 className="text-lg font-bold text-gray-800 mb-1">{title}</h2>
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">SCRIPT SKELETONS</p>
+      <h2 className="text-xl font-black text-gray-900 mb-1">{title}</h2>
       <p className="text-sm text-gray-500 mb-5">脚本骨架按「脚本结构 × 前3秒钩子 × 出镜角色」聚合，并用消耗占比排序。</p>
       <div className={`grid ${compact ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-4`}>
         {paradigms.slice(0, compact ? 4 : 8).map((p, idx) => (
@@ -628,9 +760,10 @@ function MaterialList({
   benchmark?: boolean;
 }) {
   return (
-    <section className="space-y-3">
-      <div className="glass-card p-5">
-        <h2 className="text-lg font-bold text-gray-800">{title}</h2>
+    <section className="space-y-4">
+      <div className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
+        <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">MATERIAL BREAKDOWN</p>
+        <h2 className="text-xl font-black text-gray-900">{title}</h2>
         <p className="text-sm text-gray-500 mt-1">{subtitle}</p>
       </div>
       {items.map((item, idx) => (
@@ -648,8 +781,8 @@ function MaterialList({
 
 function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: MaterialItem; expanded: boolean; onToggle: () => void; benchmark?: boolean }) {
   return (
-    <div className={`glass-card overflow-hidden ${expanded ? 'ring-2 ring-primary-200' : ''} ${benchmark ? 'border-l-4 border-l-amber-300' : ''}`}>
-      <button onClick={onToggle} className="w-full flex items-center gap-4 p-4 text-left hover:bg-gray-50 transition-colors cursor-pointer">
+    <div className={`rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden ${expanded ? 'ring-2 ring-primary-200' : ''} ${benchmark ? 'border-l-4 border-l-amber-300' : ''}`}>
+      <button onClick={onToggle} className="w-full flex items-center gap-4 p-4 text-left hover:bg-gray-50/80 transition-colors cursor-pointer">
         <RankBadge rank={item.rank} />
         <div className="w-14 h-20 rounded-lg bg-black overflow-hidden flex-shrink-0">
           <FrameVideo src={item.ml} time={1} className="w-full h-full object-cover" />

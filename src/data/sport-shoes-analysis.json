@@ -1,488 +1,1619 @@
 {
   "name": "运动鞋服",
-  "total": 379,
-  "weeks": [
-    "06.22-06.28",
-    "06.15-06.21",
-    "06.06-06.12",
-    "05.30-06.05"
-  ],
-  "dimensions": {
-    "hook": [
-      {
-        "label": "应季新品展示",
-        "count": 139,
-        "pct": 37
-      },
-      {
-        "label": "产品特写开场",
-        "count": 78,
-        "pct": 21
-      },
-      {
-        "label": "明星同款引入",
-        "count": 78,
-        "pct": 21
-      },
-      {
-        "label": "痛点场景切入",
-        "count": 64,
-        "pct": 17
-      },
-      {
-        "label": "强视觉冲击开场",
-        "count": 10,
-        "pct": 3
-      },
-      {
-        "label": "爆款数据背书",
-        "count": 5,
-        "pct": 1
-      },
-      {
-        "label": "品质认证背书",
-        "count": 3,
-        "pct": 1
-      },
-      {
-        "label": "高端质感开场",
-        "count": 2,
-        "pct": 1
-      }
-    ],
-    "persona": [
-      {
-        "label": "运动达人",
-        "count": 138,
-        "pct": 36
-      },
-      {
-        "label": "男性模特",
-        "count": 106,
-        "pct": 28
-      },
-      {
-        "label": "女性模特",
-        "count": 84,
-        "pct": 22
-      },
-      {
-        "label": "情侣组合",
-        "count": 28,
-        "pct": 7
-      },
-      {
-        "label": "青少年/儿童",
-        "count": 21,
-        "pct": 6
-      },
-      {
-        "label": "中年男性",
-        "count": 2,
-        "pct": 1
-      }
-    ],
-    "sellingPoint": [
-      {
-        "label": "轻薄透气",
-        "count": 209,
-        "pct": 55
-      },
-      {
-        "label": "高性价比",
-        "count": 56,
-        "pct": 15
-      },
-      {
-        "label": "百搭通勤",
-        "count": 34,
-        "pct": 9
-      },
-      {
-        "label": "修身显瘦",
-        "count": 16,
-        "pct": 4
-      },
-      {
-        "label": "户外防护",
-        "count": 15,
-        "pct": 4
-      },
-      {
-        "label": "保暖御寒",
-        "count": 15,
-        "pct": 4
-      },
-      {
-        "label": "优质面料",
-        "count": 13,
-        "pct": 3
-      },
-      {
-        "label": "品质做工",
-        "count": 11,
-        "pct": 3
-      },
-      {
-        "label": "时尚设计",
-        "count": 8,
-        "pct": 2
-      },
-      {
-        "label": "科技缓震",
-        "count": 1,
-        "pct": 0
-      },
-      {
-        "label": "舒适体验",
-        "count": 1,
-        "pct": 0
-      }
-    ],
-    "scriptStructure": [
-      {
-        "label": "快速展示型",
-        "count": 185,
-        "pct": 49
-      },
-      {
-        "label": "明星带货型",
-        "count": 61,
-        "pct": 16
-      },
-      {
-        "label": "痛点解决型",
-        "count": 59,
-        "pct": 16
-      },
-      {
-        "label": "产品展示型",
-        "count": 48,
-        "pct": 13
-      },
-      {
-        "label": "场景种草型",
-        "count": 18,
-        "pct": 5
-      },
-      {
-        "label": "快节奏展示型",
-        "count": 4,
-        "pct": 1
-      },
-      {
-        "label": "详细讲解型",
-        "count": 4,
-        "pct": 1
-      }
-    ]
-  },
-  "topCombos": [
+  "week": "06.22-06.28",
+  "totalCount": 4518,
+  "topItems": [
     {
-      "script": "快速展示型",
-      "hook": "应季新品展示",
-      "persona": "男性模特",
-      "count": 33,
-      "pct": 9,
-      "example": {
-        "pn": "Cardanro/卡丹路冰丝网眼夏季速干防晒男运动男士夏季裤子薄款",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53nqbaqaacyqaer4q7x5vbq3aebbwaecca.f0.mp4?dis_k=ab95b7dd7901dbfde2105f3bc4851da7&dis_t=1780301998&m=81b2be27bc1f8fd4de663bde1dd25c1c&sha256=ee409df7b3c6469ac1e90d67387b926f68c15f113cbc116155cc3549bb950e34",
-        "cs": 22051,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 1,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+      "cs": 41543.0,
+      "ctr": 2.08,
+      "cvr": 8.64,
+      "vtr": 27.95,
+      "dur": 10.4,
+      "roi": 4.53,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "快速展示型",
-      "hook": "应季新品展示",
-      "persona": "运动达人",
-      "count": 28,
-      "pct": 7,
-      "example": {
-        "pn": "MRSLUXE 凉感大U网纱户外运动透气轻薄夏季户外骑行服",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fmajeaaamuakbzqmofvbwkyesivqbesa.f0.mp4?dis_k=da19dd96edb62a9110bf32e7408e5294&dis_t=1779184221&m=75db912fa630ca7eca68a6bc009fd1f9",
-        "cs": 15609,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 2,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+      "cs": 37847.0,
+      "ctr": 2.48,
+      "cvr": 6.16,
+      "vtr": 29.81,
+      "dur": 6.0,
+      "roi": 3.61,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "快速展示型",
-      "hook": "产品特写开场",
-      "persona": "运动达人",
-      "count": 26,
-      "pct": 7,
-      "example": {
-        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "cs": 67174,
-        "sellingPoint": "高性价比"
-      }
+      "rank": 3,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+      "cs": 23297.0,
+      "ctr": 1.56,
+      "cvr": 7.68,
+      "vtr": 20.77,
+      "dur": 5.7,
+      "roi": 3.84,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "快速展示型",
-      "hook": "产品特写开场",
-      "persona": "女性模特",
-      "count": 26,
-      "pct": 7,
-      "example": {
-        "pn": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53yyaniaaapuam7i74erurvrqe2tdabvca.f0.mp4?dis_k=6c0d6b9f5e679361c2d2104083f49f3b&dis_t=1779850657&m=6813685ae5c2b6b0983e1923744af23b&sha256=d9cd05e851f4d7f5ac8564d1edd5578ef58101e48b21d886d04b2f768931f7ac",
-        "cs": 7378,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 4,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季款穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53uuaniaaaoaammhbncjvbxjie2ssqbvca.f0.mp4?dis_k=36e86768a502597e71b69c322e1dfe06&dis_t=1781338857&m=23af76f031b534be021125f2d34b57b8&sha256=e58ad7df098e88c3e70bed406df88a92dec1cfe88e987241bef17594f18ae0c8",
+      "cs": 19846.0,
+      "ctr": 2.76,
+      "cvr": 6.91,
+      "vtr": 47.04,
+      "dur": 9.1,
+      "roi": 4.43,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "明星带货型",
-      "hook": "明星同款引入",
-      "persona": "运动达人",
-      "count": 25,
-      "pct": 7,
-      "example": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tibn6aaciqairz6q4jurrgqe36nafx2a.f0.mp4?dis_k=0173f9420d04e4aed385324f90e5efa7&dis_t=1778654244&m=2db26ef8db965ee404bfabeff7bb9c92&sha256=6bab121ec84ac992a3235c34467df0935c620d528b376e90235ebe8b614153b7",
-        "cs": 46811,
-        "sellingPoint": "高性价比"
-      }
+      "rank": 5,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tibn6aaciqairz6q4jurrgqe36nafx2a.f0.mp4?dis_k=aac4cea96e004e548fbf13ff603c3938&dis_t=1776915122&m=2db26ef8db965ee404bfabeff7bb9c92&sha256=6bab121ec84ac992a3235c34467df0935c620d528b376e90235ebe8b614153b7",
+      "cs": 19510.0,
+      "ctr": 2.12,
+      "cvr": 9.03,
+      "vtr": 43.73,
+      "dur": 7.0,
+      "roi": 3.98,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "明星带货型",
-      "hook": "明星同款引入",
-      "persona": "情侣组合",
-      "count": 24,
-      "pct": 6,
-      "example": {
-        "pn": "雅鹿夏季薄款真冰丝速干裤男女同款休闲运动弹力透气宽松透气百搭",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53diaemaaa4iapo6aht5vbugqeiynaarsa.f0.mp4?dis_k=06ebcc93eb99ae2f9fbdc486e1447966&dis_t=1778909725&m=769a9a90ca3d59b35e6daccd53ecb80c&sha256=ea764a05ac9eff248006e5fbf6d3f665c7e31b3630e044ed633f7dcc87168e4b",
-        "cs": 11068,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 6,
+      "ind": "运动鞋服",
+      "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装",
+      "pn": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+      "cs": 18655.0,
+      "ctr": 1.63,
+      "cvr": 6.48,
+      "vtr": 21.66,
+      "dur": 4.7,
+      "roi": 2.7,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "快速展示型",
-      "hook": "产品特写开场",
-      "persona": "男性模特",
-      "count": 14,
-      "pct": 4,
-      "example": {
-        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
-        "cs": 52315,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 7,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季款穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53o4adgaaa2yapc5w3cruru5yegn3qam2a.f0.mp4?dis_k=0c14dd289fc4a1c47d2960149162644f&dis_t=1776916347&m=b2e36d527d837327912644677b925103&sha256=88863fb76242f03b64ad2b3f21e7d23cd38c6f732f547c2c2596398cb9ec0912",
+      "cs": 18635.0,
+      "ctr": 1.03,
+      "cvr": 7.15,
+      "vtr": 38.18,
+      "dur": 4.6,
+      "roi": 4.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "痛点解决型",
-      "hook": "痛点场景切入",
-      "persona": "运动达人",
-      "count": 13,
-      "pct": 3,
-      "example": {
-        "pn": "（丫头推荐）蜂鸟综训运动速干透气弹力休闲裤-8566",
-        "ml": "",
-        "cs": 8470,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 8,
+      "ind": "运动鞋服",
+      "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装",
+      "pn": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+      "cs": 18624.0,
+      "ctr": 1.04,
+      "cvr": 4.06,
+      "vtr": 25.22,
+      "dur": 3.5,
+      "roi": 2.68,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 9,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN冰皮直筒裤云感粉彩风防晒裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53dabmkaachiaanlm5tvurqgaeyumafrka.f0.mp4?dis_k=a7ca33521fc3d86fbf98a6a3d06070ca&dis_t=1774605602&m=120e1416230369621cf537573080b4c6&sha256=58f15578a98ba4ebea995aa944dd4dce1dc053a34124e1f0470e1f428f9109ff",
+      "cs": 16771.0,
+      "ctr": 1.92,
+      "cvr": 8.94,
+      "vtr": 44.8,
+      "dur": 7.3,
+      "roi": 4.21,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 10,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-男装-裤子-牛仔裤",
+      "pn": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+      "cs": 16344.0,
+      "ctr": 1.65,
+      "cvr": 12.39,
+      "vtr": 23.58,
+      "dur": 4.3,
+      "roi": 4.79,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 11,
+      "ind": "运动鞋服",
+      "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤",
+      "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+      "cs": 15917.0,
+      "ctr": 2.42,
+      "cvr": 6.66,
+      "vtr": 32.07,
+      "dur": 6.0,
+      "roi": 3.47,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 12,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc364aayaaa7aajuyi6xjvbv5yebt3qadca.f0.mp4?dis_k=0a250029e5bec4907b1c9c8d9b48cad0&dis_t=1781582012&m=18da6e3340addc7cc551d92535f25331&sha256=a8b6285f4260474a0b4189b04de9d22809be08585837ce9202d93ff5b0c0c9a8",
+      "cs": 12043.0,
+      "ctr": 3.87,
+      "cvr": 4.68,
+      "vtr": 22.38,
+      "dur": 5.1,
+      "roi": 4.57,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 13,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=a410ba5a741678b46db892c1d9c55550&dis_t=1781580190&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
+      "cs": 11683.0,
+      "ctr": 3.23,
+      "cvr": 6.11,
+      "vtr": 53.59,
+      "dur": 15.9,
+      "roi": 3.58,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 14,
+      "ind": "运动鞋服",
+      "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣",
+      "pn": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+      "cs": 10592.0,
+      "ctr": 2.68,
+      "cvr": 6.02,
+      "vtr": 30.15,
+      "dur": 6.0,
+      "roi": 3.39,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 15,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN白色伞裤2.0防晒透气休闲宽松伞兵裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53rqafiaaaoyalcrqcgnvbvdaeksgaavca.f0.mp4?dis_k=733c82637eff77a3dabe52095aaa7005&dis_t=1778574845&m=8f45a2d2219ab1a8de614f4c1033a2b5",
+      "cs": 9256.0,
+      "ctr": 2.19,
+      "cvr": 9.12,
+      "vtr": 21.99,
+      "dur": 4.2,
+      "roi": 4.24,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 16,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-服饰配件/皮带/帽子/围巾-防晒服配-防晒口罩/防晒脖套",
+      "pn": "【全脸防晒面罩】小野和子2026新款防晒口罩脸基尼透气玻尿酸防紫外线00MZ",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53kqahaaaaxyahco5b4nuruvaeobkaa4ca.f0.mp4?dis_k=23ea1bbe0d39550fc03ce56199fa0dc8&dis_t=1776759229&m=52a65189cbae3f99b7939bf5afecb03e&sha256=ba2e1a4a7ee53db9dd0709dd48f11d0291c125bb42b3582d7435b3a96bcd54cb",
+      "cs": 8490.0,
+      "ctr": 2.0,
+      "cvr": 12.02,
+      "vtr": 20.27,
+      "dur": 4.4,
+      "roi": 2.62,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 17,
+      "ind": "运动鞋服",
+      "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装",
+      "pn": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+      "cs": 7552.0,
+      "ctr": 1.71,
+      "cvr": 7.03,
+      "vtr": 17.42,
+      "dur": 3.5,
+      "roi": 3.05,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 18,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季款穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53uybdoaac4maof5meofurrjqeg6taen2a.f0.mp4?dis_k=65efb5344ebd721a8d661c8b7188c496&dis_t=1772183317&m=b1d008697c90bcf4ae1131feadb88736&sha256=f75a8697fa261155dda3b6553be637cb48ccb807dd284d7e24acd004ca2ded45",
+      "cs": 7469.0,
+      "ctr": 2.09,
+      "cvr": 8.62,
+      "vtr": 50.17,
+      "dur": 7.2,
+      "roi": 3.88,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 19,
+      "ind": "运动鞋服",
+      "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣",
+      "pn": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53yyaniaaapuam7i74erurvrqe2tdabvca.f0.mp4?dis_k=6c0d6b9f5e679361c2d2104083f49f3b&dis_t=1779850657&m=6813685ae5c2b6b0983e1923744af23b&sha256=d9cd05e851f4d7f5ac8564d1edd5578ef58101e48b21d886d04b2f768931f7ac",
+      "cs": 7378.0,
+      "ctr": 1.33,
+      "cvr": 19.53,
+      "vtr": 26.66,
+      "dur": 5.1,
+      "roi": 5.14,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 20,
+      "ind": "运动鞋服",
+      "ca": "服饰鞋包-女装-裤子-休闲裤",
+      "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53dybbkaacceaix3farvurqhqecupaefka.f0.mp4?dis_k=3f624a235cbe5bba4fe1b63d5e1ca9ce&dis_t=1772269259&m=569fad20d2fb353c0b0a5e368ea55979&sha256=df8fe64a875226d3fb0350fafa54485ccecfe23ab3266b7acbb9974721ee0e16",
+      "cs": 7215.0,
+      "ctr": 2.05,
+      "cvr": 6.93,
+      "vtr": 35.68,
+      "dur": 16.3,
+      "roi": 3.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     }
   ],
-  "examplesByDim": {
-    "hook": {
-      "产品特写开场": {
-        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "cs": 67174,
-        "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装"
-      },
-      "明星同款引入": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
-        "cs": 76138,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "应季新品展示": {
-        "pn": "Cardanro/卡丹路冰丝网眼夏季速干防晒男运动男士夏季裤子薄款",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53nqbaqaacyqaer4q7x5vbq3aebbwaecca.f0.mp4?dis_k=ab95b7dd7901dbfde2105f3bc4851da7&dis_t=1780301998&m=81b2be27bc1f8fd4de663bde1dd25c1c&sha256=ee409df7b3c6469ac1e90d67387b926f68c15f113cbc116155cc3549bb950e34",
-        "cs": 22051,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
-      },
-      "爆款数据背书": {
-        "pn": "【热卖爆款】凯乐石FUGA越野跑鞋男春夏户外防滑运动鞋透气轻便跑步鞋女EX3",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3much4aaej4aojao4trur4ziepzsqi7sa.f0.mp4?dis_k=aba587f678988dafa291eebc3989c057&dis_t=1777023156&m=bce444afd80d77c3ff35d4f39291b9eb&sha256=4c9418df50c2dfb30984168e9652e486291b607a7ec9147e9280d15ebef99c00",
-        "cs": 12244,
-        "ca": "运动户外-登山/攀岩/攀冰-登山鞋/徒步鞋/越野鞋"
-      },
-      "品质认证背书": {
-        "pn": "【舒云跑鞋】斯凯奇官方女鞋厚底耐磨轻便舒适缓震休闲风基础跑步鞋128650",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wyabqaaaj4amhgacwjvbvnqedc3aagca.f0.mp4?dis_k=0cdd30e1c857d877db3ffe2d6b0148ca&dis_t=1778572284&m=71eacdbe7d64f2ae33185342b24f96a7",
-        "cs": 3296,
-        "ca": "运动户外-户外鞋靴/运动鞋-跑步鞋"
-      },
-      "痛点场景切入": {
-        "pn": "（丫头推荐）蜂鸟综训运动速干透气弹力休闲裤-8566",
-        "ml": "",
-        "cs": 8470,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
-      },
-      "强视觉冲击开场": {
-        "pn": "【220克毛圈棉】夏款纯棉针织长裤男女款直口休闲裤跑步束脚运动裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3jaacgaaabeacvgx7dnurusaeeneaai2a.f0.mp4?dis_k=c1229858a04e1887737b359688d327b6&dis_t=1778321854&m=c50b1154ca731979bcce968783109a60&sha256=859e56c2d26d28e84834e33b4ccdb4c0c2fb44c380f8d0f8e0f1cf3bdc6872a6",
-        "cs": 1756,
-        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
-      },
-      "高端质感开场": {
-        "pn": "[高端定制]FORESTLIZARD直筒男女款舒适速干凉感防晒宽松伞兵裤运动长裤",
-        "ml": "",
-        "cs": 920,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
-      }
+  "apparelBenchmark": [
+    {
+      "rank": 1,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+      "cs": 209251.0,
+      "ctr": 3.23,
+      "cvr": 8.04,
+      "vtr": 58.6,
+      "dur": 41.9,
+      "roi": 2.23,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "persona": {
-      "运动达人": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
-        "cs": 76138,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "男性模特": {
-        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
-        "cs": 52315,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
-      },
-      "女性模特": {
-        "pn": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536yabcaaawyafo4piwfurv5qech3aaeka.f0.mp4?dis_k=a49e0acc577749a5c88a538cb33bbc6a&dis_t=1776830223&m=2af438c32fde553bf5391d3d1f7af6f0&sha256=3997bdb12a82d882f48e90b80a4a332705583deb6a03286b2d9ede855db2af72",
-        "cs": 15692,
-        "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣"
-      },
-      "情侣组合": {
-        "pn": "雅鹿夏季薄款真冰丝速干裤男女同款休闲运动弹力透气宽松透气百搭",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53diaemaaa4iapo6aht5vbugqeiynaarsa.f0.mp4?dis_k=06ebcc93eb99ae2f9fbdc486e1447966&dis_t=1778909725&m=769a9a90ca3d59b35e6daccd53ecb80c&sha256=ea764a05ac9eff248006e5fbf6d3f665c7e31b3630e044ed633f7dcc87168e4b",
-        "cs": 11068,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干裤"
-      },
-      "青少年/儿童": {
-        "pn": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
-        "cs": 16344,
-        "ca": "服饰鞋包-男装-裤子-牛仔裤"
-      },
-      "中年男性": {
-        "pn": "夏季网眼冰丝短裤男新款凉感透气套装中老年速干休闲运动短裤子",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53iyak6aaaeqahllqg7fvburqev5dabl2a.f0.mp4?dis_k=0370ff991693b3dc66444e0228f6451c&dis_t=1778837920&m=087440266ee7bf51ef20c23b4359761e&sha256=ec450bfdd39dfb4685720860ef0a1e8fdfc03689427df78e69e0eefbc3525943",
-        "cs": 476,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干衣裤套装"
-      }
+    {
+      "rank": 2,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+      "cs": 185387.0,
+      "ctr": 3.52,
+      "cvr": 10.24,
+      "vtr": 67.92,
+      "dur": 54.8,
+      "roi": 2.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "sellingPoint": {
-      "高性价比": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
-        "cs": 76138,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "轻薄透气": {
-        "pn": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
-        "cs": 52315,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
-      },
-      "优质面料": {
-        "pn": "[618官方补贴可机洗7A级抗菌]2026新升级可机洗水洗真丝防晒口罩",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37iae4aaasiaf2x55kfurv6qej35aatsa.f0.mp4?dis_k=59c98148aec34a4d630a8480de7d01f9&dis_t=1773998955&m=2ce6a3d50b14eed4ca773002e384ddd7",
-        "cs": 12737,
-        "ca": "服饰鞋包-服饰配件/皮带/帽子/围巾-防晒服配-防晒口罩/防晒脖套"
-      },
-      "修身显瘦": {
-        "pn": "【杨幂同款】SIINSIIN白色喇叭裤时尚显瘦运动休闲鲨鱼微喇裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5344bxoaadxaamf6vqgrurrzyeo7tqg52a.f0.mp4?dis_k=49b7d49a085cbd36d997cc6d0a995623&dis_t=1773908364&m=13fc8423708728a00c5f71fd152a30a3&sha256=cc544f417faeb91a77adf1414ca0fac8ed5edebbde99530ab707929b9c09372a",
-        "cs": 8809,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "户外防护": {
-        "pn": "KAILAS凯乐石 博格达LT冲锋衣 防水防风通勤兼备",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53ambfcaacayajp4pm4vurqayekebqeuka.f0.mp4?dis_k=d478735846e99843e159d5eb306de3ee&dis_t=1777255945&m=7ea50fb9cfaffc87d74c479cfccd797b&sha256=7242d0be599fd8cfc26df912fc47c595f9100b4a2c552229b651ad7dd0aeb959",
-        "cs": 11132,
-        "ca": "运动户外-户外服装/运动服装-冲锋衣裤-冲锋衣"
-      },
-      "科技缓震": {
-        "pn": "【舒云跑鞋】斯凯奇官方女鞋厚底耐磨轻便舒适缓震休闲风基础跑步鞋128650",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wyabqaaaj4amhgacwjvbvnqedc3aagca.f0.mp4?dis_k=0cdd30e1c857d877db3ffe2d6b0148ca&dis_t=1778572284&m=71eacdbe7d64f2ae33185342b24f96a7",
-        "cs": 3296,
-        "ca": "运动户外-户外鞋靴/运动鞋-跑步鞋"
-      },
-      "百搭通勤": {
-        "pn": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53j4amqaaahmah5tq2x5vbutyezbhqbsca.f0.mp4?dis_k=d9970ebc275ff9a4b6957a2d1f9f33a4&dis_t=1780136523&m=eb2c92b4351b2d0435336493936848fb&sha256=c0e38c4c347e72ebc2e8a1c25567ccbbef27877bc4bfe128f9f74f49334cfe8f",
-        "cs": 9923,
-        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
-      },
-      "时尚设计": {
-        "pn": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
-        "cs": 16344,
-        "ca": "服饰鞋包-男装-裤子-牛仔裤"
-      },
-      "保暖御寒": {
-        "pn": "UTO/悠途羊毛长袖春秋速干男款长袖女款运动户外跑步打底T恤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
-        "cs": 7184,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
-      },
-      "品质做工": {
-        "pn": "新中式国潮大码男装t恤运动套装男宽松短袖短裤休闲男装搭配帅气",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3lqbckaacpeaic2a54jvbqxaeevoaejka.f0.mp4?dis_k=5fc88b518b2b9e816dee66a5e9884a2e&dis_t=1780458575&m=6448f700c9c15312aa1f3a475cc98b78&sha256=4462ed214fba71226718616876f89b1859079d3af76a92a37c208b94e36da9f4",
-        "cs": 2003,
-        "ca": "服饰鞋包-男装-套装/学生校服/工作制服-休闲套装"
-      },
-      "舒适体验": {
-        "pn": "拓路者女童喇叭裤26春秋季新款长裤儿童舒适运动微喇裤户外徒步裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gube6aacrualc7r6rnvbqniej42qet2a.f0.mp4?dis_k=e5c7bbe481c6d0f7ddb157559c017843&dis_t=1782382270&m=44648c386a5b4c2d9b197736faecf327",
-        "cs": 62,
-        "ca": "运动户外-户外服装/运动服装-健身/运动服装-健身裤/运动裤"
-      }
+    {
+      "rank": 3,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+      "cs": 148391.0,
+      "ctr": 3.53,
+      "cvr": 6.45,
+      "vtr": 66.29,
+      "dur": 55.1,
+      "roi": 2.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "scriptStructure": {
-      "快速展示型": {
-        "pn": "[三件套]高强度固定一体杯运动内衣三分瑜伽裤运动健身衣服套装",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "cs": 67174,
-        "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装"
-      },
-      "明星带货型": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tibn6aaciqairz6q4jurrgqe36nafx2a.f0.mp4?dis_k=0173f9420d04e4aed385324f90e5efa7&dis_t=1778654244&m=2db26ef8db965ee404bfabeff7bb9c92&sha256=6bab121ec84ac992a3235c34467df0935c620d528b376e90235ebe8b614153b7",
-        "cs": 46811,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "痛点解决型": {
-        "pn": "UTO/悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服春秋",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53yiadqaaaviajrni7rnvbvqqehdbaaoca.f0.mp4?dis_k=9dc30389e8ee9d5fcb50377d413a4263&dis_t=1780458180&m=eb7220d1e0e7546833b0a1dca17c8d5e&sha256=81928be9b59570e4e209797a0e0609b4b798892d6e3ddd10bed6632ab52cf30e",
-        "cs": 15716,
-        "ca": "运动户外-户外服装/运动服装-速干衣裤-速干T恤"
-      },
-      "产品展示型": {
-        "pn": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
-        "cs": 35326,
-        "ca": "运动户外-户外服装/运动服装-防晒衣/皮肤衣"
-      },
-      "快节奏展示型": {
-        "pn": "森马明星同款洞洞鞋网红凉鞋男夏季防滑防臭男士外穿包头沙滩拖鞋",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53fiabeaaageaalcqe2bvbukqecivaaesa.f0.mp4?dis_k=51b5bf5f3ab430b089a14abb2fcb3abc&dis_t=1778653206&m=2420d6c0099b85c953b1289eedd0adc8&sha256=5fcb11a8eefd20dfcfe9d6ccb07e795af44da083f5453a587646224a479185ac",
-        "cs": 1495,
-        "ca": "服饰鞋包-男鞋-凉鞋-洞洞鞋"
-      },
-      "场景种草型": {
-        "pn": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3amap2aaabuaatrax3nvbwaye7ubqb7ka.f0.mp4?dis_k=17b401533542c583f41961563c49e496&dis_t=1780563028&m=275e43f248f29bea9943ddacca6e1ed6&sha256=dd6d1cdba70922451fd10cf0e97028ba18c8b0ccf42069bdddcd3ac285779b83",
-        "cs": 76138,
-        "ca": "服饰鞋包-女装-裤子-休闲裤"
-      },
-      "详细讲解型": {
-        "pn": "[泊伊尚品 品牌正品]无痕薄款高奢贴身透气外穿骑行裤女弹力修身运动服女骑行",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmazcaabc4af3wjkhvvbxmyesgzqdeka.f0.mp4?dis_k=65f46c8dfbef6052964449f39e576dd7&dis_t=1781255340&m=81e68a4b9d069c51c82ecd0dfe548fe1&sha256=f3705d0950a911e48cb5a82f58765c8178985d743e4c370bf65cfd6b9dbeb6e5",
-        "cs": 147,
-        "ca": "运动户外-骑行运动-通用骑行装备-骑行服"
-      }
+    {
+      "rank": 4,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+      "cs": 108832.0,
+      "ctr": 1.41,
+      "cvr": 8.57,
+      "vtr": 28.23,
+      "dur": 7.2,
+      "roi": 3.1,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 5,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+      "cs": 101943.0,
+      "ctr": 1.02,
+      "cvr": 8.77,
+      "vtr": 14.57,
+      "dur": 4.4,
+      "roi": 2.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 6,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+      "cs": 96372.0,
+      "ctr": 1.15,
+      "cvr": 9.46,
+      "vtr": 14.01,
+      "dur": 3.7,
+      "roi": 2.89,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 7,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸内裤套装",
+      "pn": "到手2套-无尺码凉感亲肤透气复古波点浪花领背心/背勾文胸套装-UU1251021",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc34qaueaabimadblr2tbvbxzaeilsacqsa.f0.mp4?dis_k=01f6e9ebf3bea52a561852ef24b6bf83&dis_t=1782280882&m=7be9f64fc6f5ddd22f54ca6d0c88d574",
+      "cs": 79978.0,
+      "ctr": 0.95,
+      "cvr": 9.26,
+      "vtr": 16.15,
+      "dur": 3.4,
+      "roi": 2.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 8,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5324bqwaadlaancgrlwvvbrvyebplqgc2a.f0.mp4?dis_k=ed414677b669aa2bf80b1f3c01a59db5&dis_t=1781169053&m=63de06f9cb719ca92dfe2e36b808a8ce&sha256=297813fbac22860237f37c3d566658edd771fd63b324a37572f65f0e483b3d42",
+      "cs": 75573.0,
+      "ctr": 8.57,
+      "cvr": 3.25,
+      "vtr": 38.88,
+      "dur": 37.4,
+      "roi": 2.13,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 9,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vib6caadvyagotzv6nvbrkqe4gvahyka.f0.mp4?dis_k=2902c243f4b91a510a37076a44ae0468&dis_t=1781971275&m=fdce34c18408c754ef60b72d4e323171&sha256=d723f28a5238a7219fcec2765d5a9224374671e4acfe024da9be6fd636ab20b1",
+      "cs": 67278.0,
+      "ctr": 4.57,
+      "cvr": 9.11,
+      "vtr": 72.02,
+      "dur": 59.3,
+      "roi": 2.13,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 10,
+      "ind": "男装",
+      "ca": "空",
+      "pn": "空",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+      "cs": 63564.0,
+      "ctr": 1.59,
+      "cvr": 5.1,
+      "vtr": 34.98,
+      "dur": 5.7,
+      "roi": 3.11,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 11,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53cececaaepaaimerwfbvb6eieieiqiqka.f0.mp4?dis_k=f634f603cef1f9f77a5fa11816a27baa&dis_t=1781712766&m=b245c21a174007bb98e4df8acfb84d59",
+      "cs": 62281.0,
+      "ctr": 5.38,
+      "cvr": 13.25,
+      "vtr": 35.11,
+      "dur": 45.6,
+      "roi": 2.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 12,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "[两件装]曼妮芬 · 隐形透气bra女粉底液内衣聚拢薄美背背心文胸一体新款",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53cibwuaadjuakytbiybvbseqenijag2sa.f0.mp4?dis_k=44c770f2560208a251d7ac8c7384c48f&dis_t=1781254403&m=f9c092cee40c4a38175613d65c691776&sha256=c54815b13b03debed31ad93807eab658a5b772c5703567924988405e4824ccad",
+      "cs": 60417.0,
+      "ctr": 1.2,
+      "cvr": 6.97,
+      "vtr": 16.43,
+      "dur": 4.5,
+      "roi": 3.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 13,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美7档前扣任意提橡皮擦收副乳大胸显小提拉显瘦防下垂无痕美背文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3xubmuaac2maho2baunvbtpiezk6qfssa.f0.mp4?dis_k=35e1131986d082d3afc07730128cff09&dis_t=1780661629&m=335f8ca363f20c4c2c2a6e179ece533a",
+      "cs": 59737.0,
+      "ctr": 1.36,
+      "cvr": 8.44,
+      "vtr": 26.53,
+      "dur": 5.8,
+      "roi": 2.73,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 14,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸内裤套装",
+      "pn": "到手2套-无尺码凉感亲肤透气复古波点浪花领背心/背勾文胸套装-UU1251021",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53r4ceqaaedyadvrb7ljvb5dyejchqisca.f0.mp4?dis_k=308d7906be05510364cafdec8b5f3148&dis_t=1782359468&m=f99b524312620e7647031a59b2e140e1&sha256=191927b1ab04b49e09770ea55ad3180d0586a2418b7b0ca35b21fc7b392cae7f",
+      "cs": 59014.0,
+      "ctr": 1.31,
+      "cvr": 9.76,
+      "vtr": 9.76,
+      "dur": 2.5,
+      "roi": 3.57,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 15,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3wub4qaadleam5xzrarvbrniezc2qhsca.f0.mp4?dis_k=134815463e07c29b443595569e141a1f&dis_t=1781663492&m=193bd4773ee2468d4b0273008b1bc4c2",
+      "cs": 57908.0,
+      "ctr": 5.22,
+      "cvr": 7.06,
+      "vtr": 61.04,
+      "dur": 57.2,
+      "roi": 2.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 16,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-双肩包",
+      "pn": "S5多功能旅行包防水耐磨可扩容大容量户外商务差旅包电脑包行李包男士双肩包背包轻便抗撕裂独立电脑隔层透气背带出差通勤实用",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53subiyaacamads7bbgbvbrfierskqfdca.f0.mp4?dis_k=56386bcfcfc643085609a924b87b1d0c&dis_t=1780725405&m=195e2ae79e14053ec2ad05df18fe18f9&sha256=3cb94b1ed7956d8d05d9839d1a4c9dcc9ace4b488bbeb83ee90295be8f6f7f45",
+      "cs": 56477.0,
+      "ctr": 0.79,
+      "cvr": 1.07,
+      "vtr": 64.27,
+      "dur": 16.8,
+      "roi": 1.73,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 17,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-童装/亲子装-儿童内衣裤袜-抹胸/儿童文胸/少女文胸",
+      "pn": "婷美【蚕丝乳胶抑菌杯】发育期少女内衣减震提拉定型高中初中生文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tmafaaaa2yaauqv2onubvgyekcnqauca.f0.mp4?dis_k=3d08ad44e43a87e4ec7cb59438daf494&dis_t=1757043317&m=d62adac495f29ff6c33e8539d6a3abb1&sha256=57a27024b3469ac63df88d4043f89d32d1519e21094382acf8e57df8007a9202",
+      "cs": 56242.0,
+      "ctr": 0.93,
+      "cvr": 13.55,
+      "vtr": 30.94,
+      "dur": 7.7,
+      "roi": 1.61,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 18,
+      "ind": "贴身衣物",
+      "ca": "运动户外-骑行运动-通用骑行装备-骑行服",
+      "pn": "草本初色骑行粉底液细肩带大U美背无痕隐形骑行服",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37mbdkaacumap5cq5rnvbr6yegx5qenka.f0.mp4?dis_k=e266b65d2013a6b6215c915f66d4d08f&dis_t=1780485100&m=0636fed9f2b472be237f670cfda70b31&sha256=fb5ec12c7a2168715c3b9450b351ba9f8d518c5dcd7caf06982c89c1e4664bb8",
+      "cs": 54656.0,
+      "ctr": 1.4,
+      "cvr": 14.77,
+      "vtr": 33.75,
+      "dur": 9.5,
+      "roi": 2.31,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 19,
+      "ind": "贴身衣物",
+      "ca": "母婴用品-婴童服/婴童用品-婴童尿裤/尿垫-拉拉裤/学步裤/成长裤",
+      "pn": "草本初色春夏新款中高腰护垫加长底裆柔软益生菌抑菌无痕拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53jyaugaabmaaktvaxjzvbutqeinhacq2a.f0.mp4?dis_k=e3c6abf3ebeb3681d9166890211eda0e&dis_t=1779920415&m=8472409c83a1df19f1fa9eea47bbc652&sha256=e993c4fccbe9795408cb90258ecac5eb691abe71cb06d4fb9d0119db38996bc9",
+      "cs": 48893.0,
+      "ctr": 1.57,
+      "cvr": 16.78,
+      "vtr": 28.77,
+      "dur": 9.3,
+      "roi": 1.75,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 20,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53sadn4aagyiah6z7kt5urzeae32ianxsa.f0.mp4?dis_k=f025bd78792a935b9f6bb2392d9fa1c4&dis_t=1779272327&m=695da1a8bade2f803d20abab8b6efd6c&sha256=f20c8591ec8eae2a041a82d327fb4bd9bb0331ac548cea56176bf0fe6db9cd0a",
+      "cs": 48784.0,
+      "ctr": 2.67,
+      "cvr": 6.58,
+      "vtr": 24.86,
+      "dur": 7.2,
+      "roi": 3.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 21,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "古今夏季新款宽肩带女士内衣竖条纹美背无感聚拢贴胸柔软舒适简约无痕文胸透气不闷汗",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53rqca2aaeq4aiqsjwpnvb5daebwgaidka.f0.mp4?dis_k=1311b9be40d19d6700bb024278beb05b&dis_t=1781695840&m=91591ba2d296367f8be03b0b68d5a75b&sha256=72ef97e9951a4a7c2c7b1710d1658f1a93a3f529d874398ffb7f5eab81f8753d",
+      "cs": 47030.0,
+      "ctr": 1.15,
+      "cvr": 9.12,
+      "vtr": 26.8,
+      "dur": 5.1,
+      "roi": 2.53,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 22,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "曼妮芬 · 蕾丝美背女内衣吊带背心内搭26新粉彩风美背文胸一体",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kaaamaaaluaooyycwnvbuuaeaziaabsa.f0.mp4?dis_k=f251d93d1aceb33634a23d9b9d1ff1a6&dis_t=1782109684&m=34d023da240659b66e537747d08f9437&sha256=fdd2e8bfa6c4c480009bad8efd2de550ea06f80c8dfa71b248672a1a6a24496f",
+      "cs": 44652.0,
+      "ctr": 0.87,
+      "cvr": 6.27,
+      "vtr": 38.09,
+      "dur": 4.9,
+      "roi": 3.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 23,
+      "ind": "箱包",
+      "ca": "玩具-儿童包/背包/箱包-书包/拉杆书包",
+      "pn": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+      "cs": 44374.0,
+      "ctr": 2.53,
+      "cvr": 7.54,
+      "vtr": 26.68,
+      "dur": 6.3,
+      "roi": 2.86,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 24,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-拉杆箱/拉杆包",
+      "pn": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+      "cs": 43786.0,
+      "ctr": 1.38,
+      "cvr": 4.33,
+      "vtr": 21.77,
+      "dur": 4.3,
+      "roi": 3.65,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 25,
+      "ind": "女装",
+      "ca": "空",
+      "pn": "空",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+      "cs": 43731.0,
+      "ctr": 2.51,
+      "cvr": 10.15,
+      "vtr": 55.54,
+      "dur": 18.7,
+      "roi": 2.82,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 26,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "梵客隆内裤女2026夏季新款植物纤维中高腰提臀收腹透气塑形三角裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
+      "cs": 42387.0,
+      "ctr": 4.5,
+      "cvr": 12.4,
+      "vtr": 55.06,
+      "dur": 43.4,
+      "roi": 1.63,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 27,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5354cb4aaexyal7gpiyrur73yed3xqihsa.f0.mp4?dis_k=a35630be23bd966cd9a99dc75bc6566a&dis_t=1777888091&m=5acc7c94f5da77a265acfc3a674cbb6d&sha256=0ee15e0faeb5bd8661bf9223e6c650909fd15e3c9a3d3ce0dfbe331388164d87",
+      "cs": 42212.0,
+      "ctr": 2.1,
+      "cvr": 9.39,
+      "vtr": 42.43,
+      "dur": 16.6,
+      "roi": 3.14,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 28,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "【林允同款】猫人蜂巢冰氧杯提拉承托10A抗菌内衣凉感舒适女士文胸-TJ",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cmbuaaadumaaxfrnjvvbseyeiajqgqca.f0.mp4?dis_k=b3a157d99201e59aa97a93cedd6979f9&dis_t=1781419043&m=7c6fb5d4acbe4f09be18f82d9b8e9dbe&sha256=d9e4f28f9a9882c9b93127519b824b7bdb3142b9eccfe8e6c1774c0127dfd26a",
+      "cs": 41565.0,
+      "ctr": 1.94,
+      "cvr": 7.81,
+      "vtr": 37.64,
+      "dur": 6.2,
+      "roi": 2.61,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 29,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vuajaaaawiabm5jwojvbxliescwqbeca.f0.mp4?dis_k=c09ecf7491b746287763349c44474b53&dis_t=1781971277&m=4e325c1310ab57d74730d30ea58b6f56&sha256=7e3bdb82e4b7138f2eb0d3af94b32b91cf3abe9d7694986ec4947c6070b59c2f",
+      "cs": 40723.0,
+      "ctr": 5.87,
+      "cvr": 12.91,
+      "vtr": 71.73,
+      "dur": 60.5,
+      "roi": 2.07,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 30,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vqaz6aabhqanisix5rvbxlaet6wadh2a.f0.mp4?dis_k=2a3feab3d95e06bc44d5baaceb0d007d&dis_t=1779846114&m=cc1ffc8662dcf887d68aa205105f2bc4&sha256=b63e31914e807038bf9f4b2de92f4fb53421a421c5f6d72c84ee0542e0070301",
+      "cs": 40460.0,
+      "ctr": 1.48,
+      "cvr": 10.92,
+      "vtr": 17.46,
+      "dur": 5.1,
+      "roi": 3.31,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 31,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc34mcckaaeaaaka5zs75vb7yyeexrqijka.f0.mp4?dis_k=cec1906ca42aee68e890d4b66dce6f46&dis_t=1782443454&m=7d0c8eeef6dfd8dc3a91604cdba8cddd&sha256=4e291763a53a29ab713090da8f39dfe6a4c7250a8fc87c276f151a03d6f3cff5",
+      "cs": 38934.0,
+      "ctr": 4.34,
+      "cvr": 8.07,
+      "vtr": 55.25,
+      "dur": 48.5,
+      "roi": 1.95,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 32,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53h4brqaadk4adzgblmnvbqpyeda7qggca.f0.mp4?dis_k=5eb80dbd55a89c89dfc232bdb1ca3ce8&dis_t=1781393516&m=9ae4dc28b5084f420c05dfa25df13651&sha256=1b1f665fc3e6e26ebe941a3864e9e6ea53b02768dbcdd694239f43f2b6d5b457",
+      "cs": 38643.0,
+      "ctr": 3.6,
+      "cvr": 9.41,
+      "vtr": 69.03,
+      "dur": 51.5,
+      "roi": 2.08,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 33,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "[崔万志工厂]女士内裤6条新疆棉透气高腰包臀加长裆独立密封包装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37eaawaaapeagd46jqzurv6iebp4qac2a.f0.mp4?dis_k=11c2035f6b89a12b46e4de8eaf8da2e5&dis_t=1774807683&m=d4ae43e3699d02bb5e154102ae293972",
+      "cs": 38077.0,
+      "ctr": 1.16,
+      "cvr": 6.37,
+      "vtr": 35.96,
+      "dur": 5.5,
+      "roi": 2.94,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 34,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-拉杆箱/拉杆包",
+      "pn": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+      "cs": 37593.0,
+      "ctr": 2.73,
+      "cvr": 4.58,
+      "vtr": 49.44,
+      "dur": 8.2,
+      "roi": 3.29,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 35,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【云朵冰感】大胸显小隐形女士内衣调整型提拉网纱法式文胸DT9",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bqbcaaaciuan3cjsrfvbqdaeeagaeica.f0.mp4?dis_k=1c2d93427ed7a2ef10ac401733f53d99&dis_t=1781772312&m=efdcddb4703bc49a80608fcd35437085&sha256=24896d1f023985ceabfc1171430058b4799514947e8b6b36ceb90e7a8464b06c",
+      "cs": 36476.0,
+      "ctr": 1.11,
+      "cvr": 12.29,
+      "vtr": 14.46,
+      "dur": 3.5,
+      "roi": 2.76,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 36,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-女包-腋下包",
+      "pn": "路易卡迪 LC印花双面背腋下单肩包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmbrqaadoiao5lfx2fursuyedbjqggca.f0.mp4?dis_k=25bed8345b645387c5cdb6c80098598b&dis_t=1773467221&m=7b482277f5cbb0f531bb3b481523ef69&sha256=0bb1b0af7793daf6aaeb2c13fe701f2548a146350268c3154e4a91758627ce68",
+      "cs": 32822.0,
+      "ctr": 3.86,
+      "cvr": 6.2,
+      "vtr": 29.16,
+      "dur": 5.8,
+      "roi": 4.35,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 37,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "嫦香诗法式蕾丝内衣女小胸聚拢显大收副乳防下垂纯欲性感文胸套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536uceeaaepualvwb5j5vb75ieil2qiqsa.f0.mp4?dis_k=7e685df2eb022dbfdb390e049d7f17d1&dis_t=1782184082&m=0caaa324d6b804bbd576e6206a4d6e4e",
+      "cs": 32805.0,
+      "ctr": 2.47,
+      "cvr": 10.53,
+      "vtr": 31.83,
+      "dur": 6.5,
+      "roi": 3.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 38,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "MiiOW/猫人10A抗菌冰肌速凉蜂巢洞洞杯凉感无痕提拉文胸欧若风穿搭女士夏季凉感内衣",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53sqcnmaae3madq2gi3zur5fae22kajvsa.f0.mp4?dis_k=c510cbc9a585449ee50b0e5d6115976d&dis_t=1775038130&m=b42f5a71127b89fde65676eb64ce272b&sha256=1ee51826b660223edb2b8a703fad40e7ee326742b497b6f8792ceef87b4545bb",
+      "cs": 32000.0,
+      "ctr": 1.34,
+      "cvr": 10.25,
+      "vtr": 18.83,
+      "dur": 4.2,
+      "roi": 2.68,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 39,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3sqab2aaaqqajx4rw5rvbxfaedwkaahka.f0.mp4?dis_k=926bd29608d345b74c3bdf764964e6e3&dis_t=1781971212&m=b826819dccfc1fb99c6589bb72ef27b7&sha256=e7817beeb189eb0ab7a51384e00d90baf4033ca78f775b28fe10bfc3f6ff7a67",
+      "cs": 31813.0,
+      "ctr": 5.15,
+      "cvr": 7.53,
+      "vtr": 67.96,
+      "dur": 49.2,
+      "roi": 1.87,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 40,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "中老年裸感无痕蕾丝提拉聚拢收副乳美背心大码舒适女士内衣文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3myasgaabkeabaranofvbwzqeentaci2a.f0.mp4?dis_k=40ad9c1073a2a683f1b0f9e7d378046f&dis_t=1779184526&m=dcb7792576ba761362a8527224abf72b&sha256=55eeeb7e38f41c32272f4004a501607181f0214f2d6bd078cbbf5207943a710f",
+      "cs": 31675.0,
+      "ctr": 4.52,
+      "cvr": 5.76,
+      "vtr": 39.32,
+      "dur": 10.5,
+      "roi": 2.44,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 41,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-男士内裤",
+      "pn": "[崔万志工厂]4条男士内裤95棉长绒棉透气宽边无缝平角四角",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53dibmwaacpeacicrgnvvbqgqezmnafs2a.f0.mp4?dis_k=7c093518091a1b025297717cc6cb38bd&dis_t=1780805477&m=124931679fd2a2e97788b096bfa94557&sha256=5e369d97b61546b708fe05da5b3bf976126fdb2a03eb05bcb8a34e112f3394ae",
+      "cs": 31508.0,
+      "ctr": 1.31,
+      "cvr": 5.32,
+      "vtr": 33.95,
+      "dur": 5.4,
+      "roi": 2.67,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 42,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "超薄10A抗菌透气云感无钢圈软支撑侧收聚拢内衣透气舒适女士内衣文胸欧迪芬Ordifen 063#",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3aybpkaacbyabnqbfj5vbqbqe6udaf5ka.f0.mp4?dis_k=af5430aae3b85deab8b6f245a2225add&dis_t=1781185017&m=6fec36c72d2430e5697da8cecbedab32&sha256=6d4c45127179af3e833cded0cedf05f2127333572bf085dc3c6d74c68c0bedb6",
+      "cs": 31228.0,
+      "ctr": 1.16,
+      "cvr": 9.64,
+      "vtr": 9.15,
+      "dur": 2.8,
+      "roi": 2.32,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 43,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gaaewaaaauao2l7m5zurumaejmyaas2a.f0.mp4?dis_k=833c70688577f0b81e3ba8902cbfb5bc&dis_t=1777116811&m=7ee9a3e3eb1cb8ea5b4a2146936f03d3&sha256=306f66208ca31341f6cda67e9fc4d59e2897fc2695f1bab8bf8be8ca330f5c28",
+      "cs": 31116.0,
+      "ctr": 2.09,
+      "cvr": 8.77,
+      "vtr": 50.26,
+      "dur": 10.1,
+      "roi": 3.03,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 44,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-睡衣/家居服-睡衣套装/家居服套装",
+      "pn": "【凉感】10A抑菌莫代尔冰丝家居服套装夏季青少年短袖短裤男休闲睡衣套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53pqawcaab24akbirc4bvbw7aemf6acyka.f0.mp4?dis_k=54889bf1c60174ff153c39613d0fcbaf&dis_t=1780728260&m=ee2da88f03fc480d4349c93834f38d18&sha256=7dfdb8589c665083569d2743acb38779a34310ca8a7bb847fcdb8fc2b11f5836",
+      "cs": 30757.0,
+      "ctr": 1.83,
+      "cvr": 13.25,
+      "vtr": 30.14,
+      "dur": 4.4,
+      "roi": 3.05,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 45,
+      "ind": "贴身衣物",
+      "ca": "母婴用品-婴童服/婴童用品-婴童尿裤/尿垫-拉拉裤/学步裤/成长裤",
+      "pn": "南极人夏季32A抑菌冰肌舒适吸湿凉感母婴透气拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53m4baiaacmaafgci7xbvbszyeartqebca.f0.mp4?dis_k=a6f1320138b1e140d34e15d25b46edf2&dis_t=1780307736&m=f6ab56d06305284c771b7c9587809277",
+      "cs": 30514.0,
+      "ctr": 1.44,
+      "cvr": 14.23,
+      "vtr": 33.03,
+      "dur": 6.1,
+      "roi": 1.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 46,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53subo2aacueaetkreinvbtfie5wkqf3ka.f0.mp4?dis_k=dc4da3e91476bbfa2dc20295b377d077&dis_t=1780917315&m=f1ce23b4015162b9a1107c417f00a4c5",
+      "cs": 29672.0,
+      "ctr": 3.52,
+      "cvr": 9.57,
+      "vtr": 62.47,
+      "dur": 37.8,
+      "roi": 2.04,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 47,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b537aacqaaahiak35zw3bvbx6aefd4aakca.f0.mp4?dis_k=36cd1912f3df1cceff0c685b9092c991&dis_t=1781971179&m=ec852576027dc8ab49aa6bfa13f21630&sha256=7f11f68af237230329438c4a04f12cd0d605e55b9f6f0d46601a8962421d8d05",
+      "cs": 29004.0,
+      "ctr": 4.82,
+      "cvr": 6.86,
+      "vtr": 83.33,
+      "dur": 41.3,
+      "roi": 1.97,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 48,
+      "ind": "箱包",
+      "ca": "玩具-儿童包/背包/箱包-书包/拉杆书包",
+      "pn": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37qafiaaa6mal4xsk3vubv7aekt6aavca.f0.mp4?dis_k=c64be909a5e438adfa749b317a3d289f&dis_t=1780899457&m=532314e1142f93eefe4f52ff03d38124&sha256=038471e0a666c7527655cd4404b7eebf27325aeb6900be0f68f599dd6169289a",
+      "cs": 28912.0,
+      "ctr": 1.81,
+      "cvr": 5.29,
+      "vtr": 20.77,
+      "dur": 5.2,
+      "roi": 2.82,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 49,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "曼妮芬 · 蕾丝美背女内衣吊带背心内搭26新粉彩风美背文胸一体",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmaeuaaameakwficevvbuuyejjjqassa.f0.mp4?dis_k=f3b1b028d6b5603edec0b529ac1d7c25&dis_t=1778573630&m=0bb04b22b73206784d32282be5f05b46&sha256=0cc0f801c0ef36bf702153342e4c43a3808860f76cf8e038d0e40fbd0f66aec1",
+      "cs": 28106.0,
+      "ctr": 1.24,
+      "cvr": 12.5,
+      "vtr": 17.69,
+      "dur": 3.7,
+      "roi": 2.84,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 50,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "新款有棵树粉底液三合一隐形无痕女防走光冰丝拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc374brmaadtmaagibodfvbt7yec37qgfsa.f0.mp4?dis_k=e6a25d1b4ca9c819c0c23a743d389c32&dis_t=1781339507&m=f8753e404557591f586bb4eaf49f607d&sha256=a337ba83841b9fca76161fd2e64a53abe46b52db2e6d54439284ca629d065655",
+      "cs": 28049.0,
+      "ctr": 2.19,
+      "cvr": 21.31,
+      "vtr": 35.57,
+      "dur": 7.4,
+      "roi": 1.53,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     }
-  }
+  ]
 }

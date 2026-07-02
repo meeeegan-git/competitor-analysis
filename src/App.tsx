@@ -157,7 +157,7 @@ export default function App() {
 
         {activeTab === 'sport-shoes' && (
           shoesAnalysis ? (
-            <SportAnalysisView data={shoesAnalysis} crossIndustryData={goodsAnalysis} />
+            <SportAnalysisView data={shoesAnalysis} />
           ) : (
             <div className="flex flex-col items-center justify-center py-32">
               <Loading size="large" />
@@ -168,7 +168,7 @@ export default function App() {
 
         {activeTab === 'sport-goods' && (
           goodsAnalysis ? (
-            <SportAnalysisView data={goodsAnalysis} crossIndustryData={shoesAnalysis} />
+            <SportAnalysisView data={goodsAnalysis} />
           ) : (
             <div className="flex flex-col items-center justify-center py-32">
               <Loading size="large" />

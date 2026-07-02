@@ -1,532 +1,1619 @@
 {
   "name": "运动用品",
-  "total": 238,
-  "weeks": [
-    "06.22-06.28",
-    "06.15-06.21",
-    "06.06-06.12",
-    "05.30-06.05"
-  ],
-  "dimensions": {
-    "hook": [
-      {
-        "label": "明星同款引入",
-        "count": 61,
-        "pct": 26
-      },
-      {
-        "label": "强视觉冲击开场",
-        "count": 47,
-        "pct": 20
-      },
-      {
-        "label": "痛点场景切入",
-        "count": 43,
-        "pct": 18
-      },
-      {
-        "label": "产品特写开场",
-        "count": 38,
-        "pct": 16
-      },
-      {
-        "label": "应季新品展示",
-        "count": 30,
-        "pct": 13
-      },
-      {
-        "label": "促销利益点开场",
-        "count": 8,
-        "pct": 3
-      },
-      {
-        "label": "爆款数据背书",
-        "count": 5,
-        "pct": 2
-      },
-      {
-        "label": "品质认证背书",
-        "count": 4,
-        "pct": 2
-      },
-      {
-        "label": "高端质感开场",
-        "count": 2,
-        "pct": 1
-      }
-    ],
-    "persona": [
-      {
-        "label": "运动达人",
-        "count": 133,
-        "pct": 56
-      },
-      {
-        "label": "青少年/儿童",
-        "count": 36,
-        "pct": 15
-      },
-      {
-        "label": "男性模特",
-        "count": 28,
-        "pct": 12
-      },
-      {
-        "label": "女性模特",
-        "count": 13,
-        "pct": 5
-      },
-      {
-        "label": "情侣组合",
-        "count": 11,
-        "pct": 5
-      },
-      {
-        "label": "真人模特",
-        "count": 9,
-        "pct": 4
-      },
-      {
-        "label": "中年男性",
-        "count": 5,
-        "pct": 2
-      },
-      {
-        "label": "大码女性模特",
-        "count": 3,
-        "pct": 1
-      }
-    ],
-    "sellingPoint": [
-      {
-        "label": "高性价比",
-        "count": 83,
-        "pct": 35
-      },
-      {
-        "label": "品质做工",
-        "count": 53,
-        "pct": 22
-      },
-      {
-        "label": "轻薄透气",
-        "count": 38,
-        "pct": 16
-      },
-      {
-        "label": "保暖御寒",
-        "count": 15,
-        "pct": 6
-      },
-      {
-        "label": "实用功能",
-        "count": 11,
-        "pct": 5
-      },
-      {
-        "label": "科技缓震",
-        "count": 10,
-        "pct": 4
-      },
-      {
-        "label": "户外防护",
-        "count": 10,
-        "pct": 4
-      },
-      {
-        "label": "百搭通勤",
-        "count": 5,
-        "pct": 2
-      },
-      {
-        "label": "修身显瘦",
-        "count": 5,
-        "pct": 2
-      },
-      {
-        "label": "时尚设计",
-        "count": 4,
-        "pct": 2
-      },
-      {
-        "label": "优质面料",
-        "count": 4,
-        "pct": 2
-      }
-    ],
-    "scriptStructure": [
-      {
-        "label": "场景种草型",
-        "count": 63,
-        "pct": 26
-      },
-      {
-        "label": "产品展示型",
-        "count": 51,
-        "pct": 21
-      },
-      {
-        "label": "明星带货型",
-        "count": 47,
-        "pct": 20
-      },
-      {
-        "label": "快速展示型",
-        "count": 33,
-        "pct": 14
-      },
-      {
-        "label": "详细讲解型",
-        "count": 18,
-        "pct": 8
-      },
-      {
-        "label": "痛点解决型",
-        "count": 14,
-        "pct": 6
-      },
-      {
-        "label": "促销口播型",
-        "count": 7,
-        "pct": 3
-      },
-      {
-        "label": "快节奏展示型",
-        "count": 5,
-        "pct": 2
-      }
-    ]
-  },
-  "topCombos": [
+  "week": "06.22-06.28",
+  "totalCount": 4530,
+  "topItems": [
     {
-      "script": "明星带货型",
-      "hook": "明星同款引入",
-      "persona": "运动达人",
-      "count": 25,
-      "pct": 11,
-      "example": {
-        "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
-        "cs": 49251,
-        "sellingPoint": "高性价比"
-      }
+      "rank": 1,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-甩脂机/律动机",
+      "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
+      "cs": 49251.0,
+      "ctr": 2.16,
+      "cvr": 6.9,
+      "vtr": 36.4,
+      "dur": 7.4,
+      "roi": 3.05,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "场景种草型",
-      "hook": "痛点场景切入",
-      "persona": "运动达人",
-      "count": 18,
-      "pct": 8,
-      "example": {
-        "pn": "[六一礼物]舒搏乐X6家用音乐拳击训练墙靶机成人小孩亲子解压爆汗寒假",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53q4apaaaafaaotiyqfjvbvbye6cdqb4ca.f0.mp4?dis_k=fd4c75389fef3f9b240000803e102aad&dis_t=1779442152&m=ca3d7814d1db5d4e8c7b77df43277d3b&sha256=6e02c76a60ece7661a1c70a382587ef492e45d7ebb9fd095cfd673d48f3b244b",
-        "cs": 89200,
-        "sellingPoint": "高性价比"
-      }
+      "rank": 2,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
+      "cs": 36407.0,
+      "ctr": 0.62,
+      "cvr": 4.51,
+      "vtr": 79.96,
+      "dur": 21.5,
+      "roi": 2.45,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "场景种草型",
-      "hook": "强视觉冲击开场",
-      "persona": "运动达人",
-      "count": 15,
-      "pct": 6,
-      "example": {
-        "pn": "【西热力江专属】逆引力室内外PU7号篮球训练比赛防滑耐磨耐用吸汗L",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3s4cg6aaeiqafcxb5w5vb5fyen6lqi32a.f0.mp4?dis_k=387e864de8494cfc8b18c077ee3e794c&dis_t=1782136868&m=8c81e208ed0b905798e21ffa637f9d3f&sha256=681c9a602778339d76736e007de495692054dace799d148cc89bc17067ab278d",
-        "cs": 11113,
-        "sellingPoint": "实用功能"
-      }
+      "rank": 3,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-甩脂机/律动机",
+      "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53teac4aaaluaoa7jy3jvbvgief2mqalsa.f0.mp4?dis_k=23ee71c384711e537c29e6aeeb0c2d0e&dis_t=1782107975&m=9ca81905089ca1b78c453260c694aeba&sha256=8841e51ada26db398672790c26bfc1fcbd96b0cc121b7c96f4f620f6db07cf09",
+      "cs": 32304.0,
+      "ctr": 2.13,
+      "cvr": 9.21,
+      "vtr": 51.26,
+      "dur": 8.1,
+      "roi": 3.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "产品展示型",
-      "hook": "产品特写开场",
-      "persona": "运动达人",
-      "count": 13,
-      "pct": 5,
-      "example": {
-        "pn": "玲吾玖二大容量健身运动旅行日常双肩包羽毛球网球篮球足球包书包",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4aaeaaa3eamdhywuzvbujyeaitqaasa.f0.mp4?dis_k=e454c0aa3ff346a091d25f6fe2595e14&dis_t=1779877108&m=5a771a92c570130c5045ff63ae8ac976&sha256=720203c6a9462c1858f54559d7c573d4309f910a6aa344fa938e2f1065ed8adb",
-        "cs": 13057,
-        "sellingPoint": "百搭通勤"
-      }
+      "rank": 4,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-仰卧板/健腹板",
+      "pn": "【樊少皇同款】OES健腹机腰腹核心训练卷腹家用多功能全身健身器材",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53bma5saab3aaefgyurnvbwcye3efqdwka.f0.mp4?dis_k=70af592b418a9c2a0d34875a3842b2fa&dis_t=1779801079&m=94852eef37dd12a3bc55ee6a0a831d7a&sha256=1bf53087c23d6e2e244a564745a156e9d5c4ef19a7fa5e6debef2caf5f8fb732",
+      "cs": 20136.0,
+      "ctr": 1.84,
+      "cvr": 1.08,
+      "vtr": 39.23,
+      "dur": 14.3,
+      "roi": 2.94,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "痛点解决型",
-      "hook": "痛点场景切入",
-      "persona": "运动达人",
-      "count": 9,
-      "pct": 4,
-      "example": {
-        "pn": "玲吾玖二大容量健身运动旅行日常双肩包羽毛球网球篮球足球包书包",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4aaeaaa3eamdhywuzvbujyeaitqaasa.f0.mp4?dis_k=e454c0aa3ff346a091d25f6fe2595e14&dis_t=1779877108&m=5a771a92c570130c5045ff63ae8ac976&sha256=720203c6a9462c1858f54559d7c573d4309f910a6aa344fa938e2f1065ed8adb",
-        "cs": 53107,
-        "sellingPoint": "百搭通勤"
-      }
+      "rank": 5,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wab4aaad74adi4ziqnvdxmgeycyahqca.f0.mp4?dis_k=8624899b634986d3114ad5cd4fc15fed&dis_t=1781265489",
+      "cs": 18327.0,
+      "ctr": 2.76,
+      "cvr": 9.35,
+      "vtr": 28.04,
+      "dur": 5.9,
+      "roi": 2.74,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "明星带货型",
-      "hook": "明星同款引入",
-      "persona": "情侣组合",
-      "count": 9,
-      "pct": 4,
-      "example": {
-        "pn": "OES腰部云感透气男女同款护腰带缓解腰部软硬护腰神器",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc33aaicaaa54afkuglyjubvwaeqhmabaka.f0.mp4?dis_k=a779a26491eb21fdf59bf8dd68424222&dis_t=1776571322&m=2f09a2d3c1792b8d165c66f9d3ea4973&sha256=9f1edbec1e288f2d210d2e30d26faa4354efb368cd4e4739aff9b4942d2c7884",
-        "cs": 9613,
-        "sellingPoint": "轻薄透气"
-      }
+      "rank": 6,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-仰卧板/健腹板",
+      "pn": "【樊少皇同款】OES健腹机腰腹核心训练卷腹家用多功能全身健身器材",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3xmahgaaaaaadqfaiyvvbvoyeoo5qa42a.f0.mp4?dis_k=4955609d449e0cb78808bb01c0bd49ae&dis_t=1779884364&m=3193e47e1b86325cf0c1705174506c67&sha256=690e195320ceaefa9250a9740e834c2167d052c2634016a31868a353e87d85d4",
+      "cs": 16591.0,
+      "ctr": 0.91,
+      "cvr": 5.05,
+      "vtr": 55.99,
+      "dur": 8.4,
+      "roi": 3.0,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "产品展示型",
-      "hook": "痛点场景切入",
-      "persona": "运动达人",
-      "count": 9,
-      "pct": 4,
-      "example": {
-        "pn": "玲吾玖二大容量健身运动旅行日常双肩包羽毛球网球篮球足球包书包",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4aaeaaa3eamdhywuzvbujyeaitqaasa.f0.mp4?dis_k=e454c0aa3ff346a091d25f6fe2595e14&dis_t=1779877108&m=5a771a92c570130c5045ff63ae8ac976&sha256=720203c6a9462c1858f54559d7c573d4309f910a6aa344fa938e2f1065ed8adb",
-        "cs": 4932,
-        "sellingPoint": "百搭通勤"
-      }
+      "rank": 7,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53oebzwaadjqadbobi6jvbs4ietnyqhg2a.f0.mp4?dis_k=1fb8e170b33f550aa2e30564f7d0c931&dis_t=1781246795&m=ba051261daa90a85a66da10b3dd3a2fb&sha256=54768d9a77b43d82b5d548079433c04cb2f4c6829947bdeb7ada829eedaf97c9",
+      "cs": 15210.0,
+      "ctr": 3.69,
+      "cvr": 5.33,
+      "vtr": 27.24,
+      "dur": 6.1,
+      "roi": 2.38,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
     {
-      "script": "场景种草型",
-      "hook": "明星同款引入",
-      "persona": "运动达人",
-      "count": 8,
-      "pct": 3,
-      "example": {
-        "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53x4afgaaaveaj5pypprvbvpyeko7qau2a.f0.mp4?dis_k=d4ced5595691baf2fdc1029046208a59&dis_t=1779428452&m=cf1531959837e7ba26802d543ae94cd1&sha256=c29d605e6bb14e0405cfb371f67c34dd27cc2a94eb468c70d7f214234b446b83",
-        "cs": 24679,
-        "sellingPoint": "高性价比"
-      }
+      "rank": 8,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53hicvuaafleap6korqfub6oqeli5akwsa.f0.mp4?dis_k=f2027c6d628564f41994ac7e5b01622c&dis_t=1758766451&m=2042f7e99818070d8d4313c97171f978&sha256=4215a36aea9669463369b2bce40274e49d6e5b0b13654ea089d04582f4e38fa0",
+      "cs": 15093.0,
+      "ctr": 2.87,
+      "cvr": 7.73,
+      "vtr": 27.26,
+      "dur": 6.1,
+      "roi": 2.43,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 9,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-露营/野炊/旅行装备-帐篷/天幕/帐篷配件-帐篷",
+      "pn": "有床+天幕[胡杨林pro] 太力全自动充气帐篷2-4人户外露营过夜帐篷",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
+      "cs": 13485.0,
+      "ctr": 7.44,
+      "cvr": 0.29,
+      "vtr": 39.8,
+      "dur": 16.0,
+      "roi": 2.69,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 10,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-垂钓装备-渔具套装",
+      "pn": "运动户外骑行运动穿戴装备光威滨舟旅行套装淡中硬钓两用运动户外装备",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
+      "cs": 11850.0,
+      "ctr": 1.98,
+      "cvr": 4.43,
+      "vtr": 31.83,
+      "dur": 6.6,
+      "roi": 2.55,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 11,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-篮球-篮球",
+      "pn": "【西热力江专属】逆引力室内外PU7号篮球训练比赛防滑耐磨耐用吸汗L",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3s4cg6aaeiqafcxb5w5vb5fyen6lqi32a.f0.mp4?dis_k=387e864de8494cfc8b18c077ee3e794c&dis_t=1782136868&m=8c81e208ed0b905798e21ffa637f9d3f&sha256=681c9a602778339d76736e007de495692054dace799d148cc89bc17067ab278d",
+      "cs": 11113.0,
+      "ctr": 4.2,
+      "cvr": 1.95,
+      "vtr": 57.38,
+      "dur": 18.8,
+      "roi": 3.07,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 12,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-跆拳道/武术/搏击-拳击/散打/泰拳-速度球/反应球",
+      "pn": "创步【樊少皇推荐】拳击速度球成人儿童反应球训练解压拳击靶家用",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3l4apgaaa74aiykf2ffurwxye6npqb42a.f0.mp4?dis_k=f5cbb594eee866c81d14da9b18ae4604&dis_t=1775643483&m=32a47164e6d289e74f19b7c8ac729e4b&sha256=0a0c3f6b5a44276b87e6d888af01c3c29239b37e2171a871d5937a9b8713ff47",
+      "cs": 10252.0,
+      "ctr": 1.3,
+      "cvr": 2.92,
+      "vtr": 64.66,
+      "dur": 19.0,
+      "roi": 2.38,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 13,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53xmay4aabhyalqkubenurxoyer25qddsa.f0.mp4?dis_k=205104956ee23e4780fdbf5b7d433f02&dis_t=1770010264&m=04c4c03feeac6337390987e3108f5eea&sha256=f139f602cac6d66ef81f5f93f67aca72644a4bd6bcabf4b520c2f269fd33651f",
+      "cs": 10185.0,
+      "ctr": 1.03,
+      "cvr": 6.46,
+      "vtr": 37.31,
+      "dur": 4.8,
+      "roi": 2.41,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 14,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护腰",
+      "pn": "OES腰部云感透气男女同款护腰带缓解腰部软硬护腰神器",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc33aaicaaa54afkuglyjubvwaeqhmabaka.f0.mp4?dis_k=a779a26491eb21fdf59bf8dd68424222&dis_t=1776571322&m=2f09a2d3c1792b8d165c66f9d3ea4973&sha256=9f1edbec1e288f2d210d2e30d26faa4354efb368cd4e4739aff9b4942d2c7884",
+      "cs": 9613.0,
+      "ctr": 1.42,
+      "cvr": 10.46,
+      "vtr": 37.28,
+      "dur": 6.9,
+      "roi": 2.55,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 15,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "髌骨带夏季专业级跑步羽毛球膝盖保护带运动髌护带透气不闷汗男女通用",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3omdo6aageuamox7k45ury4ye55zqn32a.f0.mp4?dis_k=8f8db79de5e59c81fc54ce3f648a1b18&dis_t=1777084523&m=a3c4737b7d4ddb232e36558b51b4bc38&sha256=40ede110e6f31aff84e14c07a5b20c985b4b31c50f1c1210eedc361eb524bd3d",
+      "cs": 9597.0,
+      "ctr": 2.61,
+      "cvr": 10.66,
+      "vtr": 23.73,
+      "dur": 5.1,
+      "roi": 2.44,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 16,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-骑行运动-摩托车/电动车整车及装备-遮阳伞/遮阳篷",
+      "pn": "[升级款]防晒防雨加厚防水雨布防水布防雨布电动车装备遮阳伞",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53uqcfkaaef4ahaek5kbub5jaekwsaivka.f0.mp4?dis_k=1e84dcab8aece164e075ada7ffdf933d&dis_t=1780744565&m=43b39c6a3c6deaeb06bafcad3b79097c&sha256=eb68f9494e1468c8a49ece556f5318befbce495e5139829c5b556c51cc51a660",
+      "cs": 9482.0,
+      "ctr": 2.91,
+      "cvr": 10.44,
+      "vtr": 44.42,
+      "dur": 11.2,
+      "roi": 3.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 17,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-垂钓装备-渔具套装",
+      "pn": "运动户外骑行运动穿戴装备光威滨舟旅行套装淡中硬钓两用运动户外装备",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53aachiaaewuanr4ztbvvb4aaeoqaai5ca.f0.mp4?dis_k=5da4aaa41cec002fdb1edfe4d88e1b4b&dis_t=1782033601&m=ece708951612804ef4ff85999ab02756&sha256=5f2b6e2ad1f991f92e2987c1d6f2f59f672f2a2fdcda547b0e0a5b88447c3496",
+      "cs": 8162.0,
+      "ctr": 1.48,
+      "cvr": 2.7,
+      "vtr": 27.93,
+      "dur": 5.5,
+      "roi": 2.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 18,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-运动装备-运动护具-运动护膝",
+      "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53lualuaaaziaps2yzhburuxiexjoqbosa.f0.mp4?dis_k=66f438dedc0a3db870a342b52a92ade2&dis_t=1763263434&m=51b8d71be4c22138cfd8a6aaef6e1cb6&sha256=9bbb107c24391a7985619cb0edf1153066190143663bfef977268c2bf2bc02e2",
+      "cs": 8076.0,
+      "ctr": 2.31,
+      "cvr": 6.14,
+      "vtr": 24.71,
+      "dur": 5.4,
+      "roi": 2.29,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 19,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-甩脂机/律动机",
+      "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535iaugaab4aab64qqhnvbx2qeipvacq2a.f0.mp4?dis_k=0870292ca9bbba102f01a1df100a0efa&dis_t=1779523268&m=514a2fb695a9ea04581b1df877e7428e&sha256=517009cd734550d23b45131ba2cfc8cb226cf5a78f5b1f092e344a262465847f",
+      "cs": 7908.0,
+      "ctr": 2.37,
+      "cvr": 5.17,
+      "vtr": 43.93,
+      "dur": 7.8,
+      "roi": 2.93,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 20,
+      "ind": "运动用品-非品牌",
+      "ca": "运动户外-中小型健身器材-甩脂机/律动机",
+      "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53x4afgaaaveaj5pypprvbvpyeko7qau2a.f0.mp4?dis_k=65d68c7b8fc10b7e838e1d92539138d7&dis_t=1779421511&m=cf1531959837e7ba26802d543ae94cd1&sha256=c29d605e6bb14e0405cfb371f67c34dd27cc2a94eb468c70d7f214234b446b83",
+      "cs": 7467.0,
+      "ctr": 2.27,
+      "cvr": 12.21,
+      "vtr": 57.77,
+      "dur": 13.5,
+      "roi": 2.87,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     }
   ],
-  "examplesByDim": {
-    "hook": {
-      "痛点场景切入": {
-        "pn": "[六一礼物]舒搏乐X6家用音乐拳击训练墙靶机成人小孩亲子解压爆汗寒假",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53q4apaaaafaaotiyqfjvbvbye6cdqb4ca.f0.mp4?dis_k=fd4c75389fef3f9b240000803e102aad&dis_t=1779442152&m=ca3d7814d1db5d4e8c7b77df43277d3b&sha256=6e02c76a60ece7661a1c70a382587ef492e45d7ebb9fd095cfd673d48f3b244b",
-        "cs": 89200,
-        "ca": "玩具-运动/休闲玩具-儿童智能拳击靶"
-      },
-      "明星同款引入": {
-        "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
-        "cs": 49251,
-        "ca": "运动户外-中小型健身器材-甩脂机/律动机"
-      },
-      "产品特写开场": {
-        "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53quadyaaammapgnsgyvurvbiehscqapca.f0.mp4?dis_k=06e8f9cc7905b8cc57033e2cbfa2a4be&dis_t=1766248425&m=959f87603f81441ba6f8943589b70314",
-        "cs": 17926,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "应季新品展示": {
-        "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wab4aaad74adi4ziqnvdxmgeycyahqca.f0.mp4?dis_k=8624899b634986d3114ad5cd4fc15fed&dis_t=1781265489",
-        "cs": 36390,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "促销利益点开场": {
-        "pn": "[买一送一]2026新款女外穿超薄夏日降温瑜伽鲨鱼收腹提臀奶皮骑行裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3paal4aaaa4anwgqnnrvbu6aexz4abpsa.f0.mp4?dis_k=8960b4863a8b7b49647398f33d49126d&dis_t=1779327547&m=4296d2dbb74f2623cb28321ff364b6f4&sha256=0a70f6243db564e640f1cc70e53867e22595b8ec72abec4bf3de3b14230a05da",
-        "cs": 7447,
-        "ca": "服饰鞋包-女装-裤子-鲨鱼裤/打底裤"
-      },
-      "强视觉冲击开场": {
-        "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "cs": 36407,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "品质认证背书": {
-        "pn": "【Harmony智联】钟爱一生好礼本博暖宫腰带姨妈神器送女友送老婆官方正品",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53nmce6aaelmabdkfzvvub42yej5vqit2a.f0.mp4?dis_k=556e21d239aa26a9d662d3afd8bc8dbc&dis_t=1757240885&m=6fb3a8297e319478ee236545776f277c&sha256=11e498beb36bfe4d62f4992efd0c5e50872491b2a97e5fdf607612c870fe8257",
-        "cs": 286,
-        "ca": "家用电器-个护健康-家用保健-暖宫带/经期护理仪"
-      },
-      "爆款数据背书": {
-        "pn": "斯伯丁爆款飞行员黑科技防滑十字纹高颜值礼物PU7号室外篮球520礼物六一礼物青少年成人通用",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536uaw6aabqmamx3djafurx5ien72qc32a.f0.mp4?dis_k=25edb3f4c26b5b642e0e351e184652a3&dis_t=1768465540&m=ec75378052249468b0ffaa6d06957a05&sha256=b36bbb238164c8fd71d3c3f122f8b587281746b8173d8c7b1a3423d8ac3abec4",
-        "cs": 617,
-        "ca": "运动户外-篮球-篮球"
-      },
-      "高端质感开场": {
-        "pn": "斯伯丁旗舰款高端竞赛篮球TF1000超纤PU职业比赛款复刻真皮手感专业篮球礼物推荐",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536uaw6aabqmamx3djafurx5ien72qc32a.f0.mp4?dis_k=25edb3f4c26b5b642e0e351e184652a3&dis_t=1768465540&m=ec75378052249468b0ffaa6d06957a05&sha256=b36bbb238164c8fd71d3c3f122f8b587281746b8173d8c7b1a3423d8ac3abec4",
-        "cs": 614,
-        "ca": "运动户外-篮球-篮球"
-      }
+  "apparelBenchmark": [
+    {
+      "rank": 1,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+      "cs": 209251.0,
+      "ctr": 3.23,
+      "cvr": 8.04,
+      "vtr": 58.6,
+      "dur": 41.9,
+      "roi": 2.23,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "persona": {
-      "运动达人": {
-        "pn": "[六一礼物]舒搏乐X6家用音乐拳击训练墙靶机成人小孩亲子解压爆汗寒假",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53q4apaaaafaaotiyqfjvbvbye6cdqb4ca.f0.mp4?dis_k=fd4c75389fef3f9b240000803e102aad&dis_t=1779442152&m=ca3d7814d1db5d4e8c7b77df43277d3b&sha256=6e02c76a60ece7661a1c70a382587ef492e45d7ebb9fd095cfd673d48f3b244b",
-        "cs": 89200,
-        "ca": "玩具-运动/休闲玩具-儿童智能拳击靶"
-      },
-      "中年男性": {
-        "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "cs": 36407,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "男性模特": {
-        "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wab4aaad74adi4ziqnvdxmgeycyahqca.f0.mp4?dis_k=8624899b634986d3114ad5cd4fc15fed&dis_t=1781265489",
-        "cs": 36390,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "真人模特": {
-        "pn": "【徐艺洋同款无痕粉底液美背内衣】四种穿法冰丝轻运动瑜伽美背吊带",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53ymbruaadpaaiw7hplzurtqyedlbqggsa.f0.mp4?dis_k=dee7e9c4059b27481fb87031587a41fd&dis_t=1777111873&m=a21f423e8e57544264fd7a0134fbeb9d&sha256=4cf14a795f405295f5a501b7f4dd240f0dafba9d3063e1ac8e031532e95b25e1",
-        "cs": 19810,
-        "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸"
-      },
-      "情侣组合": {
-        "pn": "OES腰部云感透气男女同款护腰带缓解腰部软硬护腰神器",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc33aaicaaa54afkuglyjubvwaeqhmabaka.f0.mp4?dis_k=a779a26491eb21fdf59bf8dd68424222&dis_t=1776571322&m=2f09a2d3c1792b8d165c66f9d3ea4973&sha256=9f1edbec1e288f2d210d2e30d26faa4354efb368cd4e4739aff9b4942d2c7884",
-        "cs": 9613,
-        "ca": "运动户外-运动装备-运动护具-运动护腰"
-      },
-      "女性模特": {
-        "pn": "[买一送一]2026新款女外穿超薄夏日降温瑜伽鲨鱼收腹提臀奶皮骑行裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3paal4aaaa4anwgqnnrvbu6aexz4abpsa.f0.mp4?dis_k=8960b4863a8b7b49647398f33d49126d&dis_t=1779327547&m=4296d2dbb74f2623cb28321ff364b6f4&sha256=0a70f6243db564e640f1cc70e53867e22595b8ec72abec4bf3de3b14230a05da",
-        "cs": 7447,
-        "ca": "服饰鞋包-女装-裤子-鲨鱼裤/打底裤"
-      },
-      "青少年/儿童": {
-        "pn": "[买绳送课]儿童小学生跳绳考试专用双轴承不打结竞速专业学校可调节",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53maaksaaas4aats2m5burwyaevfqabkka.f0.mp4?dis_k=3cdef642a53c1daecdbd2de44f2fa143&dis_t=1766643982&m=a1d89f8251fdd2da984ffe3c5d57af08&sha256=1bbc842111d9cfec2d2c05764286f8a9045fcb254e224bf23d84cb9938dbf2bc",
-        "cs": 16471,
-        "ca": "运动户外-中小型健身器材-跳绳"
-      },
-      "大码女性模特": {
-        "pn": "WaterTime泳衣女士新款平角保守游泳馆专用微胖度假温泉游泳衣",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3xacegaaepyao356havur5oaeio4aiq2a.f0.mp4?dis_k=3baf9ce43b0f2244386762dd0b121ab2&dis_t=1774431955&m=506dd5ce633da9206334fef922c83315&sha256=8763c2db229f607c7cd74bfcda80f5f2ec6eab37524459aa1acbd02c59ca93d0",
-        "cs": 4615,
-        "ca": "运动户外-游泳-游泳服饰-泳衣"
-      }
+    {
+      "rank": 2,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+      "cs": 185387.0,
+      "ctr": 3.52,
+      "cvr": 10.24,
+      "vtr": 67.92,
+      "dur": 54.8,
+      "roi": 2.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "sellingPoint": {
-      "高性价比": {
-        "pn": "[六一礼物]舒搏乐X6家用音乐拳击训练墙靶机成人小孩亲子解压爆汗寒假",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53q4apaaaafaaotiyqfjvbvbye6cdqb4ca.f0.mp4?dis_k=fd4c75389fef3f9b240000803e102aad&dis_t=1779442152&m=ca3d7814d1db5d4e8c7b77df43277d3b&sha256=6e02c76a60ece7661a1c70a382587ef492e45d7ebb9fd095cfd673d48f3b244b",
-        "cs": 89200,
-        "ca": "玩具-运动/休闲玩具-儿童智能拳击靶"
-      },
-      "百搭通勤": {
-        "pn": "玲吾玖二大容量健身运动旅行日常双肩包羽毛球网球篮球足球包书包",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4aaeaaa3eamdhywuzvbujyeaitqaasa.f0.mp4?dis_k=e454c0aa3ff346a091d25f6fe2595e14&dis_t=1779877108&m=5a771a92c570130c5045ff63ae8ac976&sha256=720203c6a9462c1858f54559d7c573d4309f910a6aa344fa938e2f1065ed8adb",
-        "cs": 53107,
-        "ca": "服饰鞋包-箱包皮具-通用箱包-双肩包"
-      },
-      "保暖御寒": {
-        "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "cs": 36407,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "轻薄透气": {
-        "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wab4aaad74adi4ziqnvdxmgeycyahqca.f0.mp4?dis_k=8624899b634986d3114ad5cd4fc15fed&dis_t=1781265489",
-        "cs": 36390,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "修身显瘦": {
-        "pn": "[买一送一]2026新款女外穿超薄夏日降温瑜伽鲨鱼收腹提臀奶皮骑行裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3paal4aaaa4anwgqnnrvbu6aexz4abpsa.f0.mp4?dis_k=8960b4863a8b7b49647398f33d49126d&dis_t=1779327547&m=4296d2dbb74f2623cb28321ff364b6f4&sha256=0a70f6243db564e640f1cc70e53867e22595b8ec72abec4bf3de3b14230a05da",
-        "cs": 7447,
-        "ca": "服饰鞋包-女装-裤子-鲨鱼裤/打底裤"
-      },
-      "品质做工": {
-        "pn": "有床+天幕[胡杨林pro] 太力全自动充气帐篷2-4人户外露营过夜帐篷",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53hqa2caabwiaabhisyzvbwpaeue6adika.f0.mp4?dis_k=0ed79bf856692001b5e9364a76dc6f8e&dis_t=1779671481&m=2b43074d523c8b7d14aed9f8dbdf6c69&sha256=83eadef89fde8e56134506150ff75553ee353df4690151c705011ad4696d36ed",
-        "cs": 17455,
-        "ca": "运动户外-露营/野炊/旅行装备-帐篷/天幕/帐篷配件-帐篷"
-      },
-      "科技缓震": {
-        "pn": "CHANGFENG昌峰 至尊版智能辅助回弹健腹轮液晶大屏数显卷腹练腹肌马甲线",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3qadhgaagpqajxuxpwjurzaaeooaam42a.f0.mp4?dis_k=4daebfae99f9caa0a0e863a9b1bf8ebf&dis_t=1776937389&m=4669ac423bce860bb0458bf5d05d2250&sha256=920016adf64c1d795d91eb1fca02f45cd2bac5c8dac65a9cfbe8d9e0572da0c3",
-        "cs": 4924,
-        "ca": "运动户外-中小型健身器材-健腹轮/健腹器"
-      },
-      "时尚设计": {
-        "pn": "【春夏新款】科里芙健身衣女春夏新款时尚高级感网红瑜伽服外穿休闲运动服套装",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3qeacsaaaiuajbwl56bubvaiefgaqakka.f0.mp4?dis_k=c76eac84eb1d234e10435b37b04e1410&dis_t=1753320480&sha256=fc1801872ce9574320ecc32b2fbe9910bd89b5c0ec4b4384446f222e78805291&m=ca221441a2fdeda9c41c64d3ac60173f",
-        "cs": 742,
-        "ca": "运动户外-瑜伽-瑜伽服饰-瑜伽套装"
-      },
-      "实用功能": {
-        "pn": "【西热力江专属】逆引力室内外PU7号篮球训练比赛防滑耐磨耐用吸汗L",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3s4cg6aaeiqafcxb5w5vb5fyen6lqi32a.f0.mp4?dis_k=387e864de8494cfc8b18c077ee3e794c&dis_t=1782136868&m=8c81e208ed0b905798e21ffa637f9d3f&sha256=681c9a602778339d76736e007de495692054dace799d148cc89bc17067ab278d",
-        "cs": 11113,
-        "ca": "运动户外-篮球-篮球"
-      },
-      "户外防护": {
-        "pn": "林更新同款【朱雀冲锋衣单冲】拓路者冲锋衣男女户外登山服防风防水",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53biabiaaakeaj3jgis5urucqecqfaafca.f0.mp4?dis_k=694da41f0b0699eb428fb612ce6e8323&dis_t=1778837340&m=8e6b55661cde72360c0667096ef41614&sha256=0b39b41851bbd7baa306db0187906c981162aeeb1c46287bb7855102044687a0",
-        "cs": 592,
-        "ca": "运动户外-户外服装/运动服装-冲锋衣裤-冲锋衣"
-      },
-      "优质面料": {
-        "pn": "2026新升级可机洗水洗真丝防晒口罩",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53haamsaaaqqajayx5gzuruoaeze4abska.f0.mp4?dis_k=4e692a8f22366560f6997babdcc446b7&dis_t=1778212742&m=8dfd4f9295a5c7ac51522cfefa66b886&sha256=583948547551524d7bdf4b58c7602335afae4e912aa60729cec98f63fe26d6dc",
-        "cs": 4495,
-        "ca": "服饰鞋包-服饰配件/皮带/帽子/围巾-防晒服配-防晒口罩/防晒脖套"
-      }
+    {
+      "rank": 3,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+      "cs": 148391.0,
+      "ctr": 3.53,
+      "cvr": 6.45,
+      "vtr": 66.29,
+      "dur": 55.1,
+      "roi": 2.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     },
-    "scriptStructure": {
-      "场景种草型": {
-        "pn": "[六一礼物]舒搏乐X6家用音乐拳击训练墙靶机成人小孩亲子解压爆汗寒假",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53q4apaaaafaaotiyqfjvbvbye6cdqb4ca.f0.mp4?dis_k=fd4c75389fef3f9b240000803e102aad&dis_t=1779442152&m=ca3d7814d1db5d4e8c7b77df43277d3b&sha256=6e02c76a60ece7661a1c70a382587ef492e45d7ebb9fd095cfd673d48f3b244b",
-        "cs": 89200,
-        "ca": "玩具-运动/休闲玩具-儿童智能拳击靶"
-      },
-      "痛点解决型": {
-        "pn": "玲吾玖二大容量健身运动旅行日常双肩包羽毛球网球篮球足球包书包",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4aaeaaa3eamdhywuzvbujyeaitqaasa.f0.mp4?dis_k=e454c0aa3ff346a091d25f6fe2595e14&dis_t=1779877108&m=5a771a92c570130c5045ff63ae8ac976&sha256=720203c6a9462c1858f54559d7c573d4309f910a6aa344fa938e2f1065ed8adb",
-        "cs": 53107,
-        "ca": "服饰鞋包-箱包皮具-通用箱包-双肩包"
-      },
-      "明星带货型": {
-        "pn": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
-        "cs": 49251,
-        "ca": "运动户外-中小型健身器材-甩脂机/律动机"
-      },
-      "快速展示型": {
-        "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53wab4aaad74adi4ziqnvdxmgeycyahqca.f0.mp4?dis_k=8624899b634986d3114ad5cd4fc15fed&dis_t=1781265489",
-        "cs": 36390,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "促销口播型": {
-        "pn": "[买一送一]2026新款女外穿超薄夏日降温瑜伽鲨鱼收腹提臀奶皮骑行裤",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3paal4aaaa4anwgqnnrvbu6aexz4abpsa.f0.mp4?dis_k=8960b4863a8b7b49647398f33d49126d&dis_t=1779327547&m=4296d2dbb74f2623cb28321ff364b6f4&sha256=0a70f6243db564e640f1cc70e53867e22595b8ec72abec4bf3de3b14230a05da",
-        "cs": 7447,
-        "ca": "服饰鞋包-女装-裤子-鲨鱼裤/打底裤"
-      },
-      "快节奏展示型": {
-        "pn": "CHANGFENG昌峰 至尊版智能辅助回弹健腹轮液晶大屏数显卷腹练腹肌马甲线",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3qadhgaagpqajxuxpwjurzaaeooaam42a.f0.mp4?dis_k=4daebfae99f9caa0a0e863a9b1bf8ebf&dis_t=1776937389&m=4669ac423bce860bb0458bf5d05d2250&sha256=920016adf64c1d795d91eb1fca02f45cd2bac5c8dac65a9cfbe8d9e0572da0c3",
-        "cs": 4924,
-        "ca": "运动户外-中小型健身器材-健腹轮/健腹器"
-      },
-      "产品展示型": {
-        "pn": "髌骨带男夏季专业级跑步羽毛球膝盖保护带女运动髌护带透气不闷汗",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3imblcaactuagnyzd2zvduq6ewfbqfmka.f0.mp4?dis_k=5edf6e39e55fc5f93c10862610687256&dis_t=1780602848",
-        "cs": 28958,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      },
-      "详细讲解型": {
-        "pn": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "cs": 36407,
-        "ca": "运动户外-运动装备-运动护具-运动护膝"
-      }
+    {
+      "rank": 4,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+      "cs": 108832.0,
+      "ctr": 1.41,
+      "cvr": 8.57,
+      "vtr": 28.23,
+      "dur": 7.2,
+      "roi": 3.1,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 5,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+      "cs": 101943.0,
+      "ctr": 1.02,
+      "cvr": 8.77,
+      "vtr": 14.57,
+      "dur": 4.4,
+      "roi": 2.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 6,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+      "cs": 96372.0,
+      "ctr": 1.15,
+      "cvr": 9.46,
+      "vtr": 14.01,
+      "dur": 3.7,
+      "roi": 2.89,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 7,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸内裤套装",
+      "pn": "到手2套-无尺码凉感亲肤透气复古波点浪花领背心/背勾文胸套装-UU1251021",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc34qaueaabimadblr2tbvbxzaeilsacqsa.f0.mp4?dis_k=01f6e9ebf3bea52a561852ef24b6bf83&dis_t=1782280882&m=7be9f64fc6f5ddd22f54ca6d0c88d574",
+      "cs": 79978.0,
+      "ctr": 0.95,
+      "cvr": 9.26,
+      "vtr": 16.15,
+      "dur": 3.4,
+      "roi": 2.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 8,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5324bqwaadlaancgrlwvvbrvyebplqgc2a.f0.mp4?dis_k=ed414677b669aa2bf80b1f3c01a59db5&dis_t=1781169053&m=63de06f9cb719ca92dfe2e36b808a8ce&sha256=297813fbac22860237f37c3d566658edd771fd63b324a37572f65f0e483b3d42",
+      "cs": 75573.0,
+      "ctr": 8.57,
+      "cvr": 3.25,
+      "vtr": 38.88,
+      "dur": 37.4,
+      "roi": 2.13,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 9,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vib6caadvyagotzv6nvbrkqe4gvahyka.f0.mp4?dis_k=2902c243f4b91a510a37076a44ae0468&dis_t=1781971275&m=fdce34c18408c754ef60b72d4e323171&sha256=d723f28a5238a7219fcec2765d5a9224374671e4acfe024da9be6fd636ab20b1",
+      "cs": 67278.0,
+      "ctr": 4.57,
+      "cvr": 9.11,
+      "vtr": 72.02,
+      "dur": 59.3,
+      "roi": 2.13,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 10,
+      "ind": "男装",
+      "ca": "空",
+      "pn": "空",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+      "cs": 63564.0,
+      "ctr": 1.59,
+      "cvr": 5.1,
+      "vtr": 34.98,
+      "dur": 5.7,
+      "roi": 3.11,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 11,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53cececaaepaaimerwfbvb6eieieiqiqka.f0.mp4?dis_k=f634f603cef1f9f77a5fa11816a27baa&dis_t=1781712766&m=b245c21a174007bb98e4df8acfb84d59",
+      "cs": 62281.0,
+      "ctr": 5.38,
+      "cvr": 13.25,
+      "vtr": 35.11,
+      "dur": 45.6,
+      "roi": 2.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 12,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "[两件装]曼妮芬 · 隐形透气bra女粉底液内衣聚拢薄美背背心文胸一体新款",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53cibwuaadjuakytbiybvbseqenijag2sa.f0.mp4?dis_k=44c770f2560208a251d7ac8c7384c48f&dis_t=1781254403&m=f9c092cee40c4a38175613d65c691776&sha256=c54815b13b03debed31ad93807eab658a5b772c5703567924988405e4824ccad",
+      "cs": 60417.0,
+      "ctr": 1.2,
+      "cvr": 6.97,
+      "vtr": 16.43,
+      "dur": 4.5,
+      "roi": 3.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 13,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美7档前扣任意提橡皮擦收副乳大胸显小提拉显瘦防下垂无痕美背文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3xubmuaac2maho2baunvbtpiezk6qfssa.f0.mp4?dis_k=35e1131986d082d3afc07730128cff09&dis_t=1780661629&m=335f8ca363f20c4c2c2a6e179ece533a",
+      "cs": 59737.0,
+      "ctr": 1.36,
+      "cvr": 8.44,
+      "vtr": 26.53,
+      "dur": 5.8,
+      "roi": 2.73,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 14,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸内裤套装",
+      "pn": "到手2套-无尺码凉感亲肤透气复古波点浪花领背心/背勾文胸套装-UU1251021",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53r4ceqaaedyadvrb7ljvb5dyejchqisca.f0.mp4?dis_k=308d7906be05510364cafdec8b5f3148&dis_t=1782359468&m=f99b524312620e7647031a59b2e140e1&sha256=191927b1ab04b49e09770ea55ad3180d0586a2418b7b0ca35b21fc7b392cae7f",
+      "cs": 59014.0,
+      "ctr": 1.31,
+      "cvr": 9.76,
+      "vtr": 9.76,
+      "dur": 2.5,
+      "roi": 3.57,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 15,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3wub4qaadleam5xzrarvbrniezc2qhsca.f0.mp4?dis_k=134815463e07c29b443595569e141a1f&dis_t=1781663492&m=193bd4773ee2468d4b0273008b1bc4c2",
+      "cs": 57908.0,
+      "ctr": 5.22,
+      "cvr": 7.06,
+      "vtr": 61.04,
+      "dur": 57.2,
+      "roi": 2.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 16,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-双肩包",
+      "pn": "S5多功能旅行包防水耐磨可扩容大容量户外商务差旅包电脑包行李包男士双肩包背包轻便抗撕裂独立电脑隔层透气背带出差通勤实用",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53subiyaacamads7bbgbvbrfierskqfdca.f0.mp4?dis_k=56386bcfcfc643085609a924b87b1d0c&dis_t=1780725405&m=195e2ae79e14053ec2ad05df18fe18f9&sha256=3cb94b1ed7956d8d05d9839d1a4c9dcc9ace4b488bbeb83ee90295be8f6f7f45",
+      "cs": 56477.0,
+      "ctr": 0.79,
+      "cvr": 1.07,
+      "vtr": 64.27,
+      "dur": 16.8,
+      "roi": 1.73,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 17,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-童装/亲子装-儿童内衣裤袜-抹胸/儿童文胸/少女文胸",
+      "pn": "婷美【蚕丝乳胶抑菌杯】发育期少女内衣减震提拉定型高中初中生文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3tmafaaaa2yaauqv2onubvgyekcnqauca.f0.mp4?dis_k=3d08ad44e43a87e4ec7cb59438daf494&dis_t=1757043317&m=d62adac495f29ff6c33e8539d6a3abb1&sha256=57a27024b3469ac63df88d4043f89d32d1519e21094382acf8e57df8007a9202",
+      "cs": 56242.0,
+      "ctr": 0.93,
+      "cvr": 13.55,
+      "vtr": 30.94,
+      "dur": 7.7,
+      "roi": 1.61,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 18,
+      "ind": "贴身衣物",
+      "ca": "运动户外-骑行运动-通用骑行装备-骑行服",
+      "pn": "草本初色骑行粉底液细肩带大U美背无痕隐形骑行服",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37mbdkaacumap5cq5rnvbr6yegx5qenka.f0.mp4?dis_k=e266b65d2013a6b6215c915f66d4d08f&dis_t=1780485100&m=0636fed9f2b472be237f670cfda70b31&sha256=fb5ec12c7a2168715c3b9450b351ba9f8d518c5dcd7caf06982c89c1e4664bb8",
+      "cs": 54656.0,
+      "ctr": 1.4,
+      "cvr": 14.77,
+      "vtr": 33.75,
+      "dur": 9.5,
+      "roi": 2.31,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 19,
+      "ind": "贴身衣物",
+      "ca": "母婴用品-婴童服/婴童用品-婴童尿裤/尿垫-拉拉裤/学步裤/成长裤",
+      "pn": "草本初色春夏新款中高腰护垫加长底裆柔软益生菌抑菌无痕拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53jyaugaabmaaktvaxjzvbutqeinhacq2a.f0.mp4?dis_k=e3c6abf3ebeb3681d9166890211eda0e&dis_t=1779920415&m=8472409c83a1df19f1fa9eea47bbc652&sha256=e993c4fccbe9795408cb90258ecac5eb691abe71cb06d4fb9d0119db38996bc9",
+      "cs": 48893.0,
+      "ctr": 1.57,
+      "cvr": 16.78,
+      "vtr": 28.77,
+      "dur": 9.3,
+      "roi": 1.75,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 20,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53sadn4aagyiah6z7kt5urzeae32ianxsa.f0.mp4?dis_k=f025bd78792a935b9f6bb2392d9fa1c4&dis_t=1779272327&m=695da1a8bade2f803d20abab8b6efd6c&sha256=f20c8591ec8eae2a041a82d327fb4bd9bb0331ac548cea56176bf0fe6db9cd0a",
+      "cs": 48784.0,
+      "ctr": 2.67,
+      "cvr": 6.58,
+      "vtr": 24.86,
+      "dur": 7.2,
+      "roi": 3.06,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 21,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "古今夏季新款宽肩带女士内衣竖条纹美背无感聚拢贴胸柔软舒适简约无痕文胸透气不闷汗",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53rqca2aaeq4aiqsjwpnvb5daebwgaidka.f0.mp4?dis_k=1311b9be40d19d6700bb024278beb05b&dis_t=1781695840&m=91591ba2d296367f8be03b0b68d5a75b&sha256=72ef97e9951a4a7c2c7b1710d1658f1a93a3f529d874398ffb7f5eab81f8753d",
+      "cs": 47030.0,
+      "ctr": 1.15,
+      "cvr": 9.12,
+      "vtr": 26.8,
+      "dur": 5.1,
+      "roi": 2.53,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 22,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "曼妮芬 · 蕾丝美背女内衣吊带背心内搭26新粉彩风美背文胸一体",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kaaamaaaluaooyycwnvbuuaeaziaabsa.f0.mp4?dis_k=f251d93d1aceb33634a23d9b9d1ff1a6&dis_t=1782109684&m=34d023da240659b66e537747d08f9437&sha256=fdd2e8bfa6c4c480009bad8efd2de550ea06f80c8dfa71b248672a1a6a24496f",
+      "cs": 44652.0,
+      "ctr": 0.87,
+      "cvr": 6.27,
+      "vtr": 38.09,
+      "dur": 4.9,
+      "roi": 3.15,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 23,
+      "ind": "箱包",
+      "ca": "玩具-儿童包/背包/箱包-书包/拉杆书包",
+      "pn": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+      "cs": 44374.0,
+      "ctr": 2.53,
+      "cvr": 7.54,
+      "vtr": 26.68,
+      "dur": 6.3,
+      "roi": 2.86,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 24,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-拉杆箱/拉杆包",
+      "pn": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+      "cs": 43786.0,
+      "ctr": 1.38,
+      "cvr": 4.33,
+      "vtr": 21.77,
+      "dur": 4.3,
+      "roi": 3.65,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 25,
+      "ind": "女装",
+      "ca": "空",
+      "pn": "空",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+      "cs": 43731.0,
+      "ctr": 2.51,
+      "cvr": 10.15,
+      "vtr": 55.54,
+      "dur": 18.7,
+      "roi": 2.82,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 26,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "梵客隆内裤女2026夏季新款植物纤维中高腰提臀收腹透气塑形三角裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
+      "cs": 42387.0,
+      "ctr": 4.5,
+      "cvr": 12.4,
+      "vtr": 55.06,
+      "dur": 43.4,
+      "roi": 1.63,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 27,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b5354cb4aaexyal7gpiyrur73yed3xqihsa.f0.mp4?dis_k=a35630be23bd966cd9a99dc75bc6566a&dis_t=1777888091&m=5acc7c94f5da77a265acfc3a674cbb6d&sha256=0ee15e0faeb5bd8661bf9223e6c650909fd15e3c9a3d3ce0dfbe331388164d87",
+      "cs": 42212.0,
+      "ctr": 2.1,
+      "cvr": 9.39,
+      "vtr": 42.43,
+      "dur": 16.6,
+      "roi": 3.14,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 28,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "【林允同款】猫人蜂巢冰氧杯提拉承托10A抗菌内衣凉感舒适女士文胸-TJ",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cmbuaaadumaaxfrnjvvbseyeiajqgqca.f0.mp4?dis_k=b3a157d99201e59aa97a93cedd6979f9&dis_t=1781419043&m=7c6fb5d4acbe4f09be18f82d9b8e9dbe&sha256=d9e4f28f9a9882c9b93127519b824b7bdb3142b9eccfe8e6c1774c0127dfd26a",
+      "cs": 41565.0,
+      "ctr": 1.94,
+      "cvr": 7.81,
+      "vtr": 37.64,
+      "dur": 6.2,
+      "roi": 2.61,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 29,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vuajaaaawiabm5jwojvbxliescwqbeca.f0.mp4?dis_k=c09ecf7491b746287763349c44474b53&dis_t=1781971277&m=4e325c1310ab57d74730d30ea58b6f56&sha256=7e3bdb82e4b7138f2eb0d3af94b32b91cf3abe9d7694986ec4947c6070b59c2f",
+      "cs": 40723.0,
+      "ctr": 5.87,
+      "cvr": 12.91,
+      "vtr": 71.73,
+      "dur": 60.5,
+      "roi": 2.07,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 30,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3vqaz6aabhqanisix5rvbxlaet6wadh2a.f0.mp4?dis_k=2a3feab3d95e06bc44d5baaceb0d007d&dis_t=1779846114&m=cc1ffc8662dcf887d68aa205105f2bc4&sha256=b63e31914e807038bf9f4b2de92f4fb53421a421c5f6d72c84ee0542e0070301",
+      "cs": 40460.0,
+      "ctr": 1.48,
+      "cvr": 10.92,
+      "vtr": 17.46,
+      "dur": 5.1,
+      "roi": 3.31,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 31,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc34mcckaaeaaaka5zs75vb7yyeexrqijka.f0.mp4?dis_k=cec1906ca42aee68e890d4b66dce6f46&dis_t=1782443454&m=7d0c8eeef6dfd8dc3a91604cdba8cddd&sha256=4e291763a53a29ab713090da8f39dfe6a4c7250a8fc87c276f151a03d6f3cff5",
+      "cs": 38934.0,
+      "ctr": 4.34,
+      "cvr": 8.07,
+      "vtr": 55.25,
+      "dur": 48.5,
+      "roi": 1.95,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 32,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53h4brqaadk4adzgblmnvbqpyeda7qggca.f0.mp4?dis_k=5eb80dbd55a89c89dfc232bdb1ca3ce8&dis_t=1781393516&m=9ae4dc28b5084f420c05dfa25df13651&sha256=1b1f665fc3e6e26ebe941a3864e9e6ea53b02768dbcdd694239f43f2b6d5b457",
+      "cs": 38643.0,
+      "ctr": 3.6,
+      "cvr": 9.41,
+      "vtr": 69.03,
+      "dur": 51.5,
+      "roi": 2.08,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 33,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "[崔万志工厂]女士内裤6条新疆棉透气高腰包臀加长裆独立密封包装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37eaawaaapeagd46jqzurv6iebp4qac2a.f0.mp4?dis_k=11c2035f6b89a12b46e4de8eaf8da2e5&dis_t=1774807683&m=d4ae43e3699d02bb5e154102ae293972",
+      "cs": 38077.0,
+      "ctr": 1.16,
+      "cvr": 6.37,
+      "vtr": 35.96,
+      "dur": 5.5,
+      "roi": 2.94,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 34,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-通用箱包-拉杆箱/拉杆包",
+      "pn": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+      "cs": 37593.0,
+      "ctr": 2.73,
+      "cvr": 4.58,
+      "vtr": 49.44,
+      "dur": 8.2,
+      "roi": 3.29,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 35,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【云朵冰感】大胸显小隐形女士内衣调整型提拉网纱法式文胸DT9",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bqbcaaaciuan3cjsrfvbqdaeeagaeica.f0.mp4?dis_k=1c2d93427ed7a2ef10ac401733f53d99&dis_t=1781772312&m=efdcddb4703bc49a80608fcd35437085&sha256=24896d1f023985ceabfc1171430058b4799514947e8b6b36ceb90e7a8464b06c",
+      "cs": 36476.0,
+      "ctr": 1.11,
+      "cvr": 12.29,
+      "vtr": 14.46,
+      "dur": 3.5,
+      "roi": 2.76,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 36,
+      "ind": "箱包",
+      "ca": "服饰鞋包-箱包皮具-女包-腋下包",
+      "pn": "路易卡迪 LC印花双面背腋下单肩包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmbrqaadoiao5lfx2fursuyedbjqggca.f0.mp4?dis_k=25bed8345b645387c5cdb6c80098598b&dis_t=1773467221&m=7b482277f5cbb0f531bb3b481523ef69&sha256=0bb1b0af7793daf6aaeb2c13fe701f2548a146350268c3154e4a91758627ce68",
+      "cs": 32822.0,
+      "ctr": 3.86,
+      "cvr": 6.2,
+      "vtr": 29.16,
+      "dur": 5.8,
+      "roi": 4.35,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 37,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "嫦香诗法式蕾丝内衣女小胸聚拢显大收副乳防下垂纯欲性感文胸套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b536uceeaaepualvwb5j5vb75ieil2qiqsa.f0.mp4?dis_k=7e685df2eb022dbfdb390e049d7f17d1&dis_t=1782184082&m=0caaa324d6b804bbd576e6206a4d6e4e",
+      "cs": 32805.0,
+      "ctr": 2.47,
+      "cvr": 10.53,
+      "vtr": 31.83,
+      "dur": 6.5,
+      "roi": 3.17,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 38,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "MiiOW/猫人10A抗菌冰肌速凉蜂巢洞洞杯凉感无痕提拉文胸欧若风穿搭女士夏季凉感内衣",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53sqcnmaae3madq2gi3zur5fae22kajvsa.f0.mp4?dis_k=c510cbc9a585449ee50b0e5d6115976d&dis_t=1775038130&m=b42f5a71127b89fde65676eb64ce272b&sha256=1ee51826b660223edb2b8a703fad40e7ee326742b497b6f8792ceef87b4545bb",
+      "cs": 32000.0,
+      "ctr": 1.34,
+      "cvr": 10.25,
+      "vtr": 18.83,
+      "dur": 4.2,
+      "roi": 2.68,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 39,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3sqab2aaaqqajx4rw5rvbxfaedwkaahka.f0.mp4?dis_k=926bd29608d345b74c3bdf764964e6e3&dis_t=1781971212&m=b826819dccfc1fb99c6589bb72ef27b7&sha256=e7817beeb189eb0ab7a51384e00d90baf4033ca78f775b28fe10bfc3f6ff7a67",
+      "cs": 31813.0,
+      "ctr": 5.15,
+      "cvr": 7.53,
+      "vtr": 67.96,
+      "dur": 49.2,
+      "roi": 1.87,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 40,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "中老年裸感无痕蕾丝提拉聚拢收副乳美背心大码舒适女士内衣文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3myasgaabkeabaranofvbwzqeentaci2a.f0.mp4?dis_k=40ad9c1073a2a683f1b0f9e7d378046f&dis_t=1779184526&m=dcb7792576ba761362a8527224abf72b&sha256=55eeeb7e38f41c32272f4004a501607181f0214f2d6bd078cbbf5207943a710f",
+      "cs": 31675.0,
+      "ctr": 4.52,
+      "cvr": 5.76,
+      "vtr": 39.32,
+      "dur": 10.5,
+      "roi": 2.44,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 41,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-男士内裤",
+      "pn": "[崔万志工厂]4条男士内裤95棉长绒棉透气宽边无缝平角四角",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53dibmwaacpeacicrgnvvbqgqezmnafs2a.f0.mp4?dis_k=7c093518091a1b025297717cc6cb38bd&dis_t=1780805477&m=124931679fd2a2e97788b096bfa94557&sha256=5e369d97b61546b708fe05da5b3bf976126fdb2a03eb05bcb8a34e112f3394ae",
+      "cs": 31508.0,
+      "ctr": 1.31,
+      "cvr": 5.32,
+      "vtr": 33.95,
+      "dur": 5.4,
+      "roi": 2.67,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 42,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "超薄10A抗菌透气云感无钢圈软支撑侧收聚拢内衣透气舒适女士内衣文胸欧迪芬Ordifen 063#",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3aybpkaacbyabnqbfj5vbqbqe6udaf5ka.f0.mp4?dis_k=af5430aae3b85deab8b6f245a2225add&dis_t=1781185017&m=6fec36c72d2430e5697da8cecbedab32&sha256=6d4c45127179af3e833cded0cedf05f2127333572bf085dc3c6d74c68c0bedb6",
+      "cs": 31228.0,
+      "ctr": 1.16,
+      "cvr": 9.64,
+      "vtr": 9.15,
+      "dur": 2.8,
+      "roi": 2.32,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 43,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53gaaewaaaauao2l7m5zurumaejmyaas2a.f0.mp4?dis_k=833c70688577f0b81e3ba8902cbfb5bc&dis_t=1777116811&m=7ee9a3e3eb1cb8ea5b4a2146936f03d3&sha256=306f66208ca31341f6cda67e9fc4d59e2897fc2695f1bab8bf8be8ca330f5c28",
+      "cs": 31116.0,
+      "ctr": 2.09,
+      "cvr": 8.77,
+      "vtr": 50.26,
+      "dur": 10.1,
+      "roi": 3.03,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 44,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-睡衣/家居服-睡衣套装/家居服套装",
+      "pn": "【凉感】10A抑菌莫代尔冰丝家居服套装夏季青少年短袖短裤男休闲睡衣套装",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53pqawcaab24akbirc4bvbw7aemf6acyka.f0.mp4?dis_k=54889bf1c60174ff153c39613d0fcbaf&dis_t=1780728260&m=ee2da88f03fc480d4349c93834f38d18&sha256=7dfdb8589c665083569d2743acb38779a34310ca8a7bb847fcdb8fc2b11f5836",
+      "cs": 30757.0,
+      "ctr": 1.83,
+      "cvr": 13.25,
+      "vtr": 30.14,
+      "dur": 4.4,
+      "roi": 3.05,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 45,
+      "ind": "贴身衣物",
+      "ca": "母婴用品-婴童服/婴童用品-婴童尿裤/尿垫-拉拉裤/学步裤/成长裤",
+      "pn": "南极人夏季32A抑菌冰肌舒适吸湿凉感母婴透气拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53m4baiaacmaafgci7xbvbszyeartqebca.f0.mp4?dis_k=a6f1320138b1e140d34e15d25b46edf2&dis_t=1780307736&m=f6ab56d06305284c771b7c9587809277",
+      "cs": 30514.0,
+      "ctr": 1.44,
+      "cvr": 14.23,
+      "vtr": 33.03,
+      "dur": 6.1,
+      "roi": 1.9,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 46,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b53subo2aacueaetkreinvbtfie5wkqf3ka.f0.mp4?dis_k=dc4da3e91476bbfa2dc20295b377d077&dis_t=1780917315&m=f1ce23b4015162b9a1107c417f00a4c5",
+      "cs": 29672.0,
+      "ctr": 3.52,
+      "cvr": 9.57,
+      "vtr": 62.47,
+      "dur": 37.8,
+      "roi": 2.04,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 47,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-女士内裤",
+      "pn": "焕丽女王新中式浮雕绣花高腰桑蚕丝加长底裆全包臀不卷边不卡裆女士内裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0b537aacqaaahiak35zw3bvbx6aefd4aakca.f0.mp4?dis_k=36cd1912f3df1cceff0c685b9092c991&dis_t=1781971179&m=ec852576027dc8ab49aa6bfa13f21630&sha256=7f11f68af237230329438c4a04f12cd0d605e55b9f6f0d46601a8962421d8d05",
+      "cs": 29004.0,
+      "ctr": 4.82,
+      "cvr": 6.86,
+      "vtr": 83.33,
+      "dur": 41.3,
+      "roi": 1.97,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 48,
+      "ind": "箱包",
+      "ca": "玩具-儿童包/背包/箱包-书包/拉杆书包",
+      "pn": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc37qafiaaa6mal4xsk3vubv7aekt6aavca.f0.mp4?dis_k=c64be909a5e438adfa749b317a3d289f&dis_t=1780899457&m=532314e1142f93eefe4f52ff03d38124&sha256=038471e0a666c7527655cd4404b7eebf27325aeb6900be0f68f599dd6169289a",
+      "cs": 28912.0,
+      "ctr": 1.81,
+      "cvr": 5.29,
+      "vtr": 20.77,
+      "dur": 5.2,
+      "roi": 2.82,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 49,
+      "ind": "本土品牌服饰",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-文胸/乳贴/内裤-文胸",
+      "pn": "曼妮芬 · 蕾丝美背女内衣吊带背心内搭26新粉彩风美背文胸一体",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmaeuaaameakwficevvbuuyejjjqassa.f0.mp4?dis_k=f3b1b028d6b5603edec0b529ac1d7c25&dis_t=1778573630&m=0bb04b22b73206784d32282be5f05b46&sha256=0cc0f801c0ef36bf702153342e4c43a3808860f76cf8e038d0e40fbd0f66aec1",
+      "cs": 28106.0,
+      "ctr": 1.24,
+      "cvr": 12.5,
+      "vtr": 17.69,
+      "dur": 3.7,
+      "roi": 2.84,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "rank": 50,
+      "ind": "贴身衣物",
+      "ca": "服饰鞋包-内衣裤袜/睡衣/家居服-塑身衣/裤-塑身美体裤",
+      "pn": "新款有棵树粉底液三合一隐形无痕女防走光冰丝拉拉裤",
+      "ml": "http://adsmind.gdtimg.com/ads_svp_video__0bc374brmaadtmaagibodfvbt7yec37qgfsa.f0.mp4?dis_k=e6a25d1b4ca9c819c0c23a743d389c32&dis_t=1781339507&m=f8753e404557591f586bb4eaf49f607d&sha256=a337ba83841b9fca76161fd2e64a53abe46b52db2e6d54439284ca629d065655",
+      "cs": 28049.0,
+      "ctr": 2.19,
+      "cvr": 21.31,
+      "vtr": 35.57,
+      "dur": 7.4,
+      "roi": 1.53,
+      "keyframes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
     }
-  }
+  ]
 }

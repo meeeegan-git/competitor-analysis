@@ -292,15 +292,29 @@ def stats(items, dim):
     total_cost = sum(i["cs"] for i in items) or 1
     c = Counter(i["tags"][dim] for i in items)
     cost = defaultdict(float)
-    examples = {}
+    candidates = defaultdict(list)
     for i in items:
         label = i["tags"][dim]
         cost[label] += i["cs"]
-        if label not in examples or i["cs"] > examples[label]["cs"]:
-            examples[label] = i
+        candidates[label].append(i)
+
+    frame_time = {
+        "hook": 1,
+        "visual": 3,
+        "role": 3,
+        "focus": 5,
+        "scene": 7,
+        "proof": 9,
+        "script": 1,
+    }.get(dim, 1)
+
+    used = set()
     out = []
-    for label, count in c.most_common():
-        ex = examples[label]
+    ordered = sorted(c.items(), key=lambda kv: cost[kv[0]], reverse=True)
+    for label, count in ordered:
+        sorted_candidates = sorted(candidates[label], key=lambda i: i["cs"], reverse=True)
+        ex = next((i for i in sorted_candidates if i["id"] not in used), sorted_candidates[0])
+        used.add(ex["id"])
         out.append({
             "label": label,
             "count": count,
@@ -309,7 +323,7 @@ def stats(items, dim):
             "exampleRank": ex["rank"],
             "exampleName": ex["pn"],
             "exampleVideo": ex["ml"],
-            "exampleTime": 1,
+            "exampleTime": frame_time,
         })
     return out
 
@@ -362,10 +376,15 @@ def paradigms(items):
 
 
 def build_dataset(name, pool_df, benchmark_df, meta):
-    pool = cap_by_customer(pool_df, 3, 50)
-    benchmark = cap_by_customer(benchmark_df, 3, 50)
-    own_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(pool.iterrows())]
-    bench_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(benchmark.iterrows())]
+    pool50 = cap_by_customer(pool_df, 3, 50)
+    benchmark50 = cap_by_customer(benchmark_df, 3, 50)
+    pool10 = pool50.head(10)
+    benchmark10 = benchmark50.head(10)
+
+    own_stats_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(pool50.iterrows())]
+    bench_stats_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(benchmark50.iterrows())]
+    own_breakdown_items = own_stats_items[:10]
+    bench_breakdown_items = bench_stats_items[:10]
     dims = ["hook", "scene", "role", "focus", "proof", "script", "visual"]
     return {
         "name": name,
@@ -374,20 +393,24 @@ def build_dataset(name, pool_df, benchmark_df, meta):
             **meta,
             "dedupeRule": "素材MD5去重，保留消耗最高的一条",
             "customerCapRule": "同一客户最多保留3条（原表无客户字段，按DPA商品名称识别品牌/主体）",
-            "benchmarkRule": "服饰大盘=排除运动鞋服与运动用品后的全量服饰素材TOP50",
+            "benchmarkRule": "服饰大盘=排除运动鞋服与运动用品后的全量服饰素材TOP50；逐帧拆解仅展示TOP10",
             "keyframeTimes": TIMES,
         },
         "totalCountAfterRules": len(pool_df),
-        "topItems": own_items,
-        "elementStats": {dim: stats(own_items, dim) for dim in dims},
-        "frameStats": frame_stats(own_items),
-        "paradigms": paradigms(own_items),
+        "analysisCount": len(own_stats_items),
+        "breakdownCount": len(own_breakdown_items),
+        "topItems": own_breakdown_items,
+        "elementStats": {dim: stats(own_stats_items, dim) for dim in dims},
+        "frameStats": frame_stats(own_stats_items),
+        "paradigms": paradigms(own_stats_items),
         "apparelBenchmark": {
             "name": "服饰大盘爆款素材",
-            "topItems": bench_items,
-            "elementStats": {dim: stats(bench_items, dim) for dim in dims},
-            "frameStats": frame_stats(bench_items),
-            "paradigms": paradigms(bench_items),
+            "analysisCount": len(bench_stats_items),
+            "breakdownCount": len(bench_breakdown_items),
+            "topItems": bench_breakdown_items,
+            "elementStats": {dim: stats(bench_stats_items, dim) for dim in dims},
+            "frameStats": frame_stats(bench_stats_items),
+            "paradigms": paradigms(bench_stats_items),
         },
     }
 

@@ -149,8 +149,8 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
 
         <section id="materials" className="scroll-mt-24">
           <MaterialList
-            title={`${data.name} TOP50 爆款素材逐帧拆解`}
-            subtitle="每条素材均按第1/3/5/7/9/11/13/15秒对应帧拆解；重复素材只保留一次，同一客户最多3条。"
+            title={`${data.name} TOP10 爆款素材逐帧拆解`}
+            subtitle="逐帧拆解仅展示TOP10素材；每条素材均按第1/3/5/7/9/11/13/15秒对应帧拆解。"
             items={data.topItems}
             expanded={ownExpanded}
             setExpanded={setOwnExpanded}
@@ -165,7 +165,7 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
                 <div>
                   <h2 className="text-xl font-bold text-gray-900">服饰大盘爆款素材元素拆解</h2>
                   <p className="text-sm text-gray-500 mt-1 max-w-3xl">
-                    这里不是另一个运动子类目，而是排除运动鞋服与运动用品后的服饰大盘TOP50，用来找到可迁移到{data.name}的钩子、证明方式和转化节奏。
+                    这里不是另一个运动子类目，而是排除运动鞋服与运动用品后的服饰大盘素材，用来找到可迁移到{data.name}的钩子、证明方式和转化节奏。
                   </p>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
             </div>
             <div className="grid grid-cols-4 gap-3 text-xs">
               <RulePill label="大盘规则" value="排除运动鞋服/运动用品" />
-              <RulePill label="拆解数量" value="TOP50" />
+              <RulePill label="拆解数量" value="TOP10" />
               <RulePill label="重复素材" value="MD5去重" />
               <RulePill label="客户限额" value="同客户≤3条" />
             </div>
@@ -183,8 +183,8 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
           <TimelineValidation frameStats={data.apparelBenchmark.frameStats} compact />
           <ParadigmSection title="服饰大盘可借鉴脚本骨架" paradigms={data.apparelBenchmark.paradigms} compact />
           <MaterialList
-            title="服饰大盘 TOP50 爆款素材逐帧拆解"
-            subtitle="这些素材已排除运动鞋服/运动用品自身，用来找跨品类可迁移的钩子、场景、证明方式和收口节奏。"
+            title="服饰大盘 TOP10 爆款素材逐帧拆解"
+            subtitle="逐帧拆解仅展示服饰大盘TOP10素材；这些素材已排除运动鞋服/运动用品自身。"
             items={data.apparelBenchmark.topItems}
             expanded={benchExpanded}
             setExpanded={setBenchExpanded}
@@ -204,7 +204,7 @@ function ReportSideNav() {
     { href: '#formulas', icon: '🧩', label: '创意公式', desc: '1-5公式' },
     { href: '#strategy', icon: '🎯', label: '组合策略', desc: '怎么投拍' },
     { href: '#scripts', icon: '📝', label: '脚本骨架', desc: '可复刻' },
-    { href: '#materials', icon: '🎬', label: '素材拆解', desc: 'TOP50' },
+    { href: '#materials', icon: '🎬', label: '素材拆解', desc: 'TOP10' },
     { href: '#apparel', icon: '💡', label: '服饰大盘', desc: '跨品类' },
   ];
 
@@ -324,7 +324,7 @@ function ElementValidation({ data, title, compact = false }: { data: AnalysisDat
             {stats.slice(0, 3).map(item => (
               <div key={item.label} className="bg-gray-50 rounded-2xl p-2.5 border border-gray-100">
                 <div className="h-28 rounded-xl overflow-hidden bg-black mb-2">
-                  <FrameVideo src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
+                  <FrameSnapshot src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
                 </div>
                 <p className={`text-[11px] font-black ${dim.color}`}>{item.label}</p>
                 <p className="text-[10px] text-gray-400 mt-0.5 line-clamp-2">#{item.exampleRank} {item.exampleName}</p>
@@ -782,8 +782,7 @@ function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: M
             <span className="px-1.5 py-0.5 rounded bg-gray-100 text-gray-500 text-[10px]">客户:{item.customerKey}</span>
           </div>
         </div>
-        <div className="grid grid-cols-5 gap-3 flex-shrink-0">
-          <MiniMetric label="消耗" value={`${(item.cs / 10000).toFixed(1)}万`} />
+        <div className="grid grid-cols-4 gap-3 flex-shrink-0">
           <MiniMetric label="CTR" value={`${item.ctr}%`} />
           <MiniMetric label="CVR" value={`${item.cvr}%`} />
           <MiniMetric label="3秒完播" value={`${item.vtr}%`} />
@@ -999,6 +998,69 @@ function ReplicationGuide({ item }: { item: MaterialItem }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function FrameSnapshot({ src, time, className }: { src: string; time: number; className?: string }) {
+  const [shot, setShot] = useState<string | null>(null);
+  const [failed, setFailed] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+
+    setShot(null);
+    setFailed(false);
+
+    const seek = () => {
+      try {
+        const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
+        video.currentTime = safeTime;
+      } catch {
+        setFailed(true);
+      }
+    };
+
+    const capture = () => {
+      try {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('canvas context unavailable');
+        canvas.width = video.videoWidth || 360;
+        canvas.height = video.videoHeight || 640;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
+        if (!dataUrl || dataUrl === 'data:,') throw new Error('empty snapshot');
+        setShot(dataUrl);
+      } catch {
+        setFailed(true);
+      }
+    };
+
+    video.addEventListener('loadedmetadata', seek);
+    video.addEventListener('seeked', capture, { once: true });
+    video.addEventListener('error', () => setFailed(true), { once: true });
+    video.load();
+
+    return () => {
+      video.removeEventListener('loadedmetadata', seek);
+    };
+  }, [src, time]);
+
+  return (
+    <>
+      <video ref={videoRef} src={src} className="hidden" crossOrigin="anonymous" muted playsInline preload="auto" />
+      <canvas ref={canvasRef} className="hidden" />
+      {shot ? (
+        <img src={shot} alt={`${time}s代表帧`} className={className} />
+      ) : failed ? (
+        <FrameVideo src={src} time={time} className={className} />
+      ) : (
+        <div className={`${className || ''} flex items-center justify-center bg-black text-white/60 text-[10px]`}>截帧中</div>
+      )}
+    </>
   );
 }
 

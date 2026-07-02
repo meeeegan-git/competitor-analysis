@@ -40,7 +40,7 @@ interface AnalysisData {
   };
   topCombos: ComboItem[];
   examplesByDim: {
-    [dim: string]: { [label: string]: ExampleItem };
+    [dim in 'hook' | 'persona' | 'sellingPoint' | 'scriptStructure']?: { [label: string]: ExampleItem };
   };
 }
 
@@ -70,8 +70,10 @@ const DIM_DESCRIPTIONS: Record<string, string> = {
   scriptStructure: '视频整体的内容组织方式',
 };
 
+type DimKey = 'hook' | 'persona' | 'sellingPoint' | 'scriptStructure';
+
 export default function SportAnalysisView({ data, crossIndustryData }: SportAnalysisViewProps) {
-  const [activeDim, setActiveDim] = useState<string>('hook');
+  const [activeDim, setActiveDim] = useState<DimKey>('hook');
 
   return (
     <div className="space-y-6 animate-fade-in">

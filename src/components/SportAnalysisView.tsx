@@ -415,35 +415,158 @@ function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: M
 }
 
 function KeyframeGrid({ item }: { item: MaterialItem }) {
+  const [selected, setSelected] = useState(0);
+  const [shots, setShots] = useState<Record<number, string>>({});
+  const [captureFailed, setCaptureFailed] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const captureIndexRef = useRef(0);
+  const timesKey = item.keyframes.map(frame => frame.time).join(',');
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+
+    const times = timesKey.split(',').map(Number);
+    setShots({});
+    setCaptureFailed(false);
+    captureIndexRef.current = 0;
+
+    const seekToCurrent = () => {
+      const time = times[captureIndexRef.current];
+      if (Number.isFinite(time)) {
+        const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
+        video.currentTime = safeTime;
+      }
+    };
+
+    const captureCurrent = () => {
+      const time = times[captureIndexRef.current];
+      if (!Number.isFinite(time)) return;
+      try {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('canvas context unavailable');
+        canvas.width = video.videoWidth || 360;
+        canvas.height = video.videoHeight || 640;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
+        if (!dataUrl || dataUrl === 'data:,') throw new Error('empty snapshot');
+        setShots(prev => ({ ...prev, [time]: dataUrl }));
+      } catch {
+        setCaptureFailed(true);
+        return;
+      }
+
+      captureIndexRef.current += 1;
+      if (captureIndexRef.current < times.length) {
+        seekToCurrent();
+      }
+    };
+
+    const onLoaded = () => seekToCurrent();
+    const onSeeked = () => captureCurrent();
+    const onError = () => setCaptureFailed(true);
+
+    video.addEventListener('loadedmetadata', onLoaded);
+    video.addEventListener('seeked', onSeeked);
+    video.addEventListener('error', onError);
+    video.load();
+
+    return () => {
+      video.removeEventListener('loadedmetadata', onLoaded);
+      video.removeEventListener('seeked', onSeeked);
+      video.removeEventListener('error', onError);
+    };
+  }, [item.ml, timesKey]);
+
+  const selectedFrame = item.keyframes[selected] || item.keyframes[0];
+  const selectedShot = selectedFrame ? shots[selectedFrame.time] : undefined;
+
   return (
-    <div>
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-bold text-gray-800">🎬 对应帧逐秒拆解</h3>
-        <p className="text-xs text-gray-400">点击视频可播放核对；默认停在对应秒数。</p>
+    <div className="rounded-2xl bg-white border border-gray-100 p-4">
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className="text-sm font-bold text-gray-800">🎬 对应帧逐秒拆解</h3>
+          <p className="text-xs text-gray-400 mt-0.5">单条视频自动截取8张关键帧截图，一行看完整条素材节奏。</p>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-gray-400">
+          <span className="px-2 py-0.5 rounded-full bg-gray-100">1/3/5/7/9/11/13/15s</span>
+          <span>{captureFailed ? '截图失败，请打开视频源核对' : `${Object.keys(shots).length}/${item.keyframes.length}帧`}</span>
+        </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {item.keyframes.map(frame => (
-          <div key={frame.time} className="rounded-xl bg-white border border-gray-100 overflow-hidden">
-            <div className="h-56 bg-black relative">
-              <FrameVideo src={item.ml} time={frame.time} className="w-full h-full object-contain" controls />
-              <div className="absolute left-2 top-2 px-2 py-0.5 rounded bg-black/60 text-white text-xs font-bold">{frame.time}s</div>
+
+      <video
+        ref={videoRef}
+        src={item.ml}
+        className="hidden"
+        crossOrigin="anonymous"
+        muted
+        playsInline
+        preload="auto"
+      />
+      <canvas ref={canvasRef} className="hidden" />
+
+      <div className="grid grid-cols-8 gap-3 overflow-x-auto pb-1">
+        {item.keyframes.map((frame, idx) => (
+          <button
+            key={frame.time}
+            onClick={() => setSelected(idx)}
+            className={`min-w-[118px] rounded-xl overflow-hidden border text-left transition-all cursor-pointer ${
+              selected === idx
+                ? 'border-primary-500 ring-2 ring-primary-100 shadow-sm'
+                : 'border-gray-100 hover:border-primary-200'
+            }`}
+          >
+            <div className="h-40 bg-gray-900 relative flex items-center justify-center">
+              {shots[frame.time] ? (
+                <img src={shots[frame.time]} alt={`${frame.time}s关键帧`} className="w-full h-full object-cover" />
+              ) : (
+                <div className="flex flex-col items-center gap-2 text-white/70">
+                  <div className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                  <span className="text-[10px]">截帧中</span>
+                </div>
+              )}
+              <span className="absolute left-2 top-2 px-2 py-0.5 rounded bg-black/65 text-white text-xs font-bold">{frame.time}s</span>
             </div>
-            <div className="p-3 space-y-2">
-              <div>
-                <p className="text-xs font-bold text-primary-700">{frame.phase}</p>
-                <p className="text-[11px] text-gray-600 leading-snug mt-0.5">{frame.objective}</p>
-              </div>
-              <FrameLine label="画面元素" value={frame.visualTags.join(' / ')} />
-              <FrameLine label="文案信息" value={frame.copyTags.join(' / ')} />
-              <FrameLine label="拍法" value={frame.shot} />
-              <div className="p-2 bg-blue-50 rounded-lg">
-                <p className="text-[10px] text-blue-700 font-bold">复刻要点</p>
-                <p className="text-[10px] text-blue-600 leading-snug mt-0.5">{frame.replicate}</p>
-              </div>
+            <div className="p-2 bg-white">
+              <p className="text-[11px] font-bold text-primary-700 truncate">{frame.phase}</p>
+              <p className="text-[10px] text-gray-500 mt-0.5 line-clamp-2">{frame.objective}</p>
             </div>
-          </div>
+          </button>
         ))}
       </div>
+
+      {selectedFrame && (
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
+          <div className="lg:col-span-3 rounded-xl bg-gray-900 overflow-hidden min-h-[300px] flex items-center justify-center">
+            {selectedShot ? (
+              <img src={selectedShot} alt={`${selectedFrame.time}s关键帧大图`} className="w-full h-full object-contain" />
+            ) : (
+              <div className="text-white/60 text-xs">正在生成截图...</div>
+            )}
+          </div>
+          <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-3">
+            <FrameDetailCard title={`${selectedFrame.time}s · ${selectedFrame.phase}`} desc={selectedFrame.objective} />
+            <FrameDetailCard title="画面元素" desc={selectedFrame.visualTags.join(' / ')} />
+            <FrameDetailCard title="文案信息" desc={selectedFrame.copyTags.join(' / ')} />
+            <FrameDetailCard title="拍法" desc={selectedFrame.shot} />
+            <div className="md:col-span-2 p-3 rounded-xl bg-blue-50 border border-blue-100">
+              <p className="text-xs text-blue-700 font-bold">复刻要点</p>
+              <p className="text-xs text-blue-600 leading-relaxed mt-1">{selectedFrame.replicate}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FrameDetailCard({ title, desc }: { title: string; desc: string }) {
+  return (
+    <div className="p-3 rounded-xl bg-white border border-gray-100">
+      <p className="text-xs font-bold text-gray-800">{title}</p>
+      <p className="text-xs text-gray-600 leading-relaxed mt-1">{desc}</p>
     </div>
   );
 }

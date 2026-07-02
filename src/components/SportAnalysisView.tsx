@@ -232,49 +232,17 @@ function ReportSideNav() {
 }
 
 function ReportHeader({ data }: { data: AnalysisData }) {
-  const totalCost = data.topItems.reduce((sum, item) => sum + item.cs, 0);
-  const avgCtr = avg(data.topItems.map(i => i.ctr));
-  const avgVtr = avg(data.topItems.map(i => i.vtr));
-  const avgDur = avg(data.topItems.map(i => i.dur));
-
   return (
     <div className="rounded-3xl border border-primary-100 bg-gradient-to-br from-white via-primary-50/40 to-blue-50/50 p-7 shadow-sm">
-      <div className="flex items-start justify-between gap-8">
+      <div className="flex items-center gap-4">
+        <span className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl">
+          {data.name === '运动鞋服' ? '👟' : '🏋️'}
+        </span>
         <div>
-          <div className="flex items-center gap-4 mb-4">
-            <span className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl">{data.name === '运动鞋服' ? '👟' : '🏋️'}</span>
-            <div>
-              <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Playbook</p>
-              <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款素材创意白皮书</h1>
-              <p className="text-sm text-gray-500 mt-1">基于 {data.week} 表格数据，按关键帧和消耗表现反推可复刻元素</p>
-            </div>
-          </div>
-          <div className="mt-5 grid grid-cols-2 gap-3 text-xs">
-            <DataRuleCard label="原始行数" value={`${data.dataRules.rawRows.toLocaleString()} 行`} />
-            <DataRuleCard label="有效行数" value={`${data.dataRules.validRowsAfterBlankRemoval.toLocaleString()} 行`} />
-            <DataRuleCard label="素材池" value={`${data.totalCountAfterRules.toLocaleString()} 条`} />
-            <DataRuleCard label="关键帧" value={`${data.dataRules.keyframeTimes.join(' / ')} 秒`} />
-            <DataRuleCard label="去重规则" value={data.dataRules.dedupeRule} wide />
-            <DataRuleCard label="客户限制" value={data.dataRules.customerCapRule} wide />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 min-w-[360px]">
-          <MetricCard label="TOP50总消耗" value={`${(totalCost / 10000).toFixed(1)}万`} tone="red" />
-          <MetricCard label="平均CTR" value={`${avgCtr.toFixed(2)}%`} tone="green" />
-          <MetricCard label="平均3秒完播" value={`${avgVtr.toFixed(1)}%`} tone="purple" />
-          <MetricCard label="平均播放时长" value={`${avgDur.toFixed(1)}s`} tone="blue" />
+          <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Playbook</p>
+          <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款素材创意白皮书</h1>
         </div>
       </div>
-    </div>
-  );
-}
-
-function DataRuleCard({ label, value, wide = false }: { label: string; value: string; wide?: boolean }) {
-  return (
-    <div className={`${wide ? 'col-span-2' : ''} rounded-2xl bg-white/75 border border-white px-3 py-2 shadow-sm`}>
-      <p className="text-[10px] font-bold text-gray-400">{label}</p>
-      <p className="text-xs font-medium text-gray-700 mt-0.5 leading-snug">{value}</p>
     </div>
   );
 }
@@ -1054,16 +1022,6 @@ function FrameVideo({ src, time, className, controls = false }: { src: string; t
   );
 }
 
-function MetricCard({ label, value, tone }: { label: string; value: string; tone: 'red' | 'green' | 'purple' | 'blue' }) {
-  const color = { red: 'text-red-600', green: 'text-green-600', purple: 'text-purple-600', blue: 'text-blue-600' }[tone];
-  return (
-    <div className="bg-gray-50 rounded-xl p-4 text-center">
-      <p className="text-xs text-gray-500 mb-1">{label}</p>
-      <p className={`text-xl font-bold ${color}`}>{value}</p>
-    </div>
-  );
-}
-
 function RulePill({ label, value }: { label: string; value: string }) {
   return (
     <div className="bg-amber-50 rounded-lg px-3 py-2">
@@ -1109,6 +1067,3 @@ function Tag({ children }: { children: string }) {
   return <span className="px-1.5 py-0.5 rounded bg-primary-50 text-primary-600 text-[10px] font-medium">{children}</span>;
 }
 
-function avg(values: number[]) {
-  return values.length ? values.reduce((a, b) => a + b, 0) / values.length : 0;
-}

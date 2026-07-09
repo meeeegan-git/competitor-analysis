@@ -12,6 +12,7 @@ interface StageItem {
   exampleTime: number;
   exampleProductType: string;
   desc?: string;
+  hasSample?: boolean;
 }
 
 interface KeyframeAnalysis {
@@ -264,7 +265,7 @@ function StageAnalysisBlock({ title, data, compact = false }: { title: string; d
 
 function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: StageItem[] }) {
   const tone = TONE_CLASS[stage.tone];
-  const top = items[0];
+  const top = [...items].sort((a, b) => b.costShare - a.costShare)[0];
   return (
     <div className={`rounded-3xl border ${tone.border} ${tone.soft} p-4`}>
       <div className="flex items-start justify-between gap-3 mb-4">
@@ -279,12 +280,12 @@ function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: Stag
       </div>
       <p className="text-xs text-gray-500 leading-relaxed mb-4">{stage.desc}</p>
       <div className="space-y-2.5">
-        {items.slice(0, 8).map((item, idx) => (
+        {items.map((item, idx) => (
           <StageElement key={item.label} item={item} rank={idx + 1} tone={tone} />
         ))}
       </div>
       <div className="mt-4 grid grid-cols-3 gap-2">
-        {items.slice(0, 3).map(item => (
+        {items.filter(item => item.hasSample !== false).slice(0, 3).map(item => (
           <ExampleFrame key={`${stage.key}-${item.label}`} item={item} tone={tone} />
         ))}
       </div>
@@ -293,14 +294,15 @@ function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: Stag
 }
 
 function StageElement({ item, rank, tone }: { item: StageItem; rank: number; tone: typeof TONE_CLASS[string] }) {
+  const hasSample = item.hasSample !== false && item.costShare > 0;
   return (
-    <div className="rounded-2xl bg-white/85 border border-white px-3 py-2 shadow-sm">
+    <div className={`rounded-2xl border px-3 py-2 shadow-sm ${hasSample ? 'bg-white/85 border-white' : 'bg-white/40 border-white/60 opacity-60'}`}>
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2 min-w-0">
-          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank <= 3 ? `${tone.bg} text-white` : 'bg-gray-100 text-gray-500'}`}>{rank}</span>
+          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${hasSample && rank <= 3 ? `${tone.bg} text-white` : 'bg-gray-100 text-gray-500'}`}>{rank}</span>
           <span className="text-sm font-medium text-gray-800 truncate">{item.label}</span>
         </div>
-        <span className={`text-sm font-black ${tone.text}`}>{item.costShare}%</span>
+        <span className={`text-sm font-black ${hasSample ? tone.text : 'text-gray-400'}`}>{item.costShare}%</span>
       </div>
       {item.desc && <p className="text-[10px] text-gray-400 mt-1 line-clamp-1">{item.desc}</p>}
     </div>

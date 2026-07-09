@@ -38,9 +38,9 @@
       "cs": 49250.84,
       "tags": {
         "first3": "明星达人/同款背书",
-        "mid": "功能型卖点：训练效果",
+        "mid": "功能型卖点",
         "midDesc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "end": "信任收尾：同款/背书强化",
+        "end": "信任收尾",
         "productType": "健身训练/塑形"
       },
       "keyframes": [
@@ -77,7 +77,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入信任收尾：同款/背书强化"
+          "objective": "进入信任收尾"
         },
         {
           "time": 15,
@@ -102,9 +102,9 @@
       "cs": 36407.34,
       "tags": {
         "first3": "痛点直击",
-        "mid": "功能型卖点：防护支撑",
-        "midDesc": "重点展示支撑、保护、透气、不移位等具体功能。",
-        "end": "行动收尾：立即体验/下单",
+        "mid": "专业防护",
+        "midDesc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "end": "行动收口",
         "productType": "运动防护/护具"
       },
       "keyframes": [
@@ -121,12 +121,12 @@
         {
           "time": 5,
           "phase": "卖点出现",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 7,
           "phase": "卖点展开",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 9,
@@ -141,7 +141,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入行动收尾：立即体验/下单"
+          "objective": "进入行动收口"
         },
         {
           "time": 15,
@@ -166,9 +166,9 @@
       "cs": 32303.68,
       "tags": {
         "first3": "明星达人/同款背书",
-        "mid": "功能型卖点：训练效果",
+        "mid": "功能型卖点",
         "midDesc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "end": "信任收尾：同款/背书强化",
+        "end": "信任收尾",
         "productType": "健身训练/塑形"
       },
       "keyframes": [
@@ -205,7 +205,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入信任收尾：同款/背书强化"
+          "objective": "进入信任收尾"
         },
         {
           "time": 15,
@@ -230,9 +230,9 @@
       "cs": 20136.45,
       "tags": {
         "first3": "明星达人/同款背书",
-        "mid": "功能型卖点：训练效果",
+        "mid": "功能型卖点",
         "midDesc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "end": "信任收尾：同款/背书强化",
+        "end": "信任收尾",
         "productType": "健身训练/塑形"
       },
       "keyframes": [
@@ -269,7 +269,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入信任收尾：同款/背书强化"
+          "objective": "进入信任收尾"
         },
         {
           "time": 15,
@@ -294,9 +294,9 @@
       "cs": 18327.1,
       "tags": {
         "first3": "痛点直击",
-        "mid": "功能型卖点：防护支撑",
-        "midDesc": "重点展示支撑、保护、透气、不移位等具体功能。",
-        "end": "行动收尾：立即体验/下单",
+        "mid": "专业防护",
+        "midDesc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "end": "行动收口",
         "productType": "运动防护/护具"
       },
       "keyframes": [
@@ -313,12 +313,12 @@
         {
           "time": 5,
           "phase": "卖点出现",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 7,
           "phase": "卖点展开",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 9,
@@ -333,7 +333,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入行动收尾：立即体验/下单"
+          "objective": "进入行动收口"
         },
         {
           "time": 15,
@@ -358,9 +358,9 @@
       "cs": 15209.98,
       "tags": {
         "first3": "痛点直击",
-        "mid": "功能型卖点：防护支撑",
-        "midDesc": "重点展示支撑、保护、透气、不移位等具体功能。",
-        "end": "行动收尾：立即体验/下单",
+        "mid": "专业防护",
+        "midDesc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "end": "行动收口",
         "productType": "运动防护/护具"
       },
       "keyframes": [
@@ -377,12 +377,12 @@
         {
           "time": 5,
           "phase": "卖点出现",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 7,
           "phase": "卖点展开",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 9,
@@ -397,7 +397,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入行动收尾：立即体验/下单"
+          "objective": "进入行动收口"
         },
         {
           "time": 15,
@@ -422,9 +422,9 @@
       "cs": 15092.95,
       "tags": {
         "first3": "痛点直击",
-        "mid": "功能型卖点：防护支撑",
-        "midDesc": "重点展示支撑、保护、透气、不移位等具体功能。",
-        "end": "行动收尾：立即体验/下单",
+        "mid": "专业防护",
+        "midDesc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "end": "行动收口",
         "productType": "运动防护/护具"
       },
       "keyframes": [
@@ -441,12 +441,12 @@
         {
           "time": 5,
           "phase": "卖点出现",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 7,
           "phase": "卖点展开",
-          "objective": "重点展示支撑、保护、透气、不移位等具体功能。"
+          "objective": "重点展示支撑、保护、透气、不移位等专业防护证据。"
         },
         {
           "time": 9,
@@ -461,7 +461,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入行动收尾：立即体验/下单"
+          "objective": "进入行动收口"
         },
         {
           "time": 15,
@@ -486,9 +486,9 @@
       "cs": 13485.41,
       "tags": {
         "first3": "口播推荐/产品直给",
-        "mid": "场景型卖点：户外体验",
+        "mid": "场景功能",
         "midDesc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
-        "end": "营销收尾：价格/行动引导",
+        "end": "营销收口",
         "productType": "户外露营/装备"
       },
       "keyframes": [
@@ -525,7 +525,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入营销收尾：价格/行动引导"
+          "objective": "进入营销收口"
         },
         {
           "time": 15,
@@ -550,9 +550,9 @@
       "cs": 11849.98,
       "tags": {
         "first3": "价格福利开场",
-        "mid": "场景型卖点：户外体验",
+        "mid": "场景功能",
         "midDesc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
-        "end": "机制收尾：权益/套装/赠品",
+        "end": "机制/权益收口",
         "productType": "户外露营/装备"
       },
       "keyframes": [
@@ -589,7 +589,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入机制收尾：权益/套装/赠品"
+          "objective": "进入机制/权益收口"
         },
         {
           "time": 15,
@@ -614,9 +614,9 @@
       "cs": 11112.85,
       "tags": {
         "first3": "效果演示开场",
-        "mid": "功能型卖点：训练效果",
+        "mid": "功能型卖点",
         "midDesc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "end": "行动收尾：立即体验/下单",
+        "end": "行动收口",
         "productType": "健身训练/塑形"
       },
       "keyframes": [
@@ -653,7 +653,7 @@
         {
           "time": 13,
           "phase": "收尾机制",
-          "objective": "进入行动收尾：立即体验/下单"
+          "objective": "进入行动收口"
         },
         {
           "time": 15,
@@ -674,29 +674,20 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
         "exampleTime": 1,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       },
       {
-        "label": "痛点直击",
-        "count": 9,
-        "costShare": 28.3,
-        "exampleRank": 2,
-        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
+        "label": "微剧情/场景冲突",
+        "count": 0,
+        "costShare": 0,
+        "exampleRank": 0,
+        "exampleName": "暂无代表素材",
+        "exampleVideo": "",
         "exampleTime": 1,
-        "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
-      },
-      {
-        "label": "价格福利开场",
-        "count": 10,
-        "costShare": 15.6,
-        "exampleRank": 9,
-        "exampleName": "运动户外骑行运动穿戴装备光威滨舟旅行套装淡中硬钓两用运动户外装备",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
-        "exampleTime": 1,
-        "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "exampleProductType": "暂无样本",
+        "desc": "该标签在当前TOP50中暂无样本",
+        "hasSample": false
       },
       {
         "label": "口播推荐/产品直给",
@@ -707,7 +698,20 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
         "exampleTime": 1,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
+      },
+      {
+        "label": "痛点直击",
+        "count": 9,
+        "costShare": 28.3,
+        "exampleRank": 2,
+        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
+        "exampleTime": 1,
+        "exampleProductType": "运动防护/护具",
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
       },
       {
         "label": "效果演示开场",
@@ -718,7 +722,20 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3s4cg6aaeiqafcxb5w5vb5fyen6lqi32a.f0.mp4?dis_k=387e864de8494cfc8b18c077ee3e794c&dis_t=1782136868&m=8c81e208ed0b905798e21ffa637f9d3f&sha256=681c9a602778339d76736e007de495692054dace799d148cc89bc17067ab278d",
         "exampleTime": 1,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
+      },
+      {
+        "label": "价格福利开场",
+        "count": 10,
+        "costShare": 15.6,
+        "exampleRank": 9,
+        "exampleName": "运动户外骑行运动穿戴装备光威滨舟旅行套装淡中硬钓两用运动户外装备",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
+        "exampleTime": 1,
+        "exampleProductType": "户外露营/装备",
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       },
       {
         "label": "真人上身/产品视觉",
@@ -729,45 +746,25 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53yybckaac4iacunrc5jvbrrqeexdaejka.f0.mp4?dis_k=c635ae93b149546128c8af7e2a3bcad5&dis_t=1780810633&m=f1cea4708f19665d11b97e7c8b6a84e2&sha256=2326032896d72f150a37a262732734ef5ead11a35d6f28e2e6ff7e6e8a277639",
         "exampleTime": 1,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       }
     ],
     "mid": [
       {
-        "label": "功能型卖点：训练效果",
-        "count": 23,
-        "costShare": 49.3,
+        "label": "功能型卖点",
+        "count": 24,
+        "costShare": 49.7,
         "exampleRank": 1,
         "exampleName": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
         "exampleTime": 5,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       },
       {
-        "label": "功能型卖点：防护支撑",
-        "count": 6,
-        "costShare": 26.4,
-        "exampleRank": 2,
-        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "exampleTime": 5,
-        "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
-      },
-      {
-        "label": "场景型卖点：户外体验",
-        "count": 16,
-        "costShare": 21.8,
-        "exampleRank": 8,
-        "exampleName": "有床+天幕[胡杨林pro] 太力全自动充气帐篷2-4人户外露营过夜帐篷",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
-        "exampleTime": 5,
-        "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
-      },
-      {
-        "label": "版型材质卖点",
+        "label": "版型材质",
         "count": 2,
         "costShare": 1.4,
         "exampleRank": 26,
@@ -775,10 +772,23 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3jaaesaaa4eabksa645vbusaejfeaaska.f0.mp4?dis_k=0621f310529c191f2d6c0f1c712e7419&dis_t=1780383458&m=65818e54d45d47397dc0549550fb29b0&sha256=f102c60301ce4c384aa47c6ff2c657e2a50db4ef43ff665294a17764c9e51e98",
         "exampleTime": 5,
         "exampleProductType": "服饰穿搭/鞋服",
-        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
+        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+        "hasSample": true
       },
       {
-        "label": "情绪价值/身份认同",
+        "label": "舒适体验",
+        "count": 0,
+        "costShare": 0,
+        "exampleRank": 0,
+        "exampleName": "暂无代表素材",
+        "exampleVideo": "",
+        "exampleTime": 5,
+        "exampleProductType": "暂无样本",
+        "desc": "该标签在当前TOP50中暂无样本",
+        "hasSample": false
+      },
+      {
+        "label": "情绪价值",
         "count": 2,
         "costShare": 0.7,
         "exampleRank": 46,
@@ -786,45 +796,37 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3qaaciaaa5yajpjvmenurxaaeesaaajca.f0.mp4?dis_k=4565e8ebdc9da149b53c5c66bd3dbd0f&dis_t=1781033716&m=8644f4fb0fcb65de5d58d3888399f5e2&sha256=c3e07e11fd369c1a28634f0dfff715b49e78af1f7a80081c350032e657ab516d",
         "exampleTime": 5,
         "exampleProductType": "服饰穿搭/鞋服",
-        "desc": "用同款、审美、身份想象和场景氛围建立购买理由。"
+        "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+        "hasSample": true
       },
       {
-        "label": "功能/品质卖点",
-        "count": 1,
-        "costShare": 0.4,
-        "exampleRank": 43,
-        "exampleName": "空",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32qac2aaaieabdveujjurxvaefxkaalka.f0.mp4?dis_k=fd8674b88d8cd43dc4a01d087a9f81dd&dis_t=1771322530&m=526f8a6327ca0a2c867a9def6cafcc89",
+        "label": "场景功能",
+        "count": 16,
+        "costShare": 21.8,
+        "exampleRank": 8,
+        "exampleName": "有床+天幕[胡杨林pro] 太力全自动充气帐篷2-4人户外露营过夜帐篷",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
         "exampleTime": 5,
-        "exampleProductType": "通用商品",
-        "desc": "重点展示产品功能、材质、细节和使用效果。"
+        "exampleProductType": "户外露营/装备",
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
+      },
+      {
+        "label": "专业防护",
+        "count": 6,
+        "costShare": 26.4,
+        "exampleRank": 2,
+        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
+        "exampleTime": 5,
+        "exampleProductType": "运动防护/护具",
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
       }
     ],
     "end": [
       {
-        "label": "信任收尾：同款/背书强化",
-        "count": 14,
-        "costShare": 37.5,
-        "exampleRank": 1,
-        "exampleName": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
-        "exampleTime": 13,
-        "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
-      },
-      {
-        "label": "行动收尾：立即体验/下单",
-        "count": 14,
-        "costShare": 35.2,
-        "exampleRank": 2,
-        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
-        "exampleTime": 13,
-        "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
-      },
-      {
-        "label": "机制收尾：权益/套装/赠品",
+        "label": "机制/权益收口",
         "count": 13,
         "costShare": 17.5,
         "exampleRank": 9,
@@ -832,10 +834,35 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
         "exampleTime": 13,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       },
       {
-        "label": "营销收尾：价格/行动引导",
+        "label": "信任收尾",
+        "count": 14,
+        "costShare": 37.5,
+        "exampleRank": 1,
+        "exampleName": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
+        "exampleTime": 13,
+        "exampleProductType": "健身训练/塑形",
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
+      },
+      {
+        "label": "行动收口",
+        "count": 14,
+        "costShare": 35.2,
+        "exampleRank": 2,
+        "exampleName": "护膝关节保暖春夏运动防护男女中老年跑步跳绳轻便康舒",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
+        "exampleTime": 13,
+        "exampleProductType": "运动防护/护具",
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
+      },
+      {
+        "label": "营销收口",
         "count": 9,
         "costShare": 9.8,
         "exampleRank": 8,
@@ -843,7 +870,8 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
         "exampleTime": 13,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       }
     ]
   },
@@ -859,7 +887,8 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
         "exampleTime": 1,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       },
       {
         "label": "痛点直击",
@@ -870,7 +899,8 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
         "exampleTime": 1,
         "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
       },
       {
         "label": "价格福利开场",
@@ -881,23 +911,25 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
         "exampleTime": 1,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       }
     ],
     "mid": [
       {
-        "label": "功能型卖点：训练效果",
-        "count": 23,
-        "costShare": 49.3,
+        "label": "功能型卖点",
+        "count": 24,
+        "costShare": 49.7,
         "exampleRank": 1,
         "exampleName": "[明星推荐]OES筋膜环懒人运动健身按摩器材家用甩脂揉腹舒缓肌肉",
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
         "exampleTime": 5,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       },
       {
-        "label": "功能型卖点：防护支撑",
+        "label": "专业防护",
         "count": 6,
         "costShare": 26.4,
         "exampleRank": 2,
@@ -905,10 +937,11 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
         "exampleTime": 5,
         "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
       },
       {
-        "label": "场景型卖点：户外体验",
+        "label": "场景功能",
         "count": 16,
         "costShare": 21.8,
         "exampleRank": 8,
@@ -916,12 +949,13 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3nebtiaadpialj45mvburs2iegruqgnca.f0.mp4?dis_k=7274c3f1a2f08f2abb05f8f25c96c396&dis_t=1773219314&m=67e3395d3bae0bbd530b4cffb21e3d5b&sha256=362d6a146166ec376751c8f59877a21da96a6b3a10d55bc603cd14e15b07546f",
         "exampleTime": 5,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       }
     ],
     "end": [
       {
-        "label": "信任收尾：同款/背书强化",
+        "label": "信任收尾",
         "count": 14,
         "costShare": 37.5,
         "exampleRank": 1,
@@ -929,10 +963,11 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3fuafqaaa6aajmiryvbvbulielawqawca.f0.mp4?dis_k=9d71d7137d281c36046d6341df8626d5&dis_t=1782108027&m=bdd71575192419023ecabb3ad9abb589&sha256=a43bf12b29756f069fd11789f959609c50572a7001213b3a70026122919a185d",
         "exampleTime": 13,
         "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。"
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
       },
       {
-        "label": "行动收尾：立即体验/下单",
+        "label": "行动收口",
         "count": 14,
         "costShare": 35.2,
         "exampleRank": 2,
@@ -940,10 +975,11 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b532ece4aae6iao6hh5kjur5uiej3iqitsa.f0.mp4?dis_k=acbde05c58f12f0238fdafd88f2907dd&dis_t=1777967413&m=0ccbed86eea24785ec8d5f1139c8e08b&sha256=c73a47b0cfdb5005b3cf755c3909098b0e664e2fa2949c85c972a6e99809f8e5",
         "exampleTime": 13,
         "exampleProductType": "运动防护/护具",
-        "desc": "重点展示支撑、保护、透气、不移位等具体功能。"
+        "desc": "重点展示支撑、保护、透气、不移位等专业防护证据。",
+        "hasSample": true
       },
       {
-        "label": "机制收尾：权益/套装/赠品",
+        "label": "机制/权益收口",
         "count": 13,
         "costShare": 17.5,
         "exampleRank": 9,
@@ -951,7 +987,8 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53cian6aaanqapnerbijvbueqe34jabx2a.f0.mp4?dis_k=6b60e89feb3836dc6c26a928a71d06a2&dis_t=1780558237&m=418388edc0a49dd578dee2bc8c76be53&sha256=b617b3c116007c4e2ede4db75593ff89dcfec68899b28f311b0a48722fadf34e",
         "exampleTime": 13,
         "exampleProductType": "户外露营/装备",
-        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+        "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+        "hasSample": true
       }
     ],
     "suggestion": "先用前三秒建立注意力，再用中段解释产品为什么值得买，最后用权益、机制或行动入口完成转化。"
@@ -977,9 +1014,9 @@
         "cs": 209250.67,
         "tags": {
           "first3": "价格福利开场",
-          "mid": "场景型卖点：户外体验",
+          "mid": "场景功能",
           "midDesc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
-          "end": "机制收尾：权益/套装/赠品",
+          "end": "机制/权益收口",
           "productType": "户外露营/装备"
         },
         "keyframes": [
@@ -1016,7 +1053,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入机制收尾：权益/套装/赠品"
+            "objective": "进入机制/权益收口"
           },
           {
             "time": 15,
@@ -1041,9 +1078,9 @@
         "cs": 185387.31,
         "tags": {
           "first3": "价格福利开场",
-          "mid": "场景型卖点：户外体验",
+          "mid": "场景功能",
           "midDesc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
-          "end": "机制收尾：权益/套装/赠品",
+          "end": "机制/权益收口",
           "productType": "户外露营/装备"
         },
         "keyframes": [
@@ -1080,7 +1117,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入机制收尾：权益/套装/赠品"
+            "objective": "进入机制/权益收口"
           },
           {
             "time": 15,
@@ -1105,9 +1142,9 @@
         "cs": 148390.75,
         "tags": {
           "first3": "价格福利开场",
-          "mid": "场景型卖点：户外体验",
+          "mid": "场景功能",
           "midDesc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
-          "end": "机制收尾：权益/套装/赠品",
+          "end": "机制/权益收口",
           "productType": "户外露营/装备"
         },
         "keyframes": [
@@ -1144,7 +1181,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入机制收尾：权益/套装/赠品"
+            "objective": "进入机制/权益收口"
           },
           {
             "time": 15,
@@ -1169,9 +1206,9 @@
         "cs": 108831.76,
         "tags": {
           "first3": "真人上身/产品视觉",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1208,7 +1245,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1233,9 +1270,9 @@
         "cs": 101943.16,
         "tags": {
           "first3": "真人上身/产品视觉",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1272,7 +1309,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1297,9 +1334,9 @@
         "cs": 96372.48,
         "tags": {
           "first3": "真人上身/产品视觉",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1336,7 +1373,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1361,9 +1398,9 @@
         "cs": 79977.52,
         "tags": {
           "first3": "价格福利开场",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "机制收尾：权益/套装/赠品",
+          "end": "机制/权益收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1400,7 +1437,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入机制收尾：权益/套装/赠品"
+            "objective": "进入机制/权益收口"
           },
           {
             "time": 15,
@@ -1425,9 +1462,9 @@
         "cs": 75573.01,
         "tags": {
           "first3": "真人上身/产品视觉",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1464,7 +1501,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1489,9 +1526,9 @@
         "cs": 67278.21,
         "tags": {
           "first3": "真人上身/产品视觉",
-          "mid": "体验型卖点：舒适塑形",
+          "mid": "舒适体验",
           "midDesc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "贴身衣物/塑形"
         },
         "keyframes": [
@@ -1528,7 +1565,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1553,9 +1590,9 @@
         "cs": 63564.48,
         "tags": {
           "first3": "口播推荐/产品直给",
-          "mid": "版型材质卖点",
+          "mid": "版型材质",
           "midDesc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
-          "end": "营销收尾：价格/行动引导",
+          "end": "营销收口",
           "productType": "服饰穿搭/鞋服"
         },
         "keyframes": [
@@ -1592,7 +1629,7 @@
           {
             "time": 13,
             "phase": "收尾机制",
-            "objective": "进入营销收尾：价格/行动引导"
+            "objective": "进入营销收口"
           },
           {
             "time": 15,
@@ -1605,26 +1642,28 @@
     "stageAnalysis": {
       "first3": [
         {
-          "label": "真人上身/产品视觉",
-          "count": 32,
-          "costShare": 54.8,
-          "exampleRank": 4,
-          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+          "label": "明星达人/同款背书",
+          "count": 5,
+          "costShare": 6.7,
+          "exampleRank": 20,
+          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 1,
-          "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+          "exampleProductType": "服饰穿搭/鞋服",
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+          "hasSample": true
         },
         {
-          "label": "价格福利开场",
-          "count": 7,
-          "costShare": 28.9,
-          "exampleRank": 1,
-          "exampleName": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+          "label": "微剧情/场景冲突",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
           "exampleTime": 1,
-          "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+          "exampleProductType": "暂无样本",
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
         },
         {
           "label": "口播推荐/产品直给",
@@ -1635,18 +1674,20 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
           "exampleTime": 1,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
+          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+          "hasSample": true
         },
         {
-          "label": "明星达人/同款背书",
-          "count": 5,
-          "costShare": 6.7,
-          "exampleRank": 20,
-          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+          "label": "痛点直击",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
           "exampleTime": 1,
-          "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。"
+          "exampleProductType": "暂无样本",
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
         },
         {
           "label": "效果演示开场",
@@ -1657,45 +1698,37 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
           "exampleTime": 1,
           "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
+        },
+        {
+          "label": "价格福利开场",
+          "count": 7,
+          "costShare": 28.9,
+          "exampleRank": 1,
+          "exampleName": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+          "exampleTime": 1,
+          "exampleProductType": "户外露营/装备",
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
+        },
+        {
+          "label": "真人上身/产品视觉",
+          "count": 32,
+          "costShare": 54.8,
+          "exampleRank": 4,
+          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+          "exampleTime": 1,
+          "exampleProductType": "贴身衣物/塑形",
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
         }
       ],
       "mid": [
         {
-          "label": "体验型卖点：舒适塑形",
-          "count": 34,
-          "costShare": 60.5,
-          "exampleRank": 4,
-          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
-          "exampleTime": 5,
-          "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
-        },
-        {
-          "label": "场景型卖点：户外体验",
-          "count": 5,
-          "costShare": 24.2,
-          "exampleRank": 1,
-          "exampleName": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
-          "exampleTime": 5,
-          "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
-        },
-        {
-          "label": "版型材质卖点",
-          "count": 6,
-          "costShare": 8.3,
-          "exampleRank": 10,
-          "exampleName": "空",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
-          "exampleTime": 5,
-          "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
-        },
-        {
-          "label": "功能/品质卖点",
+          "label": "功能型卖点",
           "count": 3,
           "costShare": 3.8,
           "exampleRank": 19,
@@ -1703,10 +1736,35 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
           "exampleTime": 5,
           "exampleProductType": "通用商品",
-          "desc": "重点展示产品功能、材质、细节和使用效果。"
+          "desc": "重点展示产品功能、材质、细节和使用效果。",
+          "hasSample": true
         },
         {
-          "label": "情绪价值/身份认同",
+          "label": "版型材质",
+          "count": 6,
+          "costShare": 8.3,
+          "exampleRank": 10,
+          "exampleName": "空",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+          "exampleTime": 5,
+          "exampleProductType": "服饰穿搭/鞋服",
+          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+          "hasSample": true
+        },
+        {
+          "label": "舒适体验",
+          "count": 34,
+          "costShare": 60.5,
+          "exampleRank": 4,
+          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+          "exampleTime": 5,
+          "exampleProductType": "贴身衣物/塑形",
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
+        },
+        {
+          "label": "情绪价值",
           "count": 2,
           "costShare": 3.1,
           "exampleRank": 20,
@@ -1714,23 +1772,37 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 5,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。"
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+          "hasSample": true
+        },
+        {
+          "label": "场景功能",
+          "count": 5,
+          "costShare": 24.2,
+          "exampleRank": 1,
+          "exampleName": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+          "exampleTime": 5,
+          "exampleProductType": "户外露营/装备",
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
+        },
+        {
+          "label": "专业防护",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
+          "exampleTime": 5,
+          "exampleProductType": "暂无样本",
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
         }
       ],
       "end": [
         {
-          "label": "营销收尾：价格/行动引导",
-          "count": 38,
-          "costShare": 64.5,
-          "exampleRank": 4,
-          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
-          "exampleTime": 13,
-          "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
-        },
-        {
-          "label": "机制收尾：权益/套装/赠品",
+          "label": "机制/权益收口",
           "count": 8,
           "costShare": 29.8,
           "exampleRank": 1,
@@ -1738,10 +1810,11 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 13,
           "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
         },
         {
-          "label": "信任收尾：同款/背书强化",
+          "label": "信任收尾",
           "count": 4,
           "costShare": 5.7,
           "exampleRank": 20,
@@ -1749,7 +1822,32 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 13,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。"
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+          "hasSample": true
+        },
+        {
+          "label": "行动收口",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
+          "exampleTime": 13,
+          "exampleProductType": "暂无样本",
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
+        },
+        {
+          "label": "营销收口",
+          "count": 38,
+          "costShare": 64.5,
+          "exampleRank": 4,
+          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+          "exampleTime": 13,
+          "exampleProductType": "贴身衣物/塑形",
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
         }
       ]
     },
@@ -1765,7 +1863,8 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 1,
           "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
         },
         {
           "label": "价格福利开场",
@@ -1776,7 +1875,8 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 1,
           "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
         },
         {
           "label": "口播推荐/产品直给",
@@ -1787,12 +1887,13 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
           "exampleTime": 1,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
+          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+          "hasSample": true
         }
       ],
       "mid": [
         {
-          "label": "体验型卖点：舒适塑形",
+          "label": "舒适体验",
           "count": 34,
           "costShare": 60.5,
           "exampleRank": 4,
@@ -1800,10 +1901,11 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 5,
           "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
         },
         {
-          "label": "场景型卖点：户外体验",
+          "label": "场景功能",
           "count": 5,
           "costShare": 24.2,
           "exampleRank": 1,
@@ -1811,10 +1913,11 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 5,
           "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
         },
         {
-          "label": "版型材质卖点",
+          "label": "版型材质",
           "count": 6,
           "costShare": 8.3,
           "exampleRank": 10,
@@ -1822,12 +1925,13 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
           "exampleTime": 5,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
+          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+          "hasSample": true
         }
       ],
       "end": [
         {
-          "label": "营销收尾：价格/行动引导",
+          "label": "营销收口",
           "count": 38,
           "costShare": 64.5,
           "exampleRank": 4,
@@ -1835,10 +1939,11 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 13,
           "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
         },
         {
-          "label": "机制收尾：权益/套装/赠品",
+          "label": "机制/权益收口",
           "count": 8,
           "costShare": 29.8,
           "exampleRank": 1,
@@ -1846,10 +1951,11 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 13,
           "exampleProductType": "户外露营/装备",
-          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+          "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
         },
         {
-          "label": "信任收尾：同款/背书强化",
+          "label": "信任收尾",
           "count": 4,
           "costShare": 5.7,
           "exampleRank": 20,
@@ -1857,7 +1963,8 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 13,
           "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。"
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+          "hasSample": true
         }
       ],
       "suggestion": "先用前三秒建立注意力，再用中段解释产品为什么值得买，最后用权益、机制或行动入口完成转化。"

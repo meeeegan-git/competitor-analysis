@@ -25,6 +25,32 @@ STOP_WORDS = [
 
 PRODUCT_WORDS = ["裤", "衣", "鞋", "包", "文胸", "内裤", "护膝", "健腹", "跑步机", "筋膜", "帐篷", "瑜伽", "甩脂"]
 
+STAGE_LABELS = {
+    "first3": [
+        "明星达人/同款背书",
+        "微剧情/场景冲突",
+        "口播推荐/产品直给",
+        "痛点直击",
+        "效果演示开场",
+        "价格福利开场",
+        "真人上身/产品视觉",
+    ],
+    "mid": [
+        "功能型卖点",
+        "版型材质",
+        "舒适体验",
+        "情绪价值",
+        "场景功能",
+        "专业防护",
+    ],
+    "end": [
+        "机制/权益收口",
+        "信任收尾",
+        "行动收口",
+        "营销收口",
+    ],
+}
+
 
 def clean_name(name):
     return str(name).strip()
@@ -111,6 +137,8 @@ def classify_stage(row):
 
     if has_star:
         first3 = "明星达人/同款背书"
+    elif re.search(r"剧情|反转|冲突|尴尬|朋友|闺蜜|妈妈|老公|孩子|同事", t):
+        first3 = "微剧情/场景冲突"
     elif re.search(r"护膝|关节|疼|防护|保护", t):
         first3 = "痛点直击"
     elif re.search(r"健腹|甩脂|筋膜|塑形|训练", t):
@@ -123,35 +151,35 @@ def classify_stage(row):
         first3 = "口播推荐/产品直给"
 
     if pt == "运动防护/护具":
-        mid = "功能型卖点：防护支撑"
-        mid_desc = "重点展示支撑、保护、透气、不移位等具体功能。"
+        mid = "专业防护"
+        mid_desc = "重点展示支撑、保护、透气、不移位等专业防护证据。"
     elif pt == "健身训练/塑形":
-        mid = "功能型卖点：训练效果"
+        mid = "功能型卖点"
         mid_desc = "重点展示使用动作、训练部位、便捷使用和效果想象。"
     elif pt == "户外露营/装备":
-        mid = "场景型卖点：户外体验"
+        mid = "场景功能"
         mid_desc = "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
     elif pt == "贴身衣物/塑形":
-        mid = "体验型卖点：舒适塑形"
+        mid = "舒适体验"
         mid_desc = "重点展示亲肤、无痕、承托、塑形和日常舒适。"
     elif pt == "服饰穿搭/鞋服":
-        mid = "版型材质卖点"
+        mid = "版型材质"
         mid_desc = "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
     else:
-        mid = "功能/品质卖点"
+        mid = "功能型卖点"
         mid_desc = "重点展示产品功能、材质、细节和使用效果。"
     if has_star and pt in ["服饰穿搭/鞋服", "通用商品"]:
-        mid = "情绪价值/身份认同"
+        mid = "情绪价值"
         mid_desc = "用同款、审美、身份想象和场景氛围建立购买理由。"
 
     if has_bundle:
-        end = "机制收尾：权益/套装/赠品"
+        end = "机制/权益收口"
     elif has_star:
-        end = "信任收尾：同款/背书强化"
+        end = "信任收尾"
     elif re.search(r"护膝|护具|健身|训练|筋膜", t):
-        end = "行动收尾：立即体验/下单"
+        end = "行动收口"
     else:
-        end = "营销收尾：价格/行动引导"
+        end = "营销收口"
 
     return {
         "first3": first3,
@@ -222,30 +250,39 @@ def stage_stats(items, stage_key):
         costs[label] += i["cs"]
         examples[label].append(i)
     stage_time = {"first3": 1, "mid": 5, "end": 13}[stage_key]
+    labels = STAGE_LABELS[stage_key]
     out = []
     used = set()
-    for label, count in sorted(counts.items(), key=lambda kv: costs[kv[0]], reverse=True):
-        cand = sorted(examples[label], key=lambda x: x["cs"], reverse=True)
-        ex = next((x for x in cand if x["id"] not in used), cand[0])
-        used.add(ex["id"])
+    for label in labels:
+        count = counts.get(label, 0)
+        cand = sorted(examples.get(label, []), key=lambda x: x["cs"], reverse=True)
+        ex = next((x for x in cand if x["id"] not in used), cand[0] if cand else None)
+        if ex:
+            used.add(ex["id"])
         out.append({
             "label": label,
             "count": count,
-            "costShare": round(costs[label] / total_cost * 100, 1),
-            "exampleRank": ex["rank"],
-            "exampleName": ex["pn"],
-            "exampleVideo": ex["ml"],
+            "costShare": round(costs[label] / total_cost * 100, 1) if count else 0,
+            "exampleRank": ex["rank"] if ex else 0,
+            "exampleName": ex["pn"] if ex else "暂无代表素材",
+            "exampleVideo": ex["ml"] if ex else "",
             "exampleTime": stage_time,
-            "exampleProductType": ex["tags"]["productType"],
-            "desc": ex["tags"].get("midDesc", ""),
+            "exampleProductType": ex["tags"]["productType"] if ex else "暂无样本",
+            "desc": (ex["tags"].get("midDesc", "") if ex else "该标签在当前TOP50中暂无样本"),
+            "hasSample": bool(ex),
         })
     return out
 
 
+def top_nonzero(items, n=3):
+    nonzero = sorted([i for i in items if i.get("costShare", 0) > 0], key=lambda x: x["costShare"], reverse=True)
+    return nonzero[:n] if nonzero else items[:n]
+
+
 def stage_formula(items):
-    first = stage_stats(items, "first3")[:3]
-    mid = stage_stats(items, "mid")[:3]
-    end = stage_stats(items, "end")[:3]
+    first = top_nonzero(stage_stats(items, "first3"), 3)
+    mid = top_nonzero(stage_stats(items, "mid"), 3)
+    end = top_nonzero(stage_stats(items, "end"), 3)
     return {
         "title": "前三秒钩子 → 中段卖点展示 → 结尾转化收口",
         "first3": first,

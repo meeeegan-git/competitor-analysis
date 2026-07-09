@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 
-interface ElementTags {
-  hook: string;
-  scene: string;
-  role: string;
-  proof: string;
-  script: string;
-  visual: string;
-  focus: string;
+type StageKey = 'first3' | 'mid' | 'end';
+
+interface StageItem {
+  label: string;
+  count: number;
+  costShare: number;
+  exampleRank: number;
+  exampleName: string;
+  exampleVideo: string;
+  exampleTime: number;
+  exampleProductType: string;
+  desc?: string;
 }
 
 interface KeyframeAnalysis {
   time: number;
   phase: string;
   objective: string;
-  visualTags: string[];
-  copyTags: string[];
-  shot: string;
-  replicate: string;
 }
 
 interface MaterialItem {
@@ -28,49 +28,36 @@ interface MaterialItem {
   ca: string;
   pn: string;
   ml: string;
-  cs: number;
   ctr: number;
   cvr: number;
   vtr: number;
   dur: number;
   roi: number;
-  tags: ElementTags;
+  tags: {
+    first3: string;
+    mid: string;
+    midDesc: string;
+    end: string;
+    productType: string;
+  };
   keyframes: KeyframeAnalysis[];
 }
 
-interface ElementStat {
-  label: string;
-  count: number;
-  pct: number;
-  costShare: number;
-  exampleRank: number;
-  exampleName: string;
-  exampleVideo: string;
-  exampleTime: number;
-}
-
-interface FrameStat {
-  time: number;
-  topElements: { label: string; count: number; pct: number; costShare: number }[];
-}
-
-interface Paradigm {
-  script: string;
-  hook: string;
-  role: string;
-  count: number;
-  pct: number;
-  costShare: number;
-  exampleRank: number;
-  exampleName: string;
+interface StageFormula {
+  title: string;
+  first3: StageItem[];
+  mid: StageItem[];
+  end: StageItem[];
+  suggestion: string;
 }
 
 interface BenchmarkData {
   name: string;
+  analysisCount: number;
+  breakdownCount: number;
   topItems: MaterialItem[];
-  elementStats: Record<DimKey, ElementStat[]>;
-  frameStats: FrameStat[];
-  paradigms: Paradigm[];
+  stageAnalysis: Record<StageKey, StageItem[]>;
+  stageFormula: StageFormula;
 }
 
 interface AnalysisData {
@@ -85,33 +72,46 @@ interface AnalysisData {
     keyframeTimes: number[];
   };
   totalCountAfterRules: number;
+  analysisCount: number;
+  breakdownCount: number;
   topItems: MaterialItem[];
-  elementStats: Record<DimKey, ElementStat[]>;
-  frameStats: FrameStat[];
-  paradigms: Paradigm[];
+  stageAnalysis: Record<StageKey, StageItem[]>;
+  stageFormula: StageFormula;
   apparelBenchmark: BenchmarkData;
 }
 
-type DimKey = 'hook' | 'scene' | 'role' | 'focus' | 'proof' | 'script' | 'visual';
-
-const DIMENSIONS: { key: DimKey; label: string; desc: string; color: string; bg: string }[] = [
-  { key: 'hook', label: '前3秒钩子', desc: '素材最先用什么抓停用户', color: 'text-purple-700', bg: 'bg-purple-50' },
-  { key: 'visual', label: '视觉载体', desc: '画面主要依靠什么呈现', color: 'text-blue-700', bg: 'bg-blue-50' },
-  { key: 'scene', label: '场景', desc: '用户被带入的使用场景', color: 'text-cyan-700', bg: 'bg-cyan-50' },
-  { key: 'role', label: '出镜角色', desc: '谁在视频里完成种草/演示', color: 'text-indigo-700', bg: 'bg-indigo-50' },
-  { key: 'focus', label: '核心卖点', desc: '主打哪类产品利益点', color: 'text-green-700', bg: 'bg-green-50' },
-  { key: 'proof', label: '信任证明', desc: '用什么证据降低购买顾虑', color: 'text-amber-700', bg: 'bg-amber-50' },
-  { key: 'script', label: '脚本骨架', desc: '整条素材的内容组织方式', color: 'text-rose-700', bg: 'bg-rose-50' },
+const STAGES: { key: StageKey; title: string; subtitle: string; icon: string; tone: string; desc: string }[] = [
+  {
+    key: 'first3',
+    title: '前三秒',
+    subtitle: '抓停用户',
+    icon: '⚡',
+    tone: 'purple',
+    desc: '看开头是靠明星达人、微剧情、口播推荐、痛点还是产品视觉抓住注意力。',
+  },
+  {
+    key: 'mid',
+    title: '视频中段',
+    subtitle: '卖点展示',
+    icon: '🎥',
+    tone: 'blue',
+    desc: '根据具体产品拆卖点：功能型卖点、版型材质、舒适体验、情绪价值、场景功能等。',
+  },
+  {
+    key: 'end',
+    title: '视频结尾',
+    subtitle: '转化收口',
+    icon: '🎯',
+    tone: 'green',
+    desc: '看结尾是走价格机制、权益赠品、信任背书、行动引导，还是其他营销收口。',
+  },
 ];
 
-const DIM_ICONS: Record<DimKey, string> = {
-  hook: '⚡',
-  visual: '🎥',
-  scene: '📍',
-  role: '👤',
-  focus: '💎',
-  proof: '🛡️',
-  script: '📝',
+const TONE_CLASS: Record<string, { bg: string; text: string; border: string; soft: string }> = {
+  purple: { bg: 'bg-purple-600', text: 'text-purple-700', border: 'border-purple-100', soft: 'bg-purple-50' },
+  blue: { bg: 'bg-blue-600', text: 'text-blue-700', border: 'border-blue-100', soft: 'bg-blue-50' },
+  green: { bg: 'bg-green-600', text: 'text-green-700', border: 'border-green-100', soft: 'bg-green-50' },
+  amber: { bg: 'bg-amber-600', text: 'text-amber-700', border: 'border-amber-100', soft: 'bg-amber-50' },
 };
 
 export default function SportAnalysisView({ data }: { data: AnalysisData }) {
@@ -121,66 +121,36 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
   return (
     <div className="flex gap-6 animate-fade-in">
       <ReportSideNav />
-
       <div className="min-w-0 flex-1 space-y-10">
         <section id="overview" className="scroll-mt-24">
           <ReportHeader data={data} />
         </section>
 
-        <section id="elements" className="scroll-mt-24">
-          <ElementValidation data={data} title={`${data.name}爆款元素：关键帧拆解 + 数据验证`} />
+        <section id="stages" className="scroll-mt-24">
+          <StageAnalysisBlock title={`${data.name}三段式爆款元素拆解`} data={data} />
         </section>
 
-
-        <section id="formulas" className="scroll-mt-24">
-          <CreativeFormulaSection data={data} />
-        </section>
-
-        <section id="strategy" className="scroll-mt-24">
-          <CombinationStrategySection data={data} />
-        </section>
-
-        <section id="scripts" className="scroll-mt-24">
-          <ParadigmSection title={`${data.name}可复刻脚本骨架`} paradigms={data.paradigms} />
+        <section id="formula" className="scroll-mt-24">
+          <FormulaBlock data={data} />
         </section>
 
         <section id="materials" className="scroll-mt-24">
           <MaterialList
             title={`${data.name} TOP10 爆款素材逐帧拆解`}
-            subtitle="逐帧拆解仅展示TOP10素材；每条素材均按第1/3/5/7/9/11/13/15秒对应帧拆解。"
+            subtitle="按前三秒 / 视频中段 / 视频结尾拆素材结构；每条素材保留1/3/5/7/9/11/13/15秒截图。"
             items={data.topItems}
             expanded={ownExpanded}
             setExpanded={setOwnExpanded}
           />
         </section>
 
-        <section id="apparel" className="scroll-mt-24 space-y-6">
-          <div className="rounded-3xl border border-amber-100 bg-gradient-to-br from-amber-50 via-white to-white p-6 shadow-sm">
-            <div className="flex items-start justify-between gap-5 mb-5">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">💡</span>
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900">服饰大盘爆款素材元素拆解</h2>
-                  <p className="text-sm text-gray-500 mt-1 max-w-3xl">
-                    这里不是另一个运动子类目，而是排除运动鞋服与运动用品后的服饰大盘素材，用来找到可迁移到{data.name}的钩子、证明方式和转化节奏。
-                  </p>
-                </div>
-              </div>
-              <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold whitespace-nowrap">跨品类借鉴</span>
-            </div>
-            <div className="grid grid-cols-4 gap-3 text-xs">
-              <RulePill label="大盘规则" value="排除运动鞋服/运动用品" />
-              <RulePill label="拆解数量" value="TOP10" />
-              <RulePill label="重复素材" value="MD5去重" />
-              <RulePill label="客户限额" value="同客户≤3条" />
-            </div>
-          </div>
-
-          <ElementValidation data={data.apparelBenchmark} title="服饰大盘可借鉴元素：数据占比 + 代表帧" compact />
-          <ParadigmSection title="服饰大盘可借鉴脚本骨架" paradigms={data.apparelBenchmark.paradigms} compact />
+        <section id="benchmark" className="scroll-mt-24 space-y-6">
+          <BenchmarkHeader data={data} />
+          <StageAnalysisBlock title="服饰运动大盘参考：三段式爆款元素" data={data.apparelBenchmark} compact />
+          <FormulaBlock data={data.apparelBenchmark} compact />
           <MaterialList
-            title="服饰大盘 TOP10 爆款素材逐帧拆解"
-            subtitle="逐帧拆解仅展示服饰大盘TOP10素材；这些素材已排除运动鞋服/运动用品自身。"
+            title="服饰运动大盘 TOP10 爆款素材逐帧拆解"
+            subtitle="大盘样本已排除运动户外、运动鞋服、运动用品，用于参考服饰大盘爆款打法。"
             items={data.apparelBenchmark.topItems}
             expanded={benchExpanded}
             setExpanded={setBenchExpanded}
@@ -194,13 +164,11 @@ export default function SportAnalysisView({ data }: { data: AnalysisData }) {
 
 function ReportSideNav() {
   const navItems = [
-    { href: '#overview', icon: '📌', label: '报告概览', desc: '数据规则' },
-    { href: '#elements', icon: '📊', label: '元素验证', desc: '占比/消耗' },
-    { href: '#formulas', icon: '🧩', label: '创意公式', desc: '1-5公式' },
-    { href: '#strategy', icon: '🎯', label: '组合策略', desc: '怎么投拍' },
-    { href: '#scripts', icon: '📝', label: '脚本骨架', desc: '可复刻' },
+    { href: '#overview', icon: '📌', label: '报告概览', desc: '标题' },
+    { href: '#stages', icon: '🧩', label: '三段拆解', desc: '前中后' },
+    { href: '#formula', icon: '🔗', label: '组合公式', desc: '怎么组合' },
     { href: '#materials', icon: '🎬', label: '素材拆解', desc: 'TOP10' },
-    { href: '#apparel', icon: '💡', label: '服饰大盘', desc: '跨品类' },
+    { href: '#benchmark', icon: '💡', label: '大盘参考', desc: '排除运动' },
   ];
 
   return (
@@ -229,7 +197,7 @@ function ReportSideNav() {
         </nav>
         <div className="mt-4 rounded-2xl bg-gradient-to-br from-primary-50 to-blue-50 p-3">
           <p className="text-[11px] font-bold text-primary-700">阅读路径</p>
-          <p className="text-[11px] text-gray-500 leading-relaxed mt-1">先看公式和策略，再展开具体素材关键帧。</p>
+          <p className="text-[11px] text-gray-500 leading-relaxed mt-1">先看三段公式，再展开具体素材关键帧。</p>
         </div>
       </div>
     </aside>
@@ -244,7 +212,7 @@ function ReportHeader({ data }: { data: AnalysisData }) {
           {data.name === '运动鞋服' ? '👟' : '🏋️'}
         </span>
         <div>
-          <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Playbook</p>
+          <p className="text-xs font-bold text-primary-600 tracking-wider uppercase">Creative Formula</p>
           <h1 className="text-3xl font-black text-gray-900 mt-1">{data.name}爆款创意公式拆解</h1>
         </div>
       </div>
@@ -252,467 +220,148 @@ function ReportHeader({ data }: { data: AnalysisData }) {
   );
 }
 
-function ElementValidation({ data, title, compact = false }: { data: AnalysisData | BenchmarkData; title: string; compact?: boolean }) {
-  const [active, setActive] = useState<DimKey>('hook');
-  const dim = DIMENSIONS.find(d => d.key === active)!;
-  const stats = [...(data.elementStats[active] || [])].sort((a, b) => b.costShare - a.costShare);
-  const first = stats[0];
-
+function BenchmarkHeader({ data }: { data: AnalysisData }) {
   return (
-    <section className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
-      <div className="flex items-center justify-between gap-4 mb-4">
-        <div>
-          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">ELEMENT VALIDATION</p>
-          <h2 className="text-xl font-black text-gray-900">{title}</h2>
-          <p className="text-sm text-gray-500 mt-1">仅按消耗占比排序：该元素在TOP50内贡献的消耗占比。</p>
-        </div>
-        {first && (
-          <div className={`px-4 py-2 rounded-xl ${dim.bg}`}>
-            <p className={`text-xs font-medium ${dim.color}`}>当前消耗最高</p>
-            <p className="text-sm font-bold text-gray-800">{first.label} · {first.costShare}%</p>
+    <div className="rounded-3xl border border-amber-100 bg-gradient-to-br from-amber-50 via-white to-white p-6 shadow-sm">
+      <div className="flex items-start justify-between gap-5 mb-5">
+        <div className="flex items-start gap-3">
+          <span className="text-2xl">💡</span>
+          <div>
+            <h2 className="text-xl font-bold text-gray-900">服饰运动大盘参考</h2>
+            <p className="text-sm text-gray-500 mt-1 max-w-3xl">
+              这里用于参考服饰大盘爆款打法，已排除“运动户外”“运动鞋服”“运动用品”素材，避免被运动品类自身数据干扰。
+            </p>
           </div>
-        )}
+        </div>
+        <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold whitespace-nowrap">跨品类借鉴</span>
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-3 mb-4">
-        {DIMENSIONS.map(d => {
-          const top = [...(data.elementStats[d.key] || [])].sort((a, b) => b.costShare - a.costShare)[0];
-          return (
-            <button
-              key={d.key}
-              onClick={() => setActive(d.key)}
-              className={`text-left rounded-2xl p-3.5 border transition-all cursor-pointer ${
-                active === d.key ? `${d.bg} border-current ${d.color} shadow-sm ring-2 ring-current/10` : 'bg-gray-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
-              }`}
-            >
-              <p className={`flex items-center gap-2 text-lg font-black ${active === d.key ? d.color : 'text-gray-800'}`}>
-                <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm ${active === d.key ? d.bg : 'bg-white'}`}>{DIM_ICONS[d.key]}</span>
-                <span>{d.label}</span>
-              </p>
-              <p className="text-sm text-gray-700 font-medium mt-2 truncate">{top?.label || '-'}</p>
-              <p className="text-[11px] text-gray-500 mt-1">消耗占比 <span className="font-bold text-gray-800">{top?.costShare || 0}%</span></p>
-            </button>
-          );
-        })}
+      <div className="grid grid-cols-4 gap-3 text-xs">
+        <RulePill label="排除范围" value="运动户外/运动鞋服/运动用品" />
+        <RulePill label="统计样本" value="TOP50" />
+        <RulePill label="拆解数量" value="TOP10" />
+        <RulePill label="去重规则" value="MD5去重，同客户≤3条" />
       </div>
+    </div>
+  );
+}
 
-      <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 xl:grid-cols-12'} gap-4`}>
-        <div className={compact ? '' : 'xl:col-span-7'}>
-          <div className="flex items-center gap-3 mb-3">
-            <span className={`w-10 h-10 rounded-2xl flex items-center justify-center text-lg ${dim.bg} ${dim.color}`}>{DIM_ICONS[active]}</span>
-            <div>
-              <p className={`text-2xl font-black ${dim.color}`}>{dim.label}</p>
-              <p className="text-xs text-gray-400 mt-0.5">{dim.desc}</p>
-            </div>
-          </div>
-          <div className="space-y-2.5">
-            {stats.slice(0, compact ? 8 : 12).map((item, idx) => (
-              <ValidatedBar key={item.label} item={item} rank={idx} color={dim.color} />
-            ))}
-          </div>
-        </div>
-
-        <div className={compact ? '' : 'xl:col-span-5'}>
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-sm font-bold text-gray-800">代表案例帧</p>
-            <p className="text-[11px] text-gray-400">按消耗占比TOP展示</p>
-          </div>
-          <div className="grid grid-cols-3 gap-2.5">
-            {stats.slice(0, 3).map(item => (
-              <div key={item.label} className="bg-gray-50 rounded-2xl p-2.5 border border-gray-100">
-                <div className="h-28 rounded-xl overflow-hidden bg-black mb-2">
-                  <FrameSnapshot src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
-                </div>
-                <p className={`text-[11px] font-black ${dim.color}`}>{item.label}</p>
-                <p className="text-[10px] text-gray-400 mt-0.5 line-clamp-2">#{item.exampleRank} {item.exampleName}</p>
-                <p className="text-[10px] text-gray-600 mt-1">消耗占比 <span className="font-bold">{item.costShare}%</span></p>
-              </div>
-            ))}
-          </div>
-        </div>
+function StageAnalysisBlock({ title, data, compact = false }: { title: string; data: AnalysisData | BenchmarkData; compact?: boolean }) {
+  return (
+    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="mb-5">
+        <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">THREE-STAGE CREATIVE ANALYSIS</p>
+        <h2 className="text-2xl font-black text-gray-900">{title}</h2>
+        <p className="text-sm text-gray-500 mt-1">按视频结构拆成“前三秒 / 视频中段 / 视频结尾”，每段只看相对贡献和代表素材，不展示原始消耗金额。</p>
+      </div>
+      <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-3' : 'grid-cols-1 xl:grid-cols-3'} gap-5`}>
+        {STAGES.map(stage => (
+          <StageCard key={stage.key} stage={stage} items={data.stageAnalysis[stage.key] || []} />
+        ))}
       </div>
     </section>
   );
 }
 
-function ValidatedBar({ item, rank, color }: { item: ElementStat; rank: number; color: string }) {
+function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: StageItem[] }) {
+  const tone = TONE_CLASS[stage.tone];
+  const top = items[0];
   return (
-    <div className="rounded-2xl bg-gray-50/70 border border-gray-100 px-3 py-2.5">
-      <div className="flex items-center justify-between mb-1.5">
+    <div className={`rounded-3xl border ${tone.border} ${tone.soft} p-4`}>
+      <div className="flex items-start justify-between gap-3 mb-4">
+        <div className="flex items-center gap-3">
+          <span className={`w-11 h-11 rounded-2xl ${tone.bg} text-white flex items-center justify-center text-xl shadow-sm`}>{stage.icon}</span>
+          <div>
+            <h3 className={`text-2xl font-black ${tone.text}`}>{stage.title}</h3>
+            <p className="text-sm font-semibold text-gray-700 mt-0.5">{stage.subtitle}</p>
+          </div>
+        </div>
+        {top && <span className="rounded-full bg-white/80 px-2.5 py-1 text-[11px] font-bold text-gray-600">TOP {top.costShare}%</span>}
+      </div>
+      <p className="text-xs text-gray-500 leading-relaxed mb-4">{stage.desc}</p>
+      <div className="space-y-2.5">
+        {items.slice(0, 8).map((item, idx) => (
+          <StageElement key={item.label} item={item} rank={idx + 1} tone={tone} />
+        ))}
+      </div>
+      <div className="mt-4 grid grid-cols-3 gap-2">
+        {items.slice(0, 3).map(item => (
+          <ExampleFrame key={`${stage.key}-${item.label}`} item={item} tone={tone} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function StageElement({ item, rank, tone }: { item: StageItem; rank: number; tone: typeof TONE_CLASS[string] }) {
+  return (
+    <div className="rounded-2xl bg-white/85 border border-white px-3 py-2 shadow-sm">
+      <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2 min-w-0">
-          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank < 3 ? 'bg-primary-500 text-white' : 'bg-white text-gray-500 border border-gray-100'}`}>{rank + 1}</span>
+          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank <= 3 ? `${tone.bg} text-white` : 'bg-gray-100 text-gray-500'}`}>{rank}</span>
           <span className="text-sm font-medium text-gray-800 truncate">{item.label}</span>
         </div>
-        <span className={`text-sm font-black ${color}`}>消耗占比 {item.costShare}%</span>
+        <span className={`text-sm font-black ${tone.text}`}>{item.costShare}%</span>
       </div>
-      <div className="h-2 bg-white rounded-full overflow-hidden">
-        <div className="h-full bg-gradient-to-r from-primary-400 to-primary-600 rounded-full" style={{ width: `${Math.min(item.costShare, 100)}%` }} />
-      </div>
-      <p className={`text-[10px] mt-1.5 ${color}`}>代表：#{item.exampleRank} {item.exampleName}</p>
+      {item.desc && <p className="text-[10px] text-gray-400 mt-1 line-clamp-1">{item.desc}</p>}
     </div>
   );
 }
 
+function ExampleFrame({ item, tone }: { item: StageItem; tone: typeof TONE_CLASS[string] }) {
+  return (
+    <div className="rounded-2xl bg-white/80 border border-white p-2">
+      <div className="h-24 rounded-xl overflow-hidden bg-black mb-2">
+        <FrameSnapshot src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
+      </div>
+      <p className={`text-[10px] font-black ${tone.text} line-clamp-1`}>{item.label}</p>
+      <p className="text-[9px] text-gray-400 line-clamp-2 mt-0.5">#{item.exampleRank} {item.exampleName}</p>
+    </div>
+  );
+}
 
-function CreativeFormulaSection({ data }: { data: AnalysisData }) {
-  const formulas = data.paradigms.slice(0, 5).map((p, idx) => {
-    const example = data.topItems.find(item => item.rank === p.exampleRank) || data.topItems[idx];
-    const mainFrames = example?.keyframes.filter(frame => [1, 3, 5, 9, 13, 15].includes(frame.time)) || [];
-    return { ...p, example, mainFrames, index: idx + 1 };
-  });
-
+function FormulaBlock({ data, compact = false }: { data: AnalysisData | BenchmarkData; compact?: boolean }) {
+  const f = data.stageFormula;
   return (
     <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-      <div className="flex items-start justify-between gap-4 mb-6">
+      <div className="flex items-start justify-between gap-4 mb-5">
         <div>
-          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">CREATIVE FORMULAS</p>
-          <h2 className="text-2xl font-black text-gray-900">{data.name}爆款创意公式</h2>
-          <p className="text-sm text-gray-500 mt-1">
-            借鉴参考页的“公式化拆解”方式，但不照搬名称：每个公式都由TOP50里的关键元素组合、消耗占比和代表素材关键帧共同验证。
-          </p>
+          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">CREATIVE FORMULA</p>
+          <h2 className="text-2xl font-black text-gray-900">{data.name}三段式组合公式</h2>
+          <p className="text-sm text-gray-500 mt-1">把高贡献元素组合成可执行的拍摄结构，而不是单看某个标签。</p>
         </div>
-        <div className="px-3 py-2 rounded-xl bg-primary-50 text-primary-700 text-xs font-medium whitespace-nowrap">
-          公式 = 钩子 × 画面载体 × 场景 × 证明 × 收口
-        </div>
+        <span className="px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-bold">前 → 中 → 后</span>
       </div>
-
-      <div className="space-y-5">
-        {formulas.map(formula => {
-          if (!formula.example) return null;
-          return (
-            <div key={`${formula.script}-${formula.hook}-${formula.role}`} className="rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-sm">
-              <div className="p-5 border-b border-gray-100 bg-gradient-to-r from-primary-50 via-white to-white">
-                <div className="flex items-start justify-between gap-5">
-                  <div className="min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="px-3 py-1 rounded-xl bg-primary-600 text-white text-xs font-bold shadow-sm">创意公式 {formula.index}</span>
-                      <span className="px-2.5 py-1 rounded-full bg-red-50 text-red-600 text-xs font-semibold">消耗贡献 {formula.costShare}%</span>
-                      <span className="px-2.5 py-1 rounded-full bg-gray-100 text-gray-500 text-xs">样本 {formula.count} 条</span>
-                    </div>
-                    <h3 className="text-xl font-black text-gray-900 leading-snug">
-                      公式{formula.index}：{formula.script}
-                    </h3>
-                    <div className="mt-2 flex flex-wrap gap-1.5">
-                      <FormulaChip label="前3秒钩子" value={formula.hook} />
-                      <FormulaChip label="视觉载体" value={formula.example.tags.visual} />
-                      <FormulaChip label="场景" value={formula.example.tags.scene} />
-                    </div>
-                    <p className="text-sm text-gray-500 mt-2 line-clamp-1">
-                      代表素材：#{formula.example.rank} {formula.example.pn}
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-3 gap-2 flex-shrink-0">
-                    <FormulaMetric label="CTR" value={`${formula.example.ctr}%`} />
-                    <FormulaMetric label="3秒完播" value={`${formula.example.vtr}%`} />
-                    <FormulaMetric label="播放时长" value={`${formula.example.dur}s`} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-5 space-y-5">
-                <FormulaFlow
-                  hook={formula.hook}
-                  visual={formula.example.tags.visual}
-                  scene={formula.example.tags.scene}
-                  proof={formula.example.tags.proof}
-                />
-
-                <div className="rounded-2xl bg-gray-50 border border-gray-100 p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <p className="text-sm font-bold text-gray-900">关键帧证据</p>
-                    <p className="text-xs text-gray-400">用代表素材截图验证公式节奏</p>
-                  </div>
-                  <FormulaScreenshotStrip item={formula.example} frames={formula.mainFrames} />
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                  <FormulaBlock
-                    title="爆款关键元素"
-                    items={[
-                      `前3秒钩子：${formula.hook}`,
-                      `出镜/角色：${formula.role}`,
-                      `视觉载体：${formula.example.tags.visual}`,
-                      `信任证明：${formula.example.tags.proof}`,
-                    ]}
-                  />
-                  <FormulaBlock
-                    title="按这个顺序拍"
-                    items={buildFormulaSteps(formula.example)}
-                  />
-                  <div className="rounded-2xl bg-gradient-to-br from-amber-50 to-green-50 border border-amber-100 p-4">
-                    <div className="mb-4">
-                      <p className="text-xs font-bold text-amber-700">不变骨架</p>
-                      <p className="text-xs text-amber-700 leading-relaxed mt-1">
-                        {formula.hook}抓停 → {formula.example.tags.focus}证据 → {formula.example.tags.scene}代入 → {formula.example.tags.proof} → 权益/行动收口
-                      </p>
-                    </div>
-                    <div className="pt-3 border-t border-amber-100/80">
-                      <p className="text-xs font-bold text-green-700">可替换变量</p>
-                      <p className="text-xs text-green-700 leading-relaxed mt-1">
-                        产品SKU、目标人群、出镜角色、使用场景、证明方式、价格权益都可替换；但“钩子→证据→场景→信任→收口”的顺序不要变。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      <div className={`grid ${compact ? 'grid-cols-1 lg:grid-cols-3' : 'grid-cols-1 xl:grid-cols-3'} gap-4`}>
+        <FormulaColumn title="前三秒" subtitle="抓停" items={f.first3} tone="purple" />
+        <FormulaColumn title="视频中段" subtitle="卖点展示" items={f.mid} tone="blue" />
+        <FormulaColumn title="视频结尾" subtitle="转化收口" items={f.end} tone="green" />
+      </div>
+      <div className="mt-5 rounded-2xl bg-primary-50 border border-primary-100 p-4">
+        <p className="text-sm font-bold text-primary-700">组合策略建议</p>
+        <p className="text-sm text-gray-600 mt-1 leading-relaxed">{f.suggestion}</p>
       </div>
     </section>
   );
 }
 
-function FormulaChip({ label, value }: { label: string; value: string }) {
+function FormulaColumn({ title, subtitle, items, tone }: { title: string; subtitle: string; items: StageItem[]; tone: string }) {
+  const t = TONE_CLASS[tone];
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-white/80 border border-gray-100 px-2.5 py-1 text-[11px] shadow-sm">
-      <span className="font-bold text-gray-400">{label}</span>
-      <span className="font-medium text-gray-700">{value}</span>
-    </span>
-  );
-}
-
-function FormulaMetric({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl bg-white/80 border border-white px-3 py-2 text-center shadow-sm min-w-[72px]">
-      <p className="text-[10px] text-gray-400">{label}</p>
-      <p className="text-sm font-bold text-gray-800 mt-0.5">{value}</p>
-    </div>
-  );
-}
-
-function FormulaFlow({ hook, visual, scene, proof }: { hook: string; visual: string; scene: string; proof: string }) {
-  const nodes = [
-    { label: '钩子', value: hook, tone: 'bg-purple-50 text-purple-700 border-purple-100' },
-    { label: '画面载体', value: visual, tone: 'bg-blue-50 text-blue-700 border-blue-100' },
-    { label: '场景', value: scene, tone: 'bg-cyan-50 text-cyan-700 border-cyan-100' },
-    { label: '证明', value: proof, tone: 'bg-amber-50 text-amber-700 border-amber-100' },
-    { label: '收口', value: '权益/行动入口', tone: 'bg-green-50 text-green-700 border-green-100' },
-  ];
-
-  return (
-    <div className="rounded-2xl border border-primary-100 bg-primary-50/40 p-4">
-      <div className="flex items-center gap-2 mb-3">
-        <span className="w-6 h-6 rounded-lg bg-primary-600 text-white text-xs font-bold flex items-center justify-center">F</span>
-        <p className="text-sm font-bold text-gray-900">核心公式框架</p>
-      </div>
-      <div className="grid grid-cols-5 gap-2">
-        {nodes.map((node, idx) => (
-          <div key={node.label} className="relative">
-            <div className={`h-full rounded-2xl border px-3 py-3 ${node.tone}`}>
-              <p className="text-[10px] font-bold opacity-70">{node.label}</p>
-              <p className="text-xs font-bold mt-1 leading-snug line-clamp-2">{node.value}</p>
+    <div className={`rounded-3xl border ${t.border} ${t.soft} p-4`}>
+      <p className={`text-xl font-black ${t.text}`}>{title}</p>
+      <p className="text-xs text-gray-500 mb-3">{subtitle}</p>
+      <div className="space-y-2">
+        {items.slice(0, 5).map((item, idx) => (
+          <div key={item.label} className="rounded-2xl bg-white/85 border border-white p-3">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm font-medium text-gray-800 truncate">{idx + 1}. {item.label}</span>
+              <span className={`text-xs font-black ${t.text}`}>{item.costShare}%</span>
             </div>
-            {idx < nodes.length - 1 && (
-              <span className="hidden 2xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-white border border-gray-100 items-center justify-center text-gray-300">→</span>
-            )}
+            <p className="text-[10px] text-gray-400 mt-1 line-clamp-1">代表：#{item.exampleRank} {item.exampleName}</p>
           </div>
         ))}
       </div>
     </div>
-  );
-}
-
-function FormulaScreenshotStrip({ item, frames }: { item: MaterialItem; frames: KeyframeAnalysis[] }) {
-  const [shots, setShots] = useState<Record<number, string>>({});
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const captureIndexRef = useRef(0);
-  const timesKey = frames.map(frame => frame.time).join(',');
-
-  useEffect(() => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    if (!video || !canvas || !timesKey) return;
-
-    const times = timesKey.split(',').map(Number);
-    setShots({});
-    captureIndexRef.current = 0;
-
-    const seek = () => {
-      const time = times[captureIndexRef.current];
-      if (Number.isFinite(time)) {
-        const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
-        video.currentTime = safeTime;
-      }
-    };
-
-    const capture = () => {
-      const time = times[captureIndexRef.current];
-      if (!Number.isFinite(time)) return;
-      try {
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-        canvas.width = video.videoWidth || 360;
-        canvas.height = video.videoHeight || 640;
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.68);
-        if (dataUrl && dataUrl !== 'data:,') setShots(prev => ({ ...prev, [time]: dataUrl }));
-      } catch {
-        return;
-      }
-      captureIndexRef.current += 1;
-      if (captureIndexRef.current < times.length) seek();
-    };
-
-    video.addEventListener('loadedmetadata', seek);
-    video.addEventListener('seeked', capture);
-    video.load();
-    return () => {
-      video.removeEventListener('loadedmetadata', seek);
-      video.removeEventListener('seeked', capture);
-    };
-  }, [item.ml, timesKey]);
-
-  return (
-    <div>
-      <video ref={videoRef} src={item.ml} className="hidden" crossOrigin="anonymous" muted playsInline preload="auto" />
-      <canvas ref={canvasRef} className="hidden" />
-      <div className="grid grid-cols-6 gap-2">
-        {frames.map(frame => (
-          <div key={frame.time} className="rounded-lg overflow-hidden border border-gray-100 bg-gray-900">
-            <div className="h-28 relative flex items-center justify-center">
-              {shots[frame.time] ? (
-                <img src={shots[frame.time]} alt={`${frame.time}s`} className="w-full h-full object-cover" />
-              ) : (
-                <span className="text-[10px] text-white/60">截帧中</span>
-              )}
-              <span className="absolute left-1 top-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[10px] font-bold">{frame.time}s</span>
-            </div>
-            <div className="bg-white p-1.5">
-              <p className="text-[10px] text-gray-700 font-medium truncate">{frame.phase}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function FormulaBlock({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="rounded-xl bg-gray-50 border border-gray-100 p-3">
-      <p className="text-xs font-bold text-gray-800 mb-2">{title}</p>
-      <ul className="space-y-1.5">
-        {items.map(item => (
-          <li key={item} className="text-xs text-gray-600 leading-snug flex gap-1.5">
-            <span className="text-primary-500 flex-shrink-0">•</span>
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function buildFormulaSteps(item: MaterialItem) {
-  return [
-    `1秒：${item.keyframes.find(f => f.time === 1)?.objective || item.tags.hook}`,
-    `3秒：把${item.tags.focus}和用户关系讲清楚`,
-    `5-9秒：用${item.tags.visual}/${item.tags.proof}证明卖点`,
-    `13-15秒：权益信息与行动入口同屏收口`,
-  ];
-}
-
-function CombinationStrategySection({ data }: { data: AnalysisData }) {
-  const topFormula = data.paradigms[0];
-  const secondFormula = data.paradigms[1];
-  const topHook = data.elementStats.hook?.[0]?.label || '高频钩子';
-  const topProof = data.elementStats.proof?.[0]?.label || '信任证明';
-  const apparelHook = data.apparelBenchmark.elementStats.hook?.[0]?.label || '服饰大盘钩子';
-
-  const strategies = [
-    {
-      title: '启动测试组合',
-      badge: '先跑通',
-      body: `优先用“${topHook} + ${topProof}”做3-5条短素材，保持同一产品，替换开场截图和口播角度，验证CTR与3秒完播。`,
-      steps: ['1个主推SKU', '3个不同前3秒钩子', '同一套权益收口', '看CTR/3秒完播决定放量'],
-    },
-    {
-      title: '放量复制组合',
-      badge: '扩大素材池',
-      body: `围绕“${topFormula?.script || '最高贡献脚本'}”复制多条：不改骨架，只替换人设、场景和证明方式，避免每条都重新发明脚本。`,
-      steps: ['骨架不变', '人设替换', '场景替换', '证明替换'],
-    },
-    {
-      title: '服饰大盘迁移组合',
-      badge: '跨类目借鉴',
-      body: `从服饰大盘借“${apparelHook}”的开场方式，但中段必须换成${data.name}自己的产品证据，避免只学表面穿搭/颜值。`,
-      steps: ['大盘钩子', `${data.name}卖点`, '本品使用场景', '本品权益收口'],
-    },
-    {
-      title: '资源受限组合',
-      badge: '低成本可拍',
-      body: `如果没有明星/达人资源，优先选择“${secondFormula?.hook || topHook} + 素人/店主讲解 + 细节证明”的组合，把预算放在关键帧画面和字幕。`,
-      steps: ['素人出镜', '产品细节', '对比证明', '清晰字幕'],
-    },
-    {
-      title: '高客单/强信任组合',
-      badge: '增强说服',
-      body: `高客单商品不要只拼前3秒，应把9秒左右的“${topProof}”做重：口碑、认证、材质实验、使用前后对比至少选一种。`,
-      steps: ['钩子不要夸张', '证明要可视化', '价格解释价值', '售后降低风险'],
-    },
-  ];
-
-  return (
-    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-      <div className="flex items-center justify-between gap-4 mb-6">
-        <div>
-          <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">COMBINATION STRATEGY</p>
-          <h2 className="text-2xl font-black text-gray-900">组合策略建议</h2>
-          <p className="text-sm text-gray-500 mt-1">把创意公式组合成可执行的拍摄与投放策略：先测钩子，再复制骨架，最后用服饰大盘元素扩展素材池。</p>
-        </div>
-        <span className="px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold">输出给编导/投手/广告主</span>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
-        {strategies.map((strategy, idx) => (
-          <div key={strategy.title} className="rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-4 hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-between mb-3">
-              <span className="w-7 h-7 rounded-lg bg-primary-500 text-white text-xs font-bold flex items-center justify-center">{idx + 1}</span>
-              <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-[10px] font-medium">{strategy.badge}</span>
-            </div>
-            <h3 className="text-sm font-bold text-gray-800">{strategy.title}</h3>
-            <p className="text-xs text-gray-600 leading-relaxed mt-2">{strategy.body}</p>
-            <div className="mt-3 space-y-1.5">
-              {strategy.steps.map(step => (
-                <div key={step} className="text-[10px] text-gray-500 bg-gray-50 rounded px-2 py-1">{step}</div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function ParadigmSection({ title, paradigms, compact = false }: { title: string; paradigms: Paradigm[]; compact?: boolean }) {
-  return (
-    <section className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-      <p className="text-xs font-bold text-primary-600 tracking-wider mb-1">SCRIPT SKELETONS</p>
-      <h2 className="text-xl font-black text-gray-900 mb-1">{title}</h2>
-      <p className="text-sm text-gray-500 mb-5">脚本骨架按「脚本结构 × 前3秒钩子 × 出镜角色」聚合，并用消耗占比排序。</p>
-      <div className={`grid ${compact ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-4`}>
-        {paradigms.slice(0, compact ? 4 : 8).map((p, idx) => (
-          <div key={`${p.script}-${p.hook}-${p.role}`} className="rounded-xl bg-white border border-gray-100 p-4 hover:shadow-md transition-shadow">
-            <div className="flex items-start justify-between mb-3">
-              <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold ${idx < 3 ? 'bg-primary-500 text-white' : 'bg-gray-100 text-gray-500'}`}>{idx + 1}</span>
-              <span className="text-xs text-red-500 font-semibold">消耗{p.costShare}%</span>
-            </div>
-            <p className="text-sm font-bold text-gray-800">{p.script}</p>
-            <div className="flex flex-wrap gap-1.5 mt-2">
-              <Tag>{p.hook}</Tag>
-              <Tag>{p.role}</Tag>
-            </div>
-            <p className="text-xs text-gray-400 mt-3">{p.count}条素材 · 条数占比{p.pct}%</p>
-            <p className="text-[11px] text-gray-500 mt-2 line-clamp-2">代表：#{p.exampleRank} {p.exampleName}</p>
-            <div className="mt-3 p-2 bg-amber-50 rounded-lg">
-              <p className="text-[10px] text-amber-700 font-medium">复刻骨架</p>
-              <p className="text-[10px] text-amber-600 mt-0.5">钩子抓停 → 卖点证据 → 场景代入 → 信任证明 → 价格收口</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
   );
 }
 
@@ -757,15 +406,15 @@ function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: M
       <button onClick={onToggle} className="w-full flex items-center gap-4 p-4 text-left hover:bg-gray-50/80 transition-colors cursor-pointer">
         <RankBadge rank={item.rank} />
         <div className="w-14 h-20 rounded-lg bg-black overflow-hidden flex-shrink-0">
-          <FrameVideo src={item.ml} time={1} className="w-full h-full object-cover" />
+          <FrameSnapshot src={item.ml} time={1} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-800 truncate">{item.pn}</p>
           <p className="text-xs text-gray-400 truncate mt-0.5">{item.ca}</p>
           <div className="flex flex-wrap gap-1.5 mt-2">
-            <Tag>{item.tags.hook}</Tag>
-            <Tag>{item.tags.scene}</Tag>
-            <Tag>{item.tags.script}</Tag>
+            <Tag>{item.tags.first3}</Tag>
+            <Tag>{item.tags.mid}</Tag>
+            <Tag>{item.tags.end}</Tag>
             <span className="px-1.5 py-0.5 rounded bg-gray-100 text-gray-500 text-[10px]">客户:{item.customerKey}</span>
           </div>
         </div>
@@ -777,11 +426,10 @@ function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: M
         </div>
         <Chevron expanded={expanded} />
       </button>
-
       {expanded && (
         <div className="border-t border-gray-100 p-5 bg-gray-50/40 space-y-5">
           <KeyframeGrid item={item} />
-          <ReplicationGuide item={item} />
+          <MaterialStageGuide item={item} />
         </div>
       )}
     </div>
@@ -801,7 +449,6 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
     const video = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
-
     const times = timesKey.split(',').map(Number);
     setShots({});
     setCaptureFailed(false);
@@ -814,7 +461,6 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
         video.currentTime = safeTime;
       }
     };
-
     const captureCurrent = () => {
       const time = times[captureIndexRef.current];
       if (!Number.isFinite(time)) return;
@@ -831,22 +477,16 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
         setCaptureFailed(true);
         return;
       }
-
       captureIndexRef.current += 1;
-      if (captureIndexRef.current < times.length) {
-        seekToCurrent();
-      }
+      if (captureIndexRef.current < times.length) seekToCurrent();
     };
-
     const onLoaded = () => seekToCurrent();
     const onSeeked = () => captureCurrent();
     const onError = () => setCaptureFailed(true);
-
     video.addEventListener('loadedmetadata', onLoaded);
     video.addEventListener('seeked', onSeeked);
     video.addEventListener('error', onError);
     video.load();
-
     return () => {
       video.removeEventListener('loadedmetadata', onLoaded);
       video.removeEventListener('seeked', onSeeked);
@@ -869,27 +509,15 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
           <span>{captureFailed ? '截图失败，请打开视频源核对' : `${Object.keys(shots).length}/${item.keyframes.length}帧`}</span>
         </div>
       </div>
-
-      <video
-        ref={videoRef}
-        src={item.ml}
-        className="hidden"
-        crossOrigin="anonymous"
-        muted
-        playsInline
-        preload="auto"
-      />
+      <video ref={videoRef} src={item.ml} className="hidden" crossOrigin="anonymous" muted playsInline preload="auto" />
       <canvas ref={canvasRef} className="hidden" />
-
       <div className="grid grid-cols-8 gap-3 overflow-x-auto pb-1">
         {item.keyframes.map((frame, idx) => (
           <button
             key={frame.time}
             onClick={() => setSelected(idx)}
             className={`min-w-[118px] rounded-xl overflow-hidden border text-left transition-all cursor-pointer ${
-              selected === idx
-                ? 'border-primary-500 ring-2 ring-primary-100 shadow-sm'
-                : 'border-gray-100 hover:border-primary-200'
+              selected === idx ? 'border-primary-500 ring-2 ring-primary-100 shadow-sm' : 'border-gray-100 hover:border-primary-200'
             }`}
           >
             <div className="h-40 bg-gray-900 relative flex items-center justify-center">
@@ -910,7 +538,6 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
           </button>
         ))}
       </div>
-
       {selectedFrame && (
         <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-3 rounded-xl bg-gray-900 overflow-hidden min-h-[300px] flex items-center justify-center">
@@ -922,16 +549,35 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
           </div>
           <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-3">
             <FrameDetailCard title={`${selectedFrame.time}s · ${selectedFrame.phase}`} desc={selectedFrame.objective} />
-            <FrameDetailCard title="画面元素" desc={selectedFrame.visualTags.join(' / ')} />
-            <FrameDetailCard title="文案信息" desc={selectedFrame.copyTags.join(' / ')} />
-            <FrameDetailCard title="拍法" desc={selectedFrame.shot} />
+            <FrameDetailCard title="前三秒" desc={item.tags.first3} />
+            <FrameDetailCard title="视频中段" desc={item.tags.mid} />
+            <FrameDetailCard title="视频结尾" desc={item.tags.end} />
             <div className="md:col-span-2 p-3 rounded-xl bg-blue-50 border border-blue-100">
-              <p className="text-xs text-blue-700 font-bold">复刻要点</p>
-              <p className="text-xs text-blue-600 leading-relaxed mt-1">{selectedFrame.replicate}</p>
+              <p className="text-xs text-blue-700 font-bold">产品卖点判断</p>
+              <p className="text-xs text-blue-600 leading-relaxed mt-1">{item.tags.midDesc}</p>
             </div>
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function MaterialStageGuide({ item }: { item: MaterialItem }) {
+  const cards = [
+    { title: '前三秒', value: item.tags.first3, tip: '负责抓停：让用户知道为什么要继续看。' },
+    { title: '视频中段', value: item.tags.mid, tip: item.tags.midDesc },
+    { title: '视频结尾', value: item.tags.end, tip: '负责转化：给出行动入口、权益、机制或信任收口。' },
+  ];
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      {cards.map(card => (
+        <div key={card.title} className="bg-white rounded-xl border border-gray-100 p-4">
+          <h4 className="text-sm font-bold text-gray-800 mb-2">{card.title}</h4>
+          <p className="text-xs font-semibold text-primary-600">{card.value}</p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">{card.tip}</p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -941,49 +587,6 @@ function FrameDetailCard({ title, desc }: { title: string; desc: string }) {
     <div className="p-3 rounded-xl bg-white border border-gray-100">
       <p className="text-xs font-bold text-gray-800">{title}</p>
       <p className="text-xs text-gray-600 leading-relaxed mt-1">{desc}</p>
-    </div>
-  );
-}
-
-function ReplicationGuide({ item }: { item: MaterialItem }) {
-  const replacements = [
-    { label: '钩子', origin: item.tags.hook, replace: '替换为你的最强人群痛点/名人背书/价格利益点' },
-    { label: '场景', origin: item.tags.scene, replace: '替换为目标用户最高频的真实使用场景' },
-    { label: '角色', origin: item.tags.role, replace: '替换为品牌可获得的模特、达人、素人或店主' },
-    { label: '证明', origin: item.tags.proof, replace: '替换为销量、评论、认证、对比实验或真人效果' },
-  ];
-
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      <div className="bg-white rounded-xl border border-gray-100 p-4">
-        <h4 className="text-sm font-bold text-gray-800 mb-3">📝 脚本骨架</h4>
-        {['1秒抓停', '3秒确认关系', '5秒卖点证据', '7-11秒场景/信任', '13-15秒促销收口'].map((step, idx) => (
-          <div key={step} className="flex gap-2 mb-2 last:mb-0">
-            <span className="w-5 h-5 rounded-full bg-primary-100 text-primary-700 text-[10px] font-bold flex items-center justify-center flex-shrink-0">{idx + 1}</span>
-            <p className="text-xs text-gray-600 leading-snug">{step}</p>
-          </div>
-        ))}
-      </div>
-      <div className="bg-white rounded-xl border border-gray-100 p-4">
-        <h4 className="text-sm font-bold text-gray-800 mb-3">🎥 拍法建议</h4>
-        <ul className="space-y-2">
-          <li className="text-xs text-gray-600">前3秒必须商品与钩子同屏，别先放品牌空镜。</li>
-          <li className="text-xs text-gray-600">5-9秒用细节、真人使用、对比或证明补足信任。</li>
-          <li className="text-xs text-gray-600">13秒后进入促销，不再引入新卖点。</li>
-          <li className="text-xs text-gray-600">字幕只保留关键利益点，避免小字堆砌。</li>
-        </ul>
-      </div>
-      <div className="bg-white rounded-xl border border-gray-100 p-4">
-        <h4 className="text-sm font-bold text-gray-800 mb-3">🔄 可替换元素</h4>
-        <div className="space-y-2">
-          {replacements.map(r => (
-            <div key={r.label} className="p-2 bg-gray-50 rounded-lg">
-              <p className="text-[11px] font-semibold text-gray-700">{r.label}: {r.origin}</p>
-              <p className="text-[10px] text-green-600 mt-0.5">可替换：{r.replace}</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
@@ -998,10 +601,8 @@ function FrameSnapshot({ src, time, className }: { src: string; time: number; cl
     const video = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
-
     setShot(null);
     setFailed(false);
-
     const seek = () => {
       try {
         const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
@@ -1010,7 +611,6 @@ function FrameSnapshot({ src, time, className }: { src: string; time: number; cl
         setFailed(true);
       }
     };
-
     const capture = () => {
       try {
         const ctx = canvas.getContext('2d');
@@ -1025,12 +625,10 @@ function FrameSnapshot({ src, time, className }: { src: string; time: number; cl
         setFailed(true);
       }
     };
-
     video.addEventListener('loadedmetadata', seek);
     video.addEventListener('seeked', capture, { once: true });
     video.addEventListener('error', () => setFailed(true), { once: true });
     video.load();
-
     return () => {
       video.removeEventListener('loadedmetadata', seek);
     };
@@ -1043,48 +641,11 @@ function FrameSnapshot({ src, time, className }: { src: string; time: number; cl
       {shot ? (
         <img src={shot} alt={`${time}s代表帧`} className={className} />
       ) : failed ? (
-        <FrameVideo src={src} time={time} className={className} />
+        <div className={`${className || ''} flex items-center justify-center bg-black text-white/60 text-[10px]`}>暂无截图</div>
       ) : (
         <div className={`${className || ''} flex items-center justify-center bg-black text-white/60 text-[10px]`}>截帧中</div>
       )}
     </>
-  );
-}
-
-function FrameVideo({ src, time, className, controls = false }: { src: string; time: number; className?: string; controls?: boolean }) {
-  const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
-    const seek = () => {
-      try {
-        video.currentTime = time;
-        video.pause();
-      } catch {
-        // ignore seek failures on unloaded videos
-      }
-    };
-    video.addEventListener('loadedmetadata', seek);
-    video.addEventListener('canplay', seek, { once: true });
-    seek();
-    return () => {
-      video.removeEventListener('loadedmetadata', seek);
-    };
-  }, [src, time]);
-
-  return (
-    <video
-      ref={ref}
-      src={`${src}#t=${time}`}
-      className={className}
-      muted
-      playsInline
-      preload="metadata"
-      controls={controls}
-      controlsList="nodownload"
-      onContextMenu={(e) => e.preventDefault()}
-    />
   );
 }
 
@@ -1120,16 +681,6 @@ function Chevron({ expanded }: { expanded: boolean }) {
   );
 }
 
-function FrameLine({ label, value }: { label: string; value: string }) {
-  return (
-    <p className="text-[11px] leading-snug">
-      <span className="text-gray-400">{label}：</span>
-      <span className="text-gray-700">{value}</span>
-    </p>
-  );
-}
-
 function Tag({ children }: { children: string }) {
   return <span className="px-1.5 py-0.5 rounded bg-primary-50 text-primary-600 text-[10px] font-medium">{children}</span>;
 }
-

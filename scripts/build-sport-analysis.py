@@ -23,9 +23,7 @@ STOP_WORDS = [
     "到手", "买", "送", "三件套", "二件套", "旗舰", "正品", "官方",
 ]
 
-PRODUCT_WORDS = [
-    "裤", "衣", "鞋", "包", "文胸", "内裤", "护膝", "健腹", "跑步机", "筋膜", "帐篷", "瑜伽", "甩脂",
-]
+PRODUCT_WORDS = ["裤", "衣", "鞋", "包", "文胸", "内裤", "护膝", "健腹", "跑步机", "筋膜", "帐篷", "瑜伽", "甩脂"]
 
 
 def clean_name(name):
@@ -37,16 +35,13 @@ def infer_customer(name):
     original = n
     n = re.sub(r"^[【\[][^[\]】]+[】\]]", "", n).strip()
     n = re.sub(r"^[（(][^)）]+[)）]", "", n).strip()
-
     if "/" in n:
         left = n.split("/", 1)[0].strip()
         if 1 < len(left) <= 12:
             return left
-
     m = re.match(r"^([A-Za-z][A-Za-z0-9]{1,18})", n)
     if m:
         return m.group(1).upper()
-
     for w in STOP_WORDS:
         n = n.replace(w, "")
     for w in PRODUCT_WORDS:
@@ -54,13 +49,20 @@ def infer_customer(name):
         if 0 < idx <= 8:
             n = n[:idx]
             break
-
     n = re.sub(r"[\s\-_/·,，。:：]+", "", n)
     n = re.sub(r"\d+.*$", "", n)
     n = n.strip("【】[]（）()")
-    if len(n) >= 2:
-        return n[:8]
-    return original[:8]
+    return n[:8] if len(n) >= 2 else original[:8]
+
+
+def metric(row, col):
+    val = row.get(col)
+    if pd.isna(val):
+        return 0
+    try:
+        return round(float(val), 2)
+    except Exception:
+        return 0
 
 
 def clean_df(path):
@@ -68,7 +70,6 @@ def clean_df(path):
     missing = [c for c in REQUIRED if c not in df.columns]
     if missing:
         raise ValueError(f"Missing columns: {missing}")
-
     raw_rows = len(df)
     df = df.dropna(how="all").copy()
     df = df[df["KPI三级行业"].notna()]
@@ -84,167 +85,100 @@ def clean_df(path):
     return df, {"rawRows": raw_rows, "validRowsAfterBlankRemoval": len(df)}
 
 
-def classify_item(row):
-    ind = str(row["KPI三级行业"])
-    ca = str(row["商品统一类目V2(一级～四级)"])
-    pn = clean_name(row["DPA商品名称"])
-    text = f"{ind} {ca} {pn}"
+def text_of(row):
+    return f"{row['KPI三级行业']} {row['商品统一类目V2(一级～四级)']} {clean_name(row['DPA商品名称'])}"
 
-    has_star = bool(re.search(r"明星|同款|杨幂|樊少皇|推荐|代言", text))
-    is_underwear = bool(re.search(r"内衣|文胸|内裤|塑身|贴身", text))
-    is_apparel = bool(re.search(r"女装|男装|裤|上衣|衬衫|服饰|鞋|防晒", text))
-    is_fitness = bool(re.search(r"健身|瑜伽|健腹|跑步机|甩脂|筋膜|训练", text))
-    is_protective = bool(re.search(r"护膝|髌骨|护具|关节|保护", text))
-    is_outdoor = bool(re.search(r"帐篷|露营|野炊|钓|骑行|户外", text))
+
+def product_type(text):
+    if re.search(r"护膝|髌骨|护具|关节|保护", text):
+        return "运动防护/护具"
+    if re.search(r"健腹|甩脂|筋膜|跑步机|健身|训练|瑜伽", text):
+        return "健身训练/塑形"
+    if re.search(r"帐篷|露营|野炊|钓|骑行|户外", text):
+        return "户外露营/装备"
+    if re.search(r"文胸|内衣|内裤|塑身|贴身", text):
+        return "贴身衣物/塑形"
+    if re.search(r"裤|上衣|衬衫|女装|男装|防晒|鞋", text):
+        return "服饰穿搭/鞋服"
+    return "通用商品"
+
+
+def classify_stage(row):
+    t = text_of(row)
+    pt = product_type(t)
+    has_star = bool(re.search(r"明星|同款|杨幂|樊少皇|代言|达人", t))
+    has_bundle = bool(re.search(r"套装|组合|买|送|到手|福利|限时|升级", t))
 
     if has_star:
-        hook = "名人/同款背书"
-        script = "明星同款种草型"
-        proof = "名人信任锚"
-    elif is_protective:
-        hook = "痛点场景直击"
-        script = "痛点解决验证型"
-        proof = "专业防护证明"
-    elif is_fitness:
-        hook = "效果/身材焦虑"
-        script = "效果演示种草型"
-        proof = "真人使用验证"
-    elif is_underwear:
-        hook = "舒适痛点共鸣"
-        script = "痛点细节证明型"
-        proof = "材质细节证明"
-    elif is_outdoor:
-        hook = "场景向往种草"
-        script = "场景体验展示型"
-        proof = "真实场景证明"
+        first3 = "明星达人/同款背书"
+    elif re.search(r"护膝|关节|疼|防护|保护", t):
+        first3 = "痛点直击"
+    elif re.search(r"健腹|甩脂|筋膜|塑形|训练", t):
+        first3 = "效果演示开场"
+    elif has_bundle:
+        first3 = "价格福利开场"
+    elif re.search(r"裤|衣|文胸|内裤|鞋|穿搭", t):
+        first3 = "真人上身/产品视觉"
     else:
-        hook = "产品颜值开场"
-        script = "快速展示种草型"
-        proof = "细节/口碑证明"
+        first3 = "口播推荐/产品直给"
 
-    if is_fitness:
-        scene = "居家健身/训练"
-        role = "运动达人/教练"
-        focus = "功能效果"
-    elif is_protective:
-        scene = "跑步/球类防护"
-        role = "运动人群/中老年"
-        focus = "防护舒适"
-    elif is_outdoor:
-        scene = "户外露营/运动"
-        role = "户外玩家"
-        focus = "场景功能"
-    elif is_underwear:
-        scene = "日常穿着/舒适体验"
-        role = "女性模特/素人"
-        focus = "舒适塑形"
-    elif is_apparel:
-        scene = "通勤/穿搭/运动"
-        role = "模特/KOL"
-        focus = "版型材质"
+    if pt == "运动防护/护具":
+        mid = "功能型卖点：防护支撑"
+        mid_desc = "重点展示支撑、保护、透气、不移位等具体功能。"
+    elif pt == "健身训练/塑形":
+        mid = "功能型卖点：训练效果"
+        mid_desc = "重点展示使用动作、训练部位、便捷使用和效果想象。"
+    elif pt == "户外露营/装备":
+        mid = "场景型卖点：户外体验"
+        mid_desc = "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。"
+    elif pt == "贴身衣物/塑形":
+        mid = "体验型卖点：舒适塑形"
+        mid_desc = "重点展示亲肤、无痕、承托、塑形和日常舒适。"
+    elif pt == "服饰穿搭/鞋服":
+        mid = "版型材质卖点"
+        mid_desc = "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。"
     else:
-        scene = "商品展示场景"
-        role = "素人/推荐官"
-        focus = "核心功能"
+        mid = "功能/品质卖点"
+        mid_desc = "重点展示产品功能、材质、细节和使用效果。"
+    if has_star and pt in ["服饰穿搭/鞋服", "通用商品"]:
+        mid = "情绪价值/身份认同"
+        mid_desc = "用同款、审美、身份想象和场景氛围建立购买理由。"
 
-    visual = "真人上身/使用" if (is_apparel or is_fitness or is_protective) else "产品特写展示"
-    if has_star:
-        visual = "名人标签+真人展示"
+    if has_bundle:
+        end = "机制收尾：权益/套装/赠品"
+    elif has_star:
+        end = "信任收尾：同款/背书强化"
+    elif re.search(r"护膝|护具|健身|训练|筋膜", t):
+        end = "行动收尾：立即体验/下单"
+    else:
+        end = "营销收尾：价格/行动引导"
 
     return {
-        "hook": hook,
-        "scene": scene,
-        "role": role,
-        "proof": proof,
-        "script": script,
-        "visual": visual,
-        "focus": focus,
+        "first3": first3,
+        "mid": mid,
+        "midDesc": mid_desc,
+        "end": end,
+        "productType": pt,
     }
 
 
 def frame_analysis(row, tags, time):
-    pn = clean_name(row["DPA商品名称"])
     phase_map = {
-        1: ("黄金1秒", "抓停滑动：用最强标签/最大痛点/最强画面让用户停留"),
-        3: ("钩子确认", "在3秒内明确这条素材与用户有什么关系"),
-        5: ("卖点展开", "把核心卖点变成可看见的证据"),
-        7: ("场景代入", "让用户想象自己使用/穿着后的状态"),
-        9: ("信任构建", "用背书、数据、细节或口碑降低顾虑"),
-        11: ("差异化对比", "说明为什么不是普通同类商品"),
-        13: ("利益加码", "价格、赠品、限时、保障进入画面"),
-        15: ("行动收口", "明确下一步购买动作"),
+        1: ("黄金1秒", f"用{tags['first3']}抓停用户"),
+        3: ("钩子确认", "把开场信息和目标用户需求接上"),
+        5: ("卖点出现", tags["midDesc"]),
+        7: ("卖点展开", tags["midDesc"]),
+        9: ("证据补强", "用细节、效果、同款、口碑或场景增强可信度"),
+        11: ("购买理由", "给出差异化理由：材质、功能、舒适、颜值、便捷或价格"),
+        13: ("收尾机制", f"进入{tags['end']}"),
+        15: ("行动引导", "明确点击、领取、下单、进店或看详情"),
     }
     phase, objective = phase_map[time]
-
-    visual_tags = []
-    copy_tags = []
-    if time == 1:
-        visual_tags = [tags["visual"], "大字标题/强标签"]
-        copy_tags = [tags["hook"], "第一眼利益点"]
-    elif time == 3:
-        visual_tags = ["产品主体清晰", tags["role"]]
-        copy_tags = ["痛点/利益点强化", tags["focus"]]
-    elif time == 5:
-        visual_tags = ["细节特写/功能演示", tags["focus"]]
-        copy_tags = ["卖点字幕", "可感知证据"]
-    elif time == 7:
-        visual_tags = [tags["scene"], "真人/真实环境"]
-        copy_tags = ["场景化文案", "使用后状态"]
-    elif time == 9:
-        visual_tags = [tags["proof"], "口碑/数据/认证"]
-        copy_tags = ["信任背书", "消除顾虑"]
-    elif time == 11:
-        visual_tags = ["对比画面", "前后/同类差异"]
-        copy_tags = ["差异化表达", "为什么买它"]
-    elif time == 13:
-        visual_tags = ["价格/赠品/活动信息", "商品全集合"]
-        copy_tags = ["限时权益", "价值锚点"]
-    else:
-        visual_tags = ["购买指引", "最终商品展示"]
-        copy_tags = ["点击/领券/下单", "单一行动指令"]
-
-    return {
-        "time": time,
-        "phase": phase,
-        "objective": objective,
-        "visualTags": visual_tags,
-        "copyTags": copy_tags,
-        "shot": shot_tip(tags, time),
-        "replicate": replicate_tip(tags, time, pn),
-    }
-
-
-def shot_tip(tags, time):
-    if time <= 3:
-        return f"竖屏近景或半身构图，{tags['hook']}必须与商品同屏出现，避免先铺垫品牌。"
-    if time <= 7:
-        return f"用真实{tags['scene']}承接卖点，镜头从产品细节切到真人使用，形成证据链。"
-    if time <= 11:
-        return f"插入{tags['proof']}，字幕只保留一个核心证明点，降低信息噪音。"
-    return "价格/赠品/行动按钮保持同屏，最后2秒只给一个行动指令。"
-
-
-def replicate_tip(tags, time, pn):
-    if time == 1:
-        return f"保留'{tags['hook']}'的开场结构，把商品替换成你的主推SKU：{pn[:18]}..."
-    if time == 3:
-        return "3秒内必须回答'这和我有什么关系'，不要把卖点藏到第5秒之后。"
-    if time == 5:
-        return f"把'{tags['focus']}'拆成可视化动作：拉伸、对比、上身、佩戴、使用前后。"
-    if time == 7:
-        return f"场景不要泛化，直接替换成目标用户最高频的{tags['scene']}。"
-    if time == 9:
-        return f"至少放一个{tags['proof']}，但不要堆砌多个弱证明。"
-    if time == 11:
-        return "对比只选一个维度：价格、材质、效果、使用门槛或售后保障。"
-    if time == 13:
-        return "促销画面要可见：券、赠品、到手价或限时信息至少出现一种。"
-    return "结尾不要新增卖点，直接给点击/领券/下单动作。"
+    return {"time": time, "phase": phase, "objective": objective}
 
 
 def build_item(row, rank):
-    tags = classify_item(row)
-    frames = [frame_analysis(row, tags, t) for t in TIMES]
+    tags = classify_stage(row)
     return {
         "rank": rank,
         "id": str(row["_md5"]),
@@ -253,25 +187,15 @@ def build_item(row, rank):
         "ca": str(row["商品统一类目V2(一级～四级)"]),
         "pn": clean_name(row["DPA商品名称"]),
         "ml": str(row["素材MD5示意(预览)(翻译后)"]),
-        "cs": round(float(row["消耗(元)"]), 2),
         "ctr": metric(row, "ctr(%)"),
         "cvr": metric(row, "综合目标转化率(%)"),
         "vtr": metric(row, "视频3秒完播率(%)"),
         "dur": metric(row, "平均播放时长(毫秒精度)(s)"),
         "roi": metric(row, "下单ROI"),
+        "cs": round(float(row["消耗(元)"]), 2),
         "tags": tags,
-        "keyframes": frames,
+        "keyframes": [frame_analysis(row, tags, t) for t in TIMES],
     }
-
-
-def metric(row, col):
-    val = row.get(col)
-    if pd.isna(val):
-        return 0
-    try:
-        return round(float(val), 2)
-    except Exception:
-        return 0
 
 
 def cap_by_customer(df, limit=3, topn=50):
@@ -288,104 +212,54 @@ def cap_by_customer(df, limit=3, topn=50):
     return pd.DataFrame(kept)
 
 
-def stats(items, dim):
+def stage_stats(items, stage_key):
     total_cost = sum(i["cs"] for i in items) or 1
-    c = Counter(i["tags"][dim] for i in items)
-    cost = defaultdict(float)
-    candidates = defaultdict(list)
+    counts = Counter(i["tags"][stage_key] for i in items)
+    costs = defaultdict(float)
+    examples = defaultdict(list)
     for i in items:
-        label = i["tags"][dim]
-        cost[label] += i["cs"]
-        candidates[label].append(i)
-
-    frame_time = {
-        "hook": 1,
-        "visual": 3,
-        "role": 3,
-        "focus": 5,
-        "scene": 7,
-        "proof": 9,
-        "script": 1,
-    }.get(dim, 1)
-
-    used = set()
+        label = i["tags"][stage_key]
+        costs[label] += i["cs"]
+        examples[label].append(i)
+    stage_time = {"first3": 1, "mid": 5, "end": 13}[stage_key]
     out = []
-    ordered = sorted(c.items(), key=lambda kv: cost[kv[0]], reverse=True)
-    for label, count in ordered:
-        sorted_candidates = sorted(candidates[label], key=lambda i: i["cs"], reverse=True)
-        ex = next((i for i in sorted_candidates if i["id"] not in used), sorted_candidates[0])
+    used = set()
+    for label, count in sorted(counts.items(), key=lambda kv: costs[kv[0]], reverse=True):
+        cand = sorted(examples[label], key=lambda x: x["cs"], reverse=True)
+        ex = next((x for x in cand if x["id"] not in used), cand[0])
         used.add(ex["id"])
         out.append({
             "label": label,
             "count": count,
-            "pct": round(count / len(items) * 100, 1),
-            "costShare": round(cost[label] / total_cost * 100, 1),
+            "costShare": round(costs[label] / total_cost * 100, 1),
             "exampleRank": ex["rank"],
             "exampleName": ex["pn"],
             "exampleVideo": ex["ml"],
-            "exampleTime": frame_time,
+            "exampleTime": stage_time,
+            "exampleProductType": ex["tags"]["productType"],
+            "desc": ex["tags"].get("midDesc", ""),
         })
     return out
 
 
-def frame_stats(items):
-    total = len(items) or 1
-    by_time = []
-    for t in TIMES:
-        labels = Counter()
-        cost = defaultdict(float)
-        for i in items:
-            frame = next(f for f in i["keyframes"] if f["time"] == t)
-            for tag in frame["visualTags"] + frame["copyTags"]:
-                labels[tag] += 1
-                cost[tag] += i["cs"]
-        top = []
-        total_cost = sum(i["cs"] for i in items) or 1
-        for label, count in labels.most_common(6):
-            top.append({
-                "label": label,
-                "count": count,
-                "pct": round(count / total * 100, 1),
-                "costShare": round(cost[label] / total_cost * 100, 1),
-            })
-        by_time.append({"time": t, "topElements": top})
-    return by_time
-
-
-def paradigms(items):
-    groups = defaultdict(list)
-    for i in items:
-        key = (i["tags"]["script"], i["tags"]["hook"], i["tags"]["role"])
-        groups[key].append(i)
-    total_cost = sum(i["cs"] for i in items) or 1
-    out = []
-    for (script, hook, role), group in sorted(groups.items(), key=lambda kv: sum(i["cs"] for i in kv[1]), reverse=True)[:8]:
-        top = max(group, key=lambda i: i["cs"])
-        cost = sum(i["cs"] for i in group)
-        out.append({
-            "script": script,
-            "hook": hook,
-            "role": role,
-            "count": len(group),
-            "pct": round(len(group) / len(items) * 100, 1),
-            "costShare": round(cost / total_cost * 100, 1),
-            "exampleRank": top["rank"],
-            "exampleName": top["pn"],
-        })
-    return out
+def stage_formula(items):
+    first = stage_stats(items, "first3")[:3]
+    mid = stage_stats(items, "mid")[:3]
+    end = stage_stats(items, "end")[:3]
+    return {
+        "title": "前三秒钩子 → 中段卖点展示 → 结尾转化收口",
+        "first3": first,
+        "mid": mid,
+        "end": end,
+        "suggestion": "先用前三秒建立注意力，再用中段解释产品为什么值得买，最后用权益、机制或行动入口完成转化。",
+    }
 
 
 def build_dataset(name, pool_df, benchmark_df, meta):
     pool50 = cap_by_customer(pool_df, 3, 50)
     benchmark50 = cap_by_customer(benchmark_df, 3, 50)
-    pool10 = pool50.head(10)
-    benchmark10 = benchmark50.head(10)
-
-    own_stats_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(pool50.iterrows())]
-    bench_stats_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(benchmark50.iterrows())]
-    own_breakdown_items = own_stats_items[:10]
-    bench_breakdown_items = bench_stats_items[:10]
-    dims = ["hook", "scene", "role", "focus", "proof", "script", "visual"]
+    own_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(pool50.iterrows())]
+    bench_items = [build_item(row, idx + 1) for idx, (_, row) in enumerate(benchmark50.iterrows())]
     return {
         "name": name,
         "week": "06.22-06.28",
@@ -393,24 +267,30 @@ def build_dataset(name, pool_df, benchmark_df, meta):
             **meta,
             "dedupeRule": "素材MD5去重，保留消耗最高的一条",
             "customerCapRule": "同一客户最多保留3条（原表无客户字段，按DPA商品名称识别品牌/主体）",
-            "benchmarkRule": "服饰大盘=排除运动鞋服与运动用品后的全量服饰素材TOP50；逐帧拆解仅展示TOP10",
+            "benchmarkRule": "服饰大盘=排除运动户外、运动鞋服、运动用品后的服饰运动大盘素材；统计TOP50，逐帧拆解TOP10",
             "keyframeTimes": TIMES,
         },
         "totalCountAfterRules": len(pool_df),
-        "analysisCount": len(own_stats_items),
-        "breakdownCount": len(own_breakdown_items),
-        "topItems": own_breakdown_items,
-        "elementStats": {dim: stats(own_stats_items, dim) for dim in dims},
-        "frameStats": frame_stats(own_stats_items),
-        "paradigms": paradigms(own_stats_items),
+        "analysisCount": len(own_items),
+        "breakdownCount": 10,
+        "topItems": own_items[:10],
+        "stageAnalysis": {
+            "first3": stage_stats(own_items, "first3"),
+            "mid": stage_stats(own_items, "mid"),
+            "end": stage_stats(own_items, "end"),
+        },
+        "stageFormula": stage_formula(own_items),
         "apparelBenchmark": {
-            "name": "服饰大盘爆款素材",
-            "analysisCount": len(bench_stats_items),
-            "breakdownCount": len(bench_breakdown_items),
-            "topItems": bench_breakdown_items,
-            "elementStats": {dim: stats(bench_stats_items, dim) for dim in dims},
-            "frameStats": frame_stats(bench_stats_items),
-            "paradigms": paradigms(bench_stats_items),
+            "name": "服饰运动大盘参考",
+            "analysisCount": len(bench_items),
+            "breakdownCount": 10,
+            "topItems": bench_items[:10],
+            "stageAnalysis": {
+                "first3": stage_stats(bench_items, "first3"),
+                "mid": stage_stats(bench_items, "mid"),
+                "end": stage_stats(bench_items, "end"),
+            },
+            "stageFormula": stage_formula(bench_items),
         },
     }
 
@@ -422,18 +302,19 @@ def main():
     xlsx = sys.argv[1]
     root = Path(__file__).resolve().parents[1]
     data_dir = root / "src" / "data"
-
     df, meta = clean_df(xlsx)
-    shoes = df[df["KPI三级行业"].astype(str).str.contains("运动鞋服", na=False)].copy()
-    goods = df[df["KPI三级行业"].astype(str).str.contains("运动用品", na=False)].copy()
-    benchmark = df[~df["KPI三级行业"].astype(str).str.contains("运动鞋服|运动用品", na=False)].copy()
-
+    ind = df["KPI三级行业"].astype(str)
+    ca = df["商品统一类目V2(一级～四级)"].astype(str)
+    shoes = df[ind.str.contains("运动鞋服", na=False)].copy()
+    goods = df[ind.str.contains("运动用品", na=False)].copy()
+    benchmark = df[
+        ~ind.str.contains("运动鞋服|运动用品|运动户外", na=False)
+        & ~ca.str.contains("运动户外", na=False)
+    ].copy()
     shoes_data = build_dataset("运动鞋服", shoes, benchmark, meta)
     goods_data = build_dataset("运动用品", goods, benchmark, meta)
-
     (data_dir / "sport-shoes-analysis.json").write_text(json.dumps(shoes_data, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "sport-goods-analysis.json").write_text(json.dumps(goods_data, ensure_ascii=False, indent=2), encoding="utf-8")
-
     print(json.dumps({
         "validRows": meta["validRowsAfterBlankRemoval"],
         "shoesPool": len(shoes),

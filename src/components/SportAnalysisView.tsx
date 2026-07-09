@@ -437,33 +437,59 @@ function MaterialCard({ item, expanded, onToggle, benchmark = false }: { item: M
 }
 
 function KeyframeGrid({ item }: { item: MaterialItem }) {
-  const [selected, setSelected] = useState(0);
-  const [shots, setShots] = useState<Record<number, string>>({});
+  const [shots, setShots] = useState<Record<string, string>>({});
+  const [segments, setSegments] = useState<Record<StageKey, number[]>>({ first3: [], mid: [], end: [] });
   const [captureFailed, setCaptureFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const captureQueueRef = useRef<{ key: string; time: number }[]>([]);
   const captureIndexRef = useRef(0);
-  const timesKey = item.keyframes.map(frame => frame.time).join(',');
 
   useEffect(() => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
-    const times = timesKey.split(',').map(Number);
+
     setShots({});
     setCaptureFailed(false);
+    setSegments({ first3: [], mid: [], end: [] });
+    captureQueueRef.current = [];
     captureIndexRef.current = 0;
 
-    const seekToCurrent = () => {
-      const time = times[captureIndexRef.current];
-      if (Number.isFinite(time)) {
-        const safeTime = video.duration ? Math.min(time, Math.max(video.duration - 0.1, 0)) : time;
-        video.currentTime = safeTime;
-      }
+    const buildTimes = (duration: number) => {
+      const end = Math.max(duration || 15, 3.5);
+      const firstEnd = Math.min(3, end - 0.2);
+      const first3 = spreadTimes(0.25, firstEnd, 6);
+      const midStart = Math.min(3.2, Math.max(end * 0.22, 3.1));
+      const midEnd = Math.max(midStart + 0.5, end - Math.min(3, end * 0.2));
+      const mid = spreadTimes(midStart, midEnd, 10);
+      const tailStart = Math.max(0.25, end - Math.min(4, Math.max(2.5, end * 0.22)));
+      const tail = spreadTimes(tailStart, Math.max(tailStart + 0.2, end - 0.15), 4);
+      return { first3, mid, end: tail };
     };
+
+    const startCapture = () => {
+      const nextSegments = buildTimes(video.duration || 15);
+      setSegments(nextSegments);
+      captureQueueRef.current = [
+        ...nextSegments.first3.map((time, idx) => ({ key: `first3-${idx}`, time })),
+        ...nextSegments.mid.map((time, idx) => ({ key: `mid-${idx}`, time })),
+        ...nextSegments.end.map((time, idx) => ({ key: `end-${idx}`, time })),
+      ];
+      captureIndexRef.current = 0;
+      seekToCurrent();
+    };
+
+    const seekToCurrent = () => {
+      const current = captureQueueRef.current[captureIndexRef.current];
+      if (!current) return;
+      const safeTime = video.duration ? Math.min(current.time, Math.max(video.duration - 0.1, 0)) : current.time;
+      video.currentTime = safeTime;
+    };
+
     const captureCurrent = () => {
-      const time = times[captureIndexRef.current];
-      if (!Number.isFinite(time)) return;
+      const current = captureQueueRef.current[captureIndexRef.current];
+      if (!current) return;
       try {
         const ctx = canvas.getContext('2d');
         if (!ctx) throw new Error('canvas context unavailable');
@@ -472,93 +498,95 @@ function KeyframeGrid({ item }: { item: MaterialItem }) {
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
         const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
         if (!dataUrl || dataUrl === 'data:,') throw new Error('empty snapshot');
-        setShots(prev => ({ ...prev, [time]: dataUrl }));
+        setShots(prev => ({ ...prev, [current.key]: dataUrl }));
       } catch {
         setCaptureFailed(true);
         return;
       }
       captureIndexRef.current += 1;
-      if (captureIndexRef.current < times.length) seekToCurrent();
+      if (captureIndexRef.current < captureQueueRef.current.length) seekToCurrent();
     };
-    const onLoaded = () => seekToCurrent();
-    const onSeeked = () => captureCurrent();
+
     const onError = () => setCaptureFailed(true);
-    video.addEventListener('loadedmetadata', onLoaded);
-    video.addEventListener('seeked', onSeeked);
+    video.addEventListener('loadedmetadata', startCapture, { once: true });
+    video.addEventListener('seeked', captureCurrent);
     video.addEventListener('error', onError);
     video.load();
     return () => {
-      video.removeEventListener('loadedmetadata', onLoaded);
-      video.removeEventListener('seeked', onSeeked);
+      video.removeEventListener('seeked', captureCurrent);
       video.removeEventListener('error', onError);
     };
-  }, [item.ml, timesKey]);
+  }, [item.ml]);
 
-  const selectedFrame = item.keyframes[selected] || item.keyframes[0];
-  const selectedShot = selectedFrame ? shots[selectedFrame.time] : undefined;
+  const totalFrames = segments.first3.length + segments.mid.length + segments.end.length;
 
   return (
     <div className="rounded-2xl bg-white border border-gray-100 p-4">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-sm font-bold text-gray-800">🎬 对应帧逐秒拆解</h3>
-          <p className="text-xs text-gray-400 mt-0.5">单条视频自动截取8张关键帧截图，一行看完整条素材节奏。</p>
+          <h3 className="text-sm font-bold text-gray-800">🎬 三段式视频画面分析</h3>
+          <p className="text-xs text-gray-400 mt-0.5">前三秒完整采样，中段抽约10帧，结尾抽3-5帧，按画面判断素材结构。</p>
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-400">
-          <span className="px-2 py-0.5 rounded-full bg-gray-100">1/3/5/7/9/11/13/15s</span>
-          <span>{captureFailed ? '截图失败，请打开视频源核对' : `${Object.keys(shots).length}/${item.keyframes.length}帧`}</span>
+          <span className="px-2 py-0.5 rounded-full bg-gray-100">前三秒 / 中段10帧 / 结尾4帧</span>
+          <span>{captureFailed ? '截图失败，请打开视频源核对' : `${Object.keys(shots).length}/${totalFrames || 20}帧`}</span>
         </div>
       </div>
       <video ref={videoRef} src={item.ml} className="hidden" crossOrigin="anonymous" muted playsInline preload="auto" />
       <canvas ref={canvasRef} className="hidden" />
-      <div className="grid grid-cols-8 gap-3 overflow-x-auto pb-1">
-        {item.keyframes.map((frame, idx) => (
-          <button
-            key={frame.time}
-            onClick={() => setSelected(idx)}
-            className={`min-w-[118px] rounded-xl overflow-hidden border text-left transition-all cursor-pointer ${
-              selected === idx ? 'border-primary-500 ring-2 ring-primary-100 shadow-sm' : 'border-gray-100 hover:border-primary-200'
-            }`}
-          >
-            <div className="h-40 bg-gray-900 relative flex items-center justify-center">
-              {shots[frame.time] ? (
-                <img src={shots[frame.time]} alt={`${frame.time}s关键帧`} className="w-full h-full object-cover" />
-              ) : (
-                <div className="flex flex-col items-center gap-2 text-white/70">
-                  <div className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                  <span className="text-[10px]">截帧中</span>
-                </div>
-              )}
-              <span className="absolute left-2 top-2 px-2 py-0.5 rounded bg-black/65 text-white text-xs font-bold">{frame.time}s</span>
-            </div>
-            <div className="p-2 bg-white">
-              <p className="text-[11px] font-bold text-primary-700 truncate">{frame.phase}</p>
-              <p className="text-[10px] text-gray-500 mt-0.5 line-clamp-2">{frame.objective}</p>
-            </div>
-          </button>
-        ))}
-      </div>
-      {selectedFrame && (
-        <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
-          <div className="lg:col-span-3 rounded-xl bg-gray-900 overflow-hidden min-h-[300px] flex items-center justify-center">
-            {selectedShot ? (
-              <img src={selectedShot} alt={`${selectedFrame.time}s关键帧大图`} className="w-full h-full object-contain" />
-            ) : (
-              <div className="text-white/60 text-xs">正在生成截图...</div>
-            )}
-          </div>
-          <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-3">
-            <FrameDetailCard title={`${selectedFrame.time}s · ${selectedFrame.phase}`} desc={selectedFrame.objective} />
-            <FrameDetailCard title="前三秒" desc={item.tags.first3} />
-            <FrameDetailCard title="视频中段" desc={item.tags.mid} />
-            <FrameDetailCard title="视频结尾" desc={item.tags.end} />
-            <div className="md:col-span-2 p-3 rounded-xl bg-blue-50 border border-blue-100">
-              <p className="text-xs text-blue-700 font-bold">产品卖点判断</p>
-              <p className="text-xs text-blue-600 leading-relaxed mt-1">{item.tags.midDesc}</p>
-            </div>
-          </div>
+      <SegmentFrames title="前三秒完整画面" subtitle={item.tags.first3} tone="purple" times={segments.first3} shots={shots} prefix="first3" />
+      <SegmentFrames title="视频中段抽帧分析" subtitle={`${item.tags.mid}：${item.tags.midDesc}`} tone="blue" times={segments.mid} shots={shots} prefix="mid" />
+      <SegmentFrames title="视频结尾抽帧分析" subtitle={item.tags.end} tone="green" times={segments.end} shots={shots} prefix="end" />
+    </div>
+  );
+}
+
+function spreadTimes(start: number, end: number, count: number) {
+  if (count <= 1) return [Number(start.toFixed(2))];
+  const step = (end - start) / (count - 1 || 1);
+  return Array.from({ length: count }, (_, idx) => Number((start + step * idx).toFixed(2)));
+}
+
+function SegmentFrames({
+  title,
+  subtitle,
+  tone,
+  times,
+  shots,
+  prefix,
+}: {
+  title: string;
+  subtitle: string;
+  tone: string;
+  times: number[];
+  shots: Record<string, string>;
+  prefix: string;
+}) {
+  const t = TONE_CLASS[tone];
+  return (
+    <div className={`mb-5 last:mb-0 rounded-2xl border ${t.border} ${t.soft} p-3.5`}>
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <div>
+          <p className={`text-sm font-black ${t.text}`}>{title}</p>
+          <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{subtitle}</p>
         </div>
-      )}
+        <span className="px-2 py-0.5 rounded-full bg-white/80 text-[10px] font-bold text-gray-500">{times.length || '-'}帧</span>
+      </div>
+      <div className={`grid gap-2 ${prefix === 'mid' ? 'grid-cols-5 xl:grid-cols-10' : 'grid-cols-4 xl:grid-cols-6'}`}>
+        {times.map((time, idx) => {
+          const key = `${prefix}-${idx}`;
+          return (
+            <div key={key} className="rounded-xl bg-black overflow-hidden relative h-28">
+              {shots[key] ? (
+                <img src={shots[key]} alt={`${title}-${time}s`} className="w-full h-full object-cover" />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-[10px] text-white/60">截帧中</div>
+              )}
+              <span className="absolute left-1.5 top-1.5 rounded bg-black/60 px-1.5 py-0.5 text-[10px] text-white font-bold">{time}s</span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -2,6 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 
 type StageKey = 'first3' | 'mid' | 'end';
 
+interface StageExample {
+  rank: number;
+  name: string;
+  video: string;
+  time: number;
+  productType: string;
+}
+
 interface StageItem {
   label: string;
   count: number;
@@ -11,6 +19,7 @@ interface StageItem {
   exampleVideo: string;
   exampleTime: number;
   exampleProductType: string;
+  examples?: StageExample[];
   desc?: string;
   hasSample?: boolean;
 }
@@ -265,7 +274,9 @@ function StageAnalysisBlock({ title, data, compact = false }: { title: string; d
 
 function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: StageItem[] }) {
   const tone = TONE_CLASS[stage.tone];
-  const top = [...items].sort((a, b) => b.costShare - a.costShare)[0];
+  const visibleItems = items.filter(item => item.hasSample !== false && item.costShare > 0).sort((a, b) => b.costShare - a.costShare);
+  const missingItems = items.filter(item => item.hasSample === false || item.costShare === 0);
+  const top = visibleItems[0];
   return (
     <div className={`rounded-3xl border ${tone.border} ${tone.soft} p-4`}>
       <div className="flex items-start justify-between gap-3 mb-4">
@@ -279,44 +290,52 @@ function StageCard({ stage, items }: { stage: typeof STAGES[number]; items: Stag
         {top && <span className="rounded-full bg-white/80 px-2.5 py-1 text-[11px] font-bold text-gray-600">TOP {top.costShare}%</span>}
       </div>
       <p className="text-xs text-gray-500 leading-relaxed mb-4">{stage.desc}</p>
-      <div className="space-y-2.5">
-        {items.map((item, idx) => (
+      <div className="space-y-3">
+        {visibleItems.map((item, idx) => (
           <StageElement key={item.label} item={item} rank={idx + 1} tone={tone} />
         ))}
       </div>
-      <div className="mt-4 grid grid-cols-3 gap-2">
-        {items.filter(item => item.hasSample !== false).slice(0, 3).map(item => (
-          <ExampleFrame key={`${stage.key}-${item.label}`} item={item} tone={tone} />
-        ))}
-      </div>
+      {missingItems.length > 0 && (
+        <div className="mt-3 rounded-2xl bg-white/45 border border-white/70 px-3 py-2">
+          <p className="text-[10px] font-bold text-gray-400">当前TOP50未命中标签</p>
+          <p className="text-[10px] text-gray-400 mt-1 leading-relaxed">{missingItems.map(item => item.label).join(' / ')}</p>
+        </div>
+      )}
     </div>
   );
 }
 
 function StageElement({ item, rank, tone }: { item: StageItem; rank: number; tone: typeof TONE_CLASS[string] }) {
-  const hasSample = item.hasSample !== false && item.costShare > 0;
+  const examples = item.examples?.filter(example => example.video).slice(0, 3) || [];
   return (
-    <div className={`rounded-2xl border px-3 py-2 shadow-sm ${hasSample ? 'bg-white/85 border-white' : 'bg-white/40 border-white/60 opacity-60'}`}>
+    <div className="rounded-2xl border px-3 py-2.5 shadow-sm bg-white/85 border-white">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2 min-w-0">
-          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${hasSample && rank <= 3 ? `${tone.bg} text-white` : 'bg-gray-100 text-gray-500'}`}>{rank}</span>
-          <span className="text-sm font-medium text-gray-800 truncate">{item.label}</span>
+          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold flex-shrink-0 ${rank <= 3 ? `${tone.bg} text-white` : 'bg-gray-100 text-gray-500'}`}>{rank}</span>
+          <span className="text-sm font-semibold text-gray-800 truncate">{item.label}</span>
         </div>
-        <span className={`text-sm font-black ${hasSample ? tone.text : 'text-gray-400'}`}>{item.costShare}%</span>
+        <span className={`text-sm font-black ${tone.text}`}>{item.costShare}%</span>
       </div>
       {item.desc && <p className="text-[10px] text-gray-400 mt-1 line-clamp-1">{item.desc}</p>}
+      {examples.length > 0 && (
+        <div className="mt-2 grid grid-cols-3 gap-2">
+          {examples.map(example => (
+            <ElementExampleFrame key={`${item.label}-${example.rank}`} example={example} tone={tone} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
-function ExampleFrame({ item, tone }: { item: StageItem; tone: typeof TONE_CLASS[string] }) {
+function ElementExampleFrame({ example, tone }: { example: StageExample; tone: typeof TONE_CLASS[string] }) {
   return (
-    <div className="rounded-2xl bg-white/80 border border-white p-2">
-      <div className="h-24 rounded-xl overflow-hidden bg-black mb-2">
-        <FrameSnapshot src={item.exampleVideo} time={item.exampleTime || 1} className="w-full h-full object-contain" />
+    <div className="rounded-xl bg-gray-50 border border-gray-100 p-1.5">
+      <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
+        <FrameSnapshot src={example.video} time={example.time || 1} className="w-full h-full object-cover" />
       </div>
-      <p className={`text-[10px] font-black ${tone.text} line-clamp-1`}>{item.label}</p>
-      <p className="text-[9px] text-gray-400 line-clamp-2 mt-0.5">#{item.exampleRank} {item.exampleName}</p>
+      <p className={`text-[9px] font-bold ${tone.text} mt-1 line-clamp-1`}>#{example.rank}</p>
+      <p className="text-[9px] text-gray-400 line-clamp-1">{example.name}</p>
     </div>
   );
 }
@@ -671,9 +690,9 @@ function FrameSnapshot({ src, time, className }: { src: string; time: number; cl
       {shot ? (
         <img src={shot} alt={`${time}s代表帧`} className={className} />
       ) : failed ? (
-        <div className={`${className || ''} flex items-center justify-center bg-black text-white/60 text-[10px]`}>暂无截图</div>
+        <div className={`${className || ''} flex items-center justify-center bg-gray-100 text-gray-400 text-[10px]`}>暂无截图</div>
       ) : (
-        <div className={`${className || ''} flex items-center justify-center bg-black text-white/60 text-[10px]`}>截帧中</div>
+        <div className={`${className || ''} flex items-center justify-center bg-gray-100 text-gray-400 text-[10px]`}>截帧中</div>
       )}
     </>
   );

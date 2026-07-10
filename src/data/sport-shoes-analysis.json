@@ -674,7 +674,100 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 1,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+        "hasSample": true
+      },
+      {
+        "label": "真人上身/产品视觉",
+        "count": 26,
+        "costShare": 40.2,
+        "exampleRank": 6,
+        "exampleName": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+        "exampleTime": 1,
+        "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 6,
+            "name": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 1,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 1,
+            "productType": "户外露营/装备"
+          }
+        ],
+        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+        "hasSample": true
+      },
+      {
+        "label": "价格福利开场",
+        "count": 9,
+        "costShare": 18.9,
+        "exampleRank": 4,
+        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "exampleTime": 1,
+        "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          }
+        ],
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       },
       {
@@ -686,6 +779,7 @@
         "exampleVideo": "",
         "exampleTime": 1,
         "exampleProductType": "暂无样本",
+        "examples": [],
         "desc": "该标签在当前TOP50中暂无样本",
         "hasSample": false
       },
@@ -698,6 +792,7 @@
         "exampleVideo": "",
         "exampleTime": 1,
         "exampleProductType": "暂无样本",
+        "examples": [],
         "desc": "该标签在当前TOP50中暂无样本",
         "hasSample": false
       },
@@ -710,6 +805,7 @@
         "exampleVideo": "",
         "exampleTime": 1,
         "exampleProductType": "暂无样本",
+        "examples": [],
         "desc": "该标签在当前TOP50中暂无样本",
         "hasSample": false
       },
@@ -722,71 +818,12 @@
         "exampleVideo": "",
         "exampleTime": 1,
         "exampleProductType": "暂无样本",
+        "examples": [],
         "desc": "该标签在当前TOP50中暂无样本",
         "hasSample": false
-      },
-      {
-        "label": "价格福利开场",
-        "count": 9,
-        "costShare": 18.9,
-        "exampleRank": 4,
-        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "exampleTime": 1,
-        "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "hasSample": true
-      },
-      {
-        "label": "真人上身/产品视觉",
-        "count": 26,
-        "costShare": 40.2,
-        "exampleRank": 6,
-        "exampleName": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
-        "exampleTime": 1,
-        "exampleProductType": "服饰穿搭/鞋服",
-        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
-        "hasSample": true
       }
     ],
     "mid": [
-      {
-        "label": "功能型卖点",
-        "count": 9,
-        "costShare": 18.5,
-        "exampleRank": 4,
-        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "exampleTime": 5,
-        "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "hasSample": true
-      },
-      {
-        "label": "版型材质",
-        "count": 12,
-        "costShare": 17.2,
-        "exampleRank": 6,
-        "exampleName": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
-        "exampleTime": 5,
-        "exampleProductType": "服饰穿搭/鞋服",
-        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
-        "hasSample": true
-      },
-      {
-        "label": "舒适体验",
-        "count": 0,
-        "costShare": 0,
-        "exampleRank": 0,
-        "exampleName": "暂无代表素材",
-        "exampleVideo": "",
-        "exampleTime": 5,
-        "exampleProductType": "暂无样本",
-        "desc": "该标签在当前TOP50中暂无样本",
-        "hasSample": false
-      },
       {
         "label": "情绪价值",
         "count": 5,
@@ -796,6 +833,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 5,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
         "hasSample": true
       },
@@ -808,8 +868,114 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
         "exampleTime": 5,
         "exampleProductType": "户外露营/装备",
+        "examples": [
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 5,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 5,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 11,
+            "name": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53yyaniaaapuam7i74erurvrqe2tdabvca.f0.mp4?dis_k=6c0d6b9f5e679361c2d2104083f49f3b&dis_t=1779850657&m=6813685ae5c2b6b0983e1923744af23b&sha256=d9cd05e851f4d7f5ac8564d1edd5578ef58101e48b21d886d04b2f768931f7ac",
+            "time": 5,
+            "productType": "户外露营/装备"
+          }
+        ],
         "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
         "hasSample": true
+      },
+      {
+        "label": "功能型卖点",
+        "count": 9,
+        "costShare": 18.5,
+        "exampleRank": 4,
+        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "exampleTime": 5,
+        "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          }
+        ],
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
+      },
+      {
+        "label": "版型材质",
+        "count": 12,
+        "costShare": 17.2,
+        "exampleRank": 6,
+        "exampleName": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+        "exampleTime": 5,
+        "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 6,
+            "name": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 9,
+            "name": "【全脸防晒面罩】小野和子2026新款防晒口罩脸基尼透气玻尿酸防紫外线00MZ",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53kqahaaaaxyahco5b4nuruvaeobkaa4ca.f0.mp4?dis_k=23ea1bbe0d39550fc03ce56199fa0dc8&dis_t=1776759229&m=52a65189cbae3f99b7939bf5afecb03e&sha256=ba2e1a4a7ee53db9dd0709dd48f11d0291c125bb42b3582d7435b3a96bcd54cb",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 15,
+            "name": "【全脸防晒面罩】小野和子2026新款防晒口罩脸基尼透气玻尿酸防紫外线00MZ",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3omb62aadvaaatxw2xburs4ye5vzqh3ka.f0.mp4?dis_k=1cdb598304273754e8332b18adcc0a59&dis_t=1775890832&m=d0b26bb215df70d6fbb49a24f6fba90a&sha256=5ae5a7604e88f6244d6ae9115e25254b29efc73013d2c2ef37e429b02229e40f",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
+        "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+        "hasSample": true
+      },
+      {
+        "label": "舒适体验",
+        "count": 0,
+        "costShare": 0,
+        "exampleRank": 0,
+        "exampleName": "暂无代表素材",
+        "exampleVideo": "",
+        "exampleTime": 5,
+        "exampleProductType": "暂无样本",
+        "examples": [],
+        "desc": "该标签在当前TOP50中暂无样本",
+        "hasSample": false
       },
       {
         "label": "专业防护",
@@ -820,23 +986,12 @@
         "exampleVideo": "",
         "exampleTime": 5,
         "exampleProductType": "暂无样本",
+        "examples": [],
         "desc": "该标签在当前TOP50中暂无样本",
         "hasSample": false
       }
     ],
     "end": [
-      {
-        "label": "机制/权益收口",
-        "count": 9,
-        "costShare": 18.9,
-        "exampleRank": 4,
-        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
-        "exampleTime": 13,
-        "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
-        "hasSample": true
-      },
       {
         "label": "信任收尾",
         "count": 15,
@@ -846,19 +1001,30 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 13,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
-        "hasSample": true
-      },
-      {
-        "label": "行动收口",
-        "count": 4,
-        "costShare": 3.1,
-        "exampleRank": 14,
-        "exampleName": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
-        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53j4amqaaahmah5tq2x5vbutyezbhqbsca.f0.mp4?dis_k=d9970ebc275ff9a4b6957a2d1f9f33a4&dis_t=1780136523&m=eb2c92b4351b2d0435336493936848fb&sha256=c0e38c4c347e72ebc2e8a1c25567ccbbef27877bc4bfe128f9f74f49334cfe8f",
-        "exampleTime": 13,
-        "exampleProductType": "健身训练/塑形",
-        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       },
       {
@@ -870,7 +1036,100 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
         "exampleTime": 13,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 6,
+            "name": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 13,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 13,
+            "productType": "户外露营/装备"
+          }
+        ],
         "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+        "hasSample": true
+      },
+      {
+        "label": "机制/权益收口",
+        "count": 9,
+        "costShare": 18.9,
+        "exampleRank": 4,
+        "exampleName": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+        "exampleTime": 13,
+        "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          }
+        ],
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
+        "hasSample": true
+      },
+      {
+        "label": "行动收口",
+        "count": 4,
+        "costShare": 3.1,
+        "exampleRank": 14,
+        "exampleName": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
+        "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53j4amqaaahmah5tq2x5vbutyezbhqbsca.f0.mp4?dis_k=d9970ebc275ff9a4b6957a2d1f9f33a4&dis_t=1780136523&m=eb2c92b4351b2d0435336493936848fb&sha256=c0e38c4c347e72ebc2e8a1c25567ccbbef27877bc4bfe128f9f74f49334cfe8f",
+        "exampleTime": 13,
+        "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 14,
+            "name": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53j4amqaaahmah5tq2x5vbutyezbhqbsca.f0.mp4?dis_k=d9970ebc275ff9a4b6957a2d1f9f33a4&dis_t=1780136523&m=eb2c92b4351b2d0435336493936848fb&sha256=c0e38c4c347e72ebc2e8a1c25567ccbbef27877bc4bfe128f9f74f49334cfe8f",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 33,
+            "name": "【220克毛圈棉】夏款纯棉针织长裤男女款直口休闲裤跑步束脚运动裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3jaacgaaabeacvgx7dnurusaeeneaai2a.f0.mp4?dis_k=c1229858a04e1887737b359688d327b6&dis_t=1778321854&m=c50b1154ca731979bcce968783109a60&sha256=859e56c2d26d28e84834e33b4ccdb4c0c2fb44c380f8d0f8e0f1cf3bdc6872a6",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 36,
+            "name": "（2）迈特优青少年夏季男生运动五分裤潮流百搭宽松户外休闲短裤 96107",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3zeap4aaazyadzra2svvbvsie73eqb7sa.f0.mp4?dis_k=f9edf75413b86da7cbf9d55f10f07391&dis_t=1780139290&m=e4e48fbfa1b386358b172ee26e797f0c&sha256=dbb30600c07881b4f7097f1f1e506de7a6ceb910d3a0311c93ac3a8b7cfd7efe",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          }
+        ],
+        "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       }
     ]
@@ -887,6 +1146,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 1,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
         "hasSample": true
       },
@@ -899,6 +1181,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
         "exampleTime": 1,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 6,
+            "name": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+            "time": 1,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 1,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 1,
+            "productType": "户外露营/装备"
+          }
+        ],
         "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
         "hasSample": true
       },
@@ -911,6 +1216,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
         "exampleTime": 1,
         "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 1,
+            "productType": "健身训练/塑形"
+          }
+        ],
         "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       }
@@ -925,6 +1253,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 5,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 5,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
         "hasSample": true
       },
@@ -937,6 +1288,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
         "exampleTime": 5,
         "exampleProductType": "户外露营/装备",
+        "examples": [
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 5,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 5,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 11,
+            "name": "小野和子凉感防晒衬衫防紫外线抗皱休闲外套宽松防晒衣女外穿08KC",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53yyaniaaapuam7i74erurvrqe2tdabvca.f0.mp4?dis_k=6c0d6b9f5e679361c2d2104083f49f3b&dis_t=1779850657&m=6813685ae5c2b6b0983e1923744af23b&sha256=d9cd05e851f4d7f5ac8564d1edd5578ef58101e48b21d886d04b2f768931f7ac",
+            "time": 5,
+            "productType": "户外露营/装备"
+          }
+        ],
         "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
         "hasSample": true
       },
@@ -949,6 +1323,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
         "exampleTime": 5,
         "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 5,
+            "productType": "健身训练/塑形"
+          }
+        ],
         "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       }
@@ -963,6 +1360,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
         "exampleTime": 13,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 1,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535qajaaaa54adoratyrvbv3aesdwabeca.f0.mp4?dis_k=4c5fa487eb2e542dae172296a5e1a4c2&dis_t=1780026605&m=e6fe9f926fb128b348a3279f04d115b7&sha256=18d57d9cd4e6f175238b05649438b5ad733f7855b8c46bd1faa134f307c42b4c",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 2,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc36qbdsaacgyabha65prurr5aehh2aeoka.f0.mp4?dis_k=b872fa391aa98ad79462044c626af451&dis_t=1777299178&m=8e744d26d3d12ed340cf04e427a2affd&sha256=d736e7e8b216c8e8868db2b06eaa25696ddcb9f05227e69333de9bcd4e47a6cb",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 3,
+            "name": "【杨幂同款】SIINSIIN云感直筒裤夏季穿搭粉彩风白色裤",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53pmabiaaa44ad37o7knuru6yecr5qafca.f0.mp4?dis_k=c7778688352605087ea955caa609e9a3&dis_t=1780022043&m=e7ca25d7f7221a734aade79e1288f9f4&sha256=b46eebfc63ee7075011ec452fa995c447f669346fe5e08ab7a355452f4ee3d4d",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          }
+        ],
         "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
         "hasSample": true
       },
@@ -975,6 +1395,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
         "exampleTime": 13,
         "exampleProductType": "服饰穿搭/鞋服",
+        "examples": [
+          {
+            "rank": 6,
+            "name": "（5）迈特优夏季水洗分隔设计牛仔裤青少年垂感休闲宽松阔腿牛仔裤9660",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53t4abiaaaimacl3jr65vbvhyecspqafca.f0.mp4?dis_k=90dfd21db077a8891db20e0d6a7ab160&dis_t=1782360152&m=de3d4dcd456fdc66b9bee271abbd16c7&sha256=20aeef831301c146f471b9745cbc95de9273f3c3a6319502428025fa4ffd1407",
+            "time": 13,
+            "productType": "服饰穿搭/鞋服"
+          },
+          {
+            "rank": 7,
+            "name": "UTO悠途向峰跑步长袖男士吸汗速干T恤女款弹力透气舒适运动服速干衣",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3e4augaab6eact2imabvbwjyeimtqcq2a.f0.mp4?dis_k=36966e7853db113bff0de280e0cc4321&dis_t=1779264217&m=38e9640ec1cb6187deb4de812363ad66",
+            "time": 13,
+            "productType": "户外露营/装备"
+          },
+          {
+            "rank": 8,
+            "name": "【碎冰冰】骆驼26年春夏款银胶凉感原纱防晒衣遮热防紫外线夏日溯 715BAEO003725BAEO002",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53mmbu4aadyiafc3rjgzvbsyyejzrqgtsa.f0.mp4?dis_k=945085090989f4f1aed653f32b6e1207&dis_t=1781145518&m=89a7afec94b952c6a2f4c9ff2763e6e4&sha256=f4ee384e476b583c7b3dc26dcd25c2770e311328bbd88f516be93f719dd6296e",
+            "time": 13,
+            "productType": "户外露营/装备"
+          }
+        ],
         "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
         "hasSample": true
       },
@@ -987,6 +1430,29 @@
         "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
         "exampleTime": 13,
         "exampleProductType": "健身训练/塑形",
+        "examples": [
+          {
+            "rank": 4,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc32uaxsaabwyafukavb5vbxviephkqc6ka.f0.mp4?dis_k=738c7c89348caae9bd7819046dd78b97&dis_t=1779704697&m=00dd8bc8536399304b764c77cb723de5&sha256=1a26ab0405816120ae6a1fb913472e9de782f92ccc41e9108e49863254a834ab",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 5,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53k4blaaacmaaaztrbynvbqvyewblqfmca.f0.mp4?dis_k=c42de0b8ddac5cf471acdb2225ab6268&dis_t=1780726848&m=7a216c87a26e5c4aa90e0551eb4a221a&sha256=3966b6723d7026eee7f295d5dc1ecb02615995271727e745ca3df86998ecbc96",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          },
+          {
+            "rank": 10,
+            "name": "2.0上新色【三件套】高强度运动内衣上衣三分瑜伽裤运动健身衣服套装",
+            "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53wmad6aaafqalg7rk6jvbvmyeh6zqap2a.f0.mp4?dis_k=2c10ed7dc4e168f2baad48c69c56bcea&dis_t=1781173420&m=0ec341ac6b14a80dd16fae11e0a2e790&sha256=ebf7f76eb8c513d9394486797300f8d6655b9ad4d086244ac14b64d9b080f17e",
+            "time": 13,
+            "productType": "健身训练/塑形"
+          }
+        ],
         "desc": "重点展示使用动作、训练部位、便捷使用和效果想象。",
         "hasSample": true
       }
@@ -1642,62 +2108,37 @@
     "stageAnalysis": {
       "first3": [
         {
-          "label": "明星达人/同款背书",
-          "count": 5,
-          "costShare": 6.7,
-          "exampleRank": 20,
-          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
-          "exampleTime": 1,
-          "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
-          "hasSample": true
-        },
-        {
-          "label": "微剧情/场景冲突",
-          "count": 0,
-          "costShare": 0,
-          "exampleRank": 0,
-          "exampleName": "暂无代表素材",
-          "exampleVideo": "",
-          "exampleTime": 1,
-          "exampleProductType": "暂无样本",
-          "desc": "该标签在当前TOP50中暂无样本",
-          "hasSample": false
-        },
-        {
-          "label": "口播推荐/产品直给",
-          "count": 5,
-          "costShare": 8.0,
-          "exampleRank": 10,
-          "exampleName": "空",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
-          "exampleTime": 1,
-          "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
-          "hasSample": true
-        },
-        {
-          "label": "痛点直击",
-          "count": 0,
-          "costShare": 0,
-          "exampleRank": 0,
-          "exampleName": "暂无代表素材",
-          "exampleVideo": "",
-          "exampleTime": 1,
-          "exampleProductType": "暂无样本",
-          "desc": "该标签在当前TOP50中暂无样本",
-          "hasSample": false
-        },
-        {
-          "label": "效果演示开场",
-          "count": 1,
-          "costShare": 1.6,
-          "exampleRank": 22,
-          "exampleName": "梵客隆内裤女2026夏季新款植物纤维中高腰提臀收腹透气塑形三角裤",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
+          "label": "真人上身/产品视觉",
+          "count": 32,
+          "costShare": 54.8,
+          "exampleRank": 4,
+          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 1,
           "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
           "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
           "hasSample": true
         },
@@ -1710,47 +2151,151 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 1,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 1,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 1,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 1,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
           "hasSample": true
         },
         {
-          "label": "真人上身/产品视觉",
-          "count": 32,
-          "costShare": 54.8,
-          "exampleRank": 4,
-          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
-          "exampleTime": 1,
-          "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "hasSample": true
-        }
-      ],
-      "mid": [
-        {
-          "label": "功能型卖点",
-          "count": 3,
-          "costShare": 3.8,
-          "exampleRank": 19,
-          "exampleName": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
-          "exampleTime": 5,
-          "exampleProductType": "通用商品",
-          "desc": "重点展示产品功能、材质、细节和使用效果。",
-          "hasSample": true
-        },
-        {
-          "label": "版型材质",
-          "count": 6,
-          "costShare": 8.3,
+          "label": "口播推荐/产品直给",
+          "count": 5,
+          "costShare": 8.0,
           "exampleRank": 10,
           "exampleName": "空",
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
-          "exampleTime": 5,
+          "exampleTime": 1,
           "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 10,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 19,
+              "name": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+              "time": 1,
+              "productType": "通用商品"
+            },
+            {
+              "rank": 21,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
           "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
           "hasSample": true
         },
+        {
+          "label": "明星达人/同款背书",
+          "count": 5,
+          "costShare": 6.7,
+          "exampleRank": 20,
+          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+          "exampleTime": 1,
+          "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 20,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 23,
+              "name": "【林允同款】猫人蜂巢冰氧杯提拉承托10A抗菌内衣凉感舒适女士文胸-TJ",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cmbuaaadumaaxfrnjvvbseyeiajqgqca.f0.mp4?dis_k=b3a157d99201e59aa97a93cedd6979f9&dis_t=1781419043&m=7c6fb5d4acbe4f09be18f82d9b8e9dbe&sha256=d9e4f28f9a9882c9b93127519b824b7bdb3142b9eccfe8e6c1774c0127dfd26a",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 26,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
+          "hasSample": true
+        },
+        {
+          "label": "效果演示开场",
+          "count": 1,
+          "costShare": 1.6,
+          "exampleRank": 22,
+          "exampleName": "梵客隆内裤女2026夏季新款植物纤维中高腰提臀收腹透气塑形三角裤",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
+          "exampleTime": 1,
+          "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 22,
+              "name": "梵客隆内裤女2026夏季新款植物纤维中高腰提臀收腹透气塑形三角裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53gmagcaaa2iadx4bownvbwmyemezqayka.f0.mp4?dis_k=72a55e0fec20aea93908ea9bb47cef9f&dis_t=1781422834&m=163e8e88efe7b7913947b1ff79a808d3",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
+        },
+        {
+          "label": "微剧情/场景冲突",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
+          "exampleTime": 1,
+          "exampleProductType": "暂无样本",
+          "examples": [],
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
+        },
+        {
+          "label": "痛点直击",
+          "count": 0,
+          "costShare": 0,
+          "exampleRank": 0,
+          "exampleName": "暂无代表素材",
+          "exampleVideo": "",
+          "exampleTime": 1,
+          "exampleProductType": "暂无样本",
+          "examples": [],
+          "desc": "该标签在当前TOP50中暂无样本",
+          "hasSample": false
+        }
+      ],
+      "mid": [
         {
           "label": "舒适体验",
           "count": 34,
@@ -1760,19 +2305,30 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 5,
           "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
           "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "hasSample": true
-        },
-        {
-          "label": "情绪价值",
-          "count": 2,
-          "costShare": 3.1,
-          "exampleRank": 20,
-          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
-          "exampleTime": 5,
-          "exampleProductType": "服饰穿搭/鞋服",
-          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
           "hasSample": true
         },
         {
@@ -1784,7 +2340,128 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 5,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 5,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 5,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 5,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
+          "hasSample": true
+        },
+        {
+          "label": "版型材质",
+          "count": 6,
+          "costShare": 8.3,
+          "exampleRank": 10,
+          "exampleName": "空",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+          "exampleTime": 5,
+          "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 10,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 21,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 28,
+              "name": "路易卡迪 LC印花双面背腋下单肩包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmbrqaadoiao5lfx2fursuyedbjqggca.f0.mp4?dis_k=25bed8345b645387c5cdb6c80098598b&dis_t=1773467221&m=7b482277f5cbb0f531bb3b481523ef69&sha256=0bb1b0af7793daf6aaeb2c13fe701f2548a146350268c3154e4a91758627ce68",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
+          "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
+          "hasSample": true
+        },
+        {
+          "label": "功能型卖点",
+          "count": 3,
+          "costShare": 3.8,
+          "exampleRank": 19,
+          "exampleName": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+          "exampleTime": 5,
+          "exampleProductType": "通用商品",
+          "examples": [
+            {
+              "rank": 19,
+              "name": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+              "time": 5,
+              "productType": "通用商品"
+            },
+            {
+              "rank": 36,
+              "name": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc37qafiaaa6mal4xsk3vubv7aekt6aavca.f0.mp4?dis_k=c64be909a5e438adfa749b317a3d289f&dis_t=1780899457&m=532314e1142f93eefe4f52ff03d38124&sha256=038471e0a666c7527655cd4404b7eebf27325aeb6900be0f68f599dd6169289a",
+              "time": 5,
+              "productType": "通用商品"
+            },
+            {
+              "rank": 45,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53fybx6aadgiapsuj54nvbslqep4xag72a.f0.mp4?dis_k=abbac5a1711c83fed386e064f71cadc1&dis_t=1782482598&m=74773a653704ac62c4c91ca60808ec83&sha256=9f3650bc4f2677d4b3dcc5ac44291c146da26612014ad75528931292583ee0f2",
+              "time": 5,
+              "productType": "通用商品"
+            }
+          ],
+          "desc": "重点展示产品功能、材质、细节和使用效果。",
+          "hasSample": true
+        },
+        {
+          "label": "情绪价值",
+          "count": 2,
+          "costShare": 3.1,
+          "exampleRank": 20,
+          "exampleName": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+          "exampleTime": 5,
+          "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 20,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 26,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
+          "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
           "hasSample": true
         },
         {
@@ -1796,11 +2473,47 @@
           "exampleVideo": "",
           "exampleTime": 5,
           "exampleProductType": "暂无样本",
+          "examples": [],
           "desc": "该标签在当前TOP50中暂无样本",
           "hasSample": false
         }
       ],
       "end": [
+        {
+          "label": "营销收口",
+          "count": 38,
+          "costShare": 64.5,
+          "exampleRank": 4,
+          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+          "exampleTime": 13,
+          "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
+          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
+          "hasSample": true
+        },
         {
           "label": "机制/权益收口",
           "count": 8,
@@ -1810,6 +2523,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 13,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 13,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 13,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 13,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
           "hasSample": true
         },
@@ -1822,6 +2558,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 13,
           "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 20,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+              "time": 13,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 23,
+              "name": "【林允同款】猫人蜂巢冰氧杯提拉承托10A抗菌内衣凉感舒适女士文胸-TJ",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cmbuaaadumaaxfrnjvvbseyeiajqgqca.f0.mp4?dis_k=b3a157d99201e59aa97a93cedd6979f9&dis_t=1781419043&m=7c6fb5d4acbe4f09be18f82d9b8e9dbe&sha256=d9e4f28f9a9882c9b93127519b824b7bdb3142b9eccfe8e6c1774c0127dfd26a",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 26,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+              "time": 13,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
           "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
           "hasSample": true
         },
@@ -1834,20 +2593,9 @@
           "exampleVideo": "",
           "exampleTime": 13,
           "exampleProductType": "暂无样本",
+          "examples": [],
           "desc": "该标签在当前TOP50中暂无样本",
           "hasSample": false
-        },
-        {
-          "label": "营销收口",
-          "count": 38,
-          "costShare": 64.5,
-          "exampleRank": 4,
-          "exampleName": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
-          "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
-          "exampleTime": 13,
-          "exampleProductType": "贴身衣物/塑形",
-          "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
-          "hasSample": true
         }
       ]
     },
@@ -1863,6 +2611,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 1,
           "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 1,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
           "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
           "hasSample": true
         },
@@ -1875,6 +2646,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 1,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 1,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 1,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 1,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
           "hasSample": true
         },
@@ -1887,6 +2681,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
           "exampleTime": 1,
           "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 10,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 19,
+              "name": "RUIPAI瑞牌儿童书包小学男女孩超轻书包学生护脊护体减负大容量超轻风琴隔层书包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536qadyaaa3eakanujzjurv5aeht2aapca.f0.mp4?dis_k=9fc7b26f03b3802c8c4e40a814f350a1&dis_t=1780558803&m=cee207003331e5a59252f77406f3108b&sha256=8bbc77a34f42ec87e1079f1c6c106341dc09c64493f52c60101233b1d119b472",
+              "time": 1,
+              "productType": "通用商品"
+            },
+            {
+              "rank": 21,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+              "time": 1,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
           "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
           "hasSample": true
         }
@@ -1901,6 +2718,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 5,
           "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 5,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
           "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
           "hasSample": true
         },
@@ -1913,6 +2753,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 5,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 5,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 5,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 5,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
           "hasSample": true
         },
@@ -1925,6 +2788,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
           "exampleTime": 5,
           "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 10,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53duaa6aaaiyacnjif2jvbuhieb4oqad2a.f0.mp4?dis_k=1f1f78f32bd78c388e6154d9d8951267&dis_t=1780368470&m=8535d108a11a04fb79f504481949d4ef&sha256=b0aff8c86162a76082b477668bd7ce27af822fdfe77db72b6b6acbd6aab8db5d",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 21,
+              "name": "空",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc33ebk2aackaanigrdy5vbrwievxmqflka.f0.mp4?dis_k=e52428954db28bc1a856dc97850ff44d&dis_t=1780578737&m=13d01707ca2fefd2733f96b7fe206724&sha256=8e505ce8aaf8f42d836314d079ee97b7cb67f6a957ea90bdaa07cc75d230667d",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 28,
+              "name": "路易卡迪 LC印花双面背腋下单肩包",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3kmbrqaadoiao5lfx2fursuyedbjqggca.f0.mp4?dis_k=25bed8345b645387c5cdb6c80098598b&dis_t=1773467221&m=7b482277f5cbb0f531bb3b481523ef69&sha256=0bb1b0af7793daf6aaeb2c13fe701f2548a146350268c3154e4a91758627ce68",
+              "time": 5,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
           "desc": "重点展示版型、面料、显瘦/防晒/凉感、穿搭场景。",
           "hasSample": true
         }
@@ -1939,6 +2825,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
           "exampleTime": 13,
           "exampleProductType": "贴身衣物/塑形",
+          "examples": [
+            {
+              "rank": 4,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b536iacqaaa7uabcsq2qbvbv4qefdzaakca.f0.mp4?dis_k=48d9230f6c9ddb0ba23853b287c32378&dis_t=1780103796&m=8b0a9e18f2c8a47a0f4e19ef47cc1b31&sha256=3a45abc8dd2c73b0c0d93fb0fec3702bc75e9f60e74c7033f7be8324c8d7ac8e",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 5,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cqawyaabxiaekvze5fvbwfaenqkac3ca.f0.mp4?dis_k=e19f7dc9d5642a2493d5d1710b0429d3&dis_t=1780820406&m=26ff50b660218f9e98b776a81378529f",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 6,
+              "name": "婷美【极简主义V纱系列】显小内衣透气网纱性感隐形无痕双提拉文胸",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535ubgkaacduah7orpdrvbr3iemxwqezka.f0.mp4?dis_k=f8236be43394501e71038e7cd7f79fca&dis_t=1781340942&m=9a8c59241dd63dd57ee6e02baf29daf7&sha256=b06010aa4a71eec51a3f37e8808c741ba0c7095ebe8e86ee677dabafb9b72bec",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            }
+          ],
           "desc": "重点展示亲肤、无痕、承托、塑形和日常舒适。",
           "hasSample": true
         },
@@ -1951,6 +2860,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
           "exampleTime": 13,
           "exampleProductType": "户外露营/装备",
+          "examples": [
+            {
+              "rank": 1,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b535icieaaet4ao2tb4e5vb72qeqlvajasa.f0.mp4?dis_k=dd65cca56e43209741069c684ffafbd7&dis_t=1782098894&m=c573a0c0d174f0cec3e54def0dc556a4&sha256=1204d78b118ada4afa814f776e64d7fcba665ec64040db521d3721c485db5a1f",
+              "time": 13,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 2,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3bicjcaaexmadvjj44zvb6cqesefajeka.f0.mp4?dis_k=e6f602408f9ad8e1ccd4a02da65dc5ef&dis_t=1782098892&m=53e3522faedfa8ff0fa77018f6f05595",
+              "time": 13,
+              "productType": "户外露营/装备"
+            },
+            {
+              "rank": 3,
+              "name": "【升级高腰款】洋奢国风刺绣提花10A抗菌桑蚕丝底档加强收腹提臀内裤女骑行裤",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3eycg4aae4yaee5jt6bvb6jqenytai3sa.f0.mp4?dis_k=646150b33d0dae2fba3e11539a48610e&dis_t=1782028977&m=2acb7a2a4be9fa92df38782222932a80&sha256=0f4e024027c8d3ade8edc997f8f979bf8b8628c8451550bc8b14e8a6eecc3148",
+              "time": 13,
+              "productType": "户外露营/装备"
+            }
+          ],
           "desc": "重点展示搭建、收纳、防晒防雨、露营氛围等场景功能。",
           "hasSample": true
         },
@@ -1963,6 +2895,29 @@
           "exampleVideo": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
           "exampleTime": 13,
           "exampleProductType": "服饰穿搭/鞋服",
+          "examples": [
+            {
+              "rank": 20,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3emamsaaamuaa3aahrrvbuiyezerqbska.f0.mp4?dis_k=e00134e1285b74e94193fb697b357bc8&dis_t=1778894361&m=bc5b1e9719415299b4d4645cedb5efd3&sha256=e5d2a79454343ef90f3238263a2c9fedd173beb39de674c13c268d71feb00c63",
+              "time": 13,
+              "productType": "服饰穿搭/鞋服"
+            },
+            {
+              "rank": 23,
+              "name": "【林允同款】猫人蜂巢冰氧杯提拉承托10A抗菌内衣凉感舒适女士文胸-TJ",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0bc3cmbuaaadumaaxfrnjvvbseyeiajqgqca.f0.mp4?dis_k=b3a157d99201e59aa97a93cedd6979f9&dis_t=1781419043&m=7c6fb5d4acbe4f09be18f82d9b8e9dbe&sha256=d9e4f28f9a9882c9b93127519b824b7bdb3142b9eccfe8e6c1774c0127dfd26a",
+              "time": 13,
+              "productType": "贴身衣物/塑形"
+            },
+            {
+              "rank": 26,
+              "name": "[蒋勤勤代言]卡拉羊云朵箱3.0鎏金板材PLUS行李箱防刮抗摔魔方体拉杆箱CN8141",
+              "video": "http://adsmind.gdtimg.com/ads_svp_video__0b53xab3gaadlaaeeeoosjubtoaewo4ahm2a.f0.mp4?dis_k=859ef27a934a3a7be2a7bbdf313d0b85&dis_t=1758327327&m=657863bf3f01c22e04b1b5ca334cfcb6&sha256=89813aea16faf42d1d5536c9d30240b3caf74bd76319f543c7407fe4c3362042",
+              "time": 13,
+              "productType": "服饰穿搭/鞋服"
+            }
+          ],
           "desc": "用同款、审美、身份想象和场景氛围建立购买理由。",
           "hasSample": true
         }

@@ -259,6 +259,7 @@ def stage_stats(items, stage_key):
         ex = next((x for x in cand if x["id"] not in used), cand[0] if cand else None)
         if ex:
             used.add(ex["id"])
+        example_items = cand[:3]
         out.append({
             "label": label,
             "count": count,
@@ -268,10 +269,17 @@ def stage_stats(items, stage_key):
             "exampleVideo": ex["ml"] if ex else "",
             "exampleTime": stage_time,
             "exampleProductType": ex["tags"]["productType"] if ex else "暂无样本",
+            "examples": [{
+                "rank": e["rank"],
+                "name": e["pn"],
+                "video": e["ml"],
+                "time": stage_time,
+                "productType": e["tags"]["productType"],
+            } for e in example_items],
             "desc": (ex["tags"].get("midDesc", "") if ex else "该标签在当前TOP50中暂无样本"),
             "hasSample": bool(ex),
         })
-    return out
+    return sorted(out, key=lambda x: (not x["hasSample"], -x["costShare"]))
 
 
 def top_nonzero(items, n=3):

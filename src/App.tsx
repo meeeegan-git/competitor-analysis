@@ -83,7 +83,7 @@ export default function App() {
             <div>
               <h1 className="text-lg font-bold text-gray-800">服饰运动素材爆款榜单</h1>
               <p className="text-xs text-gray-400 -mt-0.5">
-                呈现每个行业消耗TOP100爆款素材，支持多周数据查看
+                呈现每个行业消耗TOP100爆款素材（数据周期 07.03-07.09）
               </p>
             </div>
           </div>

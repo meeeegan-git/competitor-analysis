@@ -214,13 +214,13 @@ function toNum(val) {
 }
 
 // 曝光量脱敏：按 5万 为一个区间分桶，不暴露精确数值
-// 例如：5万以内 / 5到10万 / 10到15万 / 15到20万 / 20到25万 ...
+// 例如：5万以内 / 5-10万 / 10-15万 / 15-20万 / 20-25万 ...
 function desensitizeExposure(val) {
   if (!val || val <= 0) return '5万以内';
   const UNIT = 50000; // 5万
   const i = Math.floor(val / UNIT);
   if (i === 0) return '5万以内';
-  return `${i * 5}到${(i + 1) * 5}万`;
+  return `${i * 5}-${(i + 1) * 5}万`;
 }
 
 // 根据上传日期自动生成周标签（上传当日往前推7天）

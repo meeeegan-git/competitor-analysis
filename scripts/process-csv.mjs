@@ -9,6 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { createReadStream } from 'fs';
 import readline from 'readline';
 
@@ -16,12 +17,13 @@ import readline from 'readline';
 const COL_INDUSTRY = 'KPI三级行业';
 const COL_CATEGORY = '商品统一类目V2(一级～四级)';
 const COL_DPA_NAME = 'DPA商品名称';
-const COL_CONSUMPTION = '消耗(元)';
+const COL_CONSUMPTION = '日均消耗(元)';
 const COL_ORDER_PRICE = '下单单价(元)';
 const COL_ROI = '下单ROI';
 const COL_VIDEO_3S_RATE = '视频3秒完播率(%)';
 const COL_AVG_PLAY_DURATION = '平均播放时长(毫秒精度)(s)';
 const COL_CTR = 'ctr(%)';
+const COL_EXPOSURE = '日均曝光次数(次)';
 const COL_MATERIAL_MD5 = '素材MD5示意(预览)(翻译后)';
 
 // 新格式列名（无KPI三级行业、无素材链接，有视频号名称）
@@ -209,6 +211,16 @@ function toNum(val) {
   const cleaned = String(val).replace(/,/g, '').trim();
   const num = parseFloat(cleaned);
   return isNaN(num) ? 0 : num;
+}
+
+// 曝光量脱敏：按 5万 为一个区间分桶，不暴露精确数值
+// 例如：5万以内 / 5到10万 / 10到15万 / 15到20万 / 20到25万 ...
+function desensitizeExposure(val) {
+  if (!val || val <= 0) return '5万以内';
+  const UNIT = 50000; // 5万
+  const i = Math.floor(val / UNIT);
+  if (i === 0) return '5万以内';
+  return `${i * 5}到${(i + 1) * 5}万`;
 }
 
 // 根据上传日期自动生成周标签（上传当日往前推7天）
@@ -472,10 +484,14 @@ async function processCSV(csvPath, weekLabel) {
       const video3sRate = toNum(getCol(COL_VIDEO_3S_RATE));
       const avgPlayDuration = toNum(getCol(COL_AVG_PLAY_DURATION));
       const ctr = toNum(getCol(COL_CTR));
+      const exposure = toNum(getCol(COL_EXPOSURE));
       const materialLink = row._materialLink || '';
 
       // 新格式无素材链接时仍保留数据（ml 为空字符串）
       // 旧格式有素材链接时必须保留
+
+      // 脱敏：跳过无素材链接且完播率/播放时长全为0的空壳行
+      if (!materialLink && video3sRate === 0 && avgPlayDuration === 0) continue;
 
       if (category) categories.add(category);
 
@@ -494,6 +510,7 @@ async function processCSV(csvPath, weekLabel) {
         v3: parseFloat(video3sRate.toFixed(2)),          // video3sRate 3秒完播率
         ap: parseFloat(avgPlayDuration.toFixed(1)),      // avgPlayDuration 平均播放时长
         ct: parseFloat(ctr.toFixed(2)),                  // ctr
+        expd: desensitizeExposure(exposure),             // exposure 曝光量（脱敏分桶，前端展示）
         ml: materialLink,                                // materialLink 素材链接
         ca: category,                                    // category 类目
         ind: industry,                                   // industry KPI三级行业
@@ -513,7 +530,7 @@ async function processCSV(csvPath, weekLabel) {
   console.log(`行业列表: ${sortedIndustries.join(', ')}`);
 
   // 输出
-  const projectRoot = path.dirname(path.dirname(new URL(import.meta.url).pathname));
+  const projectRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
   const dataDir = path.join(projectRoot, 'src', 'data');
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });

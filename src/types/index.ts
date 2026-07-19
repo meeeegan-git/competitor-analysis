@@ -15,6 +15,7 @@ export interface CompactRow {
   v3: number;   // video3sRate 3秒完播率
   ap: number;   // avgPlayDuration 平均播放时长
   ct: number;   // ctr
+  expd: string; // exposure 曝光量（脱敏分桶，如"5万以内"/"5到10万"）
   ml: string;   // materialLink 素材链接
   ca: string;   // category 类目
   ind: string;  // industry KPI三级行业

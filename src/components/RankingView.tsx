@@ -108,6 +108,7 @@ export default function RankingView({ data }: RankingViewProps) {
                 <th className="ranking-th w-28">3秒完播率</th>
                 <th className="ranking-th w-28">平均播放时长</th>
                 <th className="ranking-th w-20">CTR</th>
+                <th className="ranking-th w-32">曝光量</th>
                 <th className="ranking-th min-w-[180px]">素材分析</th>
                 <th className="ranking-th w-32">素材</th>
               </tr>
@@ -115,7 +116,7 @@ export default function RankingView({ data }: RankingViewProps) {
             <tbody>
               {pagedRows.length === 0 ? (
                 <tr>
-                  <td colSpan={11} className="text-center py-16 text-gray-300">
+                  <td colSpan={12} className="text-center py-16 text-gray-300">
                     <p className="text-3xl mb-2">📭</p>
                     <p>暂无匹配的素材数据</p>
                   </td>
@@ -319,11 +320,16 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
       <td className="ranking-td text-right number-cell">
         {row.ap > 0 ? `${row.ap}s` : '-'}
       </td>
-      <td className="ranking-td text-right number-cell">
-        {row.ct > 0 ? `${row.ct}%` : '-'}
-      </td>
-      <td className="ranking-td">
-        {row.an?.summary ? (
+                  <td className="ranking-td text-right number-cell">
+                    {row.ct > 0 ? `${row.ct}%` : '-'}
+                  </td>
+                  <td className="ranking-td text-center">
+                    <span className="inline-block px-2 py-0.5 rounded-md text-xs font-medium bg-indigo-50 text-indigo-600 border border-indigo-200">
+                      {row.expd || '-'}
+                    </span>
+                  </td>
+                  <td className="ranking-td">
+                    {row.an?.summary ? (
           <div
             className="relative"
             onMouseEnter={() => setShowTooltip(true)}

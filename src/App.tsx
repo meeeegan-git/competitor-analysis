@@ -3,7 +3,6 @@ import { MessagePlugin, Loading } from 'tdesign-react';
 import { WeekMeta, WeekData } from './types';
 import RankingView from './components/RankingView';
 import SportAnalysisView from './components/SportAnalysisView';
-import AuthGuard from './components/AuthGuard';
 import weeksIndex from './data/weeks.json';
 
 type TabKey = 'ranking' | 'sport-shoes' | 'sport-goods';
@@ -72,7 +71,6 @@ export default function App() {
   }, [weeks]);
 
   return (
-    <AuthGuard>
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-primary-100/50 shadow-sm">
         <div className="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
@@ -197,6 +195,5 @@ export default function App() {
         </div>
       </footer>
     </div>
-    </AuthGuard>
   );
 }

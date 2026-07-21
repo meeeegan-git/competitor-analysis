@@ -99,11 +99,11 @@ export default function RankingView({ data }: RankingViewProps) {
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-gradient-to-r from-primary-50 to-blue-50">
-                <th className="ranking-th w-32">曝光量</th>
                 <th className="ranking-th w-12">#</th>
                 <th className="ranking-th w-24">商品主图</th>
                 <th className="ranking-th min-w-[220px]">商品名称</th>
                 <th className="ranking-th w-24">行业</th>
+                <th className="ranking-th w-32">曝光量</th>
                 <th className="ranking-th w-24">下单单价</th>
                 <th className="ranking-th w-24">下单ROI</th>
                 <th className="ranking-th w-28">3秒完播率</th>
@@ -264,11 +264,6 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
   return (
     <tr className="ranking-tr group">
       <td className="ranking-td text-center">
-        <span className="inline-block px-2 py-0.5 rounded-md text-xs font-medium bg-indigo-50 text-indigo-600 border border-indigo-200">
-          {row.expd || '-'}
-        </span>
-      </td>
-      <td className="ranking-td text-center">
         <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold ${getRankBadge(rank)}`}>
           {rank + 1}
         </span>
@@ -308,6 +303,11 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
         ) : (
           <span className="text-xs text-gray-300">-</span>
         )}
+      </td>
+      <td className="ranking-td text-center">
+        <span className="inline-block px-2 py-0.5 rounded-md text-xs font-medium bg-indigo-50 text-indigo-600 border border-indigo-200">
+          {row.expd || '-'}
+        </span>
       </td>
       <td className="ranking-td text-right number-cell">
         {row.op > 0 ? `¥${row.op}` : '-'}

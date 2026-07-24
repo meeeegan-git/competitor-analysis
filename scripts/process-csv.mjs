@@ -23,7 +23,8 @@ const COL_ROI = '下单ROI';
 const COL_VIDEO_3S_RATE = '视频3秒完播率(%)';
 const COL_AVG_PLAY_DURATION = '平均播放时长(毫秒精度)(s)';
 const COL_CTR = 'ctr(%)';
-const COL_EXPOSURE = '日均曝光次数(次)';
+// 曝光量列名在不同导出批次里会变化，按优先级依次尝试
+const COL_EXPOSURE_CANDIDATES = ['日均原始曝光量(次)', '日均曝光次数(次)', '日均曝光量(次)'];
 const COL_MATERIAL_MD5 = '素材MD5示意(预览)(翻译后)';
 
 // 新格式列名（无KPI三级行业、无素材链接，有视频号名称）
@@ -484,7 +485,11 @@ async function processCSV(csvPath, weekLabel) {
       const video3sRate = toNum(getCol(COL_VIDEO_3S_RATE));
       const avgPlayDuration = toNum(getCol(COL_AVG_PLAY_DURATION));
       const ctr = toNum(getCol(COL_CTR));
-      const exposure = toNum(getCol(COL_EXPOSURE));
+      let exposure = 0;
+      for (const c of COL_EXPOSURE_CANDIDATES) {
+        const v = getCol(c);
+        if (v !== '' && v !== undefined && v !== null) { exposure = toNum(v); break; }
+      }
       const materialLink = row._materialLink || '';
 
       // 新格式无素材链接时仍保留数据（ml 为空字符串）

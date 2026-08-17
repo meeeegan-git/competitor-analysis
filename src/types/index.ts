@@ -27,6 +27,7 @@ export interface CompactRow {
 export interface WeekData {
   week: string;
   generatedAt: string;
+  hasExposure?: boolean;
   totalCount: number;
   categoryCount: number;
   industryCount: number;

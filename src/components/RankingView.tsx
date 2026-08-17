@@ -22,6 +22,9 @@ export default function RankingView({ data }: RankingViewProps) {
     }));
   }, [data.industries]);
 
+  // 是否有曝光量数据（旧版导出文件可能无曝光量列，此时隐藏该列）
+  const showExposure = data.hasExposure !== false;
+
   // 筛选后的数据（行业 + 商品名称模糊搜索）
   const filteredRows = useMemo(() => {
     let rows = data.rows;
@@ -103,7 +106,7 @@ export default function RankingView({ data }: RankingViewProps) {
                 <th className="ranking-th w-24">商品主图</th>
                 <th className="ranking-th min-w-[220px]">商品名称</th>
                 <th className="ranking-th w-24">行业</th>
-                <th className="ranking-th w-32">曝光量</th>
+                {showExposure && <th className="ranking-th w-32">曝光量</th>}
                 <th className="ranking-th w-24">下单单价</th>
                 <th className="ranking-th w-24">下单ROI</th>
                 <th className="ranking-th w-28">3秒完播率</th>
@@ -116,7 +119,7 @@ export default function RankingView({ data }: RankingViewProps) {
             <tbody>
               {pagedRows.length === 0 ? (
                 <tr>
-                  <td colSpan={12} className="text-center py-16 text-gray-300">
+                  <td colSpan={showExposure ? 12 : 11} className="text-center py-16 text-gray-300">
                     <p className="text-3xl mb-2">📭</p>
                     <p>暂无匹配的素材数据</p>
                   </td>
@@ -124,7 +127,7 @@ export default function RankingView({ data }: RankingViewProps) {
               ) : (
                 pagedRows.map((row, idx) => {
                   const gIdx = globalIndex(idx);
-                  return <RowItem key={`${data.week}-${gIdx}`} row={row} rank={gIdx} />;
+                  return <RowItem key={`${data.week}-${gIdx}`} row={row} rank={gIdx} showExposure={showExposure} />;
                 })
               )}
             </tbody>
@@ -151,7 +154,7 @@ function isVideoUrl(url: string): boolean {
   return !!url && (url.startsWith('http://') || url.startsWith('https://'));
 }
 
-function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
+function RowItem({ row, rank, showExposure }: { row: CompactRow; rank: number; showExposure: boolean }) {
   const materialVideoRef = useRef<HTMLVideoElement>(null);
   const materialContainerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -304,11 +307,13 @@ function RowItem({ row, rank }: { row: CompactRow; rank: number }) {
           <span className="text-xs text-gray-300">-</span>
         )}
       </td>
+      {showExposure && (
       <td className="ranking-td text-center">
         <span className="inline-block px-2 py-0.5 rounded-md text-xs font-medium bg-indigo-50 text-indigo-600 border border-indigo-200">
           {row.expd || '-'}
         </span>
       </td>
+      )}
       <td className="ranking-td text-right number-cell">
         {row.op > 0 ? `¥${row.op}` : '-'}
       </td>

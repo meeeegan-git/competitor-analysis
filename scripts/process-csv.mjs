@@ -314,6 +314,7 @@ async function processCSV(csvPath, weekLabel) {
   let isShifted = false; // 列偏移标记
   let hasIndustryCol = false; // 是否有KPI三级行业列
   let hasMaterialCol = false; // 是否有素材链接列
+  let hasExposureCol = false; // 是否有曝光量列
 
   // 按DPA商品名称去重：优先保留有视频链接的最高消耗素材
   // 同一商品可能有多个素材，最高消耗的未必有视频链接
@@ -351,6 +352,10 @@ async function processCSV(csvPath, weekLabel) {
       }
       if (!hasMaterialCol) {
         console.log('⚠️ 无素材链接列，将不包含视频链接');
+      }
+      hasExposureCol = COL_EXPOSURE_CANDIDATES.some(c => headers.includes(c));
+      if (!hasExposureCol) {
+        console.log('⚠️ 无曝光量列，将隐藏曝光量字段');
       }
       if (hasMaterialCol) {
         const materialVal = (row[COL_MATERIAL_MD5] || '').trim();
@@ -402,7 +407,12 @@ async function processCSV(csvPath, weekLabel) {
       }
     }
     
-    const consumption = toNum(getCol(COL_CONSUMPTION));
+    // 消耗列兼容：优先「日均消耗(元)」，缺失时回退「消耗(元)」（旧版导出）
+  let consumption = toNum(getCol(COL_CONSUMPTION));
+  if (consumption === 0) {
+    const alt = toNum(row['消耗(元)'] || '');
+    if (alt > 0) consumption = alt;
+  }
     const hasLink = !!materialLink;
 
     const entry = {
@@ -515,7 +525,7 @@ async function processCSV(csvPath, weekLabel) {
         v3: parseFloat(video3sRate.toFixed(2)),          // video3sRate 3秒完播率
         ap: parseFloat(avgPlayDuration.toFixed(1)),      // avgPlayDuration 平均播放时长
         ct: parseFloat(ctr.toFixed(2)),                  // ctr
-        expd: desensitizeExposure(exposure),             // exposure 曝光量（脱敏分桶，前端展示）
+        expd: hasExposureCol ? desensitizeExposure(exposure) : '', // exposure 曝光量（脱敏分桶；无曝光列则为空）
         ml: materialLink,                                // materialLink 素材链接
         ca: category,                                    // category 类目
         ind: industry,                                   // industry KPI三级行业
@@ -546,6 +556,7 @@ async function processCSV(csvPath, weekLabel) {
   const outputData = {
     week: weekLabel,
     generatedAt: new Date().toISOString(),
+    hasExposure: hasExposureCol,
     totalCount: allRows.length,
     categoryCount: sortedCategories.length,
     industryCount: sortedIndustries.length,
